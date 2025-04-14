@@ -1,4 +1,3 @@
-// pages/dashboard.jsx
 import React from "react";
 import Navbar from "../component/navbar";
 import "../styles/dashboard.css";
@@ -8,7 +7,6 @@ const Dashboard = () => {
     <div className="dashboard">
       <Navbar />
       <div className="dashboard-content">
-        {/* Left Section */}
         <div className="dashboard-left">
           <h1>Welcome Back!</h1>
           <p>Your internship journey continues</p>
@@ -35,7 +33,6 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Right Section */}
         <div className="dashboard-right">
           <div className="recent-activity">
             <h2>Recent Activity</h2>

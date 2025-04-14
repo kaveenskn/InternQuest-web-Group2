@@ -5,14 +5,17 @@
   padding: 10px 20px;
   background-color: #fff;
   border-bottom: 1px solid #e0e0e0;
-  width: 100%; 
+  width: 100%;
   box-sizing: border-box;
+  height: 60px; 
 }
 
 .navbar-brand {
   font-size: 20px;
   font-weight: bold;
   color: #6b48ff;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-brand .icon {
@@ -31,15 +34,37 @@
   text-decoration: none;
   color: #333;
   font-size: 16px;
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  transition: all 0.3s ease; 
+}
+
+.navbar-links li a:hover {
+  background-color: #f0f0f0; 
+  color: #6b48ff; 
+  transform: scale(1.05); 
 }
 
 .navbar-links li a.active {
   font-weight: bold;
   color: #6b48ff;
+  background-color: #e8e4ff; 
 }
+
+.navbar-links li a.active:hover {
+  background-color: #d9d4ff; 
 
 .navbar-links li a.logout {
   border: 1px solid #e0e0e0;
   padding: 5px 10px;
   border-radius: 5px;
+  color: #333;
+}
+
+.navbar-links li a.logout:hover {
+  background-color: #ffeeee; 
+  border-color: #ff5555; 
+  color: #ff5555; 
+  transform: scale(1.05); 
+}
 }

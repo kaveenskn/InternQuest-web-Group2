@@ -5,13 +5,13 @@ body,
   padding: 0;
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 .dashboard {
   font-family: Arial, sans-serif;
-  height: 100vh; 
-  width: 100vw; 
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -21,14 +21,13 @@ body,
 
 .dashboard-content {
   display: flex;
-  flex: 1; 
+  flex: 1;
   width: 100%;
   padding: 20px;
   gap: 20px;
   box-sizing: border-box;
-  overflow-y: auto; 
+  overflow-y: auto;
 }
-
 
 .dashboard-left {
   flex: 1;
@@ -36,8 +35,8 @@ body,
   flex-direction: column;
   gap: 20px;
   min-width: 300px;
-  max-width: 400px; 
-  height: 100%; 
+  max-width: 400px;
+  height: 100%;
 }
 
 .dashboard-left h1 {
@@ -60,11 +59,18 @@ body,
   display: flex;
   align-items: center;
   gap: 5px;
+  transition: all 0.3s ease;
 }
 
 .find-internships-btn {
   background-color: #6b48ff;
   color: white;
+}
+
+.find-internships-btn:hover {
+  background-color: #5a3de6; 
+  transform: scale(1.02); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .update-profile-btn,
@@ -73,12 +79,19 @@ body,
   color: #333;
 }
 
+.update-profile-btn:hover,
+.manage-cv-btn:hover {
+  background-color: #e8e8e8; 
+  transform: scale(1.02); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
 .profile-completion {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  flex: 1; 
+  flex: 1;
 }
 
 .progress-bar {
@@ -115,15 +128,14 @@ body,
   color: #666;
 }
 
-
 .dashboard-right {
   flex: 2;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  min-width: 400px; 
-  height: 100%; 
-  overflow-y: auto; 
+  min-width: 400px;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .recent-activity,
@@ -176,6 +188,16 @@ body,
   right: 20px;
   color: #6b48ff;
   text-decoration: none;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease; 
+}
+
+.view-all:hover {
+  background-color: #e8e4ff; 
+  transform: scale(1.05); 
+  color: #5a3de6; 
 }
 
 .job-card {
