@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./App.css";
+import "./cvCreation.css";
 
-function App() {
+function Dashboard() {
   const [view, setView] = useState("editor");
 
   const [personalInfo, setPersonalInfo] = useState({
@@ -216,4 +216,4 @@ function App() {
   );
 }
 
-export default App;
+export default Dashboard;
