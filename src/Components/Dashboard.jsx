@@ -1,5 +1,5 @@
 import React from 'react'
-import './Dashboard.css'
+import '../styles/Dashboard.css';
 import { IoMdNotificationsOutline } from "react-icons/io";
 
 const Dashboard = () => {
@@ -21,8 +21,8 @@ const Dashboard = () => {
         <div className="progress" style={{ width: '75%' }}></div>
       </div>
       <ul>
-        <li>• Add a profile picture</li>
-        <li>• Complete your experience section</li>
+        <li>Add a profile picture</li>
+        <li>Complete your experience section</li>
       </ul>
     </div>
   </div>

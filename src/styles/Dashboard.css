@@ -17,15 +17,15 @@
   }
   
   .welcome-box, .profile-box, .recent-activity-box {
-    background: #fff;
+    background: #ffffff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
   }
   
   .find-btn {
-    background-color: #a78bfa;
-    color: #fff;
+    background-color: #ffffff;
+    color: #070000;
     font-weight: 600;
     padding: 10px;
     border: none;
@@ -36,7 +36,7 @@
   }
   
   .secondary-btn {
-    background-color: #f9fafb;
+    background-color: #9a9c9f;
     padding: 10px;
     border: 1px solid #e5e7eb;
     width: 100%;
@@ -46,7 +46,8 @@
   }
   
   .progress-bar {
-    background-color: #e5e7eb;
+    background-color: #ffffff;
+    border: 1px solid black;
     height: 8px;
     border-radius: 4px;
     margin: 10px 0;
@@ -54,13 +55,13 @@
   
   .progress {
     height: 100%;
-    background-color: #a78bfa;
+    background-color: #ff06f7;
     border-radius: 4px;
   }
   
   .profile-box ul {
     padding-left: 20px;
-    color: #6b7280;
+    color: #a1a3a8;
     font-size: 14px;
   }
   
@@ -74,16 +75,16 @@
   
   .recent-activity-box .header .icon{
     font-size: 40px;
-    border: 1px solid rgb(114, 88, 246);
+    border: 1px solid rgb(199, 191, 239);
     border-radius: 20px;
-    background-color: #caeaff;
+    background-color: #95d5ff;
   }
   
   
   .activity-card {
     display: flex;
     gap: 10px;
-    background-color: #f9fafb;
+    background-color: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     padding: 10px 15px;
