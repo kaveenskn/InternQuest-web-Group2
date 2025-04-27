@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import "../styles/form1.css";
 
@@ -21,6 +20,7 @@ const Form1 = () => {
     e.preventDefault();
     console.log(value);
   };
+
   return (
     <div className="container">
       <h1>User Information Form</h1>
