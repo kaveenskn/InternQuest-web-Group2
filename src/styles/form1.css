@@ -13,6 +13,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
+  height: 450px;
   width: 400px;
   text-align: center;
 }
@@ -66,6 +67,7 @@ label[for="employee"] {
 
 button {
   width: 100%;
+  margin-top: 20px;
   padding: 8px;
   background-color: #6b7280;
   color: white;
