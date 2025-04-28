@@ -19,6 +19,7 @@
   .welcome-box, .profile-box, .recent-activity-box {
     background: #ffffff;
     padding: 20px;
+    border:1px solid black;
     border-radius: 12px;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
   }
