@@ -1,4 +1,4 @@
-/* Global page style */
+/* Reset and base styles */
 body, html, #root {
   height: 100%;
   width: 100%;
@@ -7,17 +7,17 @@ body, html, #root {
   background-color: #f2f2f2;
 }
 
-/* Main container to center the content */
+/* Container to center everything */
 .job-post-container {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 40px 20px;
-  overflow-y: auto;
+  box-sizing: border-box;
 }
 
-/* White box for form and header */
+/* Main white card */
 .job-post-form {
   background: white;
   padding: 30px;
@@ -27,12 +27,12 @@ body, html, #root {
   border-radius: 10px;
 }
 
-/* Header inside the box */
+/* Title and subtitle inside the box */
 .form-title {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 5px;
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .form-subtitle {
@@ -42,7 +42,7 @@ body, html, #root {
   margin-bottom: 25px;
 }
 
-/* Input labels */
+/* Labels and inputs */
 .input-label {
   font-weight: 600;
   margin-bottom: 6px;
@@ -50,7 +50,6 @@ body, html, #root {
   color: #333;
 }
 
-/* Inputs and textarea */
 .input-field,
 .textarea-field {
   width: 100%;
@@ -68,7 +67,7 @@ body, html, #root {
   resize: vertical;
 }
 
-/* Horizontal form row */
+/* Horizontal row for two fields */
 .row {
   display: flex;
   gap: 20px;
@@ -77,9 +76,10 @@ body, html, #root {
 
 .half-width {
   flex: 1;
+  min-width: 240px;
 }
 
-/* Buttons row */
+/* Buttons */
 .button-row {
   display: flex;
   justify-content: flex-start;
@@ -87,7 +87,6 @@ body, html, #root {
   margin-top: 25px;
 }
 
-/* Button styles */
 .clear-btn {
   background-color: white;
   border: 2px solid #7c5dfa;
