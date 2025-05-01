@@ -1,0 +1,120 @@
+/* Global page style */
+body, html, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Main container to center the content */
+.job-post-container {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+/* White box for form and header */
+.job-post-form {
+  background: white;
+  padding: 30px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+/* Header inside the box */
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Input labels */
+.input-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #333;
+}
+
+/* Inputs and textarea */
+.input-field,
+.textarea-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fafafa;
+}
+
+.textarea-field {
+  resize: vertical;
+}
+
+/* Horizontal form row */
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.half-width {
+  flex: 1;
+}
+
+/* Buttons row */
+.button-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+/* Button styles */
+.clear-btn {
+  background-color: white;
+  border: 2px solid #7c5dfa;
+  color: #7c5dfa;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #7c5dfa;
+  color: white;
+}
+
+.post-btn {
+  background-color: #7c5dfa;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-btn:hover {
+  background-color: #5a3ec1;
+}
