@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './JobPostForm.css';
+import "../styles/JobPostForm.css";
 
 const jobTypes = [
   'Full-time',

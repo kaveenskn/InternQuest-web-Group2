@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./cvCreation.css";
+import "../styles/cvCreation.css";
 
 function Dashboard() {
   const [view, setView] = useState("editor");
