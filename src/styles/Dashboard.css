@@ -1,0 +1,100 @@
+.dashboard-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .left-panel {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .right-panel {
+    width: 70%;
+  }
+  
+  .welcome-box, .profile-box, .recent-activity-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .find-btn {
+    background-color: #a78bfa;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .secondary-btn {
+    background-color: #f9fafb;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .progress-bar {
+    background-color: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #a78bfa;
+    border-radius: 4px;
+  }
+  
+  .profile-box ul {
+    padding-left: 20px;
+    color: #6b7280;
+    font-size: 14px;
+  }
+  
+  .recent-activity-box .header {
+    display: flex;
+    align-items: center;      
+    gap: 0px;                 
+    color: #07025e;
+    margin-bottom: 20px;
+  }
+  
+  .recent-activity-box .header .icon{
+    font-size: 40px;
+    border: 1px solid rgb(114, 88, 246);
+    border-radius: 20px;
+    background-color: #caeaff;
+  }
+  
+  
+  .activity-card {
+    display: flex;
+    gap: 10px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+  }
+  
+  .activity-card .icon {
+   
+    color: #29016f;
+    padding: 10px;
+    
+    font-size: 25px;
+  }
+  
