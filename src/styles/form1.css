@@ -1,0 +1,83 @@
+body {
+  background-color: white;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  width: 400px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: x-large;
+  text-align: center;
+  color: black;
+}
+
+label {
+  font-size: 15px;
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  text-align: left;
+  color: black;
+  font-weight: 500;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.radio-group div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+label[for="student"],
+label[for="employee"] {
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 8px;
+  background-color: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+}
