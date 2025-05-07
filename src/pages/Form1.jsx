@@ -7,8 +7,8 @@ const Form1 = () => {
     fullname: "",
     email: "",
     role: "",
-    schoolName: "",
-    schoolLocation: "",
+    University: "",
+    Location: "",
     companyName: "",
     position: "",
   });
@@ -71,20 +71,20 @@ const Form1 = () => {
 
         {value.role === "student" && (
           <>
-            <label htmlFor="schoolName">School Name</label>
+            <label htmlFor="schoolName">University</label>
             <input
               type="text"
-              placeholder="Enter your school name"
-              name="schoolName"
+              placeholder="Enter your University name"
+              name="University"
               onChange={handleChange}
               required
             />
 
-            <label htmlFor="schoolLocation">School Location</label>
+            <label htmlFor="schoolLocation">Location</label>
             <input
               type="text"
-              placeholder="Enter your school location"
-              name="schoolLocation"
+              placeholder="Enter your University location"
+              name="Location"
               onChange={handleChange}
               required
             />
