@@ -5,6 +5,7 @@ const Form1 = () => {
   const [value, setValue] = useState({
     fullname: "",
     email: "",
+    password: "", // added password field
     role: "",
     University: "",
     Location: "",
@@ -39,6 +40,15 @@ const Form1 = () => {
           type="email"
           placeholder="Enter your email"
           name="email"
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="password">Password</label> {/* New password field */}
+        <input
+          type="password"
+          placeholder="Enter your password"
+          name="password"
           onChange={handleChange}
           required
         />
@@ -113,7 +123,7 @@ const Form1 = () => {
           </>
         )}
 
-        <button type="submit">Submit</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   );
