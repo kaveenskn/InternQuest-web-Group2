@@ -123,7 +123,7 @@ const Form1 = () => {
           </>
         )}
 
-        <button type="submit">Register</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
