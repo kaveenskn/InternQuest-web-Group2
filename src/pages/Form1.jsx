@@ -5,6 +5,7 @@ const Form1 = () => {
   const [value, setValue] = useState({
     fullname: "",
     email: "",
+    password: "",
     role: "",
     schoolName: "",
     schoolLocation: "",
@@ -39,6 +40,15 @@ const Form1 = () => {
           type="email"
           placeholder="Enter your email"
           name="email"
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          placeholder="Enter your password"
+          name="password"
           onChange={handleChange}
           required
         />
