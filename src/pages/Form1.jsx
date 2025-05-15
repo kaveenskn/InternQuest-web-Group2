@@ -5,9 +5,10 @@ const Form1 = () => {
   const [value, setValue] = useState({
     fullname: "",
     email: "",
+    password: "", // added password field
     role: "",
-    schoolName: "",
-    schoolLocation: "",
+    universityName: "", // changed from schoolName to universityName
+    universityLocation: "", // changed from schoolLocation to universityLocation
     companyName: "",
     position: "",
   });
@@ -43,6 +44,15 @@ const Form1 = () => {
           required
         />
 
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          placeholder="Enter your password"
+          name="password"
+          onChange={handleChange}
+          required
+        />
+
         <label htmlFor="role">Select Your Role</label>
         <div className="radio-group">
           <div>
@@ -71,20 +81,20 @@ const Form1 = () => {
 
         {value.role === "student" && (
           <>
-            <label htmlFor="schoolName">School Name</label>
+            <label htmlFor="universityName">University Name</label>
             <input
               type="text"
-              placeholder="Enter your school name"
-              name="schoolName"
+              placeholder="Enter your university name"
+              name="universityName"
               onChange={handleChange}
               required
             />
 
-            <label htmlFor="schoolLocation">School Location</label>
+            <label htmlFor="universityLocation">University Location</label>
             <input
               type="text"
-              placeholder="Enter your school location"
-              name="schoolLocation"
+              placeholder="Enter your university location"
+              name="universityLocation"
               onChange={handleChange}
               required
             />
