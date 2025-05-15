@@ -7,29 +7,14 @@ import signin from "./component/signin";
 
 const App = () => {
   return (
-<<<<<<< HEAD
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Dashboard />} />
-    //   </Routes>
-    // </Router>
-    <>
 
-      {/* <Form1/> */}
-      {/* <Dashboard/> */}
-       <Jobpostform />
-      {/* // <signin />  */}
-
-    </>
-=======
-   
-      <Router>
+    <Router>
       <Routes>
         <Route path="/" element={<Form1 />} />
          <Route path="/job" element={<Jobpostform />} />
       </Routes>
     </Router>
->>>>>>> Development-kaveen
+
   );
 };
 
