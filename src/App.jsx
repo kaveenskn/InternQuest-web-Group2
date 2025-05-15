@@ -14,10 +14,10 @@ const App = () => {
     // </Router>
     <>
 
-      <Form1/>
+      {/* <Form1/> */}
       {/* <Dashboard/> */}
-      {/* <Jobpostform />
-      <signin /> */}
+       <Jobpostform />
+      {/* // <signin />  */}
 
     </>
   );
