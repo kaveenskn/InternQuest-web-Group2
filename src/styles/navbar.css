@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #fff;
+  background-color: transparent;
   border-bottom: 1px solid #e0e0e0;
   width: 100%;
   box-sizing: border-box;
@@ -56,16 +56,16 @@
 }
 
 .navbar-links li a.logout {
-  border: 2px solid #ff5555;
-  background-color: #ff5555;
+  
+  background-color: #2d7ef9;
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
 .navbar-links li a.logout:hover {
-  background-color: #ff3333;
-  border: 2px solid #ff1111;
+  background-color: #0a06fd;
+  border: 2px solid #0a06fd;
   color: #fff;
   transform: scale(1.05);
   box-shadow: 0 2px 5px rgba(255, 85, 85, 0.3);
