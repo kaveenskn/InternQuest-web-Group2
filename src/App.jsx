@@ -7,25 +7,13 @@ import signin from "./component/signin";
 
 const App = () => {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Dashboard />} />
-    //   </Routes>
-    // </Router>
-    <>
-<<<<<<< HEAD
-    <Form1/>
-    {/* <Dashboard/> */}
-    {/* <Jobpostform/> */}
-=======
-
-      <Form1/>
-      {/* <Dashboard/> */}
-      {/* <Jobpostform />
-      <signin /> */}
-Development-Heshani
->>>>>>> c2aac000ee8a00447434a1b296cf1d5f30a84835
-    </>
+   
+      <Router>
+      <Routes>
+        <Route path="/" element={<Form1 />} />
+         <Route path="/job" element={<Jobpostform />} />
+      </Routes>
+    </Router>
   );
 };
 
