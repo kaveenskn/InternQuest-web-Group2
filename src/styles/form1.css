@@ -1,24 +1,39 @@
-body {
-  background-color: white;
-  text-align: center;
-  min-height: 100vh;
+* {
   margin: 0;
-  display: flex;
-  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
   align-items: center;
+  justify-content: center;
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
 }
 
 .container {
-  background-color: white;
+  position: relative;
+  background: white;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  padding: 10px 20px;
-  width: 400px;
-  text-align: center;
+  height: 620px;
+  width: 850px;
+  overflow: hidden;
+}
+
+.form-box {
+  position: absolute;
+  right: -8px;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
 }
 
 .container h1 {
   font-size: x-large;
+  padding: 10px;
   text-align: center;
   color: black;
 }
@@ -26,7 +41,8 @@ body {
 label {
   font-size: 15px;
   display: block;
-  width: 100%;
+  width: 100;
+  padding: 4px;
   margin-top: 8px;
   margin-bottom: 5px;
   text-align: left;
@@ -35,15 +51,17 @@ label {
 }
 
 input {
-  display: block;
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-  border: 1px solid black;
-  border-radius: 3px;
+  width: 90%;
+  padding: 10px;
+  background: lightgray;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  color: black;
   font-size: 12px;
+  font-weight: 500;
 }
-
 .radio-group {
   display: flex;
   justify-content: flex-start;
@@ -66,10 +84,12 @@ label[for="employee"] {
 }
 
 button {
-  width: 100%;
+  width: 90%;
+  height: 38px;
   margin-top: 20px;
   padding: 8px;
-  background-color: #6b7280;
+  background-color: #7494ec;
+  border-radius: 8px;
   color: white;
   border: none;
   border-radius: 8px;
@@ -80,4 +100,37 @@ button {
 
 button:hover {
   background-color: black;
+}
+
+.toggle-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.toggle-box::before {
+  content: "";
+  position: absolute;
+  left: -250%;
+  width: 300%;
+  height: 100%;
+  background: #7494ec;
+  border-radius: 150px;
+  z-index: 2;
+}
+
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  /* background: rgb(47, 71, 12); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.toggle-panel h1 {
+  color: white;
 }
