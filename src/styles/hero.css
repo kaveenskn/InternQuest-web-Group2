@@ -2,18 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px;
+  padding: 100px 30px 30px; /* top padding avoids hiding under navbar */
   background-color: #fff;
-  
+  min-height: 700px;
+  flex-wrap: wrap;
 }
 
 .hero-text {
-  width: 45%;
+  width: 40%;
 }
 
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  font-weight: bold;
+  color: #2a3f9d;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .hero-text p {
@@ -29,17 +33,33 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .hero-slider {
-  width: 50%;
-  border-radius: 20px;
-  overflow: hidden;
+  width: 60%;
+  /* No additional styling here so Swiper remains untouched */
 }
 
-.hero-slider img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
+/* Responsive adjustments */
+@media (max-width: 968px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+  }
+
+  .hero-text,
+  .hero-slider {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-slider {
+    margin-top: -10px;
+  }
 }

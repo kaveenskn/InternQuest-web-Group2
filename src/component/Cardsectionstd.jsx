@@ -33,7 +33,7 @@ const CardsSection = () => {
   ];
 
   return (
-    <div>
+    <div style={{marginTop:"80px"}}>
       
         
       <h2 style={{ textAlign: "center" }}>
