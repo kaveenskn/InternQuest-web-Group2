@@ -12,6 +12,7 @@
   "dependencies": {
     "flatted": "^3.3.3",
     "gensync": "^1.0.0-beta.2",
+    "mongoose": "^8.14.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
