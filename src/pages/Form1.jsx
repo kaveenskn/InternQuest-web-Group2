@@ -5,12 +5,12 @@ const Form1 = () => {
   const [value, setValue] = useState({
     fullname: "",
     email: "",
-    password: "", // added password field
+    password: "",
     role: "",
-    universityName: "", // changed from schoolName to universityName
-    universityLocation: "", // changed from schoolLocation to universityLocation
+    universityName: "",
+    universityLocation: "",
     companyName: "",
-    position: "",
+    companyLocation: "", // changed from position to companyLocation
   });
 
   const handleChange = (e) => {
@@ -112,11 +112,11 @@ const Form1 = () => {
               required
             />
 
-            <label htmlFor="position">Position</label>
+            <label htmlFor="companyLocation">Company Location</label>
             <input
               type="text"
-              placeholder="Enter your position"
-              name="position"
+              placeholder="Enter your company location"
+              name="companyLocation"
               onChange={handleChange}
               required
             />
