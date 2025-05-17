@@ -13,7 +13,6 @@ router.post("/signup", async (req, res) => {
     role,
     university_name,
     location,
-    course_of_study,
     company_name,
     position,
   } = req.body;
