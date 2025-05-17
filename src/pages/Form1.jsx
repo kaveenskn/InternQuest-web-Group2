@@ -5,10 +5,17 @@ const Form1 = () => {
   const [value, setValue] = useState({
     fullname: "",
     email: "",
+<<<<<<< HEAD
     password: "",
     role: "",
     universityName: "",
     universityLocation: "",
+=======
+    password: "", // added password field
+    role: "",
+    universityName: "", // changed from schoolName to universityName
+    universityLocation: "", // changed from schoolLocation to universityLocation
+>>>>>>> 7b4c9e886cae26871efeba470add9717f6ca31cf
     companyName: "",
     companyLocation: "",
   });
@@ -45,6 +52,7 @@ const Form1 = () => {
             required
           />
 
+<<<<<<< HEAD
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -78,6 +86,40 @@ const Form1 = () => {
               />
               <label htmlFor="employee">Employee</label>
             </div>
+=======
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          placeholder="Enter your password"
+          name="password"
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="role">Select Your Role</label>
+        <div className="radio-group">
+          <div>
+            <input
+              type="radio"
+              id="student"
+              name="role"
+              value="student"
+              checked={value.role === "student"}
+              onChange={handleChange}
+            />
+            <label htmlFor="student">Student</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="employee"
+              name="role"
+              value="employee"
+              checked={value.role === "employee"}
+              onChange={handleChange}
+            />
+            <label htmlFor="employee">Employee</label>
+>>>>>>> 7b4c9e886cae26871efeba470add9717f6ca31cf
           </div>
 
           {value.role === "student" && (
@@ -131,7 +173,57 @@ const Form1 = () => {
         <div className="toggle-panel toggle-left">
           <h1>Welcome to InternQuest</h1>
         </div>
+<<<<<<< HEAD
       </div>
+=======
+
+        {value.role === "student" && (
+          <>
+            <label htmlFor="universityName">University Name</label>
+            <input
+              type="text"
+              placeholder="Enter your university name"
+              name="universityName"
+              onChange={handleChange}
+              required
+            />
+
+            <label htmlFor="universityLocation">University Location</label>
+            <input
+              type="text"
+              placeholder="Enter your university location"
+              name="universityLocation"
+              onChange={handleChange}
+              required
+            />
+          </>
+        )}
+
+        {value.role === "employee" && (
+          <>
+            <label htmlFor="companyName">Company Name</label>
+            <input
+              type="text"
+              placeholder="Enter your company name"
+              name="companyName"
+              onChange={handleChange}
+              required
+            />
+
+            <label htmlFor="position">Position</label>
+            <input
+              type="text"
+              placeholder="Enter your position"
+              name="position"
+              onChange={handleChange}
+              required
+            />
+          </>
+        )}
+
+        <button type="submit">Submit</button>
+      </form>
+>>>>>>> 7b4c9e886cae26871efeba470add9717f6ca31cf
     </div>
   );
 };

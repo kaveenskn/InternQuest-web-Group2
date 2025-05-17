@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -29,18 +30,38 @@ body {
   width: 50%;
   height: 100%;
   z-index: 1;
+=======
+/* Container */
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f0f8ff; /* AliceBlue */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: auto; /* Adjusts height to fit content */
+
+>>>>>>> 7b4c9e886cae26871efeba470add9717f6ca31cf
 }
 
+/* Heading */
 .container h1 {
+<<<<<<< HEAD
   font-size: x-large;
   padding: 10px;
+=======
+>>>>>>> 7b4c9e886cae26871efeba470add9717f6ca31cf
   text-align: center;
-  color: black;
+  color: #0056b3;
+  margin-bottom: 20px;
+  font-size: 22px; /* Slightly smaller heading */
 }
 
-label {
-  font-size: 15px;
+/* Labels */
+form label {
   display: block;
+<<<<<<< HEAD
   width: 100;
   padding: 4px;
   margin-top: 8px;
@@ -62,27 +83,46 @@ input {
   font-size: 12px;
   font-weight: 500;
 }
+=======
+  margin-bottom: 6px;
+  color: #004080;
+  font-weight: 600;
+}
+
+/* Inputs */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 12px; /* Reduced margin */
+  border: 1px solid #b3d1ff;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+form input:focus {
+  border-color: #3399ff;
+}
+
+/* Radio Group */
+>>>>>>> 7b4c9e886cae26871efeba470add9717f6ca31cf
 .radio-group {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
+  margin: 12px 0 14px;
 }
 
-.radio-group div {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.radio-group input[type="radio"] {
+  margin-right: 6px;
 }
 
-label[for="student"],
-label[for="employee"] {
-  font-size: 15px;
-  color: black;
-  font-weight: 500;
+.radio-group label {
+  font-weight: normal;
 }
 
+<<<<<<< HEAD
 button {
   width: 90%;
   height: 38px;
@@ -90,16 +130,41 @@ button {
   padding: 8px;
   background-color: #7494ec;
   border-radius: 8px;
+=======
+/* Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+>>>>>>> 7b4c9e886cae26871efeba470add9717f6ca31cf
   color: white;
+  font-size: 16px;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: black;
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  form input,
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .container h1 {
+    font-size: 20px;
+  }
 }
 
 .toggle-box {
