@@ -7,10 +7,10 @@ const Form1 = () => {
     email: "",
     password: "",
     role: "",
-    schoolName: "",
-    schoolLocation: "",
+    universityName: "",
+    universityLocation: "",
     companyName: "",
-    position: "",
+    companyLocation: "",
   });
 
   const handleChange = (e) => {
@@ -82,20 +82,20 @@ const Form1 = () => {
 
           {value.role === "student" && (
             <>
-              <label htmlFor="schoolName">School Name</label>
+              <label htmlFor="universityName">University Name</label>
               <input
                 type="text"
-                placeholder="Enter your school name"
-                name="schoolName"
+                placeholder="Enter your university name"
+                name="universityName"
                 onChange={handleChange}
                 required
               />
 
-              <label htmlFor="schoolLocation">School Location</label>
+              <label htmlFor="universityLocation">University Location</label>
               <input
                 type="text"
-                placeholder="Enter your school location"
-                name="schoolLocation"
+                placeholder="Enter your university location"
+                name="universityLocation"
                 onChange={handleChange}
                 required
               />
@@ -113,11 +113,11 @@ const Form1 = () => {
                 required
               />
 
-              <label htmlFor="position">Position</label>
+              <label htmlFor="companyLocation">Company Location</label>
               <input
                 type="text"
-                placeholder="Enter your position"
-                name="position"
+                placeholder="Enter your company location"
+                name="companyLocation"
                 onChange={handleChange}
                 required
               />
