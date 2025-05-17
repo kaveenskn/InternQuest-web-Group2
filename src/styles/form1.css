@@ -1,138 +1,104 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+.form-wrapper {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-body {
+.left-panel {
+  flex: 1;
+  background-color: #7095f5;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-  min-height: 100vh;
-  background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
-}
-
-.container {
-  position: relative;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  height: 620px;
-  width: 850px;
-  overflow: hidden;
-  margin-left:20% ;
-}
-
-.form-box {
-  position: absolute;
-  right: -8px;
-  width: 50%;
-  height: 100%;
-  z-index: 1;
-}
-
-.container h1 {
-  font-size: x-large;
-  padding: 10px;
-  text-align: center;
-  color: black;
-}
-
-label {
-  font-size: 15px;
-  display: block;
-  width: 100;
-  padding: 4px;
-  margin-top: 8px;
-  margin-bottom: 5px;
-  text-align: left;
-  color: black;
-  font-weight: 500;
-}
-
-input {
-  width: 90%;
-  padding: 10px;
-  background: lightgray;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  border-radius: 8px;
-  color: black;
-  font-size: 12px;
-  font-weight: 500;
-}
-.radio-group {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.radio-group div {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-label[for="student"],
-label[for="employee"] {
-  font-size: 15px;
-  color: black;
-  font-weight: 500;
-}
-
-button {
-  width: 90%;
-  height: 38px;
-  margin-top: 20px;
-  padding: 8px;
-  background-color: #7494ec;
-  border-radius: 8px;
   color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 
-button:hover {
-  background-color: black;
-}
-
-.toggle-box {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.toggle-box::before {
-  content: "";
-  position: absolute;
-  left: -250%;
-  width: 300%;
-  height: 100%;
-  background: #7494ec;
-  border-radius: 150px;
-  z-index: 2;
-}
-
-.toggle-panel {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  /* background: rgb(47, 71, 12); */
+.right-panel {
+  flex: 1;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  z-index: 3;
 }
 
-.toggle-panel h1 {
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #d8d8d8;
+  outline: none;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #7095f5;
   color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+button:hover {
+  background-color: #5c7de0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .form-wrapper {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .left-panel {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    
+  }
+
+  .right-panel {
+    padding-top: 20px;
+  }
+}

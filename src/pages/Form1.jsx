@@ -17,14 +17,49 @@ const Form1 = () => {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(value);
+
+    try {
+      const response = await fetch("http://localhost:5000/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(value),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("User registered successfully!");
+        console.log(data);
+        setValue({
+          fullname: "",
+          email: "",
+          password: "",
+          role: "",
+          universityName: "",
+          universityLocation: "",
+          companyName: "",
+          companyLocation: "",
+        });
+      } else {
+        alert(`Error: ${data.message}`);
+        console.error(data);
+      }
+    } catch (error) {
+      console.error("Signup error:", error);
+      alert("Something went wrong while registering the user.");
+    }
   };
 
   return (
-    <div className="container">
-      <div className="form-box login">
+    <div className="form-wrapper">
+      <div className="left-panel">
+        <h2>Welcome to InternQuest</h2>
+      </div>
+      <div className="right-panel">
         <h1>User Information Form</h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="fullname">Full Name</label>
@@ -32,6 +67,7 @@ const Form1 = () => {
             type="text"
             placeholder="Enter your full name"
             name="fullname"
+            value={value.fullname}
             onChange={handleChange}
             required
           />
@@ -41,6 +77,7 @@ const Form1 = () => {
             type="email"
             placeholder="Enter your email"
             name="email"
+            value={value.email}
             onChange={handleChange}
             required
           />
@@ -50,6 +87,7 @@ const Form1 = () => {
             type="password"
             placeholder="Enter your password"
             name="password"
+            value={value.password}
             onChange={handleChange}
             required
           />
@@ -87,6 +125,7 @@ const Form1 = () => {
                 type="text"
                 placeholder="Enter your university name"
                 name="universityName"
+                value={value.universityName}
                 onChange={handleChange}
                 required
               />
@@ -96,6 +135,7 @@ const Form1 = () => {
                 type="text"
                 placeholder="Enter your university location"
                 name="universityLocation"
+                value={value.universityLocation}
                 onChange={handleChange}
                 required
               />
@@ -109,6 +149,7 @@ const Form1 = () => {
                 type="text"
                 placeholder="Enter your company name"
                 name="companyName"
+                value={value.companyName}
                 onChange={handleChange}
                 required
               />
@@ -118,6 +159,7 @@ const Form1 = () => {
                 type="text"
                 placeholder="Enter your company location"
                 name="companyLocation"
+                value={value.companyLocation}
                 onChange={handleChange}
                 required
               />
@@ -126,11 +168,6 @@ const Form1 = () => {
 
           <button type="submit">Submit</button>
         </form>
-      </div>
-      <div className="toggle-box">
-        <div className="toggle-panel toggle-left">
-          <h1>Welcome to InternQuest</h1>
-        </div>
       </div>
     </div>
   );
