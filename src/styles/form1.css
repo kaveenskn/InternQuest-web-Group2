@@ -21,6 +21,7 @@ body {
   height: 620px;
   width: 850px;
   overflow: hidden;
+  margin-left:20% ;
 }
 
 .form-box {
@@ -134,3 +135,4 @@ button:hover {
 .toggle-panel h1 {
   color: white;
 }
+
