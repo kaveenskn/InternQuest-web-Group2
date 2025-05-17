@@ -10,12 +10,15 @@ const Form1 = () => {
     role: "",
     universityName: "",
     universityLocation: "",
+<<<<<<< HEAD
 =======
     password: "", // added password field
     role: "",
     universityName: "", // changed from schoolName to universityName
     universityLocation: "", // changed from schoolLocation to universityLocation
 >>>>>>> 7b4c9e886cae26871efeba470add9717f6ca31cf
+=======
+>>>>>>> 2f0e90975ee81165171b6898680feb1c08df0cb8
     companyName: "",
     companyLocation: "",
   });
@@ -32,8 +35,14 @@ const Form1 = () => {
   return (
     <div className="container">
       <div className="form-box login">
+        <div className="toggle-box-mobile">
+          <h1>Welcome to InternQuest</h1>
+          <button className="btn register-btn" type="button">
+            Sign Up
+          </button>
+        </div>
         <h1>User Information Form</h1>
-        <form onSubmit={handleSubmit}>
+        <form>
           <label htmlFor="fullname">Full Name</label>
           <input
             type="text"
@@ -166,12 +175,17 @@ const Form1 = () => {
             </>
           )}
 
-          <button type="submit">Submit</button>
+          <button type="submit" onClick={handleSubmit}>
+            Submit
+          </button>
         </form>
       </div>
       <div className="toggle-box">
         <div className="toggle-panel toggle-left">
           <h1>Welcome to InternQuest</h1>
+          <button className="btn register-btn" type="button">
+            Sign Up
+          </button>
         </div>
 <<<<<<< HEAD
       </div>
