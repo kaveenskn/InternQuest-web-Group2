@@ -7,14 +7,14 @@ const bcrypt = require("bcryptjs");
 
 router.post("/signup", async (req, res) => {
   const {
-    full_name,
+    fullname,
     email,
     password,
     role,
-    university_name,
-    location,
-    company_name,
-    position,
+    universityName,
+    universityLocation,
+    companyName,
+    companyLocation,
   } = req.body;
 
   try {
@@ -29,7 +29,7 @@ router.post("/signup", async (req, res) => {
 
     // Create user
     const newUser = new User({
-      full_name,
+      fullname,
       email,
       password: hashedPassword,
       role,
@@ -41,18 +41,17 @@ router.post("/signup", async (req, res) => {
     if (role === "student") {
       const newStudent = new Student({
         user: savedUser._id,
-        university_name,
-        location,
-        course_of_study,
+        universityName,
+        universityLocation,
       });
       await newStudent.save();
     } else if (role === "employee") {
-      //   const newEmployee = new Employee({
-      //     user: savedUser._id,
-      //     company_name,
-      //     position,
-      //   });
-      //   await newEmployee.save();
+      // const newEmployee = new Employee({
+      //   user: savedUser._id,
+      //   companyName,
+      //   companyLocation,
+      // });
+      // await newEmployee.save();
       console.log("saved to employee");
     }
 

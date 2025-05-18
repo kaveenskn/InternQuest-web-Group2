@@ -21,7 +21,7 @@ const Form1 = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/auth/signup", {
+      const response = await fetch("http://localhost:5000/auth/signup", { 
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const Form1 = () => {
       </div>
       <div className="right-panel">
         <h1>User Information Form</h1>
-        <form onSubmit={handleSubmit}>
+        <form >
           <label htmlFor="fullname">Full Name</label>
           <input
             type="text"
@@ -166,7 +166,7 @@ const Form1 = () => {
             </>
           )}
 
-          <button type="submit">Submit</button>
+          <button type="submit" onClick={handleSubmit}>Submit</button>
         </form>
       </div>
     </div>
