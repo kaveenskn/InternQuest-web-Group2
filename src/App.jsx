@@ -7,7 +7,7 @@ import CardsSection from "./component/Cardsectionstd";
 import Jobpostform from "./component/JobPostForm";
 import signin from "./component/signin";
 import StudentDashboard from "./pages/StudentDashboard";
-
+import StudentProfile from "./pages/cvPage";
 
 const App = () => {
   return (
@@ -16,7 +16,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Form1 />} />
          <Route path="/job" element={<StudentDashboard/>} />
-         <Route path="/card" element={<CardsSection/>} />
+         <Route path="/cv" element={<StudentProfile/>} />
+         
       </Routes>
     </Router>
 

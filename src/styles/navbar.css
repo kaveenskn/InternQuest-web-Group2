@@ -30,10 +30,12 @@
   list-style: none;
   display: flex;
   gap: 20px;
-  margin: 0;
   padding: 0;
 }
 
+.navbar-links li {
+  margin-top: 20px;
+}
 .navbar-links li a {
   text-decoration: none;
   color: #ffffff;
@@ -46,4 +48,8 @@
 .navbar-links li a:hover {
   background-color: #d6eaff;
   border-radius: 5px;
+}
+
+.navbar-links li button{
+ margin-top: -10px;
 }
