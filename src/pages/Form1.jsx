@@ -167,6 +167,10 @@ const Form1 = () => {
           )}
 
           <button type="submit" onClick={handleSubmit}>Submit</button>
+          <div className="register-login-redirect">
+            Already have an account? <a href="/login">Sign in</a>
+          </div>
+
         </form>
       </div>
     </div>

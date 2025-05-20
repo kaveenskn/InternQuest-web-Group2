@@ -1,5 +1,3 @@
-
-
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -7,18 +5,21 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Allow scroll if needed vertically */
+}
+
+.slider-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
 }
 
 .swiper {
   width: 85%;
-  height: 750px;
-  margin-right: -19%;
-  margin-top: -39%;
- float: right;
- border-radius:100%;
- 
-  
-
+  aspect-ratio: 16 / 9; /* Keeps the aspect ratio consistent */
+  border-radius: 2rem;
+  overflow: hidden;
 }
 
 .swiper-slide {
@@ -31,7 +32,6 @@ body {
 }
 
 .swiper-slide img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -53,15 +53,11 @@ body {
   background: #007aff;
 }
 
-
+/* Responsive Fix */
 @media (max-width: 968px) {
   .swiper {
     width: 90%;
-    height: 250px;
-    margin: 20px auto;
-    float: none;
-    border-radius: 20px; 
-    clip-path: none; 
+    aspect-ratio: 4 / 3;
+    border-radius: 1rem;
   }
 }
-

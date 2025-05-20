@@ -95,10 +95,33 @@ h2 {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
+    width: 100%;
     
+  }
+  .left-panel h2{
+    width: 80%;
+    margin-left: -50px;
   }
 
   .right-panel {
     padding-top: 20px;
   }
+}
+
+.register-login-redirect {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #444;
+}
+
+.register-login-redirect a {
+  color: #5c67f2;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.register-login-redirect a:hover {
+  text-decoration: underline;
 }

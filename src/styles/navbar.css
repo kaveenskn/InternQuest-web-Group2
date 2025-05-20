@@ -10,7 +10,8 @@
   width: 100%;
   box-sizing: border-box;
   height: 60px;
-  position: fixed; /* Keeps navbar fixed to the top */
+  position: fixed;
+  /* Keeps navbar fixed to the top */
   top: 0;
   left: 0;
   z-index: 1000;
@@ -36,9 +37,10 @@
 .navbar-links li {
   margin-top: 20px;
 }
+
 .navbar-links li a {
   text-decoration: none;
-  color: #ffffff;
+  color: black;
   font-size: 16px;
   padding: 5px 10px;
   font-weight: bold;
@@ -46,10 +48,10 @@
 }
 
 .navbar-links li a:hover {
-  background-color: #d6eaff;
+  background-color: #56a1f1;;
   border-radius: 5px;
 }
 
-.navbar-links li button{
- margin-top: -10px;
+.navbar-links li button {
+  margin-top: -10px;
 }

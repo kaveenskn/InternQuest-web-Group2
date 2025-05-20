@@ -9,9 +9,9 @@ connectDB();
 
 const Regroute = require("./routes/Registration.js");
 app.use(express.json());
-
-// Routes
 app.use("/auth", Regroute);
+
+const logroutes = require("./routes/Login.js");
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

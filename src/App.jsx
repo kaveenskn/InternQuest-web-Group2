@@ -8,16 +8,17 @@ import Jobpostform from "./component/JobPostForm";
 import signin from "./component/signin";
 import StudentDashboard from "./pages/StudentDashboard";
 import StudentProfile from "./pages/cvPage";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
 
     <Router>
       <Routes>
-        <Route path="/" element={<Form1 />} />
+        <Route path="/signup" element={<Form1 />} />
          <Route path="/job" element={<StudentDashboard/>} />
          <Route path="/cv" element={<StudentProfile/>} />
-         
+         <Route path="/login" element={<Login/>} />
       </Routes>
     </Router>
 
