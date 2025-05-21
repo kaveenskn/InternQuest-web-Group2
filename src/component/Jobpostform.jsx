@@ -46,7 +46,7 @@ function Jobpostform() {
 
         <form onSubmit={handleSubmit}>
           <label className="input-label">
-            Job Title*
+            Job Title
             <input
               type="text"
               name="title"
