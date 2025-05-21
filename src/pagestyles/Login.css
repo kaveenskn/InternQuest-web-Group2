@@ -1,0 +1,115 @@
+.login-wrapper {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  margin: 60px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background: #fff;
+}
+
+.login-left-panel {
+  flex: 1;
+  background-color: #6d93f7;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 30px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.login-right-panel {
+  flex: 1;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-right-panel h1 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.login-right-panel form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.login-right-panel form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #eef2ff;
+  font-size: 1rem;
+}
+
+.login-right-panel form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6d93f7;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-right-panel form button:hover {
+  background-color: #5c7eea;
+}
+
+.login-register-redirect {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #444;
+}
+
+.login-register-redirect a {
+  color: #5c67f2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-register-redirect a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .login-left-panel,
+  .register-left-panel {
+    border-radius: 20px 20px 0 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .login-right-panel,
+  .register-right-panel {
+    padding: 30px 20px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .login-right-panel h1,
+  .register-right-panel h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
