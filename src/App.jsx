@@ -1,17 +1,29 @@
-import React from 'react'
-import './App.css'
-import Navbar from './component/navbar'
-import Dashboard from './component/Dashboard'
-// import other components as needed
+import React from "react";
+import "./App.css"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./component/Dashboard";
+import Form1 from "./pages/Form1";
+import CardsSection from "./component/Cardsectionstd";
+import Jobpostform from "./component/JobPostForm";
+import signin from "./component/signin";
+import StudentDashboard from "./pages/StudentDashboard";
+import StudentProfile from "./pages/cvPage";
+import Login from "./pages/Login";
 
-function App() {
+const App = () => {
   return (
-    <div className="app-container">
-      <Navbar />
-      <Dashboard />
-      {/* Add routes or other components here */}
-    </div>
-  )
-}
 
-export default App
+    <Router>
+      <Routes>
+        <Route path="/signup" element={<Form1 />} />
+         <Route path="/job" element={<StudentDashboard/>} />
+         <Route path="/cv" element={<StudentProfile/>} />
+         <Route path="/login" element={<Login/>} />
+      </Routes>
+    </Router>
+
+
+  );
+};
+
+export default App;  
