@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../pagestyles/Login.css";
 
 const Login = () => {
+  const navigate=require("us")
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
