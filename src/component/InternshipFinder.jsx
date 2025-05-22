@@ -11,6 +11,7 @@ const internships = [
     logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg',
     posted: '2 days ago'
   },
+
   {
     id: 2,
     title: 'UX Design Intern',
@@ -20,7 +21,9 @@ const internships = [
     logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg',
     posted: '1 week ago'
   },
+
   // Add more internships as needed
+
 ];
 
 export default function InternshipFinder() {
@@ -44,6 +47,7 @@ export default function InternshipFinder() {
           Browse through our curated list of internship opportunities
         </div>
       </div>
+
       <div className="if-search-card">
         <div className="if-search-row">
           <span className="if-search-icon">🔍</span>
@@ -55,6 +59,7 @@ export default function InternshipFinder() {
             onChange={e => setSearch(e.target.value)}
           />
         </div>
+
         <div className="if-filter-row">
           <div className="if-filter">
             <span className="if-filter-label">📍 Location</span>
@@ -64,6 +69,7 @@ export default function InternshipFinder() {
               <option value="Cupertino, CA">Cupertino, CA</option>
             </select>
           </div>
+
           <div className="if-filter">
             <span className="if-filter-label">🏢 Job Type</span>
             <select value={jobType} onChange={e => setJobType(e.target.value)}>
@@ -72,6 +78,7 @@ export default function InternshipFinder() {
               <option value="Fall Internship">Fall Internship</option>
             </select>
           </div>
+
           <div className="if-filter">
             <span className="if-filter-label">🏬 Company</span>
             <select value={company} onChange={e => setCompany(e.target.value)}>
@@ -80,12 +87,15 @@ export default function InternshipFinder() {
               <option value="Apple">Apple</option>
             </select>
           </div>
+
           <button className="if-search-btn">Search Internships</button>
         </div>
       </div>
+
       <div className="if-results">
         <b>{filtered.length} results found</b>
       </div>
+      
       <div className="if-card-list">
         {filtered.map(i => (
           <div key={i.id} className="if-card">
