@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
+  background: rgb(235, 229, 229);
 }
 
 .logo {
@@ -32,4 +32,50 @@ ul li {
   padding: 10px 25px;
   border-radius: 50px;
   font-size: 18px;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.styled-image {
+  width: 30%;
+  background: url("city-night2.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.hero-explore1,
+.hero-explore2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 150px;
+  margin-top: 30px;
+  padding: 5px 8px;
+  padding-left: 30px;
+  border-radius: 60px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.hero-explore1 p,
+.hero-explore2 p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.style-arrow {
+  width: 20%;
+  background: url("city-night2.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
 }
