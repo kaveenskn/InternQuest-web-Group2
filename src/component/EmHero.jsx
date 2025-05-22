@@ -9,18 +9,20 @@ const EmHero = () => {
     <div className="hero">
       <h1>CREATE SOFTWARE SOLUTIONS</h1>
       <p>Empowering innovation through tailored software systems.</p>
-      <div className="hero-explore1">
-        <p>Write to Us</p>
-        <img src={arrow} alt="" className="style-arrow" />
-      </div>
-      <div className="hero-explore2">
-        <p>Read More</p>
-        <img src={arrow} alt="" className="style-arrow" />
+      <div className="hero-container">
+        <div className="hero-explore1">
+          <p>Write to Us</p>
+          <img src={arrow} alt="" className="style-arrow" />
+        </div>
+        <div className="hero-explore2">
+          <p>Read More</p>
+          <img src={arrow} alt="" className="style-arrow" />
+        </div>
       </div>
 
       <div className="image-section">
-        <img src={employee} alt="Employee" className="styled-image" />
-        <img src={company} alt="Campany" className="styled-image" />
+        <img src={employee} alt="Employee" className="styled-image1" />
+        <img src={company} alt="Company" className="styled-image2" />
       </div>
     </div>
   );
