@@ -10,13 +10,32 @@ const jobTypes = [
   'Remote',
 ];
 
+const joblocation = [
+  'Colombo',
+  'Bandarawela',
+  'Kandy',
+  'Jaffna',
+  'Galle'
+];
+
+const jobTitles = [
+  'Software Engineer',
+  'Frontend Developer',
+  'Backend Developer',
+  'UI/UX Designer',
+  'Project Manager',
+  'Data Analyst',
+  'QA Tester',
+  'DevOps Engineer'
+];
+
 function Jobpostform() {
   const [formData, setFormData] = useState({
     title: '',
-    company: '',
     location: '',
     jobType: '',
     description: '',
+    deadline: '',
   });
 
   const handleChange = (e) => {
@@ -31,10 +50,10 @@ function Jobpostform() {
   const handleClear = () => {
     setFormData({
       title: '',
-      company: '',
       location: '',
       jobType: '',
       description: '',
+      deadline: '',
     });
   };
 
@@ -46,43 +65,36 @@ function Jobpostform() {
 
         <form onSubmit={handleSubmit}>
           <label className="input-label">
-            Job Title
-            <input
-              type="text"
+            Job Title*
+            <select
               name="title"
-              placeholder="e.g., Senior Frontend Developer"
               value={formData.title}
               onChange={handleChange}
               required
               className="input-field"
-            />
-          </label>
-
-          <label className="input-label">
-            Company Name*
-            <input
-              type="text"
-              name="company"
-              placeholder="e.g., Acme Corporation"
-              value={formData.company}
-              onChange={handleChange}
-              required
-              className="input-field"
-            />
+            >
+              <option value="" disabled>Select job title</option>
+              {jobTitles.map((job) => (
+                <option key={job} value={job}>{job}</option>
+              ))}
+            </select>
           </label>
 
           <div className="row">
             <label className="input-label half-width">
               Job Location*
-              <input
-                type="text"
+              <select
                 name="location"
-                placeholder="e.g., New York, NY or Remote"
                 value={formData.location}
                 onChange={handleChange}
                 required
                 className="input-field"
-              />
+              >
+                <option value="" disabled>Select location</option>
+                {joblocation.map((loc) => (
+                  <option key={loc} value={loc}>{loc}</option>
+                ))}
+              </select>
             </label>
 
             <label className="input-label half-width">
@@ -94,17 +106,25 @@ function Jobpostform() {
                 required
                 className="input-field"
               >
-                <option value="" disabled>
-                  Select job type
-                </option>
+                <option value="" disabled>Select job type</option>
                 {jobTypes.map((type) => (
-                  <option key={type} value={type}>
-                    {type}
-                  </option>
+                  <option key={type} value={type}>{type}</option>
                 ))}
               </select>
             </label>
           </div>
+
+          <label className="input-label">
+            Application Deadline*
+            <input
+              type="date"
+              name="deadline"
+              value={formData.deadline}
+              onChange={handleChange}
+              required
+              className="input-field"
+            />
+          </label>
 
           <label className="input-label">
             Job Description*
@@ -120,12 +140,8 @@ function Jobpostform() {
           </label>
 
           <div className="button-row">
-            <button type="button" className="clear-btn" onClick={handleClear}>
-              Clear Form
-            </button>
-            <button type="submit" className="post-btn">
-              Post Job
-            </button>
+            <button type="button" className="clear-btn" onClick={handleClear}>Clear Form</button>
+            <button type="submit" className="post-btn">Post Job</button>
           </div>
         </form>
       </div>
