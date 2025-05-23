@@ -8,7 +8,7 @@ const EmHero = () => {
   return (
     <div className="hero">
       <div className="hero-container">
-        <div className="hero-text1">
+        <div className="hero-text">
           <h2>Explore Our Services</h2>
           <p className="hero-description">
             Discover innovative solutions designed to elevate your business with

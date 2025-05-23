@@ -36,13 +36,13 @@ ul li:hover {
   border: none;
   padding: 15px;
   white-space: nowrap;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   background-color: white;
   color: black;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.3s ease-in-out;
   margin-right: 90px;
 }
 
@@ -56,20 +56,23 @@ ul li:hover {
   padding: 2rem;
 }
 
-.hero-text1 {
+.hero-text {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.hero-text1 h2 {
-  font-size: 40px;
+.hero-text h2 {
+  font-size: 45px;
   font-weight: 800;
+  font-family: sans-serif;
   color: #333;
   margin-bottom: 10px;
 }
 
-.hero-text1 p {
+.hero-text p {
   margin-bottom: 10px;
+  font-weight: 400;
+  color: black;
 }
 
 .hero-description {
@@ -96,7 +99,8 @@ ul li:hover {
   padding: 5px 6px;
   padding-left: 30px;
   border-radius: 60px;
-  background-color: white;
+  color: black;
+  background-color: lightgray;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -114,7 +118,8 @@ ul li:hover {
   padding: 5px 6px;
   padding-left: 30px;
   border-radius: 60px;
-  background-color: white;
+  color: black;
+  background-color: lightgray;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -132,7 +137,6 @@ ul li:hover {
 
 .style-arrow {
   width: 20%;
-  background: url("city-night2.jpg") no-repeat center center;
   background-size: cover;
   border-radius: 10px;
 }
@@ -144,13 +148,97 @@ ul li:hover {
   width: 60%;
   height: 100vh;
   object-fit: cover;
-  clip-path: polygon(70% 30%, 100% 0, 100% 100%, 30% 100%);
+  clip-path: polygon(60% 40%, 120% 0, 100% 100%, 30% 100%);
   z-index: 2;
 }
 
 .image-section .styled-image1 {
+  padding-top: 30px;
   width: 500px;
   object-fit: cover;
   object-position: left;
   margin-right: 800px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    height: 200px;
+    padding: 8px;
+    align-items: flex-start;
+  }
+
+  .logo {
+    width: 100px;
+    padding: 0px 10px;
+  }
+
+  ul {
+    text-align: center;
+    padding-left: 2px;
+    width: 100%;
+  }
+
+  ul li {
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .btn {
+    margin: 5px 20px;
+    width: calc(100% - 400px);
+    padding: 10px;
+    margin-left: 210px;
+  }
+
+  .hero {
+    padding: 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 25px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-explore1,
+  .hero-explore2 {
+    height: 50px;
+    width: 40%;
+    justify-content: center;
+    margin-left: 170px;
+    padding-left: 0;
+  }
+  .style-arrow {
+    width: 18%;
+    background-size: cover;
+    border-radius: 10px;
+  }
+
+  .image-section .styled-image1 {
+    justify-content: center;
+    position: static;
+    clip-path: none;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .image-section .styled-image2 {
+    display: none;
+  }
 }
