@@ -7,19 +7,25 @@ import "../styles/emDashboard.css";
 const EmHero = () => {
   return (
     <div className="hero">
-      <h1>CREATE SOFTWARE SOLUTIONS</h1>
-      <p>Empowering innovation through tailored software systems.</p>
       <div className="hero-container">
-        <div className="hero-explore1">
-          <p>Write to Us</p>
-          <img src={arrow} alt="" className="style-arrow" />
+        <div className="hero-text1">
+          <h2>Explore Our Services</h2>
+          <p className="hero-description">
+            Discover innovative solutions designed to elevate your business with
+            cutting-edge technology.
+          </p>
         </div>
-        <div className="hero-explore2">
-          <p>Read More</p>
-          <img src={arrow} alt="" className="style-arrow" />
+        <div className="button-group">
+          <div className="hero-explore1">
+            <p>Write to Us</p>
+            <img src={arrow} alt="" className="style-arrow" />
+          </div>
+          <div className="hero-explore2">
+            <p>Read More</p>
+            <img src={arrow} alt="" className="style-arrow" />
+          </div>
         </div>
       </div>
-
       <div className="image-section">
         <img src={employee} alt="Employee" className="styled-image1" />
         <img src={company} alt="Company" className="styled-image2" />
