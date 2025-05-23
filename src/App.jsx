@@ -19,6 +19,7 @@ const App = () => {
          <Route path="/job" element={<StudentDashboard/>} />
          <Route path="/cv" element={<StudentProfile/>} />
          <Route path="/login" element={<Login/>} />
+         <Route path="/post" element={<Jobpostform/>} />
       </Routes>
     </Router>
 
