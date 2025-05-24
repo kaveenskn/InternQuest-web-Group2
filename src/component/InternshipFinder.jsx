@@ -22,7 +22,7 @@ const internships = [
     posted: '1 week ago'
   },
 
-  // Add more internships as needed
+  // Can add more internships as needed
 
 ];
 
@@ -48,9 +48,10 @@ export default function InternshipFinder() {
         </div>
       </div>
 
-      <div className="if-search-card">
+      <div className="if-search-card"> 
         <div className="if-search-row">
           <span className="if-search-icon">🔍</span>
+
           <input
             className="if-search-input"
             type="text"
@@ -63,29 +64,35 @@ export default function InternshipFinder() {
         <div className="if-filter-row">
           <div className="if-filter">
             <span className="if-filter-label">📍 Location</span>
+
             <select value={location} onChange={e => setLocation(e.target.value)}>
               <option value="">Select location</option>
               <option value="Mountain View, CA">Mountain View, CA</option>
               <option value="Cupertino, CA">Cupertino, CA</option>
             </select>
+
           </div>
 
           <div className="if-filter">
             <span className="if-filter-label">🏢 Job Type</span>
+
             <select value={jobType} onChange={e => setJobType(e.target.value)}>
               <option value="">Select job type</option>
               <option value="Summer Internship">Summer Internship</option>
               <option value="Fall Internship">Fall Internship</option>
             </select>
+
           </div>
 
           <div className="if-filter">
             <span className="if-filter-label">🏬 Company</span>
+
             <select value={company} onChange={e => setCompany(e.target.value)}>
               <option value="">Select company</option>
               <option value="Google">Google</option>
               <option value="Apple">Apple</option>
             </select>
+
           </div>
 
           <button className="if-search-btn">Search Internships</button>
@@ -105,7 +112,9 @@ export default function InternshipFinder() {
                 <span className="if-card-title">{i.title}</span>
                 <span className="if-card-type">{i.type}</span>
               </div>
+
               <div className="if-card-company">{i.company}</div>
+              
               <div className="if-card-meta">
                 <span>📍 {i.location}</span>
                 <span className="if-dot">•</span>
