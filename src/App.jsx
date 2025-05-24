@@ -8,12 +8,14 @@ import Jobpostform from "./component/JobPostForm";
 import signin from "./component/signin";
 import StudentDashboard from "./pages/StudentDashboard";
 import Login from "./pages/Login";
+import InternshipLandingPage from "./pages/InternshipLandingpage";
 
 const App = () => {
   return (
 
     <Router>
       <Routes>
+         <Route path="/" element={<InternshipLandingPage />} />
         <Route path="/signup" element={<Form1 />} />
          <Route path="/job" element={<StudentDashboard/>} />
          <Route path="/login" element={<Login/>} />
