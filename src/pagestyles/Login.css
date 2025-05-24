@@ -1,17 +1,28 @@
+.Login-page{
+  background-image: url("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .login-wrapper {
   display: flex;
   width: 80%;
-  max-width: 1000px;
+  max-width: 950px;
   margin: 60px auto;
   border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   background: #fff;
 }
 
 .login-left-panel {
   flex: 1;
-  background-color: #6d93f7;
+  background: linear-gradient(to right, #12396e, #4a60ff);
   color: white;
   display: flex;
   justify-content: center;
