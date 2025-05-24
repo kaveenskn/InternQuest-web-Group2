@@ -45,7 +45,7 @@ function Jobpostform() {
         <p className="form-subtitle">Fill in the details to post a new job opportunity</p>
 
         <form onSubmit={handleSubmit}>
-          <label className="input-label">
+          <label className="input-label">            
             Job Title
             <input
               type="text"
@@ -92,11 +92,12 @@ function Jobpostform() {
                 value={formData.jobType}
                 onChange={handleChange}
                 required
-                className="input-field"
-              >
+                className="input-field">
+
                 <option value="" disabled>
                   Select job type
                 </option>
+
                 {jobTypes.map((type) => (
                   <option key={type} value={type}>
                     {type}
@@ -115,14 +116,14 @@ function Jobpostform() {
               onChange={handleChange}
               required
               rows={5}
-              className="textarea-field"
-            />
+              className="textarea-field"/>
           </label>
 
           <div className="button-row">
             <button type="button" className="clear-btn" onClick={handleClear}>
               Clear Form
             </button>
+            
             <button type="submit" className="post-btn">
               Post Job
             </button>
