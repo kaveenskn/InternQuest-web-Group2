@@ -1,122 +1,170 @@
+.job-post-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 99vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #12396e, #4a60ff);
+}
 
-/* Reset and base styles */
-body, html, #root {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #f2f2f2;
-  }
-  
-  /* Container to center everything */
-  .job-post-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 20px;
-    box-sizing: border-box;
-  }
-  
-  /* Main white card */
+.job-post-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 25px 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.input-label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.input-field,
+.textarea-field {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  border-radius: 6px;
+}
+
+.input-field::placeholder,
+.textarea-field::placeholder {
+  color: #eee;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+select option {
+  background-color: #12396e;
+  color: #fff;
+}
+
+.textarea-field {
+  resize: none;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.row .input-field{
+width: 200px;
+
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.clear-btn,
+.post-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s ease;
+  flex: 1;
+  min-width: 120px;
+}
+
+.clear-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.clear-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.post-btn {
+  background-color: white;
+  color: #333;
+}
+
+.post-btn:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
   .job-post-form {
-    background: white;
-    padding: 30px;
-    width: 100%;
-    max-width: 1000px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
+    padding: 18px;
   }
-  
-  /* Title and subtitle inside the box */
+
   .form-title {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 5px;
+    font-size: 20px;
   }
-  
+
   .form-subtitle {
-    font-size: 14px;
-    text-align: center;
-    color: #666;
-    margin-bottom: 25px;
+    font-size: 13px;
   }
-  
-  /* Labels and inputs */
-  .input-label {
-    font-weight: 600;
-    margin-bottom: 6px;
-    display: block;
-    color: #333;
-  }
-  
-  .input-field,
-  .textarea-field {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #fafafa;
-  }
-  
-  .textarea-field {
-    resize: vertical;
-  }
-  
-  /* Horizontal row for two fields */
+
   .row {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
   }
-  
+.row .input-field{
+  width: 100%;
+
+}
+
+  .textarea-field{
+    width: 95%;
+  }
+
   .half-width {
-    flex: 1;
-    min-width: 240px;
+    min-width: 100%;
   }
-  
-  /* Buttons */
+
   .button-row {
-    display: flex;
-    justify-content: flex-start;
-    gap: 15px;
-    margin-top: 25px;
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  .clear-btn {
-    background-color: white;
-    border: 2px solid #7c5dfa;
-    color: #7c5dfa;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .clear-btn:hover {
-    background-color: #7c5dfa;
-    color: white;
-  }
-  
+
+  .clear-btn,
   .post-btn {
-    background-color: #7c5dfa;
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%;
   }
-  
-  .post-btn:hover {
-    background-color: #5a3ec1;
-  }
-  
-  
+}
+
+

@@ -7,7 +7,6 @@ import CardsSection from "./component/Cardsectionstd";
 import Jobpostform from "./component/JobPostForm";
 import signin from "./component/signin";
 import StudentDashboard from "./pages/StudentDashboard";
-import StudentProfile from "./pages/cvPage";
 import Login from "./pages/Login";
 
 const App = () => {
@@ -17,8 +16,8 @@ const App = () => {
       <Routes>
         <Route path="/signup" element={<Form1 />} />
          <Route path="/job" element={<StudentDashboard/>} />
-         <Route path="/cv" element={<StudentProfile/>} />
          <Route path="/login" element={<Login/>} />
+         <Route path="/post" element={<Jobpostform/>} />
       </Routes>
     </Router>
 

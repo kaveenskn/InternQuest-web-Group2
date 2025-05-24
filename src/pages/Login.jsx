@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../pagestyles/Login.css";
 
 const Login = () => {
-  const navigate=require("us")
+  const navigate=useNavigate();
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
@@ -40,6 +41,7 @@ const Login = () => {
   };
 
   return (
+    <div className="Login-page">
     <div className="login-wrapper">
       <div className="login-left-panel">
         <h2>Welcome Back!</h2>
@@ -74,6 +76,7 @@ const Login = () => {
           </div>
         </form>
       </div>
+    </div>
     </div>
   );
 };
