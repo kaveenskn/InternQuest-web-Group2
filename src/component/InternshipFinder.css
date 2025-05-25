@@ -1,0 +1,208 @@
+/* Center content horizontally and vertically */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8fafc;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+}
+
+/* Main container */
+.if-main {
+  width: 100%;
+  max-width: 1050px;
+  padding: 32px 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+  box-sizing: border-box;
+  overflow-y: auto;
+  max-height: 90vh; /* optional: limit height */
+}
+
+/* Header */
+.if-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.if-header h1 {
+  color: #1849a9;
+  font-size: 2.3rem;
+  margin-bottom: 0.3em;
+  font-weight: 700;
+}
+
+.if-subtitle {
+  color: #555;
+  font-size: 1.13rem;
+}
+
+/* Search Card */
+.if-search-card {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  border: 1px solid #e3e7ed;
+}
+
+/* Search Input Row */
+.if-search-row {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e3e7ed;
+  padding: 0.5em 1em;
+  margin-bottom: 18px;
+}
+
+.if-search-icon {
+  font-size: 1.2em;
+  color: #a0a8b3;
+  margin-right: 0.7em;
+}
+
+.if-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1.08em;
+  outline: none;
+  padding: 0.6em 0;
+}
+
+/* Filter Row */
+.if-filter-row {
+  display: flex;
+  gap: 1.2em;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.if-filter {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 170px;
+}
+
+.if-filter-label {
+  font-size: 1em;
+  color: #1849a9;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+}
+
+.if-filter select {
+  padding: 0.5em;
+  border-radius: 7px;
+  border: 1px solid #e3e7ed;
+  background: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* Search Button */
+.if-search-btn {
+  background: #1976ed;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.7em 1.4em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 1em;
+  transition: background 0.2s;
+}
+
+.if-search-btn:hover {
+  background: #1849a9;
+}
+
+/* Results count */
+.if-results {
+  margin: 16px 0 12px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Internship Cards List */
+.if-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3em;
+  justify-content: center; /* centered cards horizontally */
+}
+
+/* Individual Card */
+.if-card {
+  display: flex;
+  background: #fff;
+  border: 1px solid #e3e7ed;
+  border-radius: 10px;
+  padding: 1.1em 1.2em;
+  min-width: 340px;
+  max-width: 400px;
+  align-items: flex-start;
+  box-shadow: 0 1px 4px rgba(24,73,169,0.06);
+  gap: 1em;
+}
+
+/* Company logo */
+.if-card-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f0f2f5;
+}
+
+/* Card content */
+.if-card-content {
+  flex: 1;
+}
+
+/* Title and type row */
+.if-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+
+.if-card-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #1849a9;
+}
+
+.if-card-type {
+  background: #e3e7ed;
+  color: #1849a9;
+  font-size: 0.9em;
+  padding: 0.2em 0.7em;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+/* Company name */
+.if-card-company {
+  color: #444;
+  font-size: 1em;
+  margin: 0.2em 0;
+}
+
+/* Meta info */
+.if-card-meta {
+  color: #666;
+  font-size: 0.95em;
+}
+
+.if-dot {
+  margin: 0 0.5em;
+}
