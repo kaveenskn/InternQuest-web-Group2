@@ -3,70 +3,55 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #fff;
-  border-bottom: 1px solid #e0e0e0;
+  background-color: rgba(0, 123, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 123, 255, 0.2);
   width: 100%;
   box-sizing: border-box;
   height: 60px;
+  position: fixed;
+  /* Keeps navbar fixed to the top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-radius: 0 0 10px 10px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .navbar-brand {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
-  color: #6b48ff;
+  color: #007bff;
   display: flex;
   align-items: center;
-}
-
-.navbar-brand .icon {
-  margin-right: 5px;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
   gap: 20px;
-  margin: 0;
   padding: 0;
+}
+
+.navbar-links li {
+  margin-top: 20px;
 }
 
 .navbar-links li a {
   text-decoration: none;
-  color: #333;
+  color: black;
   font-size: 16px;
   padding: 5px 10px;
-  border-radius: 5px;
+  font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .navbar-links li a:hover {
-  background-color: #f0f0f0;
-  color: #6b48ff;
-  transform: scale(1.05);
-}
-
-.navbar-links li a.active {
-  font-weight: bold;
-  color: #6b48ff;
-  background-color: #e8e4ff;
-}
-
-.navbar-links li a.active:hover {
-  background-color: #d9d4ff;
-}
-
-.navbar-links li a.logout {
-  border: 2px solid #ff5555;
-  background-color: #ff5555;
-  color: #fff;
-  padding: 5px 10px;
+  background-color: #56a1f1;;
   border-radius: 5px;
 }
 
-.navbar-links li a.logout:hover {
-  background-color: #ff3333;
-  border: 2px solid #ff1111;
-  color: #fff;
-  transform: scale(1.05);
-  box-shadow: 0 2px 5px rgba(255, 85, 85, 0.3);
+.navbar-links li button {
+  margin-top: -10px;
 }
