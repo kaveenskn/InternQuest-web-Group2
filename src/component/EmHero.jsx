@@ -11,8 +11,8 @@ const EmHero = () => {
         <div className="hero-text">
           <h2>Explore Our Services</h2>
           <p className="hero-description">
-            Discover innovative solutions designed to elevate your business with
-            cutting-edge technology.
+            Discover our innovative services designed to support your goals with
+            expert guidance, smart solutions and personalized customer care.
           </p>
         </div>
         <div className="button-group">
