@@ -20,9 +20,6 @@ const App = () => {
          <Route path="/post" element={<Jobpostform/>} />
       </Routes>
     </Router>
+  );};
 
-
-  );
-};
-
-export default App;  
+export default App; 

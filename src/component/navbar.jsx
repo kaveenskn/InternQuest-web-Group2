@@ -1,7 +1,13 @@
 import React from "react";
 import "../styles/navbar.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+ const navigate = useNavigate();
+  const handleLogout = () => {
+    navigate("/login");
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -9,23 +15,24 @@ const Navbar = () => {
       </div>
       <ul className="navbar-links">
         <li>
-          <a href="#" className="active">
+          <Link to="/" className="active">
             Dashboard
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">Profile</a>
+           <Link to="/profile">Profile</Link>
         </li>
         <li>
-          <a href="#">Find Jobs</a>
+          <Link to="/find-jobs">Find Jobs</Link>
+          
         </li>
         <li>
-          <a href="#">My CV</a>
+          <Link to="/my-cv">My CV</Link>
         </li>
         <li>
-          <a href="#" className="logout">
+          <button className="logout" onClick={handleLogout}>
             Logout
-          </a>
+          </button>
         </li>
       </ul>
     </nav>
