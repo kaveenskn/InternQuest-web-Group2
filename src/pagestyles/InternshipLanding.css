@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.landing-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.landing-hero-section {
+  background: #fff;
+  padding: 60px 20px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  text-align: center;
+ 
+}
+
+.landing-hero-section h1 {
+  font-size: 4.5rem;
+  color: #418aff;
+  margin-bottom: 10px;
+   -webkit-box-reflect: below -25px linear-gradient(transparent, transparent 50%, rgba(0, 0, 0, 0.3));
+}
+
+.landing-hero-section .hero-ctn {
+  font-size: 1rem;
+  color: #4b3232;
+  text-align: center;
+  margin: 20px auto;
+  white-space: normal;     
+  word-wrap: break-word;
+  text-wrap: 10px;
+   font-family: 'Poppins', sans-serif;
+  
+  
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 55px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 4px 14px rgba(65, 138, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.sign-in {
+  background: linear-gradient(to right, #174d97,#5c6ffe);
+  color: white;
+}
+
+.sign-up {
+  background: linear-gradient(to right, #174d97,#6577fd);
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.features-section {
+  background: linear-gradient(to right, #12396e,#4a60ff);
+  color: white;
+  padding: 60px 20px;
+}
+
+.features-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.card-topic{
+    display: flex;
+    gap: 15px;
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  margin: auto 30px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 30px 20px;
+  max-width: 280px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card-title{
+  display: flex;
+  gap: 20px;
+  padding: 5px 25px;
+}
+
+.feature-card .icon{
+    width:18%;
+    height: 40px;
+    border: 1px solid rgb(8, 213, 240);
+    background-color: rgba(255, 255, 255, 0.152);
+    border-radius: 100%;
+    text-align: center;
+    padding: 5px 5px;
+    
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+.card-title .icon:hover{
+  color: rgb(255, 255, 255);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+/* Footer Styles */
+.getstart-footer {
+  background: linear-gradient(to right, #12396e,#4a60ff);
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   margin-top: 2px;
+   
+}
+
+.getstart-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  gap: 30px;
+}
+
+.getstart-footer-left,
+.getstart-footer-right {
+  flex: 1;
+  min-width: 260px;
+}
+
+.getstart-footer-left h3 {
+  font-size: 1.8rem;
+  color: #5faeff;
+  margin-bottom: 10px;
+}
+
+.getstart-footer-right h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #a0c4ff;
+}
+
+.getstart-footer p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.getstart-footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 10px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+
+@media (max-width: 768px){
+   .landing-hero-section{
+    padding-left: 5px;
+   }
+  .btn {
+  padding: 12px 40px;
+}
+
+  }
