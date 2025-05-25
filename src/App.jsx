@@ -9,6 +9,7 @@ import signin from "./component/signin";
 import StudentDashboard from "./pages/StudentDashboard";
 import Login from "./pages/Login";
 import InternshipLandingPage from "./pages/InternshipLandingpage";
+import EmployeeDashboard from "./pages/EmployeeDashboard";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/job" element={<StudentDashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/post" element={<Jobpostform />} />
+        <Route path="/emp" element={<EmployeeDashboard />} />
       </Routes>
     </Router>
   );
