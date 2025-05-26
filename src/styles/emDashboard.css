@@ -43,7 +43,7 @@ ul li:hover {
   color: black;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   margin-right: 90px;
 }
 
@@ -156,13 +156,13 @@ ul li:hover {
 
 .image-section .styled-image2 {
   position: absolute;
-  top: 0; /* Explicitly set top to align with the section */
+  top: 0; 
   right: 0;
   width: 60%;
-  height: 100vh; /* Reduced from 100vh to prevent excessive height */
+  height: 100vh; 
   object-fit: cover;
   clip-path: polygon(60% 40%, 120% 0, 100% 100%, 30% 100%);
-  z-index: 1; /* Lowered z-index to avoid overlapping text */
+  z-index: 1; 
 }
 
 .image-section .styled-image1 {
@@ -185,7 +185,7 @@ ul li:hover {
 
   .logo {
     width: 100px;
-    padding: 0px 10px;
+    padding: 0px 15px;
   }
 
   ul {
