@@ -14,31 +14,40 @@ const Login = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:5000/authlog/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(credentials),
-      });
+  try {
+    const response = await fetch("http://localhost:5000/authlog/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(credentials),
+    });
 
-      const data = await response.json();
+    const data = await response.json();
 
-      if (response.ok) {
-        alert("Login successful!");
-        console.log(data);
-        // redirect or save token here
+    if (response.ok) {
+      alert("Login successful!");
+      console.log(data);
+
+      // Redirect based on role
+      if (data.user.role === "student") {
+        navigate("/student-dashboard");
+      } else if (data.user.role === "employee") {
+        navigate("/employee-dashboard");
       } else {
-        alert(`Error: ${data.message}`);
+        alert("Unknown user role");
       }
-    } catch (error) {
-      console.error("Login error:", error);
-      alert("Something went wrong during login.");
+    } else {
+      alert(`Error: ${data.message}`);
     }
-  };
+  } catch (error) {
+    console.error("Login error:", error);
+    alert("Something went wrong during login.");
+  }
+};
+
 
   return (
     <div className="Login-page">
