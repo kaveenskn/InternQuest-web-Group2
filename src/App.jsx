@@ -3,15 +3,14 @@ import "./App.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./component/Dashboard";
 import Form1 from "./pages/Form1";
-import CardsSection from "./component/Cardsectionstd";
-import Jobpostform from "./component/JobPostForm";
+import Jobpostform from "./pages/Jobpostform";
 import signin from "./component/signin";
 import StudentDashboard from "./pages/StudentDashboard";
 import Login from "./pages/Login";
 import InternshipLandingPage from "./pages/InternshipLandingpage";
 
 const App = () => {
-  return (
+  return ( 
 
     <Router>
       <Routes>
