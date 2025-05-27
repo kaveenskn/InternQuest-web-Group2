@@ -28,14 +28,10 @@ const Login = () => {
     const data = await response.json();
 
     if (response.ok) {
-      alert("Login successful!");
-      console.log(data);
-
-      // Redirect based on role
       if (data.user.role === "student") {
-        navigate("/student-dashboard");
+        navigate("/std");
       } else if (data.user.role === "employee") {
-        navigate("/employee-dashboard");
+        navigate("/emp");
       } else {
         alert("Unknown user role");
       }
