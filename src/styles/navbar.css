@@ -11,7 +11,6 @@
   box-sizing: border-box;
   height: 60px;
   position: fixed;
-  /* Keeps navbar fixed to the top */
   top: 0;
   left: 0;
   z-index: 1000;
@@ -30,7 +29,7 @@
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 40px;
   padding: 0;
 }
 
