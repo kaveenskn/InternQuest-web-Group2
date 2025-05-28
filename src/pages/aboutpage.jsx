@@ -47,7 +47,7 @@ const jobData = [
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-500 pb-12">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 pb-12">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center py-16 text-white">
         <div className="mb-4">
