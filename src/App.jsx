@@ -15,6 +15,7 @@ import EmployeeDashboard from "./pages/EmployeeDashboard";
 import InternshipFinder from "./component/InternshipFinder";
 import LoginForm from "./component/LoginForm";
 import cvCreation from "./component/cvCreation";
+import AboutPage from "./pages/aboutpage";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/internships" element={<InternshipFinder />} />
         <Route path="/login-form" element={<LoginForm />} />
         <Route path="/emp" element={<EmployeeDashboard />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </Router>
   );
