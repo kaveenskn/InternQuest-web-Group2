@@ -9,6 +9,8 @@ import Jobpostform from "./component/JobPostForm";
 import signin from "./component/signin";
 import StudentDashboard from "./pages/StudentDashboard";
 import Login from "./pages/Login";
+import InternshipLandingPage from "./pages/InternshipLandingpage";
+import EmployeeDashboard from "./pages/EmployeeDashboard";
 
 import InternshipFinder from "./component/InternshipFinder";
 import LoginForm from "./component/LoginForm";
@@ -18,7 +20,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Dashboard />} /> {/* Default route */}
+        <Route path="/" element={<Dashboard />} />
         <Route path="/signup" element={<Form1 />} />
         <Route path="/job" element={<StudentDashboard />} />
         <Route path="/login" element={<Login />} />
@@ -26,6 +28,7 @@ const App = () => {
         <Route path="/cv-form" element={<cvCreation />} />
         <Route path="/internships" element={<InternshipFinder />} />
         <Route path="/login-form" element={<LoginForm />} />
+        <Route path="/emp" element={<EmployeeDashboard />} />
       </Routes>
     </Router>
   );
