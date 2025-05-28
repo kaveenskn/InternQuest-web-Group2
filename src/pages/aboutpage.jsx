@@ -1,5 +1,23 @@
 import React from "react";
 
+const jobData = [
+  {
+    title: "Senior Frontend Developer",
+    company: "TechCorp Inc.",
+    location: "San Francisco, CA",
+    description:
+      "We are looking for an experienced Frontend Developer to join our dynamic team. You will be responsible for...",
+    type: "Full-time",
+    salaryType: "Salary",
+    applicants: 24,
+    posted: "2 days ago",
+    salary: "$120,000 - $150,000",
+    salaryColor: "text-green-600",
+    companyLink: "#",
+  }
+
+]
+
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-500 pb-12">
