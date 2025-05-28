@@ -14,9 +14,38 @@ const jobData = [
     salary: "$120,000 - $150,000",
     salaryColor: "text-green-600",
     companyLink: "#",
-  }
+  },
 
-]
+  {
+    title: "Product Manager",
+    company: "StartupXYZ",
+    location: "New York, NY",
+    description:
+      "Join our growing startup as a Product Manager. You will lead product development initiatives and work closely...",
+    type: "Full-time",
+    salaryType: "Salary",
+    applicants: 18,
+    posted: "1 week ago",
+    salary: "$100,000 - $130,000",
+    salaryColor: "text-green-600",
+    companyLink: "#",
+  },
+  {
+    title: "UX/UI Designer",
+    company: "Design Studio Pro",
+    location: "Austin, TX",
+    description:
+      "We are seeking a creative UX/UI Designer to create engaging and intuitive user experiences. You will collaborate with...",
+    type: "Contract",
+    salaryType: "Salary",
+    applicants: 31,
+    posted: "3 days ago",
+    salary: "$80,000 - $100,000",
+    salaryColor: "text-green-600",
+    companyLink: "#",
+  },
+];
+
 
 const AboutPage = () => {
   return (
