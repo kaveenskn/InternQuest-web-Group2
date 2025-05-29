@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../assets/logo.png"; // Adjust the path if needed
 
 const jobData = [
   {
@@ -56,35 +55,29 @@ const AboutPage = () => {
     >
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center pt-4 pb-6 text-white w-full">
-        <img
-          src={logo}
-          alt="Logo"
-          className="w-40 h-40 object-contain mx-auto mb-2 drop-shadow-lg"
-          style={{ maxWidth: "170px", maxHeight: "170px" }}
-        />
         <h1 className="text-5xl font-extrabold mb-2 text-center">Job Opportunities</h1>
         <p className="text-lg mb-5 text-center max-w-2xl font-medium">
           Discover amazing career opportunities and find your next dream job
         </p>
         <div className="flex flex-wrap gap-6 text-base justify-center items-center font-semibold">
           <div className="flex items-center gap-2">
-            <span className="material-icons align-middle text-xl">groups</span>
-            4 Active Positions
+            <i className="fi fi-rr-users text-xl font-bold"></i>
+            <span className="font-bold">4</span> Active Positions
           </div>
           <div className="flex items-center gap-2">
-            <span className="material-icons align-middle text-xl">schedule</span>
-            Updated Daily
+            <i className="fi fi-rr-clock text-xl font-bold"></i>
+            <span className="font-bold">Updated Daily</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="material-icons align-middle text-xl">location_on</span>
-            Remote & On-site
+            <i className="fi fi-ts-marker text-xl font-bold"></i>
+            <span className="font-bold">Remote & On-site</span>
           </div>
         </div>
       </section>
 
       {/* Latest Job Postings */}
       <section
-        className="rounded-3xl shadow-2xl px-8 py-7 max-w-6xl w-[97vw] md:w-full -mt-4"
+        className="rounded-3xl shadow-2xl px-8 py-7 max-w-6xl w-[97vw] md:w-full -mt-4 mb-10"
         style={{
           background: "linear-gradient(135deg, #e9f1fa 0%, #f7fafc 100%)",
         }}
@@ -101,7 +94,7 @@ const AboutPage = () => {
                 {job.company}
               </a>
               <div className="flex items-center text-gray-500 text-sm mb-2">
-                <span className="material-icons mr-1 text-base">location_on</span>
+                <i className="fi fi-ts-marker mr-1 text-base"></i>
                 {job.location}
               </div>
               <p className="text-gray-700 mb-4">{job.description}</p>
@@ -111,7 +104,7 @@ const AboutPage = () => {
               </div>
               <div className="flex justify-between items-center text-sm text-gray-500 mt-auto">
                 <span>
-                  <span className="material-icons align-middle text-base">groups</span> {job.applicants} applicants
+                  <i className="fi fi-rr-users align-middle text-base"></i> {job.applicants} applicants
                 </span>
                 <span>{job.posted}</span>
               </div>
