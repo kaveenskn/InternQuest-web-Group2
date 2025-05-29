@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.png"; // Adjust path if needed
+import logo from "../assets/logo.png"; // Adjust the path if needed
 
 const jobData = [
   {
@@ -49,19 +49,24 @@ const jobData = [
 const AboutPage = () => {
   return (
     <div
-      className="min-h-screen pb-12 flex flex-col items-center"
+      className="min-h-screen flex flex-col items-center"
       style={{
-        background: "linear-gradient(135deg, #153b77 0%, #3494e6 100%)",
+        background: "linear-gradient(135deg, #174076 0%, #3494e6 100%)",
       }}
     >
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center py-14 text-white w-full">
-        <img src={logo} alt="Logo" className="h-16 w-16 mb-4" />
-        <h1 className="text-5xl font-extrabold mb-4 text-center">Job Opportunities</h1>
-        <p className="text-xl mb-8 text-center max-w-2xl">
+      <section className="flex flex-col items-center justify-center pt-4 pb-6 text-white w-full">
+        <img
+          src={logo}
+          alt="Logo"
+          className="w-40 h-40 object-contain mx-auto mb-2 drop-shadow-lg"
+          style={{ maxWidth: "170px", maxHeight: "170px" }}
+        />
+        <h1 className="text-5xl font-extrabold mb-2 text-center">Job Opportunities</h1>
+        <p className="text-lg mb-5 text-center max-w-2xl font-medium">
           Discover amazing career opportunities and find your next dream job
         </p>
-        <div className="flex flex-wrap gap-8 text-lg justify-center items-center">
+        <div className="flex flex-wrap gap-6 text-base justify-center items-center font-semibold">
           <div className="flex items-center gap-2">
             <span className="material-icons align-middle text-xl">groups</span>
             4 Active Positions
@@ -79,10 +84,9 @@ const AboutPage = () => {
 
       {/* Latest Job Postings */}
       <section
-        className="rounded-3xl shadow-2xl p-8 max-w-6xl w-full -mt-8"
+        className="rounded-3xl shadow-2xl px-8 py-7 max-w-6xl w-[97vw] md:w-full -mt-4"
         style={{
-          background: "rgba(255,255,255,0.85)", // frosted glass effect for middle box
-          backdropFilter: "blur(6px)",
+          background: "linear-gradient(135deg, #e9f1fa 0%, #f7fafc 100%)",
         }}
       >
         <h2 className="text-3xl font-extrabold text-gray-800 mb-2 text-center">Latest Job Postings</h2>
