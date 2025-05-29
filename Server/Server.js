@@ -12,6 +12,7 @@ app.use(express.json());
 app.use("/auth", Regroute);
 
 const logroutes = require("./routes/Login.js");
+app.use(express.json());
 app.use("/authlog", logroutes);
 
 const PORT = process.env.PORT || 5000;

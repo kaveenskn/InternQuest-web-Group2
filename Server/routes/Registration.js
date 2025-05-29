@@ -2,11 +2,12 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/user.js");
 const Student = require("../models/student.js");
+const Employee = require("../models/employee.js");
 
 const bcrypt = require("bcryptjs");
 
 router.post("/signup", async (req, res) => {
-  const {
+  let {
     fullname,
     email,
     password,
@@ -17,8 +18,10 @@ router.post("/signup", async (req, res) => {
     companyLocation,
   } = req.body;
 
+  email = email.toLowerCase();
+  companyLocation = companyLocation.toLowerCase();
+
   try {
-    // Check if user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.status(400).json({ message: "User already exists" });
@@ -46,12 +49,12 @@ router.post("/signup", async (req, res) => {
       });
       await newStudent.save();
     } else if (role === "employee") {
-      // const newEmployee = new Employee({
-      //   user: savedUser._id,
-      //   companyName,
-      //   companyLocation,
-      // });
-      // await newEmployee.save();
+      const newEmployee = new Employee({
+        user: savedUser._id,
+        companyName,
+        companyLocation,
+      });
+      await newEmployee.save();
       console.log("saved to employee");
     }
 

@@ -1,0 +1,118 @@
+/* ProfileForm.css */
+.profile-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-form input,
+.profile-form textarea {
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #90caf9;
+  border-radius: 6px;
+  font-size: 0.95em;
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+
+.profile-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+
+.add-skill {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.add-skill input {
+  flex: 1;
+}
+
+.add-skill button {
+  padding: 8px 12px;
+  background: #0277bd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.skill-tag{
+  display: inline-flex;
+  align-items: center;
+  background: #e1f5fe;
+  color: #0277bd;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.95em;
+  font-weight: 500;
+ 
+}
+.skill-tag button {
+  background:  #0277bd;
+  border: none;
+  color: #feffff;
+  font-size: 2em;
+  margin-left: 6px;
+  padding: 0;
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #1565c0;
+  color: white;
+  padding: 10px 14px;
+  font-size: 0.95em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.save-message {
+  color: #2e7d32;
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .profile-panel {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .profile-form form {
+    width: 100%;
+  }
+
+  .profile-form input,
+  .profile-form textarea {
+    width: 100%;
+  }
+
+  .add-skill {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .add-skill input,
+  .add-skill button {
+    width: 100%;
+  }
+}
