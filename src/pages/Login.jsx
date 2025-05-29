@@ -26,6 +26,7 @@ const Login = () => {
     });
 
     const data = await response.json();
+    localStorage.setItem('userEmail', response.data.email);
 
     if (response.ok) {
       if (data.user.role === "student") {
