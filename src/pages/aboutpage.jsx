@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/logo.png"; // Adjust path if needed
 
 const jobData = [
   {
@@ -47,16 +48,15 @@ const jobData = [
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen pb-12 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-500">
+    <div
+      className="min-h-screen pb-12 flex flex-col items-center"
+      style={{
+        background: "linear-gradient(135deg, #153b77 0%, #3494e6 100%)",
+      }}
+    >
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center py-16 text-white">
-        <div className="mb-4">
-          {/* Bag Icon */}
-          <svg className="h-20 w-20 text-white opacity-90" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-            <rect x="4" y="7" width="16" height="13" rx="4" fill="none" />
-            <path d="M8 7V5a4 4 0 1 1 8 0v2" stroke="currentColor" strokeWidth="2.5" />
-          </svg>
-        </div>
+      <section className="flex flex-col items-center justify-center py-14 text-white w-full">
+        <img src={logo} alt="Logo" className="h-16 w-16 mb-4" />
         <h1 className="text-5xl font-extrabold mb-4 text-center">Job Opportunities</h1>
         <p className="text-xl mb-8 text-center max-w-2xl">
           Discover amazing career opportunities and find your next dream job
@@ -78,7 +78,13 @@ const AboutPage = () => {
       </section>
 
       {/* Latest Job Postings */}
-      <section className="bg-white rounded-t-3xl shadow-lg p-8 max-w-6xl mx-auto w-full -mt-8">
+      <section
+        className="rounded-3xl shadow-2xl p-8 max-w-6xl w-full -mt-8"
+        style={{
+          background: "rgba(255,255,255,0.85)", // frosted glass effect for middle box
+          backdropFilter: "blur(6px)",
+        }}
+      >
         <h2 className="text-3xl font-extrabold text-gray-800 mb-2 text-center">Latest Job Postings</h2>
         <p className="text-gray-600 text-center mb-8">
           Browse through our curated list of job opportunities from top companies
