@@ -69,7 +69,7 @@ const AboutPage = () => {
             <span className="font-bold">Updated Daily</span>
           </div>
           <div className="flex items-center gap-2">
-            <i className="fi fi-rr-marker text-xl font-bold"></i>
+            <i className="fi fi-rs-marker text-xl font-bold"></i>
             <span className="font-bold">Remote & On-site</span>
           </div>
         </div>
