@@ -1,154 +1,101 @@
-import React, { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import React from "react";
+import { FaCalendarAlt } from "react-icons/fa";
 
-const internships = [
-  {
-    id: 1,
-    title: "Software Engineering Intern",
-    company: "Google",
-    location: "Mountain View, CA",
-    type: "Summer Internship",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-    posted: "2 days ago",
-  },
-  {
-    id: 2,
-    title: "UX Design Intern",
-    company: "Apple",
-    location: "Cupertino, CA",
-    type: "Fall Internship",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
-    posted: "1 week ago",
-  },
-];
-
-const locations = ["Mountain View, CA", "Cupertino, CA"];
-const jobTypes = ["Summer Internship", "Fall Internship"];
-const companies = ["Google", "Apple"];
-
-const InternshipFinderPage = () => {
-  const [search, setSearch] = useState("");
-  const [location, setLocation] = useState("");
-  const [jobType, setJobType] = useState("");
-  const [company, setCompany] = useState("");
-
-  const filtered = internships.filter((i) =>
-    i.title.toLowerCase().includes(search.toLowerCase()) &&
-    (location ? i.location === location : true) &&
-    (jobType ? i.type === jobType : true) &&
-    (company ? i.company === company : true)
-  );
-
+const JobPostForm = () => {
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center py-10 px-2"
+      className="min-h-screen flex items-center justify-center"
       style={{
-        background: "linear-gradient(135deg, #224497 0%, #3494e6 100%)"
+        background: "linear-gradient(120deg, #2238A4 0%, #224497 50%, #3494e6 100%)",
       }}
     >
-      <div className="bg-white bg-opacity-90 rounded-2xl shadow-2xl p-8 w-full max-w-md md:max-w-2xl">
-        <h1 className="text-2xl md:text-3xl font-bold text-blue-900 text-center mb-2">
-          Find Your Perfect Internship
-        </h1>
-        <p className="text-center text-gray-600 mb-8">
-          Browse through our curated list of internship opportunities
+      <form
+        className="w-full max-w-md md:max-w-lg bg-white/30 backdrop-blur-lg shadow-2xl rounded-3xl px-8 py-10 mx-2 flex flex-col gap-5 border border-white/30"
+        style={{
+          boxShadow: "0 8px 40px 0 rgba(34,68,151,0.25)",
+        }}
+      >
+        <h2 className="text-2xl md:text-3xl font-extrabold text-center text-white mb-1 drop-shadow">
+          Create a New Job Posting
+        </h2>
+        <p className="text-center text-blue-100 mb-4 text-base">
+          Fill in the details to post a new job opportunity
         </p>
 
-        {/* Search and Filters */}
-        <div className="bg-gray-50 rounded-xl p-4 mb-8 border">
-          <div className="flex items-center gap-3 mb-4">
-            <FaSearch className="text-gray-400 text-lg ml-2" />
-            <input
-              type="text"
-              placeholder="Search internships by title or keyword"
-              className="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 bg-white"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
+        {/* Job Title */}
+        <div>
+          <label className="block text-white font-semibold mb-1">Job Title*</label>
+          <select className="w-full rounded-lg border-none bg-white/60 text-gray-800 px-4 py-2 focus:ring-2 focus:ring-blue-300 transition">
+            <option value="">Select job title</option>
+            <option>Software Engineer</option>
+            <option>UI/UX Designer</option>
+            <option>Product Manager</option>
+          </select>
+        </div>
+
+        {/* Row: Location & Type */}
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex-1">
+            <label className="block text-white font-semibold mb-1">Job Location*</label>
+            <select className="w-full rounded-lg border-none bg-white/60 text-gray-800 px-4 py-2 focus:ring-2 focus:ring-blue-300 transition">
+              <option value="">Select location</option>
+              <option>Remote</option>
+              <option>New York</option>
+              <option>San Francisco</option>
+            </select>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 items-center">
-            <div className="flex flex-col flex-1 min-w-[170px]">
-              <span className="text-blue-800 font-semibold mb-1">Location</span>
-              <select
-                className="rounded border border-gray-300 px-3 py-2 bg-white"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-              >
-                <option value="">Select location</option>
-                {locations.map((loc) => (
-                  <option key={loc} value={loc}>{loc}</option>
-                ))}
-              </select>
-            </div>
-            <div className="flex flex-col flex-1 min-w-[170px]">
-              <span className="text-blue-800 font-semibold mb-1">Job Type</span>
-              <select
-                className="rounded border border-gray-300 px-3 py-2 bg-white"
-                value={jobType}
-                onChange={(e) => setJobType(e.target.value)}
-              >
-                <option value="">Select job type</option>
-                {jobTypes.map((type) => (
-                  <option key={type} value={type}>{type}</option>
-                ))}
-              </select>
-            </div>
-            <div className="flex flex-col flex-1 min-w-[170px]">
-              <span className="text-blue-800 font-semibold mb-1">Company</span>
-              <select
-                className="rounded border border-gray-300 px-3 py-2 bg-white"
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
-              >
-                <option value="">Select company</option>
-                {companies.map((comp) => (
-                  <option key={comp} value={comp}>{comp}</option>
-                ))}
-              </select>
-            </div>
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition mt-4 md:mt-0">
-              Search Internships
-            </button>
+          <div className="flex-1">
+            <label className="block text-white font-semibold mb-1">Job Type*</label>
+            <select className="w-full rounded-lg border-none bg-white/60 text-gray-800 px-4 py-2 focus:ring-2 focus:ring-blue-300 transition">
+              <option value="">Select job type</option>
+              <option>Full-time</option>
+              <option>Part-time</option>
+              <option>Internship</option>
+            </select>
           </div>
         </div>
 
-        {/* Results */}
-        <div className="text-center font-semibold mb-6">
-          {filtered.length} results found
+        {/* Application Deadline */}
+        <div>
+          <label className="block text-white font-semibold mb-1">Application Deadline*</label>
+          <div className="relative">
+            <input
+              type="date"
+              className="w-full rounded-lg border-none bg-white/60 text-gray-800 px-4 py-2 focus:ring-2 focus:ring-blue-300 transition pr-10"
+              placeholder="mm / dd / yyyy"
+            />
+            <FaCalendarAlt className="absolute right-3 top-1/2 -translate-y-1/2 text-blue-400 pointer-events-none" />
+          </div>
         </div>
-        <div className="flex flex-wrap gap-6 justify-center">
-          {filtered.map((i) => (
-            <div
-              key={i.id}
-              className="flex bg-white border border-gray-200 rounded-xl shadow p-5 min-w-[280px] max-w-[350px] items-start gap-4"
-            >
-              <img
-                src={i.logo}
-                alt={i.company}
-                className="w-12 h-12 object-contain rounded-lg bg-gray-100"
-              />
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="font-semibold text-blue-700 hover:underline cursor-pointer">
-                    {i.title}
-                  </span>
-                  <span className="bg-gray-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded ml-2">
-                    {i.type}
-                  </span>
-                </div>
-                <div className="text-gray-800 text-sm font-medium">{i.company}</div>
-                <div className="text-gray-500 text-xs flex items-center gap-2 mt-1">
-                  <span>📍 {i.location}</span>
-                  <span>•</span>
-                  <span>Posted {i.posted}</span>
-                </div>
-              </div>
-            </div>
-          ))}
+
+        {/* Job Description */}
+        <div>
+          <label className="block text-white font-semibold mb-1">Job Description*</label>
+          <textarea
+            rows={4}
+            className="w-full rounded-lg border-none bg-white/60 text-gray-800 px-4 py-2 focus:ring-2 focus:ring-blue-300 transition resize-none"
+            placeholder="Describe the job responsibilities, requirements, benefits, etc."
+          />
         </div>
-      </div>
+
+        {/* Buttons */}
+        <div className="flex gap-4 mt-2">
+          <button
+            type="reset"
+            className="flex-1 bg-white/40 text-white font-semibold py-2 rounded-full hover:bg-white/60 transition"
+          >
+            Clear Form
+          </button>
+          <button
+            type="submit"
+            className="flex-1 bg-gradient-to-r from-blue-600 to-blue-400 text-white font-bold py-2 rounded-full shadow-md hover:from-blue-700 hover:to-blue-500 transition"
+          >
+            Post Job
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
 
-export default InternshipFinderPage;
+export default JobPostForm;
