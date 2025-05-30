@@ -31,14 +31,7 @@ const Navbar = () => (
   <nav className="w-full bg-white shadow-sm sticky top-0 z-10">
     <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-6">
       <div className="flex items-center gap-2">
-        <div className="bg-blue-600 rounded-lg p-1">
-          <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-            <rect width="20" height="20" x="2" y="2" rx="5" fill="#fff"/>
-            <rect width="20" height="20" x="2" y="2" rx="5" stroke="#2563eb" strokeWidth="2"/>
-            <rect width="10" height="4" x="7" y="10" rx="2" fill="#2563eb"/>
-          </svg>
-        </div>
-        <span className="text-2xl font-bold text-blue-700 tracking-tight">InternMatch</span>
+        <span className="text-2xl font-bold text-blue-700 tracking-tight">InternQuest</span>
       </div>
       <ul className="hidden md:flex gap-8 items-center font-medium text-gray-700">
         <li><a href="/" className="hover:text-blue-700">Home</a></li>
@@ -68,9 +61,7 @@ const InternshipFinderPage = () => {
   );
 
   return (
-    <div
-      className="min-h-screen bg-gradient-to-tr from-[#2238A4] via-[#224497] to-[#3494e6] pb-10"
-    >
+    <div className="min-h-screen bg-gradient-to-tr from-[#2238A4] via-[#224497] to-[#3494e6] pb-10">
       <Navbar />
       <main className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="pt-12 pb-6">
@@ -147,19 +138,22 @@ const InternshipFinderPage = () => {
         </div>
 
         {/* Results */}
-        <div className="text-gray-700 font-semibold mb-4">
+        <div className="text-center text-white font-semibold mb-6">
           {filtered.length} results found
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {filtered.map((i) => (
             <div
               key={i.id}
-              className="flex flex-1 min-w-[340px] bg-white border border-gray-200 rounded-xl shadow p-5 gap-4"
+              className="flex flex-1 min-w-[340px] max-w-[400px] bg-gradient-to-br from-white/90 via-blue-50 to-blue-100 border border-blue-200 rounded-2xl shadow-lg p-6 gap-4 transition-transform hover:scale-105"
+              style={{
+                boxShadow: "0 4px 32px 0 rgba(34,68,151,0.13)",
+              }}
             >
               <img
                 src={i.logo}
                 alt={i.company}
-                className="w-12 h-12 object-contain rounded-lg bg-gray-100"
+                className="w-12 h-12 object-contain rounded-lg bg-white shadow"
               />
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
