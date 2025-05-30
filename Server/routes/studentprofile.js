@@ -3,10 +3,9 @@ const router = express.Router();
 const {
   getStudentProfile,
   updateStudentProfile,
-} = require("../controllers/studentController");
-const authenticate = require("../middleware/auth");
+} = require("../controller/studentprofilecontrol");
 
-router.get("/profile", authenticate, getStudentProfile);
-router.put("/profile", authenticate, updateStudentProfile);
+router.get("/profile", getStudentProfile);
+router.put("/profile", updateStudentProfile);
 
 module.exports = router;

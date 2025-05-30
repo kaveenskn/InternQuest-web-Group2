@@ -41,7 +41,11 @@ const ProfileEditForm = ({
         <label>Email</label>
         <input type="email" name="email" value={profile.email} onChange={handleChange} />
         <label>Phone</label>
-        <input type="number" name="phone" value={profile.phone} onChange={handleChange} oninput="this.value = this.value.slice(0, 10)" pattern="\d*" inputmode="numeric" />
+        <input
+  type="text"
+  value={profile.phone}  
+  onChange={(e) => setProfile({ ...profile, phone: e.target.value })} maxLength={10}
+/>
         <label>GitHub Link</label>
         <input type="text" name="githubLink" value={profile.githubLink} onChange={handleChange} />
         <label>Location</label>

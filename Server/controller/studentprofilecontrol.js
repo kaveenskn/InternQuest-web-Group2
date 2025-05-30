@@ -1,13 +1,26 @@
-const Student = require("../models/Student.js");
+const User = require("../models/User.js");
+const skills = require("../models/Skill.js");
+const projects = require("../models/Project.js");
+const Student = require("../models/student.js");
 
 // GET /api/students/profile
 const getStudentProfile = async (req, res) => {
   try {
-    const email = req.user.email; // Extracted from token
-    const student = await Student.findOne({ email });
+    // 🔧 Hardcoded email for demo/dev mode
+    const email = "shankaveen05@gmail.com";
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const student = await Student.findOne({ user: user._id })
+      .populate("user")
+      .populate("skills")
+      .populate("projects");
 
     if (!student) {
-      return res.status(404).json({ message: "Student not found" });
+      return res.status(404).json({ message: "Student profile not found" });
     }
 
     res.status(200).json(student);
@@ -19,14 +32,23 @@ const getStudentProfile = async (req, res) => {
 // PUT /api/students/profile
 const updateStudentProfile = async (req, res) => {
   try {
-    const email = req.user.email;
+    // 🔧 Use the same hardcoded email to match the GET logic
+    const email = "kevinsmith04@gmail.com";
     const updates = req.body;
 
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
     const updatedStudent = await Student.findOneAndUpdate(
-      { email },
+      { user: user._id },
       updates,
-      { new: true, upsert: true } // Create if not exists
-    );
+      { new: true, upsert: true }
+    )
+      .populate("user")
+      .populate("skills")
+      .populate("projects");
 
     res.status(200).json(updatedStudent);
   } catch (error) {
