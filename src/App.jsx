@@ -41,7 +41,7 @@ const Navbar = () => (
       </ul>
       <div className="flex gap-2">
         <button className="px-4 py-1.5 rounded font-semibold border border-blue-600 text-blue-700 hover:bg-blue-50">Sign In</button>
-        <button className="px-4 py-1.5 rounded font-semibold bg-blue-6 text-white hover:bg-blue-7">Sign Up</button>
+        <button className="px-4 py-1.5 rounded font-semibold bg-blue-600 text-white hover:bg-blue-700">Sign Up</button>
       </div>
     </div>
   </nav>
@@ -61,9 +61,7 @@ const InternshipFinderPage = () => {
   );
 
   return (
-    <div
-      className="min-h-screen bg-gradient-to-tr from-[#2238A4] via-[#224497] to-[#3494e6] pb-10"
-    >
+    <div className="min-h-screen bg-gradient-to-tr from-[#2238A4] via-[#224497] to-[#3494e6] pb-10">
       <Navbar />
       <main className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="pt-12 pb-6">
@@ -104,7 +102,7 @@ const InternshipFinderPage = () => {
               </select>
             </div>
             <div className="flex flex-col flex-1 min-w-[170px]">
-              <label className="text-gray-9 font-semibold mb-1 flex items-center gap-1">
+              <label className="text-gray-900 font-semibold mb-1 flex items-center gap-1">
                 <HiOutlineBriefcase className="inline text-gray-900" /> Job Type
               </label>
               <select
@@ -147,12 +145,15 @@ const InternshipFinderPage = () => {
           {filtered.map((i) => (
             <div
               key={i.id}
-              className="flex flex-1 min-w-[340px] max-w-[400px] bg-white border border-gray-200 rounded-xl shadow p-5 gap-4"
+              className="flex flex-1 min-w-[340px] max-w-[400px] bg-gradient-to-br from-white/90 via-blue-50 to-blue-100 border border-blue-200 rounded-2xl shadow-lg p-6 gap-4 transition-transform hover:scale-105"
+              style={{
+                boxShadow: "0 4px 32px 0 rgba(34,68,151,0.13)",
+              }}
             >
               <img
                 src={i.logo}
                 alt={i.company}
-                className="w-12 h-12 object-contain rounded-lg bg-gray-100"
+                className="w-12 h-12 object-contain rounded-lg bg-white shadow"
               />
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
