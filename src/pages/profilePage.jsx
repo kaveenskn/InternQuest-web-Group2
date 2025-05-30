@@ -26,8 +26,12 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const email = "someone@example.com";  // your test email
-        const res = await axios.get(`/api/students/profile?email=${encodeURIComponent(email)}`);
+        const token = localStorage.getItem('token');
+        const res = await axios.get(`/api/students/profile`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
         const data = res.data;
 
         if (data) {

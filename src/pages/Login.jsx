@@ -26,8 +26,16 @@ const Login = () => {
     });
 
     const data = await response.json();
+    
 
     if (response.ok) {
+       const token = data.token;          
+    const userEmail = data.email;   
+
+    localStorage.setItem('token', token);
+    localStorage.setItem('email', userEmail);
+
+
       if (data.user.role === "student") {
         navigate("/std");
       } else if (data.user.role === "employee") {
