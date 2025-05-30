@@ -12,7 +12,7 @@ import Login from "./pages/Login";
 import InternshipLandingPage from "./pages/InternshipLandingpage";
 import EmployeeDashboard from "./pages/EmployeeDashboard";
 
-import InternshipFinder from "./component/InternshipFinder";
+import InternshipFinderPage from "./pages/internshipFinderPage";
 import LoginForm from "./component/LoginForm";
 import cvCreation from "./component/cvCreation";
 import AboutPage from "./pages/aboutpage";
@@ -27,7 +27,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/post" element={<Jobpostform />} />
         <Route path="/cv-form" element={<cvCreation />} />
-        <Route path="/internships" element={<InternshipFinder />} />
+        <Route path="/internships" element={<InternshipFinderPage />} />
         <Route path="/login-form" element={<LoginForm />} />
         <Route path="/emp" element={<EmployeeDashboard />} />
         <Route path="/about" element={<AboutPage />} />
