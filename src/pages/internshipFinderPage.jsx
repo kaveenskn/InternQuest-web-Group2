@@ -40,15 +40,21 @@ const InternshipFinderPage = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10 px-2">
-      <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-5xl">
-        <h1 className="text-3xl md:text-4xl font-bold text-blue-700 text-center mb-2">
+    <div
+      className="min-h-screen flex flex-col items-center justify-center py-10 px-2"
+      style={{
+        background: "linear-gradient(135deg, #224497 0%, #3494e6 100%)"
+      }}
+    >
+      <div className="bg-white bg-opacity-90 rounded-2xl shadow-2xl p-8 w-full max-w-md md:max-w-2xl">
+        <h1 className="text-2xl md:text-3xl font-bold text-blue-900 text-center mb-2">
           Find Your Perfect Internship
         </h1>
         <p className="text-center text-gray-600 mb-8">
           Browse through our curated list of internship opportunities
         </p>
 
+        {/* Search and Filters */}
         <div className="bg-gray-50 rounded-xl p-4 mb-8 border">
           <div className="flex items-center gap-3 mb-4">
             <FaSearch className="text-gray-400 text-lg ml-2" />
@@ -100,12 +106,13 @@ const InternshipFinderPage = () => {
                 ))}
               </select>
             </div>
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition mt-4 md:mt-0">
               Search Internships
             </button>
           </div>
         </div>
 
+        {/* Results */}
         <div className="text-center font-semibold mb-6">
           {filtered.length} results found
         </div>
@@ -113,7 +120,7 @@ const InternshipFinderPage = () => {
           {filtered.map((i) => (
             <div
               key={i.id}
-              className="flex bg-white border border-gray-200 rounded-xl shadow p-5 min-w-[320px] max-w-[370px] items-start gap-4"
+              className="flex bg-white border border-gray-200 rounded-xl shadow p-5 min-w-[280px] max-w-[350px] items-start gap-4"
             >
               <img
                 src={i.logo}
