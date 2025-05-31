@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaSearch, FaMapMarkerAlt, FaBuilding } from "react-icons/fa";
+import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
 import { HiOutlineBriefcase } from "react-icons/hi";
 import "../styles/internshipFinderPage.css";
 
@@ -7,26 +7,25 @@ const internships = [
   {
     id: 1,
     title: "Software Engineering Intern",
-    company: "Google",
     location: "Mountain View, CA",
     type: "Summer Internship",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    deadline: "2025-06-15",
+    description: "Assist in developing web applications and collaborating with the engineering team.",
     posted: "2 days ago"
   },
   {
     id: 2,
     title: "UX Design Intern",
-    company: "Apple",
     location: "Cupertino, CA",
     type: "Fall Internship",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    deadline: "2025-07-01",
+    description: "Work with the design team to create user-friendly interfaces and conduct user research.",
     posted: "1 week ago"
   }
 ];
 
 const locations = ["Mountain View, CA", "Cupertino, CA"];
 const jobTypes = ["Summer Internship", "Fall Internship"];
-const companies = ["Google", "Apple"];
 
 const Navbar = () => (
   <nav className="intern-navbar">
@@ -52,13 +51,11 @@ const InternshipFinderPage = () => {
   const [search, setSearch] = useState("");
   const [location, setLocation] = useState("");
   const [jobType, setJobType] = useState("");
-  const [company, setCompany] = useState("");
 
   const filtered = internships.filter((i) =>
     i.title.toLowerCase().includes(search.toLowerCase()) &&
     (location ? i.location === location : true) &&
-    (jobType ? i.type === jobType : true) &&
-    (company ? i.company === company : true)
+    (jobType ? i.type === jobType : true)
   );
 
   return (
@@ -115,21 +112,6 @@ const InternshipFinderPage = () => {
                 ))}
               </select>
             </div>
-            <div className="filter-col">
-              <label className="filter-label">
-                <FaBuilding className="filter-icon" /> Company
-              </label>
-              <select
-                className="filter-select"
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
-              >
-                <option value="">Select company</option>
-                {companies.map((comp) => (
-                  <option key={comp} value={comp}>{comp}</option>
-                ))}
-              </select>
-            </div>
             <button className="search-btn">
               Search Internships
             </button>
@@ -142,27 +124,20 @@ const InternshipFinderPage = () => {
         </div>
         <div className="results-grid">
           {filtered.map((i) => (
-            <div
-              key={i.id}
-              className="intern-card"
-            >
-              <img
-                src={i.logo}
-                alt={i.company}
-                className="card-logo"
-              />
+            <div key={i.id} className="intern-card">
               <div className="card-content">
                 <div className="card-title-row">
                   <span className="card-title">{i.title}</span>
                   <span className="card-type">{i.type}</span>
                 </div>
-                <div className="card-company">{i.company}</div>
                 <div className="card-meta">
-                  <span>
-                    <FaMapMarkerAlt className="card-meta-icon" /> {i.location}
-                  </span>
-                  <span className="dot">•</span>
-                  <span>Posted {i.posted}</span>
+                  <FaMapMarkerAlt className="card-meta-icon" /> {i.location}
+                </div>
+                <div className="card-deadline">
+                  <strong>Deadline:</strong> {i.deadline}
+                </div>
+                <div className="card-desc">
+                  {i.description}
                 </div>
               </div>
             </div>
