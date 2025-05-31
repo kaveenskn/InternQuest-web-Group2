@@ -27,26 +27,6 @@ const internships = [
 const locations = ["Mountain View, CA", "Cupertino, CA"];
 const jobTypes = ["Summer Internship", "Fall Internship"];
 
-const Navbar = () => (
-  <nav className="intern-navbar">
-    <div className="navbar-container">
-      <div className="navbar-brand">
-        <span className="navbar-logo">InternQuest</span>
-      </div>
-      <ul className="navbar-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/internships" className="active">Find Internships</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-      <div className="navbar-auth">
-        <button className="btn-signin">Sign In</button>
-        <button className="btn-signup">Sign Up</button>
-      </div>
-    </div>
-  </nav>
-);
-
 const InternshipFinderPage = () => {
   const [search, setSearch] = useState("");
   const [location, setLocation] = useState("");
@@ -60,7 +40,6 @@ const InternshipFinderPage = () => {
 
   return (
     <div className="intern-page">
-      <Navbar />
       <main className="intern-main">
         <div className="intern-header">
           <h1>Find Your Perfect Internship</h1>
@@ -88,7 +67,7 @@ const InternshipFinderPage = () => {
               </label>
               <select
                 className="filter-select"
-                value={location}
+                value=""
                 onChange={(e) => setLocation(e.target.value)}
               >
                 <option value="">Select location</option>
@@ -103,7 +82,7 @@ const InternshipFinderPage = () => {
               </label>
               <select
                 className="filter-select"
-                value={jobType}
+                value=""
                 onChange={(e) => setJobType(e.target.value)}
               >
                 <option value="">Select job type</option>
