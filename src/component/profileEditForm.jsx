@@ -36,7 +36,7 @@ const ProfileEditForm = ({
       <form>
         <label>Full Name</label>
         <input type="text" name="fullName" value={profile.fullName} onChange={handleChange} />
-        <label>Field of Study</label>
+        <label>Course of Study</label>
         <input type="text" name="course_of_study" value={profile.course_of_study} onChange={handleChange} />
         <label>Email</label>
         <input type="email" name="email" value={profile.email} onChange={handleChange} />
@@ -50,7 +50,7 @@ const ProfileEditForm = ({
         <input type="text" name="githubLink" value={profile.githubLink} onChange={handleChange} />
         <label>Location</label>
         <input type="text" name="universityLocation" value={profile.universityLocation} onChange={handleChange} />
-        <label>Education</label>
+        <label>universityName</label>
         <input type="text" name="universityName" value={profile.universityName} onChange={handleChange} />
 
         <label>Add Skill</label>

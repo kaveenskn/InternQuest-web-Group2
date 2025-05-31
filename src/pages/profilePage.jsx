@@ -27,14 +27,14 @@ const ProfilePage = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get(`/api/students/profile`, {
+        const res = await axios.get('http://localhost:5000/api/students/profile', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
 
         const data = res.data;
-
+         alert("got data: " + error.message);
         if (data) {
           setProfile({
               fullname: data.user?.name || data.fullname || '',
@@ -55,11 +55,12 @@ const ProfilePage = () => {
         }
       } catch (error) {
         console.error('Error fetching profile:', error);
+        alert("can not connect: " + error.message);
         setProfile(emptyProfile);
         setProjects([]);
+       
       }
     };
-
     fetchProfile();
   }, []);
 
@@ -67,10 +68,10 @@ const ProfilePage = () => {
     try {
       const token = localStorage.getItem('token');
 
-      const res = await axios.put('/api/students/profile', {
+      const res = await axios.put('http://localhost:5000/api/students/profile', {
         fullname: profile.fullname,
         universityName: profile.universityName,
-        universityLocation: profile.universityLocation,
+        universityLocation: profile.universityLocation, 
         course_of_study: profile.course_of_study,
         phone: profile.phone,
         github_link: profile.github_link,
@@ -100,8 +101,10 @@ const ProfilePage = () => {
       setProjects(updated.projects?.length ? updated.projects : projects);
 
       setMessage('Profile saved successfully!');
+      alert('Profile saved successfully!');
     } catch (err) {
-      setMessage('Error saving profile: ' + err.message);
+      setMessage('Error saving profileaaaa: ' + err.message);
+      alert("errors many")
     }
 
     setTimeout(() => setMessage(''), 3000);

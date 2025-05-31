@@ -1,13 +1,11 @@
+const Student = require("../models/student.js");
 const User = require("../models/User.js");
 const skills = require("../models/Skill.js");
 const projects = require("../models/Project.js");
-const Student = require("../models/student.js");
 
-// GET /api/students/profile
 const getStudentProfile = async (req, res) => {
   try {
-    // 🔧 Hardcoded email for demo/dev mode
-    const email = "shankaveen05@gmail.com";
+    const email = req.user.email;
 
     const user = await User.findOne({ email });
     if (!user) {
@@ -32,8 +30,7 @@ const getStudentProfile = async (req, res) => {
 // PUT /api/students/profile
 const updateStudentProfile = async (req, res) => {
   try {
-    // 🔧 Use the same hardcoded email to match the GET logic
-    const email = "kevinsmith04@gmail.com";
+    const email = req.user.email; // ✅ Use token-based email
     const updates = req.body;
 
     const user = await User.findOne({ email });
@@ -45,10 +42,7 @@ const updateStudentProfile = async (req, res) => {
       { user: user._id },
       updates,
       { new: true, upsert: true }
-    )
-      .populate("user")
-      .populate("skills")
-      .populate("projects");
+    );
 
     res.status(200).json(updatedStudent);
   } catch (error) {
