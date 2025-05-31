@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/aboutPage.css"; // Adjust path if needed
+import "../styles/aboutPage.css";
 
 const jobData = [
   {
@@ -48,59 +48,62 @@ const jobData = [
 
 const AboutPage = () => {
   return (
-    <div className="about-page">
+    <div className="about-bg">
       {/* Hero Section */}
-      <section className="hero-section">
+      <section className="about-hero">
         <h1>Job Opportunities</h1>
-        <p className="hero-subtitle">
+        <p className="about-hero-subtitle">
           Discover amazing career opportunities and find your next dream job
         </p>
-        <div className="stats-container">
-          <div className="stat-item">
+        <div className="about-stats-row">
+          <div className="about-stat">
             <i className="fi fi-rr-users"></i>
-            <span>4</span> Active Positions
+            <span className="about-stat-main">4</span>
+            <span>Active Positions</span>
           </div>
-          <div className="stat-item">
+          <div className="about-stat">
             <i className="fi fi-rr-clock"></i>
+            <span className="about-stat-main"></span>
             <span>Updated Daily</span>
           </div>
-          <div className="stat-item">
-            <i className="fi fi-rs-marker"></i>
+          <div className="about-stat">
+            <i className="fi fi-rr-marker"></i>
+            <span className="about-stat-main"></span>
             <span>Remote & On-site</span>
           </div>
         </div>
       </section>
 
-      {/* Latest Job Postings */}
-      <section className="job-postings">
+      {/* Card Container for Job Postings */}
+      <section className="about-job-container">
         <h2>Latest Job Postings</h2>
-        <p className="job-subtitle">
+        <p className="about-job-subtitle">
           Browse through our curated list of job opportunities from top companies
         </p>
-        <div className="jobs-grid">
+        <div className="about-job-grid">
           {jobData.map((job, idx) => (
-            <div key={idx} className="job-card">
+            <div key={idx} className="about-job-card">
               <h3>{job.title}</h3>
-              <a href={job.companyLink} className="company-link">
+              <a href={job.companyLink} className="about-company-link">
                 {job.company}
               </a>
-              <div className="job-location">
-                <i className="fi fi-ts-marker"></i>
+              <div className="about-job-location">
+                <i className="fi fi-rr-marker"></i>
                 {job.location}
               </div>
-              <p className="job-description">{job.description}</p>
-              <div className="job-tags">
-                <span className="job-type">{job.type}</span>
-                <span className="salary-type">{job.salaryType}</span>
+              <p className="about-job-desc">{job.description}</p>
+              <div className="about-job-tags">
+                <span className="about-job-type">{job.type}</span>
+                <span className="about-salary-type">{job.salaryType}</span>
               </div>
-              <div className="job-meta">
+              <div className="about-job-meta">
                 <span>
                   <i className="fi fi-rr-users"></i> {job.applicants} applicants
                 </span>
                 <span>{job.posted}</span>
               </div>
-              <div className="job-salary">
-                Salary Range: <span className="salary-green">{job.salary}</span>
+              <div className="about-job-salary">
+                Salary Range: <span className="about-salary-green">{job.salary}</span>
               </div>
             </div>
           ))}
