@@ -1,0 +1,172 @@
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #174076 0%, #3494e6 100%);
+  padding: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-item i {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Job postings section */
+.job-postings {
+  background: linear-gradient(135deg, #e9f1fa 0%, #f7fafc 100%);
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 1200px;
+  width: 97vw;
+  margin: -16px auto 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.job-postings h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.job-subtitle {
+  color: #718096;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.job-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.job-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #2d3748;
+}
+
+.company-link {
+  color: #3182ce;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.company-link:hover {
+  text-decoration: underline;
+}
+
+.job-location {
+  color: #718096;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.job-description {
+  color: #4a5568;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.job-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.job-type, .salary-type {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.job-type {
+  background: #c6f6d5;
+  color: #2f855a;
+}
+
+.salary-type {
+  background: #bee3f8;
+  color: #2b6cb0;
+}
+
+.job-meta {
+  color: #718096;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.job-meta i {
+  margin-right: 4px;
+}
+
+.job-salary {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.salary-green {
+  color: #2f855a;
+  font-weight: 700;
+}
