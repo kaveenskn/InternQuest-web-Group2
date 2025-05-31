@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaSearch, FaMapMarkerAlt, FaBuilding } from "react-icons/fa";
 import { HiOutlineBriefcase } from "react-icons/hi";
+import "../styles/internshipFinderPage.css";
 
 const internships = [
   {
@@ -10,7 +11,7 @@ const internships = [
     location: "Mountain View, CA",
     type: "Summer Internship",
     logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-    posted: "2 days ago",
+    posted: "2 days ago"
   },
   {
     id: 2,
@@ -19,8 +20,8 @@ const internships = [
     location: "Cupertino, CA",
     type: "Fall Internship",
     logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
-    posted: "1 week ago",
-  },
+    posted: "1 week ago"
+  }
 ];
 
 const locations = ["Mountain View, CA", "Cupertino, CA"];
@@ -28,20 +29,20 @@ const jobTypes = ["Summer Internship", "Fall Internship"];
 const companies = ["Google", "Apple"];
 
 const Navbar = () => (
-  <nav className="w-full bg-white shadow-sm sticky top-0 z-10">
-    <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-6">
-      <div className="flex items-center gap-2">
-        <span className="text-2xl font-bold text-blue-700 tracking-tight">InternQuest</span>
+  <nav className="intern-navbar">
+    <div className="navbar-container">
+      <div className="navbar-brand">
+        <span className="navbar-logo">InternQuest</span>
       </div>
-      <ul className="hidden md:flex gap-8 items-center font-medium text-gray-700">
-        <li><a href="/" className="hover:text-blue-700">Home</a></li>
-        <li><a href="/internships" className="text-blue-700 font-semibold">Find Internships</a></li>
-        <li><a href="/about" className="hover:text-blue-700">About</a></li>
-        <li><a href="/contact" className="hover:text-blue-700">Contact</a></li>
+      <ul className="navbar-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/internships" className="active">Find Internships</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
-      <div className="flex gap-2">
-        <button className="px-4 py-1.5 rounded font-semibold border border-blue-600 text-blue-700 hover:bg-blue-50">Sign In</button>
-        <button className="px-4 py-1.5 rounded font-semibold bg-blue-600 text-white hover:bg-blue-700">Sign Up</button>
+      <div className="navbar-auth">
+        <button className="btn-signin">Sign In</button>
+        <button className="btn-signup">Sign Up</button>
       </div>
     </div>
   </nav>
@@ -61,37 +62,35 @@ const InternshipFinderPage = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-[#2238A4] via-[#224497] to-[#3494e6] pb-10">
+    <div className="intern-page">
       <Navbar />
-      <main className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="pt-12 pb-6">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-white text-center mb-2 drop-shadow">
-            Find Your Perfect Internship
-          </h1>
-          <p className="text-center text-white/90 mb-6 text-lg font-medium drop-shadow">
+      <main className="intern-main">
+        <div className="intern-header">
+          <h1>Find Your Perfect Internship</h1>
+          <p className="intern-subtitle">
             Browse through our curated list of internship opportunities
           </p>
         </div>
 
         {/* Search and Filters */}
-        <div className="bg-white rounded-xl shadow border p-6 mb-8">
-          <div className="flex items-center gap-3 mb-4">
-            <FaSearch className="text-gray-500 text-lg" />
+        <div className="intern-search-card">
+          <div className="search-row">
+            <FaSearch className="search-icon" />
             <input
               type="text"
               placeholder="Search internships by title or keyword"
-              className="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300 bg-white"
+              className="search-input"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
-          <div className="flex flex-col md:flex-row gap-4 items-center">
-            <div className="flex flex-col flex-1 min-w-[170px]">
-              <label className="text-gray-900 font-semibold mb-1 flex items-center gap-1">
-                <FaMapMarkerAlt className="inline text-gray-900" /> Location
+          <div className="filter-row">
+            <div className="filter-col">
+              <label className="filter-label">
+                <FaMapMarkerAlt className="filter-icon" /> Location
               </label>
               <select
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 bg-white text-gray-800 focus:ring-2 focus:ring-blue-300"
+                className="filter-select"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
               >
@@ -101,12 +100,12 @@ const InternshipFinderPage = () => {
                 ))}
               </select>
             </div>
-            <div className="flex flex-col flex-1 min-w-[170px]">
-              <label className="text-gray-900 font-semibold mb-1 flex items-center gap-1">
-                <HiOutlineBriefcase className="inline text-gray-900" /> Job Type
+            <div className="filter-col">
+              <label className="filter-label">
+                <HiOutlineBriefcase className="filter-icon" /> Job Type
               </label>
               <select
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 bg-white text-gray-800 focus:ring-2 focus:ring-blue-300"
+                className="filter-select"
                 value={jobType}
                 onChange={(e) => setJobType(e.target.value)}
               >
@@ -116,12 +115,12 @@ const InternshipFinderPage = () => {
                 ))}
               </select>
             </div>
-            <div className="flex flex-col flex-1 min-w-[170px]">
-              <label className="text-gray-900 font-semibold mb-1 flex items-center gap-1">
-                <FaBuilding className="inline text-gray-900" /> Company
+            <div className="filter-col">
+              <label className="filter-label">
+                <FaBuilding className="filter-icon" /> Company
               </label>
               <select
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 bg-white text-gray-800 focus:ring-2 focus:ring-blue-300"
+                className="filter-select"
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
               >
@@ -131,43 +130,38 @@ const InternshipFinderPage = () => {
                 ))}
               </select>
             </div>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded-lg transition mt-4 md:mt-6 shadow-md">
+            <button className="search-btn">
               Search Internships
             </button>
           </div>
         </div>
 
         {/* Results */}
-        <div className="text-center text-white font-semibold mb-6">
+        <div className="results-count">
           {filtered.length} results found
         </div>
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="results-grid">
           {filtered.map((i) => (
             <div
               key={i.id}
-              className="flex flex-1 min-w-[340px] max-w-[400px] bg-gradient-to-br from-white/90 via-blue-50 to-blue-100 border border-blue-200 rounded-2xl shadow-lg p-6 gap-4 transition-transform hover:scale-105"
-              style={{
-                boxShadow: "0 4px 32px 0 rgba(34,68,151,0.13)",
-              }}
+              className="intern-card"
             >
               <img
                 src={i.logo}
                 alt={i.company}
-                className="w-12 h-12 object-contain rounded-lg bg-white shadow"
+                className="card-logo"
               />
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="font-semibold text-blue-900 text-lg hover:underline cursor-pointer">
-                    {i.title}
-                  </span>
-                  <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded ml-2">
-                    {i.type}
-                  </span>
+              <div className="card-content">
+                <div className="card-title-row">
+                  <span className="card-title">{i.title}</span>
+                  <span className="card-type">{i.type}</span>
                 </div>
-                <div className="text-gray-800 text-sm font-medium">{i.company}</div>
-                <div className="text-gray-600 text-xs flex items-center gap-2 mt-1">
-                  <FaMapMarkerAlt className="inline text-blue-700" /> {i.location}
-                  <span>•</span>
+                <div className="card-company">{i.company}</div>
+                <div className="card-meta">
+                  <span>
+                    <FaMapMarkerAlt className="card-meta-icon" /> {i.location}
+                  </span>
+                  <span className="dot">•</span>
                   <span>Posted {i.posted}</span>
                 </div>
               </div>
