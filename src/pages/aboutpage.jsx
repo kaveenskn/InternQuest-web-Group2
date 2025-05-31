@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/aboutPage.css"; // Make sure this path is correct
 
 const jobData = [
   {
@@ -12,7 +13,7 @@ const jobData = [
     applicants: 24,
     posted: "2 days ago",
     salary: "$120,000 - $150,000",
-    salaryColor: "text-green-600",
+    salaryColor: "green",
     companyLink: "#",
   },
   {
@@ -26,7 +27,7 @@ const jobData = [
     applicants: 18,
     posted: "1 week ago",
     salary: "$100,000 - $130,000",
-    salaryColor: "text-green-600",
+    salaryColor: "green",
     companyLink: "#",
   },
   {
@@ -40,76 +41,66 @@ const jobData = [
     applicants: 31,
     posted: "3 days ago",
     salary: "$80,000 - $100,000",
-    salaryColor: "text-green-600",
+    salaryColor: "green",
     companyLink: "#",
   },
 ];
 
 const AboutPage = () => {
   return (
-    <div
-      className="min-h-screen flex flex-col items-center"
-      style={{
-        background: "linear-gradient(135deg, #174076 0%, #3494e6 100%)",
-      }}
-    >
+    <div className="about-page">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center pt-4 pb-6 text-white w-full">
-        <h1 className="text-5xl font-extrabold mb-2 text-center">Job Opportunities</h1>
-        <p className="text-lg mb-5 text-center max-w-2xl font-medium">
+      <section className="hero-section">
+        <h1>Job Opportunities</h1>
+        <p className="hero-subtitle">
           Discover amazing career opportunities and find your next dream job
         </p>
-        <div className="flex flex-wrap gap-6 text-base justify-center items-center font-semibold">
-          <div className="flex items-center gap-2">
-            <i className="fi fi-rr-users text-xl font-bold"></i>
-            <span className="font-bold">4</span> Active Positions
+        <div className="stats-container">
+          <div className="stat-item">
+            <i className="fi fi-rr-users"></i>
+            <span>4</span> Active Positions
           </div>
-          <div className="flex items-center gap-2">
-            <i className="fi fi-rr-clock text-xl font-bold"></i>
-            <span className="font-bold">Updated Daily</span>
+          <div className="stat-item">
+            <i className="fi fi-rr-clock"></i>
+            <span>Updated Daily</span>
           </div>
-          <div className="flex items-center gap-2">
-            <i className="fi fi-rs-marker text-xl font-bold"></i>
-            <span className="font-bold">Remote & On-site</span>
+          <div className="stat-item">
+            <i className="fi fi-rs-marker"></i>
+            <span>Remote & On-site</span>
           </div>
         </div>
       </section>
 
       {/* Latest Job Postings */}
-      <section
-        className="rounded-3xl shadow-2xl px-8 py-7 max-w-6xl w-[97vw] md:w-full -mt-4 mb-10"
-        style={{
-          background: "linear-gradient(135deg, #e9f1fa 0%, #f7fafc 100%)",
-        }}
-      >
-        <h2 className="text-3xl font-extrabold text-gray-800 mb-2 text-center">Latest Job Postings</h2>
-        <p className="text-gray-600 text-center mb-8">
+      <section className="job-postings">
+        <h2>Latest Job Postings</h2>
+        <p className="job-subtitle">
           Browse through our curated list of job opportunities from top companies
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="jobs-grid">
           {jobData.map((job, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow-md p-6 flex flex-col">
-              <h3 className="font-bold text-lg mb-1">{job.title}</h3>
-              <a href={job.companyLink} className="text-blue-600 font-semibold mb-1 hover:underline">
+            <div key={idx} className="job-card">
+              <h3>{job.title}</h3>
+              <a href={job.companyLink} className="company-link">
                 {job.company}
               </a>
-              <div className="flex items-center text-gray-500 text-sm mb-2">
-                <i className="fi fi-ts-marker mr-1 text-base"></i>
+              <div className="job-location">
+                <i className="fi fi-ts-marker"></i>
                 {job.location}
               </div>
-              <p className="text-gray-700 mb-4">{job.description}</p>
-              <div className="flex gap-2 mb-4">
-                <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">{job.type}</span>
-                <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">{job.salaryType}</span>
+              <p className="job-description">{job.description}</p>
+              <div className="job-tags">
+                <span className="job-type">{job.type}</span>
+                <span className="salary-type">{job.salaryType}</span>
               </div>
-              <div className="flex justify-between items-center text-sm text-gray-500 mt-auto">
+              <div className="job-meta">
                 <span>
-                  <i className="fi fi-rr-users align-middle text-base"></i> {job.applicants} applicants
+                  <i className="fi fi-rr-users"></i> {job.applicants} applicants
                 </span>
                 <span>{job.posted}</span>
               </div>
-              <div className="mt-2 font-semibold">
-                Salary Range: <span className={`font-bold ${job.salaryColor}`}>{job.salary}</span>
+              <div className="job-salary">
+                Salary Range: <span className="salary-green">{job.salary}</span>
               </div>
             </div>
           ))}
