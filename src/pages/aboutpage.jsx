@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/aboutPage.css"; // Make sure this path is correct
+import "../styles/aboutPage.css"; // Adjust path if needed
 
 const jobData = [
   {
