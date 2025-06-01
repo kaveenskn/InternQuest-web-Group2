@@ -60,7 +60,7 @@ const Form1 = () => {
         <h2>Welcome to InternQuest</h2>
       </div>
       <div className="right-panel">
-        <h1>User Information Form</h1>
+        <h1>Signup With InternQuest</h1>
         <form >
           <label htmlFor="fullname">Full Name</label>
           <input
