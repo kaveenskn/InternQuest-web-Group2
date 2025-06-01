@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 import InternshipLandingPage from "./pages/InternshipLandingpage";
 import EmployeeDashboard from "./pages/EmployeeDashboard";
 import ProfilePage from "./pages/profilePage";
-import InternshipApplication from "./pages/InternshipApplication";
+import InternshipApp from "./pages/InternshipApp";
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/post" element={<Jobpostform />} />
         <Route path="/emp" element={<EmployeeDashboard />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/apply" element={<InternshipApplication />} />
+        <Route path="/internship" element={<InternshipApp />} />
       </Routes>
     </Router>
   );
