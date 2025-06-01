@@ -34,10 +34,10 @@ const ProfilePage = () => {
         });
 
         const data = res.data;
-         alert("got data: " + error.message);
+         console.log("Got data:", data);
         if (data) {
           setProfile({
-              fullname: data.user?.name || data.fullname || '',
+              fullname: data.fullname || data.fullname || '',
               email: data.user?.email || data.email || '',
               universityName: data.user?.universityName || data.universityName || '',
               universityLocation: data.universityLocation || '',
@@ -103,7 +103,7 @@ const ProfilePage = () => {
       setMessage('Profile saved successfully!');
       alert('Profile saved successfully!');
     } catch (err) {
-      setMessage('Error saving profileaaaa: ' + err.message);
+      setMessage('Error saving profileaaaa: ' + err);
       alert("errors many")
     }
 

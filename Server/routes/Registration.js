@@ -32,7 +32,6 @@ router.post("/signup", async (req, res) => {
 
     // Create user
     const newUser = new User({
-      fullname,
       email,
       password: hashedPassword,
       role,
@@ -44,6 +43,7 @@ router.post("/signup", async (req, res) => {
     if (role === "student") {
       const newStudent = new Student({
         user: savedUser._id,
+        fullname,
         universityName,
         universityLocation,
       });
@@ -51,6 +51,7 @@ router.post("/signup", async (req, res) => {
     } else if (role === "employee") {
       const newEmployee = new Employee({
         user: savedUser._id,
+        fullname,
         companyName,
         companyLocation,
       });

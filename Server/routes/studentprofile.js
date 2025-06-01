@@ -26,8 +26,7 @@ router.get("/profile", authenticate, async (req, res) => {
     }
 
     const student = await Student.findOne({ user: user._id })
-      .populate("user", "fullname email")
-      .populate("skills")
+      .populate("user", "email")
       .populate("projects");
 
     if (!student) {
@@ -55,6 +54,8 @@ router.put("/profile", authenticate, async (req, res) => {
       skills,
       projects,
     } = req.body;
+
+    console.log("Received github_link:", github_link);
 
     // Find the user
     const user = await User.findOne({ email });
@@ -96,25 +97,39 @@ router.put("/profile", authenticate, async (req, res) => {
         : student.github_link;
 
     // Skills and projects update (only if valid)
-    if (Array.isArray(skills) && skills.length > 0) {
-      if (!validateObjectIdArray(skills)) {
-        return res.status(400).json({ message: "Invalid skill ID format" });
-      }
-      student.skills = skills;
+    if (Array.isArray(skills)) {
+      student.skills = skills.map((skill) => skill.trim()).filter(Boolean);
     }
 
-    if (Array.isArray(projects) && projects.length > 0) {
-      if (!validateObjectIdArray(projects)) {
-        return res.status(400).json({ message: "Invalid project ID format" });
+    if (Array.isArray(projects)) {
+      const savedProjectIds = [];
+
+      for (const proj of projects) {
+        if (proj._id && mongoose.Types.ObjectId.isValid(proj._id)) {
+          // Existing project
+          savedProjectIds.push(proj._id);
+        } else if (
+          proj.title &&
+          proj.description &&
+          proj.tech_stack &&
+          proj.link
+        ) {
+          // New project from frontend
+          const newProject = new Project({
+            title: proj.title.trim(),
+            description: proj.description.trim(),
+            tech_stack: proj.tech_stack.trim(),
+            link: proj.link.trim(),
+            student: student._id,
+          });
+
+          const savedProject = await newProject.save();
+          savedProjectIds.push(savedProject._id);
+        }
       }
-      student.projects = projects;
+
+      student.projects = savedProjectIds;
     }
-
-    await student.save();
-
-    const populatedStudent = await Student.findById(student._id)
-      .populate("skills")
-      .populate("projects");
 
     res.status(200).json({
       message: "Profile updated successfully",
@@ -122,7 +137,6 @@ router.put("/profile", authenticate, async (req, res) => {
         fullname: user.fullname,
         email: user.email,
       },
-      student: populatedStudent,
     });
   } catch (error) {
     console.error("Error updating profile:", error);

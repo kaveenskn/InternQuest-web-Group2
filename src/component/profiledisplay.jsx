@@ -9,7 +9,7 @@ const ProfileDisplay = ({ profile, projects }) => {
     <div className="profile-panel profile-preview">
       <div className="profilehead">
         <div className="profile-picture"><FaUser size={50} color="#ccc" /></div>
-        <h2 style={{ color: "white", fontSize: "35px", fontFamily: "'Bebas Neue', sans-serif" }}>{profile.fullName}</h2>
+        <h2 style={{ color: "white", fontSize: "35px", fontFamily: "'Bebas Neue', sans-serif" }}>{profile.fullname}</h2>
         <p className="sub"style={{
                                     color: "white",
                                     fontSize: "25px",
@@ -34,7 +34,7 @@ const ProfileDisplay = ({ profile, projects }) => {
 
       <div className="section">
         <h4>GitHub</h4>
-        <a href={profile.githubLink} target="_blank" rel="noopener noreferrer">{profile.githubLink}</a>
+        <a href={profile.githubLink} target="_blank" rel="noopener noreferrer">{profile.github_link}</a>
       </div>
 
       <div className="section">
@@ -55,7 +55,7 @@ const ProfileDisplay = ({ profile, projects }) => {
         <h4>Projects</h4>
         <div className="project-cards">
           {projects.map((proj) => (
-            <div key={proj.id} className="project-card">
+            <div key={proj._id} className="project-card">
               <FaCode size={18} />
               <h5>{proj.title}</h5>
               <p className="tech">{proj.tech_stack}</p>
