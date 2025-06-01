@@ -26,11 +26,22 @@ const Login = () => {
     });
 
     const data = await response.json();
+<<<<<<< HEAD
     localStorage.setItem('userEmail', response.data.email);
+=======
+    
+>>>>>>> Development-kaveen
 
     if (response.ok) {
+       const token = data.token;          
+    const userEmail = data.email;   
+
+    localStorage.setItem('token', token);
+    localStorage.setItem('email', userEmail);
+
+
       if (data.user.role === "student") {
-        navigate("/std");
+        navigate("/profile");
       } else if (data.user.role === "employee") {
         navigate("/emp");
       } else {
