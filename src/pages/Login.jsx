@@ -26,11 +26,7 @@ const Login = () => {
     });
 
     const data = await response.json();
-<<<<<<< HEAD
-    localStorage.setItem('userEmail', response.data.email);
-=======
     
->>>>>>> Development-kaveen
 
     if (response.ok) {
        const token = data.token;          
