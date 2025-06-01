@@ -8,11 +8,9 @@ import Login from "./pages/Login";
 import InternshipLandingPage from "./pages/InternshipLandingpage";
 import EmployeeDashboard from "./pages/EmployeeDashboard";
 import ProfilePage from "./pages/profilePage";
-
-
+import InternshipApplication from "./pages/InternshipApplication";
 
 const App = () => {
-
   return (
     <Router>
       <Routes>
@@ -22,8 +20,8 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/post" element={<Jobpostform />} />
         <Route path="/emp" element={<EmployeeDashboard />} />
-        <Route path="/profile" element={< ProfilePage/>} />
-      
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/apply" element={<InternshipApplication />} />
       </Routes>
     </Router>
   );

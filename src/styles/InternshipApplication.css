@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafe;
+}
+
+.internship-app {
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.status-bar {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.applications,
+.jobs {
+  background-color: #e0edff;
+  color: #2563eb;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.job-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.job-title-box h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.job-title-box p {
+  margin: 5px 0 10px;
+  color: gray;
+}
+
+.application-count {
+  background-color: #f3f4f6;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.profiles {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-card {
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status.pending {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.status.reviewed {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.view-profile {
+  background-color: #2563eb;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.view-profile:hover {
+  background-color: #1d4ed8;
+}
+
+.university,
+.gpa,
+.applied-date {
+  margin: 4px 0;
+  font-size: 14px;
+}
