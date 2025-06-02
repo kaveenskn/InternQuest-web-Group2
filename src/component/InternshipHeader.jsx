@@ -9,8 +9,8 @@ const InternshipHeader = () => {
         <p>Review and manage candidate applications by job position</p>
       </div>
       <div className="status-bar">
-        <span className="applications">6 Applications</span>
-        <span className="jobs">2 Jobs</span>
+        <span className="applications">8 Applications</span>
+        <span className="jobs">3 Jobs</span>
       </div>
     </div>
   );

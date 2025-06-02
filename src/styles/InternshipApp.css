@@ -1,3 +1,8 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,7 +11,7 @@ body {
 }
 
 .internship-app {
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .header {
@@ -20,6 +25,7 @@ body {
   border-radius: 8px;
   margin-bottom: 20px;
 }
+
 .header-text {
   display: flex;
   flex-direction: column;
@@ -61,4 +67,72 @@ body {
   padding: 5px 10px;
   border-radius: 12px;
   font-size: 14px;
+}
+
+.profile-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.profile-card {
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px;
+  width: 250px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.profile-card:hover {
+  transform: scale(1.03);
+}
+
+.profile-card h2 {
+  margin-bottom: 5px;
+}
+
+.profile-card .role {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.status {
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.accepted {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.profile-view-btn {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.profile-view-btn:hover {
+  background-color: #303f9f;
 }
