@@ -3,28 +3,18 @@ const mongoose = require("mongoose");
 const StudentSchema = new mongoose.Schema(
   {
     user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
-    universityName: { type: String, required: true },
-    universityLocation: { type: String },
+    fullname: { type: String, required: true },
+    universityName: { type: String, trim: true },
+    universityLocation: { type: String, trim: true },
     github_link: { type: String },
     phone: {
       type: String,
+      trim: true,
       match: [/^\+?\d{10,15}$/, "Please enter a valid phone number"],
     },
-    course_of_study: { type: String },
-    skills: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Skill",
-        default: [],
-      },
-    ],
-    projects: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Project",
-        default: [],
-      },
-    ],
+    course_of_study: { type: String, trim: true },
+    skills: [{ type: String, trim: true }],
+    projects: [{ type: mongoose.Schema.Types.ObjectId, ref: "Project" }],
   },
   { timestamps: true }
 );
