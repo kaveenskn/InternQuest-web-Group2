@@ -13,6 +13,7 @@ const internships = [
     description: "Assist in developing web applications and collaborating with the engineering team.",
     posted: "2 days ago"
   },
+  
   {
     id: 2,
     title: "UX Design Intern",

@@ -16,6 +16,7 @@ const jobData = [
     salaryColor: "green",
     companyLink: "#",
   },
+
   {
     title: "Product Manager",
     company: "StartupXYZ",
@@ -30,6 +31,7 @@ const jobData = [
     salaryColor: "green",
     companyLink: "#",
   },
+  
   {
     title: "UX/UI Designer",
     company: "Design Studio Pro",
@@ -80,6 +82,7 @@ const AboutPage = () => {
         <p className="about-job-subtitle">
           Browse through our curated list of job opportunities from top companies
         </p>
+
         <div className="about-job-grid">
           {jobData.map((job, idx) => (
             <div key={idx} className="about-job-card">
