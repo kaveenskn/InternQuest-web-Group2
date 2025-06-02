@@ -5,11 +5,11 @@
   min-height: 99vh;
   padding: 20px;
   box-sizing: border-box;
-  background: linear-gradient(to right, #12396e, #4a60ff);
+  background-color: aliceblue;
 }
 
 .job-post-form {
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to right, #12396e, #4a60ff);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border-radius: 16px;
@@ -123,7 +123,7 @@ width: 200px;
 }
 
 .post-btn:hover {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 @media (max-width: 768px) {
