@@ -14,8 +14,8 @@ const InternshipLandingPage = () => {
          </p>
        
         <div className="auth-buttons">
-          <button className="btn sign-in">Sign in</button>
-          <button className="btn sign-up">Sign up</button>
+          <button className="btns sign-in">Sign in</button>
+          <button className="btns sign-up">Sign up</button>
         </div>
       </header>
 

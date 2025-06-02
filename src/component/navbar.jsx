@@ -1,34 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
-import { Link, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
- const navigate = useNavigate();
+const Navbar = ({ brand = "InternQuest", icon = "👤", links = [] }) => {
+  const navigate = useNavigate();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const handleLogout = () => {
     navigate("/login");
+  };
+
+  const toggleMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <span className="icon">👤</span> InternQuest
+        <span className="icon">{icon}</span> {brand}
       </div>
-      <ul className="navbar-links">
-        <li>
-          <Link to="/" className="active">
-            Dashboard
-          </Link>
-        </li>
-        <li>
-           <Link to="/profile">Profile</Link>
-        </li>
-        <li>
-          <Link to="/find-jobs">Find Jobs</Link>
-          
-        </li>
-        <li>
-          <Link to="/my-cv">My CV</Link>
-        </li>
+
+      <div className="mobile-menu-icon" onClick={toggleMenu}>
+        {isMobileMenuOpen ? "×" : "☰"}
+      </div>
+
+      <ul className={`navbar-links ${isMobileMenuOpen ? "show" : ""}`}>
+        {links.map((link) => (
+          <li key={link.path}>
+            <NavLink
+              to={link.path}
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.label}
+            </NavLink>
+          </li>
+        ))}
         <li>
           <button className="logout" onClick={handleLogout}>
             Logout

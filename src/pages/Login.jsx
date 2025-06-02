@@ -14,31 +14,46 @@ const Login = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:5000/authlog/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(credentials),
-      });
 
-      const data = await response.json();
+  try {
+    const response = await fetch("http://localhost:5000/authlog/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(credentials),
+    });
 
-      if (response.ok) {
-        alert("Login successful!");
-        console.log(data);
-        // redirect or save token here
+
+    const data = await response.json();
+    
+
+    if (response.ok) {
+       const token = data.token;          
+    const userEmail = data.email;   
+
+    localStorage.setItem('token', token);
+    localStorage.setItem('email', userEmail);
+
+
+      if (data.user.role === "student") {
+        navigate("/profile");
+      } else if (data.user.role === "employee") {
+        navigate("/emp");
       } else {
-        alert(`Error: ${data.message}`);
+        alert("Unknown user role");
       }
-    } catch (error) {
-      console.error("Login error:", error);
-      alert("Something went wrong during login.");
+    } else {
+      alert(`Error: ${data.message}`);
     }
-  };
+  } catch (error) {
+    console.error("Login error:", error);
+    alert("Something went wrong during login.");
+  }
+};
+
 
   return (
     <div className="Login-page">
