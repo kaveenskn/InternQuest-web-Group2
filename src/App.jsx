@@ -10,6 +10,7 @@ import EmployeeDashboard from "./pages/EmployeeDashboard";
 import ProfilePage from "./pages/profilePage";
 import StudentsDashboard from "./pages/StudentDashboard";
 import StudentsPage from "./pages/StudentsPage";
+import EmployeePage from "./pages/Employeepage";
 
 
 
@@ -27,8 +28,10 @@ const App = () => {
       {/*students page */}
         <Route path="/students" element={<StudentsPage/>} />
         <Route path="/post" element={<Jobpostform />} />
-        <Route path="/emp" element={<EmployeeDashboard />} />
         
+        
+        {/* employee page */}
+        <Route path="/employers" element={<EmployeePage />} />
       
       </Routes>
     </Router>
