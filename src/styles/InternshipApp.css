@@ -90,7 +90,7 @@ body {
   border-radius: 15px;
   padding: 20px;
   margin: 15px;
-  width: 240px;
+  width: 250px;
   background: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.1s ease, box-shadow 0.1s ease;
@@ -122,4 +122,70 @@ body {
 .view-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 768px) {
+  .internship-app {
+    padding: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .status-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .text-card {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .profile-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .profile-card {
+    width: 100%;
+    margin: 10px 0;
+    padding: 16px;
+  }
+
+  .view-button {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .text-card {
+    font-size: 0.9rem;
+  }
+
+  .applications,
+  .jobs {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
 }
