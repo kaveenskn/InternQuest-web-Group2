@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import EmployeeDashboard from './EmployeeDashboard';
+import EmHero from '../component/EmHero';
 import Navbar from '../component/navbar';
 
 
@@ -19,7 +19,7 @@ const EmployeePage = () => {
       case 'home':
         return (
           <>
-            <EmployeeDashboard/>
+            <EmHero/>
           </>
         )
       case 'profile':

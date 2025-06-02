@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/aboutPage.css";
+import "../styles/Jobboard.css";
 
 const jobData = [
   {
@@ -48,7 +48,7 @@ const jobData = [
   },
 ];
 
-const AboutPage = () => {
+const Jobboard = () => {
   return (
     <div className="about-bg">
       {/* Hero Section */}
@@ -116,4 +116,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default Jobboard;
