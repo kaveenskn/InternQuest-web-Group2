@@ -1,6 +1,6 @@
 import React from "react";
-import InternshipHeader from "../component/InternshipHeader";
-import InternshipProfileCard from "../component/InternshipProfileCard";
+import InternshipHeader from "./InternshipHeader";
+import InternshipProfileCard from "./InternshipProfileCard";
 import "../styles/InternshipApp.css";
 
 const InternshipApp = () => {

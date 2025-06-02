@@ -7,7 +7,7 @@ import InternshipLandingPage from "./pages/InternshipLandingpage";
 import ProfilePage from "./pages/profilePage";
 import StudentsPage from "./pages/StudentsPage";
 import EmployeePage from "./pages/Employeepage";
-import InternshipApp from "./pages/InternshipApp";
+import InternshipApp from "./component/InternshipApp";
 
 const App = () => {
   return (
