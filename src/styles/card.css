@@ -26,7 +26,7 @@
 }
 
 .card.highlighted {
-  background-color: #5568fd;
+   background: linear-gradient(to right, #12396e, #4a60ff);
   color: white;
   border-bottom: 4px solid #3e51e2;
 }

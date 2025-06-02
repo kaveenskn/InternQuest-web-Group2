@@ -1,11 +1,15 @@
 /* ProfilePage.css */
 .profile-page {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 120px;
 }
 
 .profile-page h1 {
   text-align: center;
+    background: linear-gradient(to right, #12396e, #4a60ff);/* Gradient */
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .profile-container {
