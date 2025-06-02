@@ -32,28 +32,28 @@ body {
 
 .header h1 {
   text-align: left;
-  font-size: 25px;
+  font-size: 32px;
   margin-bottom: 5px;
   color: #2563eb;
 }
 
 .header p {
   text-align: left;
-  font-size: 16px;
+  font-size: 15px;
   color: black;
   margin: 0;
 }
 
 .text-card {
   background-color: #f0f4f8;
-  padding: 18px;
-  margin: 20px 0;
+  padding: 16px;
+  margin: 18px 0;
   border-radius: 8px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #333;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .status-bar {
@@ -67,7 +67,7 @@ body {
 .applications {
   background-color: #e0edff;
   color: #2563eb;
-  padding: 5px 10px;
+  padding: 10px 15px;
   border-radius: 12px;
   font-size: 14px;
 }
@@ -75,7 +75,7 @@ body {
 .jobs {
   background-color: #e0edff;
   color: rgb(29, 132, 29);
-  padding: 5px 10px;
+  padding: 10px 15px;
   border-radius: 12px;
   font-size: 14px;
 }
@@ -90,7 +90,7 @@ body {
   border-radius: 15px;
   padding: 20px;
   margin: 15px;
-  width: 250px;
+  width: 240px;
   background: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.1s ease, box-shadow 0.1s ease;
@@ -101,28 +101,25 @@ body {
 }
 
 .profile-card h3 {
-  font-size: 23px;
+  font-size: 20px;
   margin: 0;
   color: black;
 }
 
-.profile-card .role {
-  font-weight: bold;
-  margin: 8px 0;
-}
-
-.profile-view-btn {
-  margin-top: 8px;
-  padding: 8px 12px;
-  background-color: #3f51b5;
+.view-button {
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   display: inline-block;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.profile-view-btn:hover {
-  background-color: #303f9f;
+.view-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
