@@ -4,9 +4,8 @@ import "../styles/InternshipApp.css";
 const InternshipProfileCard = ({
   name,
   role,
-  status,
   university,
-  gpa,
+  email,
   applied,
   onViewProfile = () => {},
 }) => {
@@ -16,10 +15,9 @@ const InternshipProfileCard = ({
         <h3>{name}</h3>
         <p>{role}</p>
         <p>🎓{university}</p>
-        <p>⭐ GPA:{gpa}</p>
+        <p>📧 {email}</p>
         <p>📅 Applied {applied}</p>
       </div>
-      <div className={`status ${status.toLowerCase()}`}>{status}</div>
       <div>
         <button className="view-button" onClick={onViewProfile}>
           View Profile

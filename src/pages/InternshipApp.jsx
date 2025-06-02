@@ -8,51 +8,43 @@ const InternshipApp = () => {
     {
       name: "Liam Johnson",
       role: "Software Engineer Intern",
-      status: "Accepted",
       university: "Stanford University",
-      gpa: "4.0",
+      email: "liam.johnson@stanford.edu",
       applied: "2023-09-25",
     },
     {
       name: "Carlos Ruiz",
       role: "Fullstack Intern",
-      status: "Accepted",
       university: "Madrid University",
-      gpa: "3.6",
+      email: "carlos.ruiz@madrid.edu",
       applied: "2023-10-10",
     },
     {
       name: "Jane Smith",
       role: "Backend Developer Intern",
-      status: "Accepted",
       university: "XYZ University",
-      gpa: "3.9",
+      email: "jane.smith@xyz.edu",
       applied: "2023-09-15",
     },
-
     {
       name: "John Doe",
       role: "Frontend Developer Intern",
-      status: "Pending",
       university: "ABC University",
-      gpa: "3.8",
+      email: "john.doe@abc.edu",
       applied: "2023-10-01",
     },
-
     {
       name: "Emily Davis",
       role: "DevOps Intern",
-      status: "Rejected",
       university: "Harvard University",
-      gpa: "3.4",
+      email: "emily.davis@harvard.edu",
       applied: "2023-09-30",
     },
     {
       name: "Ali Khan",
       role: "UI/UX Designer Intern",
-      status: "Rejected",
       university: "LMN University",
-      gpa: "3.5",
+      email: "ali.khan@lmn.edu",
       applied: "2023-08-20",
     },
   ];
@@ -61,17 +53,15 @@ const InternshipApp = () => {
     {
       name: "Sakura Tanaka",
       role: "Data Science Intern",
-      status: "Pending",
       university: "Tokyo University",
-      gpa: "3.7",
+      email: "sakura.tanaka@tokyo.edu",
       applied: "2023-10-05",
     },
     {
       name: "Nina Patel",
       role: "Data Science Intern",
-      status: "Pending",
       university: "MIT",
-      gpa: "3.8",
+      email: "nina.patel@mit.edu",
       applied: "2023-10-12",
     },
   ];
@@ -89,9 +79,8 @@ const InternshipApp = () => {
             key={index}
             name={candidate.name}
             role={candidate.role}
-            status={candidate.status}
             university={candidate.university}
-            gpa={candidate.gpa}
+            email={candidate.email}
             applied={candidate.applied}
           />
         ))}
@@ -106,9 +95,8 @@ const InternshipApp = () => {
             key={index}
             name={candidate.name}
             role={candidate.role}
-            status={candidate.status}
             university={candidate.university}
-            gpa={candidate.gpa}
+            email={candidate.email}
             applied={candidate.applied}
           />
         ))}

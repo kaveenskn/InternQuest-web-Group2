@@ -111,29 +111,6 @@ body {
   margin: 8px 0;
 }
 
-.status {
-  margin-top: 10px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 10px;
-  display: inline-block;
-}
-
-.status.pending {
-  background-color: #fff3cd;
-  color: #856404;
-}
-
-.status.accepted {
-  background-color: #d4edda;
-  color: #155724;
-}
-
-.status.rejected {
-  background-color: #f8d7da;
-  color: #721c24;
-}
-
 .profile-view-btn {
   margin-top: 8px;
   padding: 8px 12px;
