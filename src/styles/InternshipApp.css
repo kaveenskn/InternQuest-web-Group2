@@ -83,13 +83,13 @@ body {
 .profile-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 8px;
 }
 
 .profile-card {
   border-radius: 15px;
   padding: 20px;
-  margin: 15px;
+  margin: 10px;
   width: 250px;
   background: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
