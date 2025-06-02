@@ -15,7 +15,7 @@ const InternshipProfileCard = ({
       <div className="profile-info">
         <h3>{name}</h3>
         <p>{role}</p>
-        <p>🏫 {university}</p>
+        <p>🎓{university}</p>
         <p>⭐ GPA:{gpa}</p>
         <p>📅 Applied {applied}</p>
       </div>

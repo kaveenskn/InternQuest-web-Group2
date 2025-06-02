@@ -4,40 +4,7 @@ import InternshipProfileCard from "../component/InternshipProfileCard";
 import "../styles/InternshipApp.css";
 
 const InternshipApp = () => {
-
-  const candidates = [
-    {
-      name: "John Doe",
-      role: "Frontend Developer Intern",
-      status: "Pending",
-      university: "ABC University",
-      gpa: "3.8",
-      applied: "2023-10-01",
-    },
-    {
-      name: "Jane Smith",
-      role: "Backend Developer Intern",
-      status: "Accepted",
-      university: "XYZ University",
-      gpa: "3.9",
-      applied: "2023-09-15",
-    },
-    {
-      name: "Ali Khan",
-      role: "UI/UX Designer Intern",
-      status: "Rejected",
-      university: "LMN University",
-      gpa: "3.5",
-      applied: "2023-08-20",
-    },
-    {
-      name: "Sakura Tanaka",
-      role: "Data Analyst Intern",
-      status: "Pending",
-      university: "Tokyo University",
-      gpa: "3.7",
-      applied: "2023-10-05",
-    },
+  const softwareEngineeringCandidates = [
     {
       name: "Liam Johnson",
       role: "Software Engineer Intern",
@@ -55,6 +22,24 @@ const InternshipApp = () => {
       applied: "2023-10-10",
     },
     {
+      name: "Jane Smith",
+      role: "Backend Developer Intern",
+      status: "Accepted",
+      university: "XYZ University",
+      gpa: "3.9",
+      applied: "2023-09-15",
+    },
+
+    {
+      name: "John Doe",
+      role: "Frontend Developer Intern",
+      status: "Pending",
+      university: "ABC University",
+      gpa: "3.8",
+      applied: "2023-10-01",
+    },
+
+    {
       name: "Emily Davis",
       role: "DevOps Intern",
       status: "Rejected",
@@ -63,8 +48,27 @@ const InternshipApp = () => {
       applied: "2023-09-30",
     },
     {
+      name: "Ali Khan",
+      role: "UI/UX Designer Intern",
+      status: "Rejected",
+      university: "LMN University",
+      gpa: "3.5",
+      applied: "2023-08-20",
+    },
+  ];
+
+  const dataScienceCandidates = [
+    {
+      name: "Sakura Tanaka",
+      role: "Data Science Intern",
+      status: "Pending",
+      university: "Tokyo University",
+      gpa: "3.7",
+      applied: "2023-10-05",
+    },
+    {
       name: "Nina Patel",
-      role: "QA Tester Intern",
+      role: "Data Science Intern",
       status: "Pending",
       university: "MIT",
       gpa: "3.8",
@@ -75,8 +79,29 @@ const InternshipApp = () => {
   return (
     <div className="internship-app">
       <InternshipHeader />
+
+      <div className="text-card">
+        <h2>🏢 Software Engineering Intern</h2>
+      </div>
       <div className="profile-list">
-        {candidates.map((candidate, index) => (
+        {softwareEngineeringCandidates.map((candidate, index) => (
+          <InternshipProfileCard
+            key={index}
+            name={candidate.name}
+            role={candidate.role}
+            status={candidate.status}
+            university={candidate.university}
+            gpa={candidate.gpa}
+            applied={candidate.applied}
+          />
+        ))}
+      </div>
+
+      <div className="text-card">
+        <h2>🏢 Data Science Intern</h2>
+      </div>
+      <div className="profile-list">
+        {dataScienceCandidates.map((candidate, index) => (
           <InternshipProfileCard
             key={index}
             name={candidate.name}
