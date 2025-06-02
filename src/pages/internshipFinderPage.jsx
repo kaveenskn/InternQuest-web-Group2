@@ -107,7 +107,7 @@ const InternshipFinderPage = () => {
             <div key={i.id} className="intern-card">
               <div className="card-content">
                 <div className="card-title-row">
-                  <span className="card-title">{i.title}</span>
+                  <span className="interncard-title">{i.title}</span>
                   <span className="card-type">{i.type}</span>
                 </div>
                 <div className="card-meta">
