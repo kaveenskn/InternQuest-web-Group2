@@ -17,6 +17,7 @@ const authenticate = (req, res, next) => {
     }
 
     req.user = {
+      id: decoded.id, // ✅ Add this line
       email: decoded.email,
       role: decoded.role,
     };

@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import EmHero from '../component/EmHero';
 import Navbar from '../component/navbar';
+import Jobpostform from '../component/Jobpostform';
 
 
 const EmpLinks = [
   { key: "home", label: "home" },
   { key: "profile", label: "Profile" },
-  { key: "find-jobs", label: "Post job" },
+  { key: "Post job", label: "Post job" },
   { key: "about", label: "About us" },
 ];
 
@@ -24,8 +25,8 @@ const EmployeePage = () => {
         )
       case 'profile':
         return <><h1>hello</h1></>
-      case 'find-jobs':
-        return <div><h2>Find Jobs Page</h2></div>
+      case 'Post job':
+        return <Jobpostform/>
       case 'my-cv':
         return <div><h2>My CV Page</h2></div>
       default:

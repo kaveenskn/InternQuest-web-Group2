@@ -20,6 +20,9 @@ app.use("/api/students", profileroutes);
 const jobpostroutes = require("./routes/Jobpostroute.js");
 app.use("/api/employers", jobpostroutes);
 
+const jobboardroute = require("./routes/jobboardroute.js");
+app.use("/api/employee", jobboardroute);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port  ${PORT}`);

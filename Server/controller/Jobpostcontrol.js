@@ -1,4 +1,5 @@
 const Job = require("../models/Jobpost.js");
+const User = require("../models/User.js"); // Use the same model as login
 const Employee = require("../models/employee.js");
 
 const postJob = async (req, res) => {
@@ -11,24 +12,24 @@ const postJob = async (req, res) => {
         .json({ message: "Access denied. Only employees can post jobs." });
     }
 
-    // Find employee by email from token
-    const employee = await Employee.findOne({ email: req.user.email });
+    // 🟢 Correct way to get employee based on the user._id from JWT
+    const employee = await Employee.findOne({ user: req.user.id });
     if (!employee) {
-      return res.status(404).json({ message: "Employee not found" });
+      return res.status(404).json({ message: "Employee profile not found" });
+    }
+
+    if (!title || !location || !jobType || !description || !deadline) {
+      return res.status(400).json({ message: "All fields are required" });
     }
 
     const newJob = new Job({
-      employee: employee._id,
+      employee: employee._id, // 👈 This is the _id of the Employee document
       title,
       location,
       jobType,
       description,
       deadline,
     });
-
-    if (!title || !location || !jobType || !description || !deadline) {
-      return res.status(400).json({ message: "All fields are required" });
-    }
 
     await newJob.save();
 

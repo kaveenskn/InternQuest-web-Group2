@@ -11,7 +11,7 @@ import Jobpostform from "./component/Jobpostform";
 
 import InternshipFinderPage from "./component/internshipFinderPage";
 
-
+import Jobboard from "./component/Jobboard";
 
 
 
@@ -37,6 +37,9 @@ const App = () => {
 
 
                  <Route path="/find" element={<InternshipFinderPage/>} />
+
+
+                 <Route path="/jobboard" element={<Jobboard/>} />
       
       </Routes>
     </Router>
