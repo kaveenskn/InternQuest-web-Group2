@@ -39,7 +39,7 @@ const Login = () => {
       if (data.user.role === "student") {
         navigate("/students");
       } else if (data.user.role === "employee") {
-        navigate("/emp");
+        navigate("/employers");
       } else {
         alert("Unknown user role");
       }
