@@ -61,7 +61,7 @@
 }
 .search-icon {
   font-size: 1.2rem;
-  color: 9ca3af;
+  color: #9ca3af;
   margin-right: 12px;
 }
 .search-input {
@@ -169,7 +169,7 @@
 }
 .card-type {
   background: #dbeafe;
-  color: 1e40af;
+  color: #1e40af;
   font-size: 0.9rem;
   padding: 2px 10px;
   border-radius: 20px;
@@ -198,4 +198,22 @@
   color: #374151;
   font-size: 0.98rem;
   margin-top: 4px;
+}
+
+/* View Profile Button */
+.view-profile-btn {
+  margin-top: 18px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(34, 68, 151, 0.07);
+}
+.view-profile-btn:hover {
+  background: #1e40af;
 }

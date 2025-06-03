@@ -13,7 +13,6 @@ const internships = [
     description: "Assist in developing web applications and collaborating with the engineering team.",
     posted: "2 days ago"
   },
-  
   {
     id: 2,
     title: "UX Design Intern",
@@ -27,16 +26,19 @@ const internships = [
 
 const locations = ["Mountain View, CA", "Cupertino, CA"];
 const jobTypes = ["Summer Internship", "Fall Internship"];
+const jobTitles = [...new Set(internships.map(i => i.title))];
 
 const InternshipFinderPage = () => {
   const [search, setSearch] = useState("");
   const [location, setLocation] = useState("");
   const [jobType, setJobType] = useState("");
+  const [jobTitle, setJobTitle] = useState("");
 
   const filtered = internships.filter((i) =>
     i.title.toLowerCase().includes(search.toLowerCase()) &&
     (location ? i.location === location : true) &&
-    (jobType ? i.type === jobType : true)
+    (jobType ? i.type === jobType : true) &&
+    (jobTitle ? i.title === jobTitle : true)
   );
 
   return (
@@ -68,7 +70,7 @@ const InternshipFinderPage = () => {
               </label>
               <select
                 className="filter-select"
-                value=""
+                value={location}
                 onChange={(e) => setLocation(e.target.value)}
               >
                 <option value="">Select location</option>
@@ -83,12 +85,27 @@ const InternshipFinderPage = () => {
               </label>
               <select
                 className="filter-select"
-                value=""
+                value={jobType}
                 onChange={(e) => setJobType(e.target.value)}
               >
                 <option value="">Select job type</option>
                 {jobTypes.map((type) => (
                   <option key={type} value={type}>{type}</option>
+                ))}
+              </select>
+            </div>
+            <div className="filter-col">
+              <label className="filter-label">
+                Job Title
+              </label>
+              <select
+                className="filter-select"
+                value={jobTitle}
+                onChange={(e) => setJobTitle(e.target.value)}
+              >
+                <option value="">Select job title</option>
+                {jobTitles.map((title) => (
+                  <option key={title} value={title}>{title}</option>
                 ))}
               </select>
             </div>
@@ -119,6 +136,7 @@ const InternshipFinderPage = () => {
                 <div className="card-desc">
                   {i.description}
                 </div>
+                <button className="view-profile-btn">View Profile</button>
               </div>
             </div>
           ))}
