@@ -7,6 +7,9 @@ import InternshipLandingPage from "./pages/InternshipLandingpage";
 import ProfilePage from "./pages/profilePage";
 import StudentsPage from "./pages/StudentsPage";
 import EmployeePage from "./pages/Employeepage";
+import Jobpostform from "./component/Jobpostform";
+
+import InternshipFinderPage from "./component/internshipFinderPage";
 
 
 
@@ -30,6 +33,10 @@ const App = () => {
 
         {/* employee page */}
         <Route path="/employers" element={<EmployeePage />} />
+                 <Route path="/post" element={<Jobpostform/>} />
+
+
+                 <Route path="/find" element={<InternshipFinderPage/>} />
       
       </Routes>
     </Router>

@@ -37,7 +37,7 @@ const Login = () => {
 
 
       if (data.user.role === "student") {
-        navigate("/students/profile");
+        navigate("/students");
       } else if (data.user.role === "employee") {
         navigate("/emp");
       } else {
