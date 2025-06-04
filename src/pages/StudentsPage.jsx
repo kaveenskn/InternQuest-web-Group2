@@ -3,6 +3,7 @@ import HeroSection from '../component/hero'
 import Navbar from '../component/navbar'
 import CardsSection from '../component/Cardsectionstd'
 import ProfilePage from './profilePage'
+import "../pagestyles/studentpage.css"
 
 const StdLinks = [
   { key: "dashboard", label: "Dashboard" },
@@ -18,10 +19,10 @@ const StudentsPage = () => {
     switch (activePage) {
       case 'dashboard':
         return (
-          <>
+          <div className="student-page Home">
             <HeroSection />
             <CardsSection />
-          </>
+         </div>
         )
       case 'profile':
         return <><ProfilePage/></>

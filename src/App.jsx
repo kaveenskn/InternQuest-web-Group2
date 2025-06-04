@@ -7,23 +7,37 @@ import InternshipLandingPage from "./pages/InternshipLandingpage";
 import ProfilePage from "./pages/profilePage";
 import StudentsPage from "./pages/StudentsPage";
 import EmployeePage from "./pages/Employeepage";
-import InternshipApp from "./component/InternshipApp";
+import Jobpostform from "./component/Jobpostform";
+
+import InternshipFinderPage from "./component/internshipFinderPage";
+
+
+
+
 
 const App = () => {
+
   return (
     <Router>
       <Routes>
-        {/* Interface and login, Register */}
+     {/* Interface and login, Register */}
         <Route path="/" element={<InternshipLandingPage />} />
         <Route path="/signup" element={<Form1 />} />
         <Route path="/login" element={<Login />} />
 
-        {/*students page */}
-        <Route path="/students" element={<StudentsPage />} />
+      {/*students page */}
+        <Route path="/students" element={<StudentsPage/>} />
+        
+        
+          
 
         {/* employee page */}
         <Route path="/employers" element={<EmployeePage />} />
-        <Route path="/internship" element={<InternshipApp />} />
+                 <Route path="/post" element={<Jobpostform/>} />
+
+
+                 <Route path="/find" element={<InternshipFinderPage/>} />
+      
       </Routes>
     </Router>
   );
