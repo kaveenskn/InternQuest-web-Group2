@@ -13,9 +13,12 @@ app.use("/auth", Regroute);
 
 const logroutes = require("./routes/Login.js");
 app.use("/authlog", logroutes);
+<<<<<<< HEAD
+=======
 
 const profileroutes = require("./routes/studentprofile.js");
 app.use("/api/students", profileroutes);
+>>>>>>> 36ad49f1fe2d9cff91cf19f946e7633b4003a1f7
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
