@@ -124,7 +124,8 @@ const InternshipFinderPage = () => {
             <div key={i.id} className="intern-card">
               <div className="card-content">
                 <div className="card-title-row">
-                  <span className="card-title">{i.title}</span>
+                  {/* Tooltip on job title */}
+                  <span className="card-title" title={i.title}>{i.title}</span>
                   <span className="card-type">{i.type}</span>
                 </div>
                 <div className="card-meta">
@@ -136,7 +137,7 @@ const InternshipFinderPage = () => {
                 <div className="card-desc">
                   {i.description}
                 </div>
-                <button className="apply-btn">Apply</button>
+                <button className="view-profile-btn">Apply</button>
               </div>
             </div>
           ))}

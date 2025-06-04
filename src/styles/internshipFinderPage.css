@@ -220,8 +220,8 @@
   margin-top: 4px;
 }
 
-.apply-btn {
-  margin-top: 32px;
+.view-profile-btn {
+  margin-top: 40px; /* Extra space above the button */
   background: #2563eb;
   color: #fff;
   border: none;
@@ -234,7 +234,6 @@
   box-shadow: 0 2px 8px rgba(34, 68, 151, 0.07);
   align-self: flex-start;
 }
-.apply-btn:hover {
+.view-profile-btn:hover {
   background: #1e40af;
 }
-
