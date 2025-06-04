@@ -1,36 +1,43 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Dashboard from "./component/Dashboard";
 import Form1 from "./pages/Form1";
-import CardsSection from "./component/Cardsectionstd";
-import Jobpostform from "./pages/Jobpostform";
-// Remove this line: import signin from "./component/signin";
-import StudentDashboard from "./pages/StudentDashboard";
 import Login from "./pages/Login";
 import InternshipLandingPage from "./pages/InternshipLandingpage";
-import EmployeeDashboard from "./pages/EmployeeDashboard";
+import ProfilePage from "./pages/profilePage";
+import StudentsPage from "./pages/StudentsPage";
+import EmployeePage from "./pages/Employeepage";
+import Jobpostform from "./component/Jobpostform";
 
-import InternshipFinderPage from "./pages/internshipFinderPage";
-import LoginForm from "./component/LoginForm";
-import cvCreation from "./component/cvCreation";
-import AboutPage from "./pages/aboutpage";
+import InternshipFinderPage from "./component/internshipFinderPage";
+
+
+
+
 
 const App = () => {
+
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+     {/* Interface and login, Register */}
+        <Route path="/" element={<InternshipLandingPage />} />
         <Route path="/signup" element={<Form1 />} />
-        <Route path="/job" element={<StudentDashboard />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/post" element={<Jobpostform />} />
-        <Route path="/cv-form" element={<cvCreation />} />
-        <Route path="/internships" element={<InternshipFinderPage />} />
-        <Route path="/login-form" element={<LoginForm />} />
-        <Route path="/emp" element={<EmployeeDashboard />} />
-        <Route path="/about" element={<AboutPage />} />
+
+      {/*students page */}
+        <Route path="/students" element={<StudentsPage/>} />
+        
+        
+          
+
+        {/* employee page */}
+        <Route path="/employers" element={<EmployeePage />} />
+                 <Route path="/post" element={<Jobpostform/>} />
+
+
+                 <Route path="/find" element={<InternshipFinderPage/>} />
+      
       </Routes>
     </Router>
   );

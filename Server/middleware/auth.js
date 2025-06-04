@@ -16,7 +16,11 @@ const authenticate = (req, res, next) => {
       return res.status(401).json({ message: "Invalid token payload" });
     }
 
-    req.user = decoded;
+    req.user = {
+      id: decoded.id, // ✅ Add this line
+      email: decoded.email,
+      role: decoded.role,
+    };
     next();
   } catch (err) {
     if (err.name === "TokenExpiredError") {

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
 
-const Navbar = ({ brand = "InternQuest", icon = "👤", links = [] }) => {
-  const navigate = useNavigate();
+const Navbar = ({
+  brand = "InternQuest",
+  icon = "👤",
+  links = [],
+  onLinkClick = () => {},
+  activeKey = "",
+}) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const handleLogout = () => {
-    navigate("/login");
-  };
 
   const toggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -26,18 +26,21 @@ const Navbar = ({ brand = "InternQuest", icon = "👤", links = [] }) => {
 
       <ul className={`navbar-links ${isMobileMenuOpen ? "show" : ""}`}>
         {links.map((link) => (
-          <li key={link.path}>
-            <NavLink
-              to={link.path}
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={() => setIsMobileMenuOpen(false)}
+          <li key={link.key}>
+            <button
+               className={`nav-link ${link.key === activeKey ? "active" : ""}`}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                onLinkClick(link.key);
+              }}
+              style={{ background: "none", border: "none", cursor: "pointer" }}
             >
               {link.label}
-            </NavLink>
+            </button>
           </li>
         ))}
         <li>
-          <button className="logout" onClick={handleLogout}>
+          <button className="logout" onClick={() => onLinkClick("logout")}>
             Logout
           </button>
         </li>

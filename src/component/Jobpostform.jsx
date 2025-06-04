@@ -29,6 +29,9 @@ const jobTitles = [
   'DevOps Engineer'
 ];
 
+
+
+
 function Jobpostform() {
   const [formData, setFormData] = useState({
     title: '',
@@ -42,10 +45,39 @@ function Jobpostform() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Job Posted!\n' + JSON.stringify(formData, null, 2));
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const token = localStorage.getItem('token'); // Or get from context/store
+
+  if (!token) {
+    alert('You must be logged in to post a job.');
+    return;
+  }
+
+  try {
+    const response = await fetch('http://localhost:5000/api/employers/postjob', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`, // Send token
+      },
+      body: JSON.stringify(formData), // Ensure formData has keys: title, location, jobType, description, deadline
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      alert('Job posted successfully!');
+     
+    } else {
+      alert(`Error: ${result.message || 'Job post failed'}`);
+    }
+  } catch (error) {
+    alert('Error posting job:server Error ');
+  }
+};
+
 
   const handleClear = () => {
     setFormData({
@@ -141,7 +173,7 @@ function Jobpostform() {
 
           <div className="button-row">
             <button type="button" className="clear-btn" onClick={handleClear}>Clear Form</button>
-            <button type="submit" className="post-btn">Post Job</button>
+            <button type="submit" className="post-btn" onClick={handleSubmit}>Post Job</button>
           </div>
         </form>
       </div>

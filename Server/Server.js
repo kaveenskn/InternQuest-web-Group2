@@ -17,6 +17,9 @@ app.use("/authlog", logroutes);
 const profileroutes = require("./routes/studentprofile.js");
 app.use("/api/students", profileroutes);
 
+const jobpostroutes = require("./routes/Jobpostroute.js");
+app.use("/api/employers", jobpostroutes);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port  ${PORT}`);

@@ -11,7 +11,7 @@
 
 .left-panel {
   flex: 1;
-  background-color: #7095f5;
+  background: linear-gradient(to right, #12396e, #4a60ff);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,7 +63,7 @@ input[type="password"] {
 button {
   margin-top: 20px;
   padding: 12px;
-  background-color: #7095f5;
+  background: linear-gradient(to right, #12396e, #4a60ff);
   color: white;
   border: none;
   border-radius: 10px;
