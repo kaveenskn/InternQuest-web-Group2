@@ -136,7 +136,7 @@ const InternshipFinderPage = () => {
                 <div className="card-desc">
                   {i.description}
                 </div>
-                <button className="view-profile-btn">View Profile</button>
+                <button className="apply-btn">Apply</button>
               </div>
             </div>
           ))}

@@ -220,7 +220,7 @@
   margin-top: 4px;
 }
 
-.view-profile-btn {
+.apply-btn {
   margin-top: 32px;
   background: #2563eb;
   color: #fff;
@@ -234,7 +234,7 @@
   box-shadow: 0 2px 8px rgba(34, 68, 151, 0.07);
   align-self: flex-start;
 }
-.view-profile-btn:hover {
+.apply-btn:hover {
   background: #1e40af;
 }
 
