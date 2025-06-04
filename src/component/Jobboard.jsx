@@ -4,24 +4,34 @@ import "../styles/Jobboard.css";
 const Jobboard = () => {
   const [jobs, setJobs] = useState([]);
 
-  useEffect(() => {
-    const fetchJobs = async () => {
-      try {
-        const response = await fetch("http://localhost:5000/api/employee/jobs"); // Adjust route as needed
-        const data = await response.json();
+ useEffect(() => {
+  const fetchJobs = async () => {
+    try {
+      const token = localStorage.getItem("token"); // Adjust based on where you store the token
 
-        if (response.ok) {
-          setJobs(data.jobs); // Assuming backend returns { jobs: [...] }
-        } else {
-          console.error("Failed to fetch jobs:", data.message);
-        }
-      } catch (err) {
-        console.error("Error fetching jobs:", err.message);
+      const response = await fetch("http://localhost:5000/api/employee/jobs", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setJobs(data); // since your backend returns the formatted array directly
+      } else {
+        console.error("Failed to fetch jobs:", data.message);
       }
-    };
+    } catch (err) {
+      console.error("Error fetching jobs:", err.message);
+    }
+  };
 
-    fetchJobs();
-  }, []);
+  fetchJobs();
+}, []);
+
 
   return (
     <div className="about-bg">
@@ -62,7 +72,7 @@ const Jobboard = () => {
             <div key={idx} className="about-job-card">
               <h3>{job.title}</h3>
               <a href="#" className="about-company-link">
-                {job.company} {/* fetched from employer */}
+                {job.companyName} {/* fetched from employer */}
               </a>
               <div className="about-job-location">
                 <i className="fi fi-rr-marker"></i>
