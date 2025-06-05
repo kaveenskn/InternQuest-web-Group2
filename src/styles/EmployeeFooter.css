@@ -97,3 +97,36 @@
   color: #283593;
   border-color: #283593;
 }
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .feature-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8em;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .card-icon {
+    font-size: 3em;
+  }
+
+  .card-title {
+    font-size: 1.2em;
+  }
+}
