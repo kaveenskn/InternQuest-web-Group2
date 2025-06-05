@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import "../styles/Jobpostform.css";
 
 const jobTypes = [
-  'Full-time',
-  'Part-time',
-  'Contract',
-  'Internship',
-  'Temporary',
+  'Onsite',
   'Remote',
+  'Hybrid',
 ];
 
 const joblocation = [
