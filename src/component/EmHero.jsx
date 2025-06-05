@@ -26,7 +26,6 @@ const EmHero = () => {
           </div>
         </div>
         <div className="image-section">
-          <img src={company} alt="Company" className="styled-image2" />
           <img src={employee} alt="Employee" className="styled-image1" />
         </div>
       </div>

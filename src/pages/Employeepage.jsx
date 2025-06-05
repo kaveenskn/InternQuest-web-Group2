@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import EmHero from "../component/EmHero";
 import Navbar from "../component/navbar";
 import Jobpostform from "../component/Jobpostform";
-import "../component/EmployeeFooter";
+import EmployeeFooter from "../component/EmployeeFooter";
 
 const EmpLinks = [
   { key: "home", label: "home" },
@@ -20,6 +20,7 @@ const EmployeePage = () => {
         return (
           <>
             <EmHero />
+            <EmployeeFooter />
           </>
         );
       case "profile":
