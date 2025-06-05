@@ -6,40 +6,43 @@
   min-height: 99vh;
   padding: 20px;
   box-sizing: border-box;
-  background-color: aliceblue;
+  background: linear-gradient(135deg, #2774ae 0%, #12396e 100%);
 }
 
 .job-post-form {
-  background: linear-gradient(to right, #12396e, #4a60ff);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-radius: 16px;
-  padding: 25px 30px;
-  max-width: 500px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 32px 36px;
+  max-width: 520px;
   width: 100%;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  color: #fff;
+  box-shadow: 0 8px 32px rgba(39, 116, 174, 0.18);
+  color: #12396e;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .form-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 8px;
+  color: #12396e;
+  letter-spacing: 0.5px;
 }
 
 .form-subtitle {
   text-align: center;
-  font-size: 14px;
-  margin-bottom: 20px;
-  opacity: 0.8;
+  font-size: 15px;
+  margin-bottom: 22px;
+  opacity: 0.85;
+  color: #2774ae;
 }
 
 .input-label {
   display: block;
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 16px;
+  color: #12396e;
+  font-weight: 500;
 }
 
 .input-field,
@@ -47,23 +50,31 @@
   display: block;
   width: 100%;
   margin-top: 6px;
-  padding: 8px 12px;
-  border: none;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  font-size: 14px;
+  padding: 10px 14px;
+  border: 1.5px solid #b4c5e4;
+  background: #f7fbff;
+  color: #12396e;
+  font-size: 15px;
   outline: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  transition: border 0.2s;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+  border: 1.5px solid #2774ae;
+  background: #eaf4fb;
 }
 
 .input-field::placeholder,
 .textarea-field::placeholder {
-  color: #eee;
+  color: #b4c5e4;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
+  filter: invert(0.7);
 }
+
 select option {
   background-color: #12396e;
   color: #fff;
@@ -71,60 +82,68 @@ select option {
 
 .textarea-field {
   resize: none;
-  padding: 10px 12px;
+  padding: 12px 14px;
   text-align: left;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
-  gap: 2px;
+  gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 16px;
 }
 
 .row .input-field{
-width: 200px;
-
+  width: 230px;
 }
 
 .button-row {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
-  gap: 10px;
+  margin-top: 24px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
+/* Modern Blue Gradient Buttons */
 .clear-btn,
 .post-btn {
-  padding: 10px 20px;
-  border-radius: 25px;
+  padding: 12px 0;
+  border-radius: 30px;
   border: none;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 14px;
-  transition: 0.3s ease;
-  flex: 1;
-  min-width: 120px;
+  font-weight: 600;
+  font-size: 16px;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(39, 116, 174, 0.08);
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
+/* Clear Button: outlined blue gradient */
 .clear-btn {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  background: transparent;
+  color: #2774ae;
+  border: 2px solid #2774ae;
 }
 
 .clear-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(90deg, #2774ae 0%, #12396e 100%);
+  color: #fff;
+  border: 2px solid #12396e;
 }
 
+/* Post Button: filled blue gradient */
 .post-btn {
-  background-color: white;
-  color: #333;
+  background: linear-gradient(90deg, #2774ae 0%, #12396e 100%);
+  color: #fff;
+  border: 2px solid #2774ae;
 }
 
 .post-btn:hover {
-  background-color: #ffffff;
+  background: #12396e;
+  color: #fff;
+  border: 2px solid #12396e;
 }
 
 @media (max-width: 768px) {
@@ -133,7 +152,7 @@ width: 200px;
   }
 
   .form-title {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .form-subtitle {
@@ -144,10 +163,9 @@ width: 200px;
     flex-direction: column;
     gap: 10px;
   }
-.row .input-field{
-  width: 100%;
-
-}
+  .row .input-field{
+    width: 100%;
+  }
 
   .textarea-field{
     width: 95%;
@@ -167,5 +185,3 @@ width: 200px;
     width: 100%;
   }
 }
-
-
