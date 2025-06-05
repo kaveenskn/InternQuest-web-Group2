@@ -1,45 +1,47 @@
-import React, { useState } from "react";
-import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { HiOutlineBriefcase } from "react-icons/hi";
+import axios from "axios";
 import "../styles/internshipFinderPage.css";
 
-const internships = [
-  {
-    id: 1,
-    title: "Software Engineering Intern",
-    location: "Mountain View, CA",
-    type: "Summer Internship",
-    deadline: "2025-06-15",
-    description: "Assist in developing web applications and collaborating with the engineering team.",
-    posted: "2 days ago"
-  },
-  {
-    id: 2,
-    title: "UX Design Intern",
-    location: "Cupertino, CA",
-    type: "Fall Internship",
-    deadline: "2025-07-01",
-    description: "Work with the design team to create user-friendly interfaces and conduct user research.",
-    posted: "1 week ago"
-  }
-];
-
-const locations = ["Mountain View, CA", "Cupertino, CA"];
-const jobTypes = ["Summer Internship", "Fall Internship"];
-const jobTitles = [...new Set(internships.map(i => i.title))];
-
 const InternshipFinderPage = () => {
-  const [search, setSearch] = useState("");
+  const [internships, setInternships] = useState([]);
+  const [filtered, setFiltered] = useState([]);
   const [location, setLocation] = useState("");
   const [jobType, setJobType] = useState("");
   const [jobTitle, setJobTitle] = useState("");
+  const [showAll, setShowAll] = useState(false);
 
-  const filtered = internships.filter((i) =>
-    i.title.toLowerCase().includes(search.toLowerCase()) &&
-    (location ? i.location === location : true) &&
-    (jobType ? i.type === jobType : true) &&
-    (jobTitle ? i.title === jobTitle : true)
-  );
+  // Fetch internships from backend
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("/api/jobs");
+        const sorted = res.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        setInternships(sorted);
+        setFiltered(sorted);
+      } catch (err) {
+        console.error("Failed to fetch internships", err);
+      }
+    };
+    fetchData();
+  }, []);
+
+  // Filter based on dropdowns
+  const handleSearch = () => {
+    const filteredData = internships.filter((i) =>
+      (location ? i.location === location : true) &&
+      (jobType ? i.jobType === jobType : true) &&
+      (jobTitle ? i.title === jobTitle : true)
+    );
+    setFiltered(filteredData);
+    setShowAll(false);
+  };
+
+  const displayedInternships = showAll ? filtered : filtered.slice(0, 6);
+  const locations = [...new Set(internships.map(i => i.location))];
+  const jobTypes = [...new Set(internships.map(i => i.jobType))];
+  const jobTitles = [...new Set(internships.map(i => i.title))];
 
   return (
     <div className="intern-page">
@@ -51,18 +53,8 @@ const InternshipFinderPage = () => {
           </p>
         </div>
 
-        {/* Search and Filters */}
+        {/* Filters Only */}
         <div className="intern-search-card">
-          <div className="search-row">
-            <FaSearch className="search-icon" />
-            <input
-              type="text"
-              placeholder="Search internships by title or keyword"
-              className="search-input"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
           <div className="filter-row">
             <div className="filter-col">
               <label className="filter-label">
@@ -95,9 +87,7 @@ const InternshipFinderPage = () => {
               </select>
             </div>
             <div className="filter-col">
-              <label className="filter-label">
-                Job Title
-              </label>
+              <label className="filter-label">Job Title</label>
               <select
                 className="filter-select"
                 value={jobTitle}
@@ -109,29 +99,27 @@ const InternshipFinderPage = () => {
                 ))}
               </select>
             </div>
-            <button className="search-btn">
+            <button className="search-btn" onClick={handleSearch}>
               Search Internships
             </button>
           </div>
         </div>
 
         {/* Results */}
-        <div className="results-count">
-          {filtered.length} results found
-        </div>
+        <div className="results-count">{filtered.length} results found</div>
         <div className="results-grid">
-          {filtered.map((i) => (
-            <div key={i.id} className="intern-card">
+          {displayedInternships.map((i) => (
+            <div key={i._id} className="intern-card">
               <div className="card-content">
                 <div className="card-title-row">
-                  <span className="card-title" title={i.title}>{i.title}</span>
-                  <span className="card-type">{i.type}</span>
+                  <span className="int-card-title" title={i.title}>{i.title}</span>
+                  <span className="int-card-type">{i.jobType}</span>
                 </div>
                 <div className="card-meta">
                   <FaMapMarkerAlt className="card-meta-icon" /> {i.location}
                 </div>
                 <div className="card-deadline">
-                  <strong>Deadline:</strong> {i.deadline}
+                  <strong>Deadline:</strong> {new Date(i.deadline).toLocaleDateString()}
                 </div>
                 <div className="card-desc">
                   {i.description}
@@ -141,6 +129,15 @@ const InternshipFinderPage = () => {
             </div>
           ))}
         </div>
+
+        {/* View More Button */}
+        {!showAll && filtered.length > 6 && (
+          <div style={{ textAlign: "center", marginTop: "20px" }}>
+            <button className="search-btn" onClick={() => setShowAll(true)}>
+              View More
+            </button>
+          </div>
+        )}
       </main>
     </div>
   );

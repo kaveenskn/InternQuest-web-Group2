@@ -1,7 +1,8 @@
 /* ProfilePage.css */
 .profile-page {
   width: 100%;
-  margin-top: 120px;
+  margin-top: 0px;
+    background: linear-gradient(to right, #12396e, #4a60ff);
 }
 
 .profile-page h1 {

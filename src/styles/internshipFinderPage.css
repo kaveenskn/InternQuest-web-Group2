@@ -166,7 +166,7 @@
   margin-bottom: 6px;
 }
 
-.card-title {
+.int-card-title {
   font-size: 1.1rem;
   font-weight: 600;
   color: #1e40af;
@@ -178,11 +178,11 @@
   display: inline-block;
 }
 
-.card-title:hover {
-  text-decoration: underline;
+.int-card-title:hover {
+  transform: translateZ(3px);
 }
 
-.card-type {
+.int-card-type {
   background: #dbeafe;
   color: #1e40af;
   font-size: 0.9rem;

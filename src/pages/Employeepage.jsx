@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import EmHero from '../component/EmHero';
 import Navbar from '../component/navbar';
 import Jobpostform from '../component/Jobpostform';
+import Jobboard from '../component/Jobboard';
 
 
 const EmpLinks = [
@@ -26,7 +27,10 @@ const EmployeePage = () => {
       case 'profile':
         return <><h1>hello</h1></>
       case 'Post job':
-        return <Jobpostform/>
+        return <>
+         <Jobboard/>
+         <Jobpostform/>
+        </>
       case 'my-cv':
         return <div><h2>My CV Page</h2></div>
       default:
