@@ -137,6 +137,9 @@
     align-items: flex-start;
     overflow: hidden;
   }
+  .topic-text {
+    font-size: 2rem;
+  }
 
   .logo {
     width: 100px;
