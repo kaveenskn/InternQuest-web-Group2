@@ -1,16 +1,31 @@
+/* Remove default browser margin/padding and set height for full-viewport backgrounds */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Main container: full height, blue gradient, centered content */
 .job-post-container {
-  margin-top: 100px;
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 99vh;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 0;
   background: linear-gradient(135deg, #2774ae 0%, #12396e 100%);
 }
 
+/* Form card styling */
 .job-post-form {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   border-radius: 18px;
   padding: 32px 36px;
   max-width: 520px;
