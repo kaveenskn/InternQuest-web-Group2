@@ -12,16 +12,26 @@
 
 .hero-text {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.hero-text h2 {
-  font-size: 45px;
+.topic-text {
+  font-size: 2.5rem;
   font-weight: 800;
-  font-family: sans-serif;
-  color: #333;
-  margin-bottom: 10px;
-  display: block; /* Ensure h2 is visible */
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.topic-text::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3b82f6;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
 .hero-text p {
@@ -100,20 +110,22 @@
   width: 100%;
 }
 
-.image-section .styled-image2 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60%;
-  height: 100vh;
-  clip-path: polygon(60% 40%, 120% 0, 100% 100%, 30% 100%);
-  z-index: 1;
+.media-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.Emvideo {
+  width: 480px;
+  height: 280px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .image-section .styled-image1 {
+  width: 520px;
   padding-top: 30px;
-  width: 500px;
-  margin-right: 800px;
 }
 
 @media (max-width: 768px) {
