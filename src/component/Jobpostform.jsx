@@ -2,21 +2,39 @@ import React, { useState } from 'react';
 import "../styles/Jobpostform.css";
 
 const jobTypes = [
-  'Full-time',
-  'Part-time',
-  'Contract',
-  'Internship',
-  'Temporary',
+  'Onsite',
   'Remote',
+  'Hybrid',
 ];
 
 const joblocation = [
+  'Ampara',
+  'Anuradhapura',
+  'Badulla',
+  'Batticaloa',
   'Colombo',
-  'Bandarawela',
-  'Kandy',
+  'Galle',
+  'Gampaha',
+  'Hambantota',
   'Jaffna',
-  'Galle'
+  'Kalutara',
+  'Kandy',
+  'Kegalle',
+  'Kilinochchi',
+  'Kurunegala',
+  'Mannar',
+  'Matale',
+  'Matara',
+  'Moneragala',
+  'Mullaitivu',
+  'Nuwara Eliya',
+  'Polonnaruwa',
+  'Puttalam',
+  'Ratnapura',
+  'Trincomalee',
+  'Vavuniya'
 ];
+
 
 const jobTitles = [
   'Software Engineer',
