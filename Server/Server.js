@@ -23,6 +23,9 @@ app.use("/api/employers", jobpostroutes);
 const jobboardroutes = require("./routes/jobboardroute.js");
 app.use("/api/employee", jobboardroutes);
 
+const jobfindroutes = require("./routes/jobFinderroute.js");
+app.use("/api/jobs", jobfindroutes);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port  ${PORT}`);

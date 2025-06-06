@@ -16,11 +16,13 @@ const InternshipFinderPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("/api/jobs");
+        const res = await axios.get("http://localhost:5000/api/jobs/find");
         const sorted = res.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setInternships(sorted);
         setFiltered(sorted);
+        alert("info fetched")
       } catch (err) {
+        alert("error in fetching")
         console.error("Failed to fetch internships", err);
       }
     };
@@ -42,6 +44,7 @@ const InternshipFinderPage = () => {
   const locations = [...new Set(internships.map(i => i.location))];
   const jobTypes = [...new Set(internships.map(i => i.jobType))];
   const jobTitles = [...new Set(internships.map(i => i.title))];
+
 
   return (
     <div className="intern-page">

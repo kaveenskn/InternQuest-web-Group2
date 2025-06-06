@@ -12,6 +12,7 @@ import Jobpostform from "./component/Jobpostform";
 import InternshipFinderPage from "./component/internshipFinderPage";
 
 import Jobboard from "./component/Jobboard";
+import InternshipApp from "./component/InternshipApp";
 
 
 
@@ -38,6 +39,7 @@ const App = () => {
 
                  <Route path="/find" element={<InternshipFinderPage/>} />
                  <Route path="/board" element={<Jobboard/>} />
+                 <Route path="/application" element={<InternshipApp/>} />
       
       </Routes>
     </Router>

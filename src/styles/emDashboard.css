@@ -1,6 +1,5 @@
-
 .hero {
-  margin-top: 120px;
+  margin-top: 5px;
   text-align: center;
   padding: 2rem;
 }
@@ -13,16 +12,26 @@
 
 .hero-text {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.hero-text h2 {
-  font-size: 45px;
+.topic-text {
+  font-size: 2.5rem;
   font-weight: 800;
-  font-family: sans-serif;
-  color: #333;
-  margin-bottom: 10px;
-  display: block; /* Ensure h2 is visible */
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.topic-text::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3b82f6;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
 .hero-text p {
@@ -101,23 +110,32 @@
   width: 100%;
 }
 
-.image-section .styled-image2 {
-  position: absolute;
-  top: 0; 
-  right: 0;
-  width: 60%;
-  height: 100vh; 
-  object-fit: cover;
-  clip-path: polygon(60% 40%, 120% 0, 100% 100%, 30% 100%);
-  z-index: 1; 
+.media-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+}
+
+.Emvideo {
+  width: 500px;
+  height: 280px;
+  clip-path: polygon(
+    10% 0%,
+    90% 0%,
+    100% 10%,
+    100% 90%,
+    90% 100%,
+    10% 100%,
+    0% 90%,
+    0% 10%
+  );
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .image-section .styled-image1 {
-  padding-top: 30px;
   width: 500px;
-  object-fit: cover;
-  object-position: left;
-  margin-right: 800px;
+  padding-top: 10px;
 }
 
 @media (max-width: 768px) {
@@ -128,6 +146,9 @@
     padding: 8px;
     align-items: flex-start;
     overflow: hidden;
+  }
+  .topic-text {
+    font-size: 2rem;
   }
 
   .logo {
