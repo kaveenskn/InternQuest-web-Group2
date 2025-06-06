@@ -24,14 +24,9 @@ const EmHero = () => {
             </div>
           </div>
         </div>
-        <div className="media-wrapper">
-          <video autoPlay loop muted className="Emvideo">
-            <source src={video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="image-section">
-            <img src={employee} alt="Employee" className="styled-image1" />
-          </div>
+
+        <div className="image-section">
+          <img src={employee} alt="Employee" className="styled-image1" />
         </div>
       </div>
     </div>
