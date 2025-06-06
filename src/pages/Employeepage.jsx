@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import EmHero from '../component/EmHero';
-import Navbar from '../component/navbar';
-import Jobpostform from '../component/Jobpostform';
-import Jobboard from '../component/Jobboard';
 
-=======
 import React, { useState } from "react";
 import EmHero from "../component/EmHero";
 import Navbar from "../component/navbar";
 import Jobpostform from "../component/Jobpostform";
 import EmployeeFooter from "../component/EmployeeFooter";
->>>>>>> f04c9cfe1737cc173e4c4b061d683d4f2bab883f
+import CardsSection from "../component/Cardsectionstd";
+
 
 const EmpLinks = [
   { key: "home", label: "home" },
@@ -29,20 +23,9 @@ const EmployeePage = () => {
         return (
           <>
             <EmHero />
-            <EmployeeFooter />
+             <CardsSection />
           </>
-<<<<<<< HEAD
-        )
-      case 'profile':
-        return <><h1>hello</h1></>
-      case 'Post job':
-        return <>
-         <Jobboard/>
-         <Jobpostform/>
-        </>
-      case 'my-cv':
-        return <div><h2>My CV Page</h2></div>
-=======
+
         );
       case "profile":
         return (
@@ -58,7 +41,7 @@ const EmployeePage = () => {
             <h2>My CV Page</h2>
           </div>
         );
->>>>>>> f04c9cfe1737cc173e4c4b061d683d4f2bab883f
+
       default:
         return (
           <div>
