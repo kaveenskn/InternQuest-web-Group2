@@ -5,6 +5,8 @@ import Navbar from "../component/navbar";
 import Jobpostform from "../component/Jobpostform";
 import EmployeeFooter from "../component/EmployeeFooter";
 import CardsSection from "../component/Cardsectionstd";
+import Jobboard from "../component/Jobboard";
+import "../pagestyles/employee.css"
 
 
 const EmpLinks = [
@@ -34,7 +36,13 @@ const EmployeePage = () => {
           </>
         );
       case "Post job":
-        return <Jobpostform />;
+        return (
+        <div className="post-job">
+        <Jobboard/>
+        <Jobpostform />;
+        </div>
+        );
+        
       case "my-cv":
         return (
           <div>

@@ -115,14 +115,11 @@ const InternshipFinderPage = () => {
             <div key={i._id} className="intern-card">
               <div className="card-content">
                 <div className="card-title-row">
-<<<<<<< HEAD
-                  <span className="int-card-title" title={i.title}>{i.title}</span>
-                  <span className="int-card-type">{i.jobType}</span>
-=======
+
                   {/* Tooltip for full job title */}
                   <span className="card-title" title={i.title}>{i.title}</span>
                   <span className="card-type">{i.type}</span>
->>>>>>> 1a1562c6c81334720b13a1dd7ca44c75dea8ccb1
+
                 </div>
                 <div className="card-meta">
                   <FaMapMarkerAlt className="card-meta-icon" /> {i.location}
@@ -133,7 +130,7 @@ const InternshipFinderPage = () => {
                 <div className="card-desc">
                   {i.description}
                 </div>
-                <button className="view-profile-btn">View Profile</button>
+                <button className="view-profile-btn">Apply</button>
               </div>
             </div>
           ))}

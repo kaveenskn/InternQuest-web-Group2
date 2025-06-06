@@ -11,6 +11,7 @@ body {
 
 .internship-app {
   padding: 20px 40px;
+   background: linear-gradient(to right, #12396e, #4a60ff);
 }
 
 .header {
@@ -45,7 +46,9 @@ body {
 }
 
 .text-card {
-  background-color: #f0f4f8;
+   background: rgba(255, 255, 255, 0.1);
+   backdrop-filter: blur(12px); /* blur effect */
+  -webkit-backdrop-filter: blur(12px); 
   padding: 16px;
   margin: 18px 0;
   border-radius: 8px;
