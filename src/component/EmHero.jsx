@@ -1,9 +1,7 @@
 import React from "react";
 import employee from "../assets/employee.png";
-import company from "../assets/company.png";
 import arrow from "../assets/arrow.png";
 import "../styles/emDashboard.css";
-import video from "../assets/EVideo.mp4";
 
 const EmHero = () => {
   return (
