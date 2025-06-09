@@ -68,7 +68,10 @@ const Jobboard = () => {
         </p>
 
         <div className="about-job-grid">
-          {jobs.map((job, idx) => (
+                {jobs.length === 0 ? (
+                  <p>No job postings found.</p>
+                ) : (
+                  jobs.map((job, idx) => (
             <div key={idx} className="about-job-card">
               <h3>{job.title}</h3>
               <a href="#" className="about-company-link">
@@ -88,7 +91,12 @@ const Jobboard = () => {
                 </span>
               </div>
             </div>
-          ))}
+          ))
+                )}
+
+
+
+         
         </div>
       </section>
     </div>

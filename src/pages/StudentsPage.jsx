@@ -4,6 +4,7 @@ import Navbar from '../component/navbar'
 import CardsSection from '../component/Cardsectionstd'
 import ProfilePage from './profilePage'
 import "../pagestyles/studentpage.css"
+import InternshipFinderPage from '../component/internshipFinderPage'
 
 const StdLinks = [
   { key: "dashboard", label: "Dashboard" },
@@ -27,7 +28,7 @@ const StudentsPage = () => {
       case 'profile':
         return <><ProfilePage/></>
       case 'find-jobs':
-        return <div><h2>Find Jobs Page</h2></div>
+        return <div><InternshipFinderPage/></div>
       case 'my-cv':
         return <div><h2>My CV Page</h2></div>
       default:

@@ -20,10 +20,9 @@ const InternshipFinderPage = () => {
         const sorted = res.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setInternships(sorted);
         setFiltered(sorted);
-        alert("info fetched")
       } catch (err) {
-        alert("error in fetching")
         console.error("Failed to fetch internships", err);
+        alert("Error fetching internships.");
       }
     };
     fetchData();
@@ -40,11 +39,36 @@ const InternshipFinderPage = () => {
     setShowAll(false);
   };
 
+  // Handle Apply
+  const handleApply = async (jobId, employeeId) => {
+    try {
+        const token = localStorage.getItem('token');
+        const res = await axios.post(
+      'http://localhost:5000/api/applications/apply',
+      {
+        jobId,
+        employeeId,
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+      alert(res.data.message || "Application submitted!");
+
+    } catch (error) {
+      console.error("Apply error:", error);
+      alert(error.res?.data?.message || "Application failed. Try again.");
+    }
+  };
+
   const displayedInternships = showAll ? filtered : filtered.slice(0, 6);
   const locations = [...new Set(internships.map(i => i.location))];
   const jobTypes = [...new Set(internships.map(i => i.jobType))];
   const jobTitles = [...new Set(internships.map(i => i.title))];
-
 
   return (
     <div className="intern-page">
@@ -56,7 +80,7 @@ const InternshipFinderPage = () => {
           </p>
         </div>
 
-        {/* Filters Only */}
+        {/* Filters */}
         <div className="intern-search-card">
           <div className="filter-row">
             <div className="filter-col">
@@ -115,22 +139,32 @@ const InternshipFinderPage = () => {
             <div key={i._id} className="intern-card">
               <div className="card-content">
                 <div className="card-title-row">
-
-                  {/* Tooltip for full job title */}
                   <span className="card-title" title={i.title}>{i.title}</span>
-                  <span className="card-type">{i.type}</span>
-
+                  <span className="card-type">{i.jobType}</span>
                 </div>
+
+                {i.employee?.companyName && (
+                  <div className="card-company">
+                    <strong>Company:</strong> {i.employee.companyName}
+                  </div>
+                )}
+
                 <div className="card-meta">
                   <FaMapMarkerAlt className="card-meta-icon" /> {i.location}
                 </div>
+
                 <div className="card-deadline">
                   <strong>Deadline:</strong> {new Date(i.deadline).toLocaleDateString()}
                 </div>
-                <div className="card-desc">
-                  {i.description}
-                </div>
-                <button className="view-profile-btn">Apply</button>
+
+                <div className="card-desc">{i.description}</div>
+
+                <button
+                  className="view-profile-btn"
+                  onClick={() => handleApply(i._id, i.employee?._id)}
+                >
+                  Apply
+                </button>
               </div>
             </div>
           ))}

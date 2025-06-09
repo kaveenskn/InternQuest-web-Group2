@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { getAllJobs } = require("../controller/jobboardcontrol");
+const { getJobsByLoggedInEmployee } = require("../controller/jobboardcontrol");
 const authenticate = require("../middleware/auth");
 
-router.get("/jobs", authenticate, getAllJobs); // Protected route
+router.get("/jobs", authenticate, getJobsByLoggedInEmployee); // Protected route
 
 module.exports = router;
