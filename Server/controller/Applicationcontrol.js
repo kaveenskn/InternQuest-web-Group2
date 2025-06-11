@@ -4,9 +4,9 @@ const Job = require("../models/Jobpost");
 
 const applyToJob = async (req, res) => {
   try {
-    const { jobId, employeeId } = req.body;
+    const { jobId } = req.body;
     const userId = req.user.id;
-    const Role = req.user.role; // assuming middleware added user to req
+    const Role = req.user.role;
 
     if (Role !== "student") {
       return res
@@ -15,7 +15,6 @@ const applyToJob = async (req, res) => {
     }
 
     const student = await Student.findOne({ user: userId }).populate("user");
-
     if (!student) {
       return res.status(404).json({ message: "Student not found" });
     }
@@ -25,10 +24,21 @@ const applyToJob = async (req, res) => {
       return res.status(404).json({ message: "Job not found" });
     }
 
+    // Check if already applied
+    const existingApp = await Application.findOne({
+      student: student._id,
+      job: job._id,
+    });
+    if (existingApp) {
+      return res
+        .status(400)
+        .json({ message: "You have already applied for this job." });
+    }
+
     const newApp = new Application({
       student: student._id,
       job: job._id,
-      employee: employeeId,
+      employee: job.employee, // get employee from job document
       fullName: student.fullname,
       universityName: student.universityName,
       email: student.user.email,

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/navbar.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({
   brand = "InternQuest",
@@ -14,6 +15,8 @@ const Navbar = ({
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+
+  const navigate=useNavigate();
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -40,7 +43,7 @@ const Navbar = ({
           </li>
         ))}
         <li>
-          <button className="logout" onClick={() => onLinkClick("logout")}>
+          <button className="logout" onClick={() => navigate("/")}>
             Logout
           </button>
         </li>

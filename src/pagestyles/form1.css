@@ -1,3 +1,15 @@
+.signup-page{
+  background-image: url("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
 .form-wrapper {
   display: flex;
   width: 90%;
@@ -7,11 +19,12 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+ 
 }
 
 .left-panel {
   flex: 1;
-  background: linear-gradient(to right, #12396e, #4a60ff);
+  background: linear-gradient(to left, #0d47a1 20%, black 70%);
   display: flex;
   align-items: center;
   justify-content: center;

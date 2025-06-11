@@ -3,13 +3,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgba(0, 123, 255, 0.1);
+  background-color: rgba(82, 82, 82, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 123, 255, 0.2);
   width: 100%;
   box-sizing: border-box;
-  min-height: 70px;
+  height:10vh;
   position: relative;
   top: 0;
   left: 0;

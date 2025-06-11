@@ -1,9 +1,12 @@
 import React from "react";
 import "../pagestyles/InternshipLanding.css"
 import { FaSearch, FaUserCheck, FaBullhorn, FaFilter, FaUserCircle, FaRegCalendarAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 
 const InternshipLandingPage = () => {
+
+  const navigate= useNavigate();
   return (
     <div className="landing-page">
       <header className="landing-hero-section">
@@ -14,8 +17,8 @@ const InternshipLandingPage = () => {
          </p>
        
         <div className="auth-buttons">
-          <button className="btns sign-in">Sign in</button>
-          <button className="btns sign-up">Sign up</button>
+          <button className="btns sign-in" onClick={()=>{navigate("/login")}}>Sign in</button>
+          <button className="btns sign-up" onClick={()=>{navigate("/signup")}}>Sign up</button>
         </div>
       </header>
 

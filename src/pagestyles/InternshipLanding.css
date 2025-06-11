@@ -20,20 +20,22 @@ body {
 
 .landing-hero-section h1 {
   font-size: 4.5rem;
-  color: #418aff;
+  color: #061938;
   margin-bottom: 10px;
    -webkit-box-reflect: below -25px linear-gradient(transparent, transparent 50%, rgba(0, 0, 0, 0.3));
+    
+  
 }
 
 .landing-hero-section .hero-ctn {
-  font-size: 1rem;
-  color: #4b3232;
+  font-size: 1.2rem;
+  color: #090263;
   text-align: center;
   margin: 20px auto;
   white-space: normal;     
   word-wrap: break-word;
   text-wrap: 10px;
-   font-family: 'Poppins', sans-serif;
+   font-family: 'Boulder', sans-serif;
   
   
 }
@@ -55,15 +57,16 @@ body {
   transition: all 0.3s ease;
   width: 15%;
   color: #ffffff;
+  
 }
 
 .sign-in {
-  background: linear-gradient(to right, #174d97,#5c6ffe);
+  background: linear-gradient(to left, #0d47a1 20%, black 70%);
   color: white;
 }
 
 .sign-up {
-  background: linear-gradient(to right, #174d97,#6577fd);
+ background: linear-gradient(to left, #0d47a1 20%, black 70%);
   color: rgb(255, 255, 255);
   
 }
@@ -74,7 +77,7 @@ body {
 }
 
 .features-section {
-  background: linear-gradient(to right, #12396e,#4a60ff);
+   background: radial-gradient(circle at top right, #0d47a1 20%, transparent 70%), black;
   color: white;
   padding: 60px 20px;
 }
@@ -105,13 +108,21 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
   text-align: center;
+  border-left: 0.5px solid rgb(1, 17, 99);
+  
 }
+
+
+
 
 .card-title{
   display: flex;
   gap: 20px;
   padding: 5px 25px;
+  
 }
+
+
 
 .feature-card .icon{
     width:30%;
@@ -138,7 +149,7 @@ body {
 }
 /* Footer Styles */
 .getstart-footer {
-  background: linear-gradient(to right, #12396e,#4a60ff);
+   background: linear-gradient(to left, #0d47a1 20%, black 70%);
   color: #ffffff;
   padding: 40px 20px 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -186,6 +197,8 @@ body {
   font-size: 0.85rem;
   color: #ccc;
 }
+
+
 
 @media (max-width: 968px){
    .landing-hero-section{

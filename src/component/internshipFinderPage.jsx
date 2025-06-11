@@ -66,9 +66,43 @@ const InternshipFinderPage = () => {
   };
 
   const displayedInternships = showAll ? filtered : filtered.slice(0, 6);
-  const locations = [...new Set(internships.map(i => i.location))];
-  const jobTypes = [...new Set(internships.map(i => i.jobType))];
-  const jobTitles = [...new Set(internships.map(i => i.title))];
+  const locations = [ 'Ampara',
+  'Anuradhapura',
+  'Badulla',
+  'Batticaloa',
+  'Colombo',
+  'Galle',
+  'Gampaha',
+  'Hambantota',
+  'Jaffna',
+  'Kalutara',
+  'Kandy',
+  'Kegalle',
+  'Kilinochchi',
+  'Kurunegala',
+  'Mannar',
+  'Matale',
+  'Matara',
+  'Moneragala',
+  'Mullaitivu',
+  'Nuwara Eliya',
+  'Polonnaruwa',
+  'Puttalam',
+  'Ratnapura',
+  'Trincomalee',
+  'Vavuniya'];
+  const jobTypes = ['Onsite',
+  'Remote',
+  'Hybrid',];
+  const jobTitles = [
+    'Software Engineer',
+  'Frontend Developer',
+  'Backend Developer',
+  'UI/UX Designer',
+  'Project Manager',
+  'Data Analyst',
+  'QA Tester',
+  'DevOps Engineer'];
 
   return (
     <div className="intern-page">

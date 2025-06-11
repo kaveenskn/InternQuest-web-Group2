@@ -1,16 +1,19 @@
 /* ProfilePage.css */
 .profile-page {
-  width: 100%;
-  margin-top: 0px;
-    background: linear-gradient(to right, #12396e, #4a60ff);
+  width: 101%;
+  height: 30%;
+  margin-top: -15px;
+  margin-left: -10px;
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+ background: linear-gradient(to left, #0d47a1 20%, black 70%);
+ padding-top: 20px;
 }
 
 .profile-page h1 {
   text-align: center;
-    background: linear-gradient(to right, #12396e, #4a60ff);/* Gradient */
-    background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    color: #ffffff;
+ 
 }
 
 .profile-container {

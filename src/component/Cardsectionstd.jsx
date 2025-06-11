@@ -34,7 +34,7 @@ const CardsSection = () => {
 
 
   return (
-    <div style={{marginTop:"80px"}}>
+    <div style={{marginTop:"80px"}} className="cards-section">
       
      <h2 style={{ textAlign: "center" }}>
   Your Gateway to <strong>Top Internships</strong>

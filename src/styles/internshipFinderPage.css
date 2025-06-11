@@ -1,10 +1,13 @@
 .intern-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #2238A4 0%, #224497 50%, #3494e6 100%);
+   background: linear-gradient(to left, #0d47a1 20%, black 70%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
+  width: 102%;
+  margin-left: -15px;
+  margin-top: -15px;
 }
 
 /* Main content */
@@ -16,6 +19,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+    width: 102%;
 }
 .intern-header {
   text-align: center;

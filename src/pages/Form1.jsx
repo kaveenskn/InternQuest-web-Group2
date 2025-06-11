@@ -55,7 +55,10 @@ const Form1 = () => {
   };
 
   return (
+  
+ <div className="signup-page">
     <div className="form-wrapper">
+    
       <div className="left-panel">
         <h2>Welcome to InternQuest</h2>
       </div>
@@ -174,6 +177,7 @@ const Form1 = () => {
         </form>
       </div>
     </div>
+     </div>
   );
 };
 
