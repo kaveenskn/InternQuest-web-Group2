@@ -10,9 +10,9 @@ import "../pagestyles/employee.css"
 
 
 const EmpLinks = [
-  { key: "home", label: "home" },
-  { key: "profile", label: "Profile" },
-  { key: "Post job", label: "Post job" },
+  { key: "home", label: "Home" },
+  { key: "post-job", label: "Post-Job" },
+  { key: "applications", label: "Applications" },
   { key: "about", label: "About us" },
 ];
 
@@ -29,13 +29,13 @@ const EmployeePage = () => {
           </>
 
         );
-      case "profile":
+      case "applications":
         return (
           <>
             <h1>hello</h1>
           </>
         );
-      case "Post job":
+      case "post-job":
         return (
         <div className="post-job">
         <Jobboard/>
