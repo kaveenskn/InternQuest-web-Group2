@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/navbar.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({
   brand = "InternQuest",
@@ -14,6 +15,8 @@ const Navbar = ({
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+
+  const navigate=useNavigate();
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -28,7 +31,7 @@ const Navbar = ({
         {links.map((link) => (
           <li key={link.key}>
             <button
-              className={`nav-link ${link.key === activeKey ? "active" : ""}`}
+               className={`nav-link ${link.key === activeKey ? "active" : ""}`}
               onClick={() => {
                 setIsMobileMenuOpen(false);
                 onLinkClick(link.key);
@@ -40,13 +43,7 @@ const Navbar = ({
           </li>
         ))}
         <li>
-          <button
-            className="logout"
-            onClick={() => {
-              setIsMobileMenuOpen(false); // <-- Close mobile menu here
-              onLinkClick("logout");
-            }}
-          >
+          <button className="logout" onClick={() => navigate("/")}>
             Logout
           </button>
         </li>

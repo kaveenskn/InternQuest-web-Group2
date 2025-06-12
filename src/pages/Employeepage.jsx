@@ -1,8 +1,13 @@
+
 import React, { useState } from "react";
 import EmHero from "../component/EmHero";
 import Navbar from "../component/navbar";
 import Jobpostform from "../component/Jobpostform";
 import EmployeeFooter from "../component/EmployeeFooter";
+import CardsSection from "../component/Cardsectionstd";
+import Jobboard from "../component/Jobboard";
+import "../pagestyles/employee.css"
+
 
 const EmpLinks = [
   { key: "home", label: "home" },
@@ -20,8 +25,9 @@ const EmployeePage = () => {
         return (
           <>
             <EmHero />
-            <EmployeeFooter />
+             <CardsSection />
           </>
+
         );
       case "profile":
         return (
@@ -30,13 +36,20 @@ const EmployeePage = () => {
           </>
         );
       case "Post job":
-        return <Jobpostform />;
+        return (
+        <div className="post-job">
+        <Jobboard/>
+        <Jobpostform />;
+        </div>
+        );
+        
       case "my-cv":
         return (
           <div>
             <h2>My CV Page</h2>
           </div>
         );
+
       default:
         return (
           <div>

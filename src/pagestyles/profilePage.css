@@ -1,15 +1,19 @@
 /* ProfilePage.css */
 .profile-page {
-  width: 100%;
-  margin-top: 120px;
+  width: 102%;
+  height: 30%;
+ margin-top: -13px;
+  margin-left: -15px;
+ background: linear-gradient(to left, #0d47a1 20%, black 70%);
+ padding-top: 20px;
 }
 
 .profile-page h1 {
   text-align: center;
-    background: linear-gradient(to right, #12396e, #4a60ff);/* Gradient */
-    background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    color: #ffffff;
+    margin-top: 100px;
+ border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px;
 }
 
 .profile-container {
@@ -20,14 +24,16 @@
   font-family: 'Segoe UI', sans-serif;
   background: #ffffff;
   justify-content: center;
+  
 }
 
 @media (max-width: 768px) {
   .profile-page {
-    width: 100%;
+    width: 105%;
     margin-right: 0;
+    margin-left: -10px;
     padding-right: 10px;
-    padding-left: 10px;
+    padding-left: 15px;
   }
 
   .profile-container {

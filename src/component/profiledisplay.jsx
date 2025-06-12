@@ -20,8 +20,14 @@ const ProfileDisplay = ({ profile, projects }) => {
       </p>
       </div>
       
+
+     <div className="section">
+        <h4>Education</h4>
+        <p><FaGraduationCap size={12} /> {profile.universityName}</p>
+      </div>
+
       <div className="section">
-          <h4>Contact</h4>
+          <h4>University Location</h4>
           <div className="location" style={{ marginTop: "15px" }}><FaMapMarkerAlt size={12} /> {profile.universityLocation}</div>
       </div>
 
@@ -37,10 +43,7 @@ const ProfileDisplay = ({ profile, projects }) => {
         <a href={profile.githubLink} target="_blank" rel="noopener noreferrer">{profile.github_link}</a>
       </div>
 
-      <div className="section">
-        <h4>Education</h4>
-        <p><FaGraduationCap size={12} /> {profile.universityName}</p>
-      </div>
+     
 
       <div className="section">
         <h4>Skills</h4>

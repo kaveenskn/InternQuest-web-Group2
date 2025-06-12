@@ -1,8 +1,9 @@
 .about-bg {
   min-height: 100vh;
-  background: linear-gradient(135deg, #174076 0%, #3494e6 100%);
+   background: linear-gradient(to right, #12396e, #4a60ff);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 60px;
+  width:101%;
 }
 
 /* Hero Section */

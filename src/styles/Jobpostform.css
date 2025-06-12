@@ -14,13 +14,14 @@ body {
 
 /* Main container: full height, blue gradient, centered content */
 .job-post-container {
-  min-height: 100vh;
-  min-width: 100vw;
+
+  min-height: 90vh;
+  width:101%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  background: linear-gradient(135deg, #2774ae 0%, #12396e 100%);
+  padding: 50px 20px;
+  background: linear-gradient(to right, #12396e, #4a60ff);
 }
 
 /* Form card styling */
@@ -64,7 +65,7 @@ body {
 .textarea-field {
   display: block;
   width: 100%;
-  margin-top: 6px;
+  margin-top: 2px;
   padding: 10px 14px;
   border: 1.5px solid #b4c5e4;
   background: #f7fbff;
@@ -104,7 +105,7 @@ select option {
 .row {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 1px;
   flex-wrap: wrap;
   margin-bottom: 16px;
 }

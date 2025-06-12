@@ -12,7 +12,6 @@ const postJob = async (req, res) => {
         .json({ message: "Access denied. Only employees can post jobs." });
     }
 
-    // 🟢 Correct way to get employee based on the user._id from JWT
     const employee = await Employee.findOne({ user: req.user.id });
     if (!employee) {
       return res.status(404).json({ message: "Employee profile not found" });
@@ -23,7 +22,7 @@ const postJob = async (req, res) => {
     }
 
     const newJob = new Job({
-      employee: employee._id, // 👈 This is the _id of the Employee document
+      employee: employee._id,
       title,
       location,
       jobType,

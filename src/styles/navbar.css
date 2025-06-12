@@ -3,83 +3,87 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgba(0, 123, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 123, 255, 0.2);
+  border-bottom: 2px solid #ffffff33;
   width: 100%;
   box-sizing: border-box;
-  min-height: 70px;
-  position: relative;
+  height: 10vh;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1000;
   border-radius: 0 0 10px 10px;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+background-color: rgba(66, 66, 66, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
 }
 
+/* Brand/Logo */
 .navbar-brand {
   font-size: 24px;
   font-weight: bold;
-  color: #007bff;
+  color: white;
   display: flex;
   align-items: center;
 }
 
+/* Links container */
 .navbar-links {
   list-style: none;
   display: flex;
   gap: 40px;
   padding: 0;
-  margin: 0;
 }
 
+/* Each list item */
 .navbar-links li {
-  margin: 0;
+  margin-top: 20px;
 }
 
-.nav-link {
+/* Nav button styling */
+.navbar-links li .nav-link {
   text-decoration: none;
-  color: #007bff;
+  color: white;
   font-size: 18px;
   padding: 5px 10px;
   font-weight: bold;
   transition: all 0.3s ease;
   border: none;
-  background: none;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 0.5px;
+  background: transparent;
 }
 
-.nav-link:hover {
-  background: linear-gradient(to right, #12396e, #4a60ff);
+/* Hover effect for nav links */
+.navbar-links li .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
   transform: scale(1.05);
-  box-shadow: 0 4px 10px #12396e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
-.logout {
-  background-color: #dc3545;
-  color: white;
-  padding: 6px 12px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Adjust margin for all buttons */
+.navbar-links li button {
+  margin-top: -10px;
 }
 
+/* Logout button hover */
 .logout:hover {
-  background-color: #c82333;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  color: #fff;
+  border-radius: 5px;
 }
 
+/* Mobile Menu Icon */
 .mobile-menu-icon {
   display: none;
   font-size: 28px;
   cursor: pointer;
-  color: #007bff;
+  color: white;
   position: absolute;
   right: 20px;
   top: 15px;
@@ -89,9 +93,8 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    max-height: none;
+    max-height: 70px;
+    overflow-x: scroll;
   }
 
   .mobile-menu-icon {
@@ -102,14 +105,16 @@
     display: none;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
-    padding: 20px;
-    background-color: rgba(0, 123, 255, 0.1);
-    border-radius: 0 0 10px 10px;
     position: absolute;
     top: 60px;
-    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #007bff, #4a60ff); /* Same gradient */
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
     z-index: 999;
+    overflow-y: auto;
   }
 
   .navbar-links.show {
@@ -117,13 +122,20 @@
   }
 
   .navbar-links li {
-    width: 100%;
+    margin: 0;
   }
 
-  .navbar-links li .nav-link,
-  .navbar-links li .logout {
+  .navbar-links li button {
+    margin-top: 10px;
     width: 100%;
-    text-align: left;
-    margin: 0;
+    color: white;
+    background: transparent;
+  }
+
+  .navbar-links li .nav-link:hover,
+  .logout:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: scale(1.05);
   }
 }

@@ -1,6 +1,6 @@
 /* ProfileForm.css */
 .profile-panel {
-  background: white;
+  
   border-radius: 12px;
   padding: 20px;
   flex: 1 1 350px;
@@ -10,6 +10,7 @@
 .profile-form form {
   display: flex;
   flex-direction: column;
+ 
 }
 
 .profile-form input,
@@ -42,7 +43,7 @@
 
 .add-skill button {
   padding: 8px 12px;
-  background: #0277bd;
+  background: linear-gradient(to left, #0d47a1 20%, black 70%);
   color: white;
   border: none;
   border-radius: 6px;
@@ -60,7 +61,7 @@
  
 }
 .skill-tag button {
-  background:  #0277bd;
+  background: linear-gradient(to left, #0d47a1 20%, black 70%);
   border: none;
   color: #feffff;
   font-size: 2em;
@@ -74,7 +75,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #1565c0;
+  background: linear-gradient(to left, #0d47a1 20%, black 70%);
   color: white;
   padding: 10px 14px;
   font-size: 0.95em;

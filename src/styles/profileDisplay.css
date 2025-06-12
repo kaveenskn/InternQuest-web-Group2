@@ -9,10 +9,12 @@
 
 .profile-preview {
   max-width: 400px;
-  margin: 0 auto;}
+  margin: 0 auto;
+ background: linear-gradient(to left, #0d47a1 20%, black 70%);
+}
 
 .profilehead {
-  background-color: #0277bd;
+   background: linear-gradient(to left, #0d47a1 20%, black 70%);
   padding: 5px;
   border-radius: 5px;
 }
@@ -20,7 +22,7 @@
 .profile-picture {
   width: 70px;
   height: 70px;
-  background: #bbdefb;
+  background: #057cdd;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -31,17 +33,17 @@
 .profile-preview h2 {
   margin: 0;
   font-size: 1.5em;
-  color: #0d47a1;
+  color: #9dbef0;
 }
 
 .sub {
-  color: #1976d2;
+  color: #fdfeff;
   margin-bottom: 5px;
 }
 
 .location {
   font-size: 0.9em;
-  color: #000000;
+  color: #fffbfb;
   margin-bottom: 15px;
   
 }
@@ -51,12 +53,20 @@
   text-align: left;
 }
 
+
 .section h4 {
   margin-bottom: 10px;
   font-size: 1.1em;
-  color: #1565c0;
+  color: #3d8de9;
 }
 
+.section p{
+  color: #e1f5fe;
+}
+
+.section a{
+  color: #f0f7ff;
+}
 .skills,
 .project-cards {
   display: flex;

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/employeeFooter.css";
+// import "../styles/employeeFooter.css";
 import { FaChartBar, FaFileAlt, FaBullhorn, FaCrown } from "react-icons/fa";
 
 const EmployeeFooter = () => {
@@ -12,8 +12,8 @@ const EmployeeFooter = () => {
           <div className="card-icon smart-job-icon">
             <FaChartBar />
           </div>
-          <h3 className="card-title">Personalized Dashboard</h3>
-          <p className="card-description">
+          <h3 className="emp-card-title">Personalized Dashboard</h3>
+          <p className="emp-card-description">
             Track your progress, explore new opportunities, and stay connected
             with your team.
           </p>

@@ -29,9 +29,9 @@ body {
 }
 
 /* Optional: Add spacing between sections */
-section {
+/* section {
   padding: 50px 20px;
-}
+} */
 
 /* Responsive typography */
 h1, h2, h3, h4, h5, h6 {

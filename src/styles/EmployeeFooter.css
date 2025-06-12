@@ -1,4 +1,4 @@
-.internship-gateway-section {
+/* .internship-gateway-section {
   background-color: #f8f8f8;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -132,6 +132,9 @@
   .card-title {
     font-size: 1.2em;
   }
+<<<<<<< HEAD
+} */
+=======
 
   .card-description {
     font-size: 0.9em;
@@ -142,3 +145,4 @@
     font-size: 0.85em;
   }
 }
+>>>>>>> 125a5aaea6254ca6abffda7d258ccfcef40f6f77

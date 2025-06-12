@@ -22,7 +22,7 @@
 
 .login-left-panel {
   flex: 1;
-  background: linear-gradient(to right, #12396e, #4a60ff);
+ background: linear-gradient(to left, #0d47a1 20%, black 70%);
   color: white;
   display: flex;
   justify-content: center;
