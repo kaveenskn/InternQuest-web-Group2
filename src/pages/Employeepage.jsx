@@ -4,7 +4,7 @@ import EmHero from "../component/EmHero";
 import Navbar from "../component/navbar";
 import Jobpostform from "../component/Jobpostform";
 import EmployeeFooter from "../component/EmployeeFooter";
-import CardsSection from "../component/Cardsectionstd";
+import EmployeePageCards from "../component/Cardsectionemp";
 import Jobboard from "../component/Jobboard";
 import "../pagestyles/employee.css"
 
@@ -25,7 +25,7 @@ const EmployeePage = () => {
         return (
           <>
             <EmHero />
-             <CardsSection />
+             <EmployeePageCards/>
           </>
 
         );
