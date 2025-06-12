@@ -4,17 +4,17 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
-  padding-bottom: 40px;
+  padding-bottom: 0px;
   width: 102%;
   margin-left: -15px;
-  margin-top: -15px;
+  margin-top: -13px;
 }
 
 /* Main content */
 .intern-main {
   max-width: 1280px;
   width: 100%;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 0 20px;
   flex: 1;
   display: flex;
@@ -42,6 +42,17 @@
   white-space: nowrap;
 }
 @media (max-width: 768px) {
+
+.intern-page{
+  width: 105%;
+  margin-left: -13px;
+  
+}
+.intern-main {
+  margin-top: 40px;
+}
+
+
   .intern-subtitle {
     white-space: normal;
   }
@@ -50,7 +61,7 @@
 .intern-search-card {
   background: #fff;
   border-radius: 16px;
-  padding: 24px;
+  padding: 26px;
   margin-bottom: 24px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
 }

@@ -78,7 +78,7 @@
 .card-title {
   font-size: 1.4em;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-weight: 600;
 }
 
@@ -86,7 +86,7 @@
   font-size: 0.95em;
   color: #666;
   line-height: 1.6;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .read-more {
@@ -103,36 +103,46 @@
   color: #283593;
   border-color: #283593;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .section-title {
-    font-size: 2em;
-    margin-bottom: 40px;
+    font-size: 1.6rem;
+    padding: 12px;
+    margin: 8px 0;
   }
 
   .cards-container {
-    grid-template-columns: 1fr;
-    padding: 0 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 20px 15px;
+    overflow-x: hidden;
+    align-items: center;
   }
 
   .feature-card {
-    padding: 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1.8em;
-  }
-
-  .feature-card {
+    width: 90%;
     padding: 20px;
   }
 
   .card-icon {
-    font-size: 3em;
+    font-size: 2.5em;
+    margin-bottom: 15px;
   }
 
   .card-title {
     font-size: 1.2em;
   }
+<<<<<<< HEAD
 } */
+=======
+
+  .card-description {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+
+  .read-more {
+    font-size: 0.85em;
+  }
+}
+>>>>>>> 125a5aaea6254ca6abffda7d258ccfcef40f6f77
