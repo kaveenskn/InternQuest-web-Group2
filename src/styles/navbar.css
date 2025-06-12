@@ -15,7 +15,7 @@
   left: 0;
   z-index: 1000;
   border-radius: 0 0 10px 10px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .navbar-brand {
@@ -31,44 +31,50 @@
   display: flex;
   gap: 40px;
   padding: 0;
+  margin: 0;
 }
 
 .navbar-links li {
-  margin-top: 20px;
+  margin: 0;
 }
 
-.navbar-links li .nav-link
- {
+.nav-link {
   text-decoration: none;
-  color: #007bff; /* Blue for all states */
+  color: #007bff;
   font-size: 18px;
   padding: 5px 10px;
   font-weight: bold;
   transition: all 0.3s ease;
   border: none;
+  background: none;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0.5px;
 }
 
-
-
-/* Enhanced hover effect */
-.navbar-links li .nav-link:hover {
+.nav-link:hover {
   background: linear-gradient(to right, #12396e, #4a60ff);
-  color: #4a60ff;
   transform: scale(1.05);
   box-shadow: 0 4px 10px #12396e;
+  border-radius: 5px;
 }
 
-
-.navbar-links li button {
-  margin-top: -10px;
+.logout {
+  background-color: #dc3545;
+  color: white;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.logout:hover {
+  background-color: #c82333;
+}
 
-
-/* Mobile Menu Icon */
 .mobile-menu-icon {
   display: none;
   font-size: 28px;
@@ -82,10 +88,12 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-   .navbar{
-    max-height:70px ;
-    overflow-x: scroll;
-   }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: none;
+  }
+
   .mobile-menu-icon {
     display: block;
   }
@@ -94,16 +102,14 @@
     display: none;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 0 0 10px 10px;
     position: absolute;
     top: 60px;
-    right: 0;
-    background-color: rgba(0, 123, 255, 0.1);
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    border-radius: 0 0 10px 10px;
+    left: 0;
     z-index: 999;
-    overflow-y: auto;
   }
 
   .navbar-links.show {
@@ -111,17 +117,13 @@
   }
 
   .navbar-links li {
+    width: 100%;
+  }
+
+  .navbar-links li .nav-link,
+  .navbar-links li .logout {
+    width: 100%;
+    text-align: left;
     margin: 0;
-  }
-
-  .navbar-links li a {
-    padding: 10px;
-    display: block;
-    width: 100%;
-  }
-
-  .navbar-links li button {
-    margin-top: 10px;
-    width: 100%;
   }
 }

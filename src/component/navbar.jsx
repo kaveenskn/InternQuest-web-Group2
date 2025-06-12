@@ -28,7 +28,7 @@ const Navbar = ({
         {links.map((link) => (
           <li key={link.key}>
             <button
-               className={`nav-link ${link.key === activeKey ? "active" : ""}`}
+              className={`nav-link ${link.key === activeKey ? "active" : ""}`}
               onClick={() => {
                 setIsMobileMenuOpen(false);
                 onLinkClick(link.key);
@@ -40,7 +40,13 @@ const Navbar = ({
           </li>
         ))}
         <li>
-          <button className="logout" onClick={() => onLinkClick("logout")}>
+          <button
+            className="logout"
+            onClick={() => {
+              setIsMobileMenuOpen(false); // <-- Close mobile menu here
+              onLinkClick("logout");
+            }}
+          >
             Logout
           </button>
         </li>

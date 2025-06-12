@@ -1,6 +1,5 @@
-
 .hero {
-  margin-top: 120px;
+  margin-top: 5px;
   text-align: center;
   padding: 2rem;
 }
@@ -13,16 +12,26 @@
 
 .hero-text {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.hero-text h2 {
-  font-size: 45px;
+.topic-text {
+  font-size: 2.5rem;
   font-weight: 800;
-  font-family: sans-serif;
-  color: #333;
-  margin-bottom: 10px;
-  display: block; /* Ensure h2 is visible */
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.topic-text::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3b82f6;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
 .hero-text p {
@@ -101,23 +110,9 @@
   width: 100%;
 }
 
-.image-section .styled-image2 {
-  position: absolute;
-  top: 0; 
-  right: 0;
-  width: 60%;
-  height: 100vh; 
-  object-fit: cover;
-  clip-path: polygon(60% 40%, 120% 0, 100% 100%, 30% 100%);
-  z-index: 1; 
-}
-
 .image-section .styled-image1 {
-  padding-top: 30px;
   width: 500px;
-  object-fit: cover;
-  object-position: left;
-  margin-right: 800px;
+  padding-top: 10px;
 }
 
 @media (max-width: 768px) {
@@ -128,6 +123,9 @@
     padding: 8px;
     align-items: flex-start;
     overflow: hidden;
+  }
+  .topic-text {
+    font-size: 2rem;
   }
 
   .logo {
@@ -174,29 +172,30 @@
 
   .button-group {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 15px;
   }
 
   .hero-explore1,
   .hero-explore2 {
-    margin-top: 0;
-    width: 50%;
-    justify-content: center;
-    padding-left: 0;
+    width: 80%;
+    padding-left: 20px;
+  }
+
+  .hero-explore1 p,
+  .hero-explore2 p {
+    font-size: 14px;
   }
 
   .style-arrow {
-    width: 18%;
-    background-size: cover;
-    border-radius: 10px;
-  }
-  .image-section .styled-image1 {
-    width: 150%;
-    margin: 0px auto;
-    display: block;
+    width: 20px;
+    height: 20px;
   }
 
-  .image-section .styled-image2 {
-    display: none;
+  .image-section .styled-image1 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding-top: 5px;
   }
 }

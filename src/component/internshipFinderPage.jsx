@@ -124,6 +124,7 @@ const InternshipFinderPage = () => {
             <div key={i.id} className="intern-card">
               <div className="card-content">
                 <div className="card-title-row">
+                  {/* Tooltip for full job title */}
                   <span className="card-title" title={i.title}>{i.title}</span>
                   <span className="card-type">{i.type}</span>
                 </div>

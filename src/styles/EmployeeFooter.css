@@ -1,0 +1,144 @@
+.internship-gateway-section {
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  background-color: #f0f4f8;
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 50px;
+  overflow-x: auto;
+  padding: 40px 30px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.highlight-card {
+  background-color: #3f51b5;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(63, 81, 181, 0.4);
+}
+
+.highlight-card .card-title,
+.highlight-card .card-description,
+.highlight-card .read-more {
+  color: #ffffff;
+}
+
+.highlight-card .read-more {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.highlight-card .read-more:hover {
+  color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+.card-icon {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  color: #3f51b5;
+}
+
+.highlight-card .card-icon {
+  color: #ffffff;
+}
+
+.card-title {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.card-description {
+  font-size: 0.95em;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.read-more {
+  font-size: 0.9em;
+  color: #3f51b5;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #3f51b5;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  color: #283593;
+  border-color: #283593;
+}
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.6rem;
+    padding: 12px;
+    margin: 8px 0;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 20px 15px;
+    overflow-x: hidden;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .card-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+
+  .card-title {
+    font-size: 1.2em;
+  }
+
+  .card-description {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+
+  .read-more {
+    font-size: 0.85em;
+  }
+}
