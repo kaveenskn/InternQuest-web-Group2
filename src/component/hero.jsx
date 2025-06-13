@@ -9,14 +9,13 @@ const HeroSection = () => {
         <h1>
           We Create <br /> <strong>Solutions for Your Business</strong>
         </h1>
-        <p className="hero-description" >
+        <p className="hero-description">
           Class aptent taciti sociosqu ad litora torquent per conubia nostra,
           per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis.
         </p>
         <div className="button-group">
           <button className="cta-btn primary">Get Started</button>
           <button className="cta-btn secondary">Learn More</button>
-          
         </div>
       </div>
       <div className="hero-slider">
