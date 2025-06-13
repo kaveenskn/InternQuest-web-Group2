@@ -1,20 +1,16 @@
-* {
-  box-sizing: border-box;
-}
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9fafe;
-}
 
 .internship-app {
+  width:100%;
+  margin-left: -16px;
   padding: 20px 40px;
-   background: linear-gradient(to right, #12396e, #4a60ff);
+   background: linear-gradient(to left, #0d47a1 20%, black 70%);
+   margin-top: -13px;
+   overflow-x: hidden;
 }
 
 .header {
+  margin-top: 110px;
   background: white;
   border-bottom: 1px solid #e2e8f0;
   padding: 40px 35px;
@@ -129,6 +125,7 @@ body {
 @media (max-width: 768px) {
   .internship-app {
     padding: 16px;
+    margin-left: 0;
   }
 
   .header {

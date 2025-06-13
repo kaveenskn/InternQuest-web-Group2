@@ -22,7 +22,7 @@ const StudentsPage = () => {
         return (
           <div className="student-page Home">
             <HeroSection />
-            <CardsSection />
+            <CardsSection className="cards-st" />
          </div>
         )
       case 'profile':

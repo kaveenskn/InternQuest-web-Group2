@@ -4,15 +4,16 @@ import EmHero from "../component/EmHero";
 import Navbar from "../component/navbar";
 import Jobpostform from "../component/Jobpostform";
 import EmployeeFooter from "../component/EmployeeFooter";
-import CardsSection from "../component/Cardsectionstd";
+import EmployeePageCards from "../component/Cardsectionemp";
 import Jobboard from "../component/Jobboard";
-import "../pagestyles/employee.css"
+import "../pagestyles/employee.css";
+import InternshipApp from "../component/InternshipApp";
 
 
 const EmpLinks = [
-  { key: "home", label: "home" },
-  { key: "profile", label: "Profile" },
-  { key: "Post job", label: "Post job" },
+  { key: "home", label: "Home" },
+  { key: "post-job", label: "Post-Job" },
+  { key: "applications", label: "Applications" },
   { key: "about", label: "About us" },
 ];
 
@@ -25,17 +26,17 @@ const EmployeePage = () => {
         return (
           <>
             <EmHero />
-             <CardsSection />
+             <EmployeePageCards/>
           </>
 
         );
-      case "profile":
+      case "applications":
         return (
           <>
-            <h1>hello</h1>
+            <InternshipApp/>
           </>
         );
-      case "Post job":
+      case "post-job":
         return (
         <div className="post-job">
         <Jobboard/>

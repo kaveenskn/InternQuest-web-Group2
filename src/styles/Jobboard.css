@@ -1,9 +1,18 @@
 .about-bg {
   min-height: 100vh;
+<<<<<<< HEAD
   background: linear-gradient(120deg, #2c496c 0%, #34567f 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 60px;
   width: 100%;
+=======
+  background: linear-gradient(to left, #0d47a1 20%, black 70%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 60px;
+  width:100%;
+  margin-left: 0;
+  
+>>>>>>> Development-kaveen
 }
 
 /* Hero Section */
@@ -11,10 +20,16 @@
   padding-top: 48px;
   padding-bottom: 32px;
   text-align: center;
+<<<<<<< HEAD
   color: #e9f1fa;
+=======
+  color: #fff;
+  
+>>>>>>> Development-kaveen
 }
 
 .about-hero h1 {
+  margin-top: 60px;
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 10px;
@@ -35,6 +50,15 @@
 }
 
 @media (max-width: 900px) {
+
+.about-bg {
+   width: 103%;
+}
+  .about-hero {
+  width: 103%;
+   padding: 30px 20px;
+  
+}
   .about-hero-subtitle {
     white-space: normal;
     font-size: 1.05rem;
@@ -78,8 +102,8 @@
 .about-job-container {
   background: linear-gradient(135deg, #e8f1fa 0%, #c9d8e6 100%);
   border-radius: 36px;
-  padding: 46px 32px 46px 32px;
-  max-width: 1200px;
+   padding: 30px 20px;
+  max-width: 1100px;
   width: 96vw;
   margin: 0 auto;
   box-shadow: 0 10px 36px rgba(44, 73, 108, 0.15);

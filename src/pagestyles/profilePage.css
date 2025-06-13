@@ -3,7 +3,7 @@
   width: 102%;
   height: 30%;
  margin-top: -13px;
-  margin-left: -15px;
+  margin-left: -16px;
  background: linear-gradient(to left, #0d47a1 20%, black 70%);
  padding-top: 20px;
 }
@@ -29,9 +29,9 @@
 
 @media (max-width: 768px) {
   .profile-page {
-    width: 105%;
+    width: 106%;
     margin-right: 0;
-    margin-left: -10px;
+    margin-left: -13px;
     padding-right: 10px;
     padding-left: 15px;
   }
