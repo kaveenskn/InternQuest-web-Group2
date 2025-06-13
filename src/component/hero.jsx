@@ -16,6 +16,7 @@ const HeroSection = () => {
         <div className="button-group">
           <button className="cta-btn primary">Get Started</button>
           <button className="cta-btn secondary">Learn More</button>
+          <button className="cta-btn third">Short List</button>
         </div>
       </div>
       <div className="hero-slider">
