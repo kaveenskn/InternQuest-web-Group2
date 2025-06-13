@@ -1,11 +1,10 @@
 .about-bg {
   min-height: 100vh;
-  background: linear-gradient(to left, #0d47a1 20%, black 70%);
+  background: linear-gradient(to top, white 30%, #0d47a1 50%, black 90%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 60px;
-  width:100%;
-  margin-left: 0;
-  
+  width: 102%;
+  margin-left: -10px;
 }
 
 /* Hero Section */
@@ -14,7 +13,6 @@
   padding-bottom: 32px;
   text-align: center;
   color: #fff;
-  
 }
 
 .about-hero h1 {
@@ -23,10 +21,11 @@
   font-weight: 800;
   margin-bottom: 10px;
   letter-spacing: 1px;
+  color: #e9f1fa;
 }
 
 .about-hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 28px;
   max-width: 1000px;
@@ -34,20 +33,7 @@
   margin-right: auto;
   white-space: nowrap;
   text-align: center;
-}
-@media (max-width: 900px) {
-
-.about-bg {
-   width: 103%;
-}
-  .about-hero {
-  width: 103%;
-   padding: 30px 20px;
-  
-}
-  .about-hero-subtitle {
-    white-space: normal;
-  }
+  color: #b8c7d9;
 }
 
 .about-stats-row {
@@ -64,11 +50,11 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255,255,255,0.13);
+  background: rgba(52, 86, 127, 0.22);
   border-radius: 20px;
   padding: 8px 18px;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(23,64,118,0.06);
+  color: #e9f1fa;
+  box-shadow: 0 2px 8px rgba(44, 73, 108, 0.09);
 }
 
 .about-stat i {
@@ -83,24 +69,24 @@
   margin-right: 4px;
 }
 
-/* Job Card Container */
+/* Container Box */
 .about-job-container {
-  background: linear-gradient(135deg, #e9f1fa 0%, #f7fafc 100%);
+  background: rgb(242, 243, 248);
   border-radius: 36px;
-   padding: 30px 20px;
+  padding: 30px 20px;
   max-width: 1100px;
   width: 96vw;
   margin: 0 auto;
-  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 10px 36px rgba(44, 73, 108, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .about-job-container h2 {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   font-weight: 800;
-  color: #22223b;
+  color: #22304a;
   text-align: center;
   margin-bottom: 8px;
   letter-spacing: 1px;
@@ -110,40 +96,42 @@
   color: #5d6e7b;
   text-align: center;
   margin-bottom: 36px;
-  font-size: 1.13rem;
+  font-size: 1.05rem;
 }
 
 .about-job-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 36px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
   width: 100%;
+
 }
 
+/* Job Cards */
 .about-job-card {
-  background: #fff;
+  background-color: rgb(0, 0, 104);
+  border: 1px solid #dbeafe;
   border-radius: 18px;
-  padding: 26px 20px 20px 20px;
-  box-shadow: 0 4px 18px rgba(52, 148, 230, 0.11);
+  padding: 24px 16px 18px 16px;
+  box-shadow: 0 4px 18px rgba(44, 73, 108, 0.13);
   display: flex;
   flex-direction: column;
-  min-height: 320px;
-  transition: box-shadow 0.2s;
+  margin-left: 20px;
+  max-width: 400px;
+  min-height: 250px;
+  transition: box-shadow 0.2s, background 0.2s;
 }
 
-.about-job-card:hover {
-  box-shadow: 0 12px 36px rgba(52, 148, 230, 0.18);
-}
 
 .about-job-card h3 {
-  font-size: 1.18rem;
+  font-size: 1.13rem;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #1a202c;
+  color: #ffffff;
 }
 
 .about-company-link {
-  color: #2176c1;
+  color: #9cd1ff;
   font-weight: 600;
   margin-bottom: 8px;
   text-decoration: none;
@@ -155,7 +143,7 @@
 }
 
 .about-job-location {
-  color: #718096;
+  color: #b2d0e8;
   font-size: 0.95rem;
   margin-bottom: 16px;
   display: flex;
@@ -169,9 +157,26 @@
 }
 
 .about-job-desc {
-  color: #4a5568;
-  margin-bottom: 22px;
+  color: #e3f2fd;
+  font-size: 0.95rem;
+  margin-top: 8px;
   line-height: 1.5;
+  overflow: hidden;
+  max-height: 70px;
+  transition: max-height 0.3s ease;
+  margin-bottom: 22px;
+}
+
+.about-job-desc.expanded {
+  max-height: 300px;
+}
+
+.read-more-toggle {
+  display: inline-block;
+  color: #9cd1ff;
+  cursor: pointer;
+  margin-top: 4px;
+  font-weight: 600;
 }
 
 .about-job-tags {
@@ -180,7 +185,8 @@
   margin-bottom: 18px;
 }
 
-.about-job-type, .about-salary-type {
+.about-job-type,
+.about-salary-type {
   padding: 6px 16px;
   border-radius: 13px;
   font-size: 0.88rem;
@@ -199,7 +205,7 @@
 }
 
 .about-job-meta {
-  color: #718096;
+  color: #c0dbf2;
   font-size: 0.93rem;
   display: flex;
   justify-content: space-between;
@@ -220,4 +226,36 @@
 .about-salary-green {
   color: #2f855a;
   font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-bg {
+    padding-bottom: 24px;
+    width: 104%;
+    margin-left: -5px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .about-job-container {
+    padding: 20px 4px;
+    border-radius: 12px;
+  }
+
+  .about-job-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-job-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-job-card {
+    padding: 14px 8px 12px 8px;
+    min-height: 220px;
+  }
 }

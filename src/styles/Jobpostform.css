@@ -1,17 +1,18 @@
 
 .job-post-container {
   min-height: 90vh;
-  width:98%;
+  width:102%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
-  background: linear-gradient(to left, #0d47a1 20%, black 70%);
+
+  margin-left: -10px;
 }
 
 /* Form card styling */
 .job-post-form {
-  background: rgba(255, 255, 255, 0.96);
+    background: linear-gradient(to top, white 30%, #0d47a1 50%, black 90%);
   border-radius: 18px;
   padding: 32px 36px;
   max-width: 520px;
@@ -26,7 +27,7 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 8px;
-  color: #12396e;
+  color: #ffffff;
   letter-spacing: 0.5px;
 }
 
@@ -35,14 +36,14 @@
   font-size: 15px;
   margin-bottom: 22px;
   opacity: 0.85;
-  color: #2774ae;
+  color: #ffffff;
 }
 
 .input-label {
   display: block;
   font-size: 15px;
   margin-bottom: 16px;
-  color: #12396e;
+  color: #0095ff;
   font-weight: 500;
 }
 
@@ -148,8 +149,16 @@ select option {
 }
 
 @media (max-width: 768px) {
+.job-post-container {
+width: 105%;
+margin-left:-10px ;
+
+}
   .job-post-form {
     padding: 18px;
+    width: 102%;
+    margin-left: 10px;
+
   }
 
   .form-title {

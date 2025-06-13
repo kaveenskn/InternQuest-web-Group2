@@ -3,35 +3,39 @@ import "../styles/Jobboard.css";
 
 const Jobboard = () => {
   const [jobs, setJobs] = useState([]);
+  const [expandedCard, setExpandedCard] = useState(null); // to track expanded job
 
- useEffect(() => {
-  const fetchJobs = async () => {
-    try {
-      const token = localStorage.getItem("token"); // Adjust based on where you store the token
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const token = localStorage.getItem("token");
 
-      const response = await fetch("http://localhost:5000/api/employee/jobs", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
+        const response = await fetch("http://localhost:5000/api/employee/jobs", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
-      const data = await response.json();
+        const data = await response.json();
 
-      if (response.ok) {
-        setJobs(data); // since your backend returns the formatted array directly
-      } else {
-        console.error("Failed to fetch jobs:", data.message);
+        if (response.ok) {
+          setJobs(data);
+        } else {
+          console.error("Failed to fetch jobs:", data.message);
+        }
+      } catch (err) {
+        console.error("Error fetching jobs:", err.message);
       }
-    } catch (err) {
-      console.error("Error fetching jobs:", err.message);
-    }
+    };
+
+    fetchJobs();
+  }, []);
+
+  const toggleReadMore = (index) => {
+    setExpandedCard((prev) => (prev === index ? null : index));
   };
-
-  fetchJobs();
-}, []);
-
 
   return (
     <div className="about-bg">
@@ -68,35 +72,44 @@ const Jobboard = () => {
         </p>
 
         <div className="about-job-grid">
-                {jobs.length === 0 ? (
-                  <p>No job postings found.</p>
-                ) : (
-                  jobs.map((job, idx) => (
-            <div key={idx} className="about-job-card">
-              <h3>{job.title}</h3>
-              <a href="#" className="about-company-link">
-                {job.companyName} {/* fetched from employer */}
-              </a>
-              <div className="about-job-location">
-                <i className="fi fi-rr-marker"></i>
-                {job.location}
-              </div>
-              <p className="about-job-desc">{job.description}</p>
-              <div className="about-job-tags">
-                <span className="about-job-type">{job.jobType}</span>
-              </div>
-              <div className="about-job-meta">
-                <span>
-                  <i className="fi fi-rr-clock"></i> Apply before: {job.deadline}
-                </span>
-              </div>
-            </div>
-          ))
+          {jobs.length === 0 ? (
+            <p>No job postings found.</p>
+          ) : (
+            jobs.map((job, idx) => (
+              <div key={idx} className="about-job-card">
+                <h3>{job.title}</h3>
+                <a href="#" className="about-company-link">
+                  {job.companyName}
+                </a>
+                <div className="about-job-location">
+                  <i className="fi fi-rr-marker"></i> {job.location}
+                </div>
+
+                <p className={`about-job-desc ${expandedCard === idx ? "expanded" : ""}`}>
+                  {expandedCard === idx
+                    ? job.description
+                    : job.description.slice(0, 100) + (job.description.length > 100 ? "..." : "")
+                  }
+                </p>
+
+                {job.description.length > 100 && (
+                  <span className="read-more-toggle" onClick={() => toggleReadMore(idx)}>
+                    {expandedCard === idx ? "Read less" : "Read more"}
+                  </span>
                 )}
 
-
-
-         
+                <div className="about-job-tags">
+                  <span className="about-job-type">{job.jobType}</span>
+                </div>
+                <div className="about-job-meta">
+                  <span>
+                    <i className="fi fi-rr-clock"></i> Apply before:{" "}
+                    {new Date(job.deadline).toLocaleDateString()}
+                  </span>
+                </div>
+              </div>
+            ))
+          )}
         </div>
       </section>
     </div>
