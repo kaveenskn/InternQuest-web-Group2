@@ -11,8 +11,8 @@ const InternshipFinderPage = () => {
   const [jobType, setJobType] = useState("");
   const [jobTitle, setJobTitle] = useState("");
   const [showAll, setShowAll] = useState(false);
+  const [expandedCard, setExpandedCard] = useState(null);
 
-  // Fetch internships from backend
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -28,7 +28,6 @@ const InternshipFinderPage = () => {
     fetchData();
   }, []);
 
-  // Filter based on dropdowns
   const handleSearch = () => {
     const filteredData = internships.filter((i) =>
       (location ? i.location === location : true) &&
@@ -39,26 +38,20 @@ const InternshipFinderPage = () => {
     setShowAll(false);
   };
 
-  // Handle Apply
   const handleApply = async (jobId, employeeId) => {
     try {
-        const token = localStorage.getItem('token');
-        const res = await axios.post(
-      'http://localhost:5000/api/applications/apply',
-      {
-        jobId,
-        employeeId,
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-
+      const token = localStorage.getItem('token');
+      const res = await axios.post(
+        'http://localhost:5000/api/applications/apply',
+        { jobId, employeeId },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       alert(res.data.message || "Application submitted!");
-
     } catch (error) {
       console.error("Apply error:", error);
       alert(error.res?.data?.message || "Application failed. Try again.");
@@ -66,43 +59,10 @@ const InternshipFinderPage = () => {
   };
 
   const displayedInternships = showAll ? filtered : filtered.slice(0, 6);
-  const locations = [ 'Ampara',
-  'Anuradhapura',
-  'Badulla',
-  'Batticaloa',
-  'Colombo',
-  'Galle',
-  'Gampaha',
-  'Hambantota',
-  'Jaffna',
-  'Kalutara',
-  'Kandy',
-  'Kegalle',
-  'Kilinochchi',
-  'Kurunegala',
-  'Mannar',
-  'Matale',
-  'Matara',
-  'Moneragala',
-  'Mullaitivu',
-  'Nuwara Eliya',
-  'Polonnaruwa',
-  'Puttalam',
-  'Ratnapura',
-  'Trincomalee',
-  'Vavuniya'];
-  const jobTypes = ['Onsite',
-  'Remote',
-  'Hybrid',];
-  const jobTitles = [
-    'Software Engineer',
-  'Frontend Developer',
-  'Backend Developer',
-  'UI/UX Designer',
-  'Project Manager',
-  'Data Analyst',
-  'QA Tester',
-  'DevOps Engineer'];
+
+  const locations = [ 'Ampara', 'Anuradhapura', 'Badulla', 'Batticaloa', 'Colombo', 'Galle', 'Gampaha', 'Hambantota', 'Jaffna', 'Kalutara', 'Kandy', 'Kegalle', 'Kilinochchi', 'Kurunegala', 'Mannar', 'Matale', 'Matara', 'Moneragala', 'Mullaitivu', 'Nuwara Eliya', 'Polonnaruwa', 'Puttalam', 'Ratnapura', 'Trincomalee', 'Vavuniya' ];
+  const jobTypes = ['Onsite', 'Remote', 'Hybrid'];
+  const jobTitles = ['Software Engineer', 'Frontend Developer', 'Backend Developer', 'UI/UX Designer', 'Project Manager', 'Data Analyst', 'QA Tester', 'DevOps Engineer'];
 
   return (
     <div className="intern-page">
@@ -121,11 +81,7 @@ const InternshipFinderPage = () => {
               <label className="filter-label">
                 <FaMapMarkerAlt className="filter-icon" /> Location
               </label>
-              <select
-                className="filter-select"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-              >
+              <select className="filter-select" value={location} onChange={(e) => setLocation(e.target.value)}>
                 <option value="">Select location</option>
                 {locations.map((loc) => (
                   <option key={loc} value={loc}>{loc}</option>
@@ -136,11 +92,7 @@ const InternshipFinderPage = () => {
               <label className="filter-label">
                 <HiOutlineBriefcase className="filter-icon" /> Job Type
               </label>
-              <select
-                className="filter-select"
-                value={jobType}
-                onChange={(e) => setJobType(e.target.value)}
-              >
+              <select className="filter-select" value={jobType} onChange={(e) => setJobType(e.target.value)}>
                 <option value="">Select job type</option>
                 {jobTypes.map((type) => (
                   <option key={type} value={type}>{type}</option>
@@ -149,11 +101,7 @@ const InternshipFinderPage = () => {
             </div>
             <div className="filter-col">
               <label className="filter-label">Job Title</label>
-              <select
-                className="filter-select"
-                value={jobTitle}
-                onChange={(e) => setJobTitle(e.target.value)}
-              >
+              <select className="filter-select" value={jobTitle} onChange={(e) => setJobTitle(e.target.value)}>
                 <option value="">Select job title</option>
                 {jobTitles.map((title) => (
                   <option key={title} value={title}>{title}</option>
@@ -173,8 +121,8 @@ const InternshipFinderPage = () => {
             <div key={i._id} className="intern-card">
               <div className="card-content">
                 <div className="card-title-row">
-                  <span className="card-title" title={i.title}>{i.title}</span>
-                  <span className="card-type">{i.jobType}</span>
+                  <span className="int-card-title" title={i.title}>{i.title}</span>
+                  <span className="int-card-type">{i.jobType}</span>
                 </div>
 
                 {i.employee?.companyName && (
@@ -191,12 +139,19 @@ const InternshipFinderPage = () => {
                   <strong>Deadline:</strong> {new Date(i.deadline).toLocaleDateString()}
                 </div>
 
-                <div className="card-desc">{i.description}</div>
+                <div className={`card-desc ${expandedCard === i._id ? "expanded" : ""}`}>
+                  {expandedCard === i._id ? i.description : i.description.slice(0, 120) + (i.description.length > 120 ? "..." : "")}
+                </div>
 
-                <button
-                  className="view-profile-btn"
-                  onClick={() => handleApply(i._id, i.employee?._id)}
-                >
+                {i.description.length > 120 && (
+                  <span className="read-more-toggle" onClick={() =>
+                    setExpandedCard((prev) => (prev === i._id ? null : i._id))
+                  }>
+                    {expandedCard === i._id ? "Read less" : "Read more"}
+                  </span>
+                )}
+
+                <button className="view-profile-btn" onClick={() => handleApply(i._id, i.employee?._id)}>
                   Apply
                 </button>
               </div>
@@ -204,11 +159,11 @@ const InternshipFinderPage = () => {
           ))}
         </div>
 
-        {/* View More Button */}
-        {!showAll && filtered.length > 6 && (
+        {/* View More / Less */}
+        {filtered.length > 6 && (
           <div style={{ textAlign: "center", marginTop: "20px" }}>
-            <button className="search-btn" onClick={() => setShowAll(true)}>
-              View More
+            <button className="search-btn" onClick={() => setShowAll(!showAll)}>
+              {showAll ? "View Less" : "View More"}
             </button>
           </div>
         )}

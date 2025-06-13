@@ -4,7 +4,7 @@
   margin-left: -15px;
   text-align: center;
   padding: 2rem;
-   background: linear-gradient(to top, #ffffff 30%, #03275e 70%);
+  background: linear-gradient(to top, white 30%, #0d47a1 50%, black 90%);
 }
 
 .hero-content {
@@ -83,12 +83,12 @@
 }
 
 .hero-explore1:hover {
-  background-color: #022842;
+  background-color: #4a60ff;
   color: white;
 }
 
 .hero-explore2:hover {
-  background-color: #2f9ae7;
+ background-color: #4a60ff;
   color: white;
 }
 

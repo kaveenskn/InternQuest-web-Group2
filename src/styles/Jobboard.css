@@ -1,18 +1,10 @@
 .about-bg {
   min-height: 100vh;
-<<<<<<< HEAD
-  background: linear-gradient(120deg, #2c496c 0%, #34567f 100%);
+  background: linear-gradient(to top, white 30%, #0d47a1 50%, black 90%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 60px;
-  width: 100%;
-=======
-  background: linear-gradient(to left, #0d47a1 20%, black 70%);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-bottom: 60px;
-  width:100%;
-  margin-left: 0;
-  
->>>>>>> Development-kaveen
+  width: 102%;
+  margin-left: -10px;
 }
 
 /* Hero Section */
@@ -20,12 +12,7 @@
   padding-top: 48px;
   padding-bottom: 32px;
   text-align: center;
-<<<<<<< HEAD
-  color: #e9f1fa;
-=======
   color: #fff;
-  
->>>>>>> Development-kaveen
 }
 
 .about-hero h1 {
@@ -47,22 +34,6 @@
   white-space: nowrap;
   text-align: center;
   color: #b8c7d9;
-}
-
-@media (max-width: 900px) {
-
-.about-bg {
-   width: 103%;
-}
-  .about-hero {
-  width: 103%;
-   padding: 30px 20px;
-  
-}
-  .about-hero-subtitle {
-    white-space: normal;
-    font-size: 1.05rem;
-  }
 }
 
 .about-stats-row {
@@ -98,11 +69,11 @@
   margin-right: 4px;
 }
 
-/* Lighter container box */
+/* Container Box */
 .about-job-container {
-  background: linear-gradient(135deg, #e8f1fa 0%, #c9d8e6 100%);
+  background: rgb(242, 243, 248);
   border-radius: 36px;
-   padding: 30px 20px;
+  padding: 30px 20px;
   max-width: 1100px;
   width: 96vw;
   margin: 0 auto;
@@ -131,36 +102,36 @@
 .about-job-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
+  gap: 20px;
   width: 100%;
+
 }
 
-/* Lighter job cards for more separation */
+/* Job Cards */
 .about-job-card {
-  background: #fff;
+  background-color: rgb(0, 0, 104);
+  border: 1px solid #dbeafe;
   border-radius: 18px;
   padding: 24px 16px 18px 16px;
   box-shadow: 0 4px 18px rgba(44, 73, 108, 0.13);
   display: flex;
   flex-direction: column;
-  min-height: 300px;
+  margin-left: 20px;
+  max-width: 400px;
+  min-height: 250px;
   transition: box-shadow 0.2s, background 0.2s;
 }
 
-.about-job-card:hover {
-  box-shadow: 0 12px 36px rgba(52, 148, 230, 0.19);
-  background: #e9f1fa;
-}
 
 .about-job-card h3 {
   font-size: 1.13rem;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #1a202c;
+  color: #ffffff;
 }
 
 .about-company-link {
-  color: #2176c1;
+  color: #9cd1ff;
   font-weight: 600;
   margin-bottom: 8px;
   text-decoration: none;
@@ -172,7 +143,7 @@
 }
 
 .about-job-location {
-  color: #718096;
+  color: #b2d0e8;
   font-size: 0.95rem;
   margin-bottom: 16px;
   display: flex;
@@ -186,9 +157,26 @@
 }
 
 .about-job-desc {
-  color: #4a5568;
-  margin-bottom: 22px;
+  color: #e3f2fd;
+  font-size: 0.95rem;
+  margin-top: 8px;
   line-height: 1.5;
+  overflow: hidden;
+  max-height: 70px;
+  transition: max-height 0.3s ease;
+  margin-bottom: 22px;
+}
+
+.about-job-desc.expanded {
+  max-height: 300px;
+}
+
+.read-more-toggle {
+  display: inline-block;
+  color: #9cd1ff;
+  cursor: pointer;
+  margin-top: 4px;
+  font-weight: 600;
 }
 
 .about-job-tags {
@@ -197,7 +185,8 @@
   margin-bottom: 18px;
 }
 
-.about-job-type, .about-salary-type {
+.about-job-type,
+.about-salary-type {
   padding: 6px 16px;
   border-radius: 13px;
   font-size: 0.88rem;
@@ -216,7 +205,7 @@
 }
 
 .about-job-meta {
-  color: #718096;
+  color: #c0dbf2;
   font-size: 0.93rem;
   display: flex;
   justify-content: space-between;
@@ -240,54 +229,33 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .about-job-container {
-    padding: 32px 12px;
-    border-radius: 24px;
-  }
-  .about-job-grid {
-    gap: 24px;
-  }
-}
-
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .about-bg {
     padding-bottom: 24px;
+    width: 104%;
+    margin-left: -5px;
   }
+
   .about-hero h1 {
     font-size: 2.1rem;
   }
+
   .about-job-container {
     padding: 20px 4px;
     border-radius: 12px;
   }
+
   .about-job-container h2 {
     font-size: 1.5rem;
   }
+
   .about-job-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
   .about-job-card {
     padding: 14px 8px 12px 8px;
     min-height: 220px;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-hero {
-    padding-top: 24px;
-    padding-bottom: 16px;
-  }
-  .about-hero h1 {
-    font-size: 1.3rem;
-  }
-  .about-job-container {
-    padding: 10px 2px;
-    border-radius: 8px;
-  }
-  .about-job-card {
-    padding: 8px 4px 8px 4px;
-    min-height: 160px;
   }
 }
