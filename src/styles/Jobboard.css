@@ -1,9 +1,9 @@
 .about-bg {
   min-height: 100vh;
-   background: linear-gradient(to right, #12396e, #4a60ff);
+  background: linear-gradient(120deg, #2c496c 0%, #34567f 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 60px;
-  width:101%;
+  width: 100%;
 }
 
 /* Hero Section */
@@ -11,7 +11,7 @@
   padding-top: 48px;
   padding-bottom: 32px;
   text-align: center;
-  color: #fff;
+  color: #e9f1fa;
 }
 
 .about-hero h1 {
@@ -19,10 +19,11 @@
   font-weight: 800;
   margin-bottom: 10px;
   letter-spacing: 1px;
+  color: #e9f1fa;
 }
 
 .about-hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 28px;
   max-width: 1000px;
@@ -30,10 +31,13 @@
   margin-right: auto;
   white-space: nowrap;
   text-align: center;
+  color: #b8c7d9;
 }
+
 @media (max-width: 900px) {
   .about-hero-subtitle {
     white-space: normal;
+    font-size: 1.05rem;
   }
 }
 
@@ -51,11 +55,11 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255,255,255,0.13);
+  background: rgba(52, 86, 127, 0.22);
   border-radius: 20px;
   padding: 8px 18px;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(23,64,118,0.06);
+  color: #e9f1fa;
+  box-shadow: 0 2px 8px rgba(44, 73, 108, 0.09);
 }
 
 .about-stat i {
@@ -70,24 +74,24 @@
   margin-right: 4px;
 }
 
-/* Job Card Container */
+/* Lighter container box */
 .about-job-container {
-  background: linear-gradient(135deg, #e9f1fa 0%, #f7fafc 100%);
+  background: linear-gradient(135deg, #e8f1fa 0%, #c9d8e6 100%);
   border-radius: 36px;
   padding: 46px 32px 46px 32px;
   max-width: 1200px;
   width: 96vw;
   margin: 0 auto;
-  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 10px 36px rgba(44, 73, 108, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .about-job-container h2 {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   font-weight: 800;
-  color: #22223b;
+  color: #22304a;
   text-align: center;
   margin-bottom: 8px;
   letter-spacing: 1px;
@@ -97,33 +101,35 @@
   color: #5d6e7b;
   text-align: center;
   margin-bottom: 36px;
-  font-size: 1.13rem;
+  font-size: 1.05rem;
 }
 
 .about-job-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 36px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
   width: 100%;
 }
 
+/* Lighter job cards for more separation */
 .about-job-card {
   background: #fff;
   border-radius: 18px;
-  padding: 26px 20px 20px 20px;
-  box-shadow: 0 4px 18px rgba(52, 148, 230, 0.11);
+  padding: 24px 16px 18px 16px;
+  box-shadow: 0 4px 18px rgba(44, 73, 108, 0.13);
   display: flex;
   flex-direction: column;
-  min-height: 320px;
-  transition: box-shadow 0.2s;
+  min-height: 300px;
+  transition: box-shadow 0.2s, background 0.2s;
 }
 
 .about-job-card:hover {
-  box-shadow: 0 12px 36px rgba(52, 148, 230, 0.18);
+  box-shadow: 0 12px 36px rgba(52, 148, 230, 0.19);
+  background: #e9f1fa;
 }
 
 .about-job-card h3 {
-  font-size: 1.18rem;
+  font-size: 1.13rem;
   font-weight: 700;
   margin-bottom: 8px;
   color: #1a202c;
@@ -207,4 +213,57 @@
 .about-salary-green {
   color: #2f855a;
   font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-job-container {
+    padding: 32px 12px;
+    border-radius: 24px;
+  }
+  .about-job-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-bg {
+    padding-bottom: 24px;
+  }
+  .about-hero h1 {
+    font-size: 2.1rem;
+  }
+  .about-job-container {
+    padding: 20px 4px;
+    border-radius: 12px;
+  }
+  .about-job-container h2 {
+    font-size: 1.5rem;
+  }
+  .about-job-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .about-job-card {
+    padding: 14px 8px 12px 8px;
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+  .about-hero h1 {
+    font-size: 1.3rem;
+  }
+  .about-job-container {
+    padding: 10px 2px;
+    border-radius: 8px;
+  }
+  .about-job-card {
+    padding: 8px 4px 8px 4px;
+    min-height: 160px;
+  }
 }
