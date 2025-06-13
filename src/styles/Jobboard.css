@@ -74,9 +74,9 @@
   margin-right: 4px;
 }
 
-/* Job Card Container */
+/* Lighter container box */
 .about-job-container {
-  background: linear-gradient(135deg, #34567f 0%, #2c496c 100%);
+  background: linear-gradient(135deg, #e8f1fa 0%, #c9d8e6 100%);
   border-radius: 36px;
   padding: 46px 32px 46px 32px;
   max-width: 1200px;
@@ -91,14 +91,14 @@
 .about-job-container h2 {
   font-size: 2.1rem;
   font-weight: 800;
-  color: #e9f1fa;
+  color: #22304a;
   text-align: center;
   margin-bottom: 8px;
   letter-spacing: 1px;
 }
 
 .about-job-subtitle {
-  color: #b8c7d9;
+  color: #5d6e7b;
   text-align: center;
   margin-bottom: 36px;
   font-size: 1.05rem;
@@ -111,8 +111,9 @@
   width: 100%;
 }
 
+/* Lighter job cards for more separation */
 .about-job-card {
-  background: #22304a;
+  background: #fff;
   border-radius: 18px;
   padding: 24px 16px 18px 16px;
   box-shadow: 0 4px 18px rgba(44, 73, 108, 0.13);
@@ -124,18 +125,18 @@
 
 .about-job-card:hover {
   box-shadow: 0 12px 36px rgba(52, 148, 230, 0.19);
-  background: #2c496c;
+  background: #e9f1fa;
 }
 
 .about-job-card h3 {
   font-size: 1.13rem;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #e9f1fa;
+  color: #1a202c;
 }
 
 .about-company-link {
-  color: #6fbcb8;
+  color: #2176c1;
   font-weight: 600;
   margin-bottom: 8px;
   text-decoration: none;
@@ -147,7 +148,7 @@
 }
 
 .about-job-location {
-  color: #90b9e4;
+  color: #718096;
   font-size: 0.95rem;
   margin-bottom: 16px;
   display: flex;
@@ -161,7 +162,7 @@
 }
 
 .about-job-desc {
-  color: #a5bfcf;
+  color: #4a5568;
   margin-bottom: 22px;
   line-height: 1.5;
 }
@@ -181,17 +182,17 @@
 }
 
 .about-job-type {
-  background: #58a9a7;
-  color: #fff;
+  background: #c6f6d5;
+  color: #2f855a;
 }
 
 .about-salary-type {
-  background: #90b9e4;
-  color: #22304a;
+  background: #bee3f8;
+  color: #2b6cb0;
 }
 
 .about-job-meta {
-  color: #b8c7d9;
+  color: #718096;
   font-size: 0.93rem;
   display: flex;
   justify-content: space-between;
@@ -210,7 +211,7 @@
 }
 
 .about-salary-green {
-  color: #6fbcb8;
+  color: #2f855a;
   font-weight: 700;
 }
 
