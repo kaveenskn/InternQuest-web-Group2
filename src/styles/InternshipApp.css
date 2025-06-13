@@ -1,27 +1,24 @@
-* {
-  box-sizing: border-box;
-}
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9fafe;
-}
 
 .internship-app {
+  width:103%;
+  margin-left: -16px;
   padding: 20px 40px;
-   background: linear-gradient(to right, #12396e, #4a60ff);
+  background: linear-gradient(to top, white 30%, #0d47a1 50%, black 90%);
+
+   margin-top: -13px;
+   overflow-x: hidden;
 }
 
 .header {
-  background: white;
+  margin-top: 150px;
+  background: rgb(242, 243, 248);
   border-bottom: 1px solid #e2e8f0;
   padding: 40px 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.2); 
   border-radius: 8px;
   margin-bottom: 20px;
 }
@@ -129,6 +126,7 @@ body {
 @media (max-width: 768px) {
   .internship-app {
     padding: 16px;
+    margin-left: 0;
   }
 
   .header {

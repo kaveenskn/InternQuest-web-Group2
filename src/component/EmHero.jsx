@@ -16,11 +16,11 @@ const EmHero = () => {
           <div className="button-group">
             <div className="hero-explore1">
               <p>Get Started</p>
-              <img src={arrow} alt="arrow" className="style-arrow" />
+          
             </div>
             <div className="hero-explore2">
               <p>Learn More</p>
-              <img src={arrow} alt="arrow" className="style-arrow" />
+              
             </div>
           </div>
         </div>

@@ -1,3 +1,11 @@
+.cards-section{
+  background-color: rgb(235, 230, 230);
+  width: 102%;
+  min-height: 70vh;
+  margin-left: -13px;
+  margin-top: -280px;
+}
+
 
 .card-container {
   display: flex;
@@ -11,7 +19,7 @@
 }
 
 .card {
-  background: white;
+  background: rgb(255, 255, 255);
   padding: 20px;
   width: 230px;
   min-height: 250px;
@@ -28,7 +36,7 @@
 }
 
 .card.highlighted {
-   background: linear-gradient(to right, #12396e, #4a60ff);
+   background: linear-gradient(to left, #0d47a1 20%, black 70%);
   color: white;
   border-bottom: 4px solid #3e51e2;
 }
