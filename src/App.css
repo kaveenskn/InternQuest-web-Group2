@@ -1,13 +1,24 @@
 /* App.css */
 
-html, body {
-  margin-left: 0;
-  margin-right: 0;
+*,
+*::before,
+*::after {
+  margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevents both x and y scroll */
+  box-sizing: border-box;
+}
+
+html, body, #root {
   height: 100%;
   width: 100%;
-  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #000; /* Or your preferred background */
   font-family: sans-serif;
 }
 
+.wrapper, .container {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}

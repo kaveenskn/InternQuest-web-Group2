@@ -2,7 +2,7 @@
 .profile-panel {
   background: white;
   border-radius: 30px;
-  padding: 20px;
+  padding: 25px;
   flex: 1 1 350px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
