@@ -6,7 +6,8 @@ import Jobpostform from "../component/Jobpostform";
 import EmployeeFooter from "../component/EmployeeFooter";
 import EmployeePageCards from "../component/Cardsectionemp";
 import Jobboard from "../component/Jobboard";
-import "../pagestyles/employee.css"
+import "../pagestyles/employee.css";
+import InternshipApp from "../component/InternshipApp";
 
 
 const EmpLinks = [
@@ -32,7 +33,7 @@ const EmployeePage = () => {
       case "applications":
         return (
           <>
-            <h1>hello</h1>
+            <InternshipApp/>
           </>
         );
       case "post-job":
