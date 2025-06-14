@@ -47,7 +47,7 @@ const TestimonialSection = () => (
     </div>
     <div className="cta-section">
       <span className="cta-text">Ready to Find Your Dream Internship?</span>
-      <button className="cta-button">Get Started</button>
+      <button className="cta-button">Contact Us</button>
     </div>
   </div>
 );
