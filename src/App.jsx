@@ -15,6 +15,9 @@ import Jobboard from "./component/Jobboard";
 import InternshipApp from "./component/InternshipApp";
 import InternshipProfileCard from "./component/InternshipProfileCard";
 
+import TestimonialSection from "./pages/TestimonialSection";
+
+
 
 
 const App = () => {
@@ -42,6 +45,9 @@ const App = () => {
                  <Route path="/find" element={<InternshipFinderPage/>} />
                  <Route path="/board" element={<Jobboard/>} />
                  <Route path="/application" element={<InternshipApp/>} />
+
+                 <Route path="/testimonials" element={<TestimonialSection />} />
+
                  
       
       </Routes>
