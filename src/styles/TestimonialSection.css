@@ -26,10 +26,15 @@
   padding: 0 20px 24px 20px;
   width: 340px;
   text-align: center;
-  box-shadow: none;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.12), 0 1.5px 6px 0 rgba(0,0,0,0.10); /* Added shadow */
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 8px 24px 0 rgba(0,0,0,0.18), 0 3px 12px 0 rgba(0,0,0,0.14); /* Slightly deeper on hover */
 }
 
 .testimonial-avatar {
