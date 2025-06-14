@@ -405,16 +405,32 @@
     font-size: 14px;
   }
   
-  .carousel-dots {
-    gap: 8px;
-    margin: 20px 0;
-  }
-  
-  .carousel-dot {
-    width: 10px;
-    height: 10px;
-  }
-  
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin: 12px 0 0 0;
+  padding: 0;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #cbd5e0;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: 0 1px;
+  padding: 0;
+}
+
+.carousel-dot.active {
+  background: #2c5aa0;
+  transform: scale(1.15);
+}
+
   .cta-button {
     padding: 12px 24px;
   }
