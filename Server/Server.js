@@ -32,6 +32,9 @@ app.use("/api/applications", Applicationroutes);
 const Applicationfetchcontrol = require("./routes/Applicationfetchroute.js");
 app.use("/api/applications", Applicationfetchcontrol);
 
+const Studentsview = require("./routes/StudentView.js");
+app.use("/api/students", Studentsview);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port  ${PORT}`);

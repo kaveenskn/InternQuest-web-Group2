@@ -19,12 +19,12 @@ const StudentsPage = () => {
   const renderPage = () => {
     switch (activePage) {
       case 'dashboard':
-        return (
-          <div className="student-page Home">
-            <HeroSection />
-            <CardsSection className="cards-st" />
-         </div>
-        )
+      return (
+    <div className="student-page Home">
+      <HeroSection onGetStarted={() => setActivePage("find-jobs")} />
+      <CardsSection className="cards-st" />
+    </div>
+       );
       case 'profile':
         return <><ProfilePage/></>
       case 'find-jobs':

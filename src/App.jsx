@@ -14,6 +14,7 @@ import InternshipFinderPage from "./component/internshipFinderPage";
 import Jobboard from "./component/Jobboard";
 import InternshipApp from "./component/InternshipApp";
 import InternshipProfileCard from "./component/InternshipProfileCard";
+import StudentProfilePage from "./pages/StudentsProfile";
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/" element={<InternshipLandingPage />} />
         <Route path="/signup" element={<Form1 />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/student-profile/:email" element={<StudentProfilePage/>}/>
 
       {/*students page */}
         <Route path="/students" element={<StudentsPage/>} />
