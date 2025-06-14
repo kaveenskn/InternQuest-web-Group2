@@ -3,31 +3,31 @@ import "../styles/TestimonialSection.css";
 
 const testimonials = [
   {
-    name: "Johanna Doe",
-    role: "Customer",
+    name: "Sarah Johnson",
+    role: "Computer Science Student",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
-    text: "Sed nam volutpat vitae erat consequat auctor eu ac nisi. Class aptent taciti sociosqu ad litora torquent per...",
+    text: "InternQuest helped me find the perfect software development internship at a tech startup. The application process was seamless and I got multiple interview calls!",
     stars: 5,
   },
   {
-    name: "John Doe",
-    role: "Administrator",
+    name: "Michael Chen",
+    role: "HR Manager",
     image: "https://randomuser.me/api/portraits/men/45.jpg",
-    text: "Sed nam volutpat vitae erat consequat auctor eu ac nisi. Class aptent taciti sociosqu ad litora torquent per...",
-    stars: 4,
+    text: "As a recruiter, this platform makes it easy to connect with talented students. We've hired 5 excellent interns through InternQuest this semester.",
+    stars: 5,
   },
   {
-    name: "Jonathan Doe",
-    role: "Customer",
-    image: "https://randomuser.me/api/portraits/men/46.jpg",
-    text: "Sed nam volutpat vitae erat consequat auctor eu ac nisi. Class aptent taciti sociosqu ad litora torquent per...",
+    name: "Emily Rodriguez",
+    role: "Marketing Intern",
+    image: "https://randomuser.me/api/portraits/women/46.jpg",
+    text: "I was struggling to find internships until I discovered InternQuest. Within two weeks, I had three offers and chose my dream marketing internship!",
     stars: 4,
   },
 ];
 
 const TestimonialSection = () => (
   <div className="testimonial-wrapper">
-    <h2 className="testimonial-title">What Clients Say</h2>
+    <h2 className="testimonial-title">What Our Community Says</h2>
     <div className="testimonial-list">
       {testimonials.map((t, i) => (
         <div className="testimonial-card" key={i}>
@@ -46,8 +46,8 @@ const TestimonialSection = () => (
       ))}
     </div>
     <div className="cta-section">
-      <span className="cta-text">Ready to Get Started?</span>
-      <button className="cta-button">Contact Us</button>
+      <span className="cta-text">Ready to Find Your Dream Internship?</span>
+      <button className="cta-button">Get Started</button>
     </div>
   </div>
 );
