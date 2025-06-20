@@ -2,6 +2,7 @@ import React from "react";
 import "../pagestyles/InternshipLanding.css"
 import { FaSearch, FaUserCheck, FaBullhorn, FaFilter, FaUserCircle, FaRegCalendarAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import TestimonialSection from "../component/TestimonialSection";
 
 
 const InternshipLandingPage = () => {
@@ -77,6 +78,12 @@ const InternshipLandingPage = () => {
         </div>
       </section>
       <footer className="getstart-footer">
+<div className="feedback">
+    <TestimonialSection/>
+  </div>
+
+
+
   <div className="getstart-footer-container">
     <div className="getstart-footer-left">
       <h3>InternQuest</h3>
@@ -92,6 +99,7 @@ const InternshipLandingPage = () => {
   <div className="getstart-footer-bottom">
     <p>© 2025 InternQuest. All rights reserved.</p>
   </div>
+  
 </footer>
 
     </div>

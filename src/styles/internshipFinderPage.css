@@ -291,3 +291,19 @@
 .view-profile-btn:hover {
   background: #1e40af;
 }
+
+
+.filter-select {
+  color: black;               /* Text color */
+  background-color: white;    /* Optional: white background for clarity */
+  border: 1px solid #ccc;     /* Optional: improve look */
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Optional: ensure <option> styles (for some browsers) */
+.filter-select option {
+  color: black;
+  background-color: white;
+}

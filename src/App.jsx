@@ -16,7 +16,7 @@ import InternshipApp from "./component/InternshipApp";
 import InternshipProfileCard from "./component/InternshipProfileCard";
 import StudentProfilePage from "./pages/StudentsProfile";
 
-import TestimonialSection from "./pages/TestimonialSection";
+import TestimonialSection from "./component/TestimonialSection";
 
 
 

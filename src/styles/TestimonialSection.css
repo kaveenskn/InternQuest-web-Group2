@@ -1,7 +1,8 @@
-.testimonial-wrapper {
+ .testimonial-wrapper {
   background: #fff;
   padding: 40px 0 0 0;
   text-align: center;
+  margin-top: -20px;
 }
 
 .testimonial-title {
@@ -143,7 +144,7 @@
   justify-content: center;
   align-items: center;
   gap: 2px;
-}
+} */
 
 /* Enhanced Arrow Navigation */
 .carousel-arrow {
@@ -417,4 +418,4 @@
   .cta-button {
     padding: 12px 24px;
   }
-}
+} 
