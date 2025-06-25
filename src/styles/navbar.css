@@ -1,16 +1,16 @@
 
-
-/* Navbar container with glass effect */
 .glass-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-   background: linear-gradient(to left, #0d47a1 50%, black 90%);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
+
+  background: rgba(0, 0, 0, 0.4);  /* semi-transparent black */
+  backdrop-filter: blur(10px);     /* glassmorphism */
+  -webkit-backdrop-filter: blur(10px);
+
   z-index: 999;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', sans-serif;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }

@@ -1,9 +1,11 @@
 .hero-section {
+
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 50px 50px;
-  background: linear-gradient(to top, white 30%, #0d47a1 50%, black 90%);
+  
   min-height: 700px;
   flex-wrap: wrap;
   margin-left: -10px;

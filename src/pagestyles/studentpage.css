@@ -4,3 +4,16 @@ margin-top: 0px;
 
 }
 
+.std-dashboard{
+    min-height: 100vh;
+  width: 102%;
+  margin-left: -16px;
+  background: 
+  linear-gradient(to right, rgba(0, 0, 0, 0.95) 25%, rgba(0, 0, 0, 0) 100%),  /* dark left fade */
+  linear-gradient(to top left, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 80%), 
+    url("https://assets.ascendientlearning.com/assets/CourseImages/2021-it-training-2__PadWzgwMCw0NTAsIkZGRkZGRiIsMF0_BGColorWzI1NSwyNTUsMjU1XQ.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment:fixed;
+}

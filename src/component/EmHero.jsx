@@ -1,5 +1,4 @@
 import React from "react";
-import employee from "../assets/employee.png";
 import arrow from "../assets/arrow.png";
 import "../styles/emDashboard.css";
 
@@ -25,9 +24,7 @@ const EmHero = () => {
           </div>
         </div>
 
-        <div className="image-section">
-          <img src={employee} alt="Employee" className="styled-image1" />
-        </div>
+       
       </div>
     </div>
   );

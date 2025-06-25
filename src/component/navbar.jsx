@@ -8,6 +8,7 @@ const Navbar = ({
   links = [],
   activeKey = "",
   onLinkClick = () => {},
+  transparent = false, // 👈 New prop
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -22,7 +23,9 @@ const Navbar = ({
   };
 
   return (
-    <nav className="glass-navbar">
+    <nav
+      className={`glass-navbar ${transparent ? "navbar-transparent" : "navbar-solid"}`}
+    >
       <div className="navbar-brand">
         <span className="icon">{icon}</span>
         <span className="brand-text">{brand}</span>

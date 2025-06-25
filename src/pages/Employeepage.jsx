@@ -1,14 +1,11 @@
-
 import React, { useState } from "react";
 import EmHero from "../component/EmHero";
 import Navbar from "../component/navbar";
 import Jobpostform from "../component/Jobpostform";
-import EmployeeFooter from "../component/EmployeeFooter";
 import EmployeePageCards from "../component/Cardsectionemp";
 import Jobboard from "../component/Jobboard";
 import "../pagestyles/employee.css";
 import InternshipApp from "../component/InternshipApp";
-
 
 const EmpLinks = [
   { key: "home", label: "Home" },
@@ -20,55 +17,76 @@ const EmpLinks = [
 const EmployeePage = () => {
   const [activePage, setActivePage] = useState("home");
 
-  const renderPage = () => {
+  const renderPageContent = () => {
     switch (activePage) {
       case "home":
         return (
-          <>
+          // Wrap Navbar + Hero inside background wrapper for home page
+          <div className="home-background-wrapper">
+            <div className="employee-home">  
+              <Navbar
+              links={EmpLinks}
+              onLinkClick={(key) => setActivePage(key)}
+              activeKey={activePage}
+              transparent={true} // transparent true here because background is on wrapper
+            />
             <EmHero />
-             <EmployeePageCards/>
-          </>
-
+               </div>
+            
+            <EmployeePageCards />
+          </div>
         );
       case "applications":
         return (
           <>
-            <InternshipApp/>
+            <Navbar
+              links={EmpLinks}
+              onLinkClick={(key) => setActivePage(key)}
+              activeKey={activePage}
+              transparent={false}
+            />
+            <div className="applications-page" >
+              <InternshipApp />
+            </div>
           </>
         );
       case "post-job":
         return (
-        <div className="post-job">
-        <Jobboard/>
-        <Jobpostform />;
-        </div>
+          <>
+            <Navbar
+              links={EmpLinks}
+              onLinkClick={(key) => setActivePage(key)}
+              activeKey={activePage}
+              transparent={false}
+            />
+            <div className="post-job" >
+              <Jobboard />
+              <Jobpostform />
+            </div>
+          </>
         );
-        
       case "my-cv":
         return (
-          <div>
-            <h2>My CV Page</h2>
-          </div>
-        );
+          <>
+            <Navbar
+              links={EmpLinks}
+              onLinkClick={(key) => setActivePage(key)}
+              activeKey={activePage}
+              transparent={false}
+            />
+            <div >
+              <h2>My CV Page</h2>
+            </div>
+          </>
 
-      default:
-        return (
-          <div>
-            <h2>Page Not Found</h2>
-          </div>
         );
     }
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
-      <Navbar
-        links={EmpLinks}
-        onLinkClick={(key) => setActivePage(key)}
-        activeKey={activePage}
-      />
-      <div style={{ flex: 1, overflowY: "auto", padding: "1rem" }}>
-        {renderPage()}
+    <div>
+      <div style={{ flex: 1, overflowY: "auto" }}>
+        {renderPageContent()}
       </div>
     </div>
   );

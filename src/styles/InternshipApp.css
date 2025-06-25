@@ -1,13 +1,20 @@
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 .internship-app {
-  width:103%;
-  margin-left: -16px;
+  width:102%;
   padding: 20px 40px;
   background: linear-gradient(to top, white 30%, #0d47a1 50%, black 90%);
-
    margin-top: -13px;
-   overflow-x: hidden;
+   margin-left: -16px;
+   scroll-behavior: never;
+   height: auto;
+   overflow: hidden;
+   min-height: 1000px;
+  
 }
 
 .header {
