@@ -1,6 +1,6 @@
 .about-bg {
   min-height: 100vh;
-  background: linear-gradient(to top, white 30%, #0d47a1 50%, black 90%);
+  background:transparent;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 60px;
   width: 102%;

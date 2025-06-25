@@ -2,9 +2,8 @@
 .profile-page {
   width: 103%;
   height: 30%;
- margin-top: -13px;
+  margin-top: -13px;
   margin-left: -16px;
- background: linear-gradient(to left, #0d47a1 20%, black 70%);
  padding-top: 20px;
 }
 

@@ -52,7 +52,7 @@ const EmployeePage = () => {
         );
       case "post-job":
         return (
-          <>
+          <div className="employee-postjob">
             <Navbar
               links={EmpLinks}
               onLinkClick={(key) => setActivePage(key)}
@@ -63,7 +63,7 @@ const EmployeePage = () => {
               <Jobboard />
               <Jobpostform />
             </div>
-          </>
+          </div>
         );
       case "my-cv":
         return (
