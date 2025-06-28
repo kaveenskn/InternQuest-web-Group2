@@ -6,9 +6,10 @@ app.use(cors());
 
 const connectDB = require("./configure/mongo.js");
 connectDB();
+app.use(express.json());
 
 const Regroute = require("./routes/Registration.js");
-app.use(express.json());
+
 app.use("/auth", Regroute);
 
 const logroutes = require("./routes/Login.js");

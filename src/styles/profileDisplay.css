@@ -1,5 +1,5 @@
 /* ProfileDisplay.css */
-.profile-panel {
+.prdis-panel {
   background: white;
   border-radius: 30px;
   padding: 25px;
@@ -7,21 +7,27 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.profile-preview {
-  max-width: 400px;
+.prdis-preview {
+  max-width: 1000px;
   margin: 0 auto;
- background: linear-gradient(to left, #0d47a1 20%, black 70%);
+  background: rgba(255, 255, 255, 0.15);  /* semi-transparent glass effect */
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.profilehead {
-   background: linear-gradient(to left, #0d47a1 20%, black 70%);
-  padding: 5px;
-  border-radius: 5px;
+.prdis-head {
+  background: linear-gradient(to right, black 20%, #0d47a1 80%);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.profile-picture {
-  width: 70px;
-  height: 70px;
+.prdis-picture {
+  width: 80px;
+  height: 80px;
   background: #057cdd;
   border-radius: 50%;
   display: flex;
@@ -30,77 +36,95 @@
   margin: 0 auto 10px auto;
 }
 
-.profile-preview h2 {
+.prdis-preview h2 {
   margin: 0;
-  font-size: 1.5em;
-  color: #9dbef0;
+  font-size: 2em;
+  color: #e3f2fd;
 }
 
-.sub {
-  color: #fdfeff;
-  margin-bottom: 5px;
-}
-
-.location {
-  font-size: 0.9em;
-  color: #fffbfb;
-  margin-bottom: 15px;
-  
-}
-
-.section {
-  margin-top: 20px;
-  text-align: left;
-}
-
-
-.section h4 {
+.prdis-sub {
+  color: #ffffff;
   margin-bottom: 10px;
-  font-size: 1.1em;
-  color: #3d8de9;
+  font-size: 1.2em;
+  font-weight: 400;
 }
 
-.section p{
+.prdis-location {
+  font-size: 0.95em;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.prdis-section {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.prdis-section h4 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #4fc3f7;
+  border-bottom: 1px solid #4fc3f7;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.prdis-section p {
   color: #e1f5fe;
+  margin: 6px 0;
 }
 
-.section a{
-  color: #f0f7ff;
+.prdis-section a {
+  color: #bbdefb;
+  text-decoration: none;
+  word-break: break-word;
 }
-.skills,
-.project-cards {
+
+.prdis-skills,
+.prdis-project-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   justify-content: center;
+  margin-top: 10px;
 }
 
-.skill-tag {
+.prdis-skill-tag {
   background: #e1f5fe;
   color: #0277bd;
-  padding: 3px 5px;
+  padding: 5px 10px;
   border-radius: 20px;
   font-size: 0.85em;
   display: inline-flex;
   align-items: center;
+  font-weight: 500;
 }
 
-.project-card {
+.prdis-project-card {
   background: #f0f7ff;
   border: 1px solid #bbdefb;
-  padding: 10px;
-  border-radius: 8px;
-  flex: 1 1 100%;
-  max-width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  flex: 1 1 300px;
+  max-width: 45%;
+  text-align: center;
+  transition: transform 0.2s ease;
 }
 
-.project-card h5 {
-  margin: 5px 0;
-  font-size: 1em;
+.prdis-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.prdis-project-card h5 {
+  margin: 10px 0 5px 0;
+  font-size: 1.1em;
   color: #0d47a1;
 }
 
-.project-card .tech {
-  font-size: 0.85em;
+.prdis-project-card .prdis-tech {
+  font-size: 0.9em;
   color: #5c6bc0;
+  margin-bottom: 8px;
 }
