@@ -1,13 +1,13 @@
 .intern-page {
   min-height: 100vh;
-    background: linear-gradient(to top, white 30%, #0d47a1 50%, black 90%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
-  padding-bottom: 0px;
+  padding-bottom: 90px;
   width: 103%;
   margin-left: -16px;
-  margin-top: -13px;
+  margin-top: 0px;
+  padding-top: 40px;
 }
 
 /* Main content */
@@ -69,15 +69,26 @@
 }
 
 
+@media (max-width: 1068px) {
 
+.intern-page{
+
+  width: 100%;
+  margin-left: -13px;
+  padding:60px 20px 90px 20px;
+  
+}
+}
 
 
 
 @media (max-width: 768px) {
 
 .intern-page{
+
   width: 105%;
   margin-left: -13px;
+  padding:60px 20px 0px 20px;
   
 }
 .intern-main {
