@@ -1,10 +1,10 @@
 /* ProfileForm.css */
 .profile-panel {
-  
   border-radius: 12px;
-  padding: 20px;
+  padding: 60px;
   flex: 1 1 350px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 }
 
 .profile-form form {

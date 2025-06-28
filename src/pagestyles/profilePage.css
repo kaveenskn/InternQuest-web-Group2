@@ -5,6 +5,13 @@
   margin-top: -13px;
   margin-left: -16px;
  padding-top: 20px;
+  background:  
+    url("https://i.pinimg.com/736x/1d/b2/7c/1db27c7b961102594bf357185efd3131.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment:fixed;
+ 
 }
 
 .profile-page h1 {
@@ -21,7 +28,7 @@
   gap: 20px;
   padding: 20px;
   font-family: 'Segoe UI', sans-serif;
-  background: #ffffff;
+  
   justify-content: center;
   
 }
