@@ -21,14 +21,3 @@ background-attachment: fixed;
 
 }
 
-.employee-postjob{
-  background: 
-  linear-gradient(to right, rgba(0, 0, 0, 0.91) 20%, rgba(0, 0, 0, 0.411) 100%),  /* lighter left fade */
-  linear-gradient(to top left, rgba(0, 0, 0, 0.552) 20%, rgba(255, 255, 255, 0) 80%), 
-  url("https://i.pinimg.com/736x/ed/d4/84/edd4844d67d9186dde32e9efcc1117ab.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-
-}
