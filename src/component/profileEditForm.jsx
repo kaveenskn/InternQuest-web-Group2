@@ -31,7 +31,7 @@ const ProfileEditForm = ({
   };
 
   return (
-    <div className="profile-panel profile-form">
+    <div className="pfedit-profile-panel pfedit-profile-form">
       <h3>Edit Profile</h3>
       <form>
         <label>Full Name</label>
@@ -99,7 +99,7 @@ const ProfileEditForm = ({
         />
 
         <label>Add Skill</label>
-        <div className="add-skill">
+        <div className="pfedit-add-skill">
           <input
             type="text"
             name="skill"
@@ -110,20 +110,20 @@ const ProfileEditForm = ({
           <button type="button" onClick={handleAddSkill}>Add</button>
         </div>
 
-        <div className="skills">
+        <div className="pfedit-skills">
           {(profile.skills || []).map((skill, index) => (
-            <span key={index} className="skill-tag">
+            <span key={index} className="pfedit-skill-tag">
               {skill}
               <button type="button" onClick={() => handleRemoveSkill(index)}>×</button>
             </span>
           ))}
         </div>
 
-        {message && <p className="save-message">{message}</p>}
+        {message && <p className="pfedit-save-message">{message}</p>}
       </form>
 
       <h3>Add Project</h3>
-      <form className="project-form">
+      <form className="pfedit-project-form">
         <label>Title</label>
         <input
           type="text"
@@ -158,7 +158,7 @@ const ProfileEditForm = ({
         <button type="button" onClick={handleAddProject}>Add Project</button>
       </form>
 
-      <button type="button" className="save-button" onClick={handleSaveProfile}>
+      <button type="button" className="pfedit-save-button" onClick={handleSaveProfile}>
         <FaSave /> Save
       </button>
     </div>

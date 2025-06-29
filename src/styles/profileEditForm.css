@@ -1,20 +1,24 @@
-/* ProfileForm.css */
-.profile-panel {
+/* ProfileEditForm.css */
+.pfedit-profile-panel {
   border-radius: 12px;
   padding: 60px;
   flex: 1 1 350px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0.15);   /* semi-transparent */
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(10px);             /* the blur effect */
+  -webkit-backdrop-filter: blur(10px); 
+  max-width: 400px;
 }
 
-.profile-form form {
+.pfedit-profile-form form {
   display: flex;
   flex-direction: column;
- 
 }
 
-.profile-form input,
-.profile-form textarea {
+.pfedit-profile-form input,
+.pfedit-profile-form textarea {
   padding: 8px;
   margin-bottom: 12px;
   border: 1px solid #90caf9;
@@ -24,24 +28,23 @@
   color: #0d47a1;
 }
 
-.profile-form textarea {
+.pfedit-profile-form textarea {
   resize: vertical;
   min-height: 60px;
 }
 
-
-.add-skill {
+.pfedit-add-skill {
   display: flex;
   gap: 8px;
   margin-bottom: 10px;
   flex-wrap: wrap;
 }
 
-.add-skill input {
+.pfedit-add-skill input {
   flex: 1;
 }
 
-.add-skill button {
+.pfedit-add-skill button {
   padding: 8px 12px;
   background: linear-gradient(to left, #0d47a1 20%, black 70%);
   color: white;
@@ -49,7 +52,8 @@
   border-radius: 6px;
   cursor: pointer;
 }
-.skill-tag{
+
+.pfedit-skill-tag {
   display: inline-flex;
   align-items: center;
   background: #e1f5fe;
@@ -58,9 +62,9 @@
   border-radius: 20px;
   font-size: 0.95em;
   font-weight: 500;
- 
 }
-.skill-tag button {
+
+.pfedit-skill-tag button {
   background: linear-gradient(to left, #0d47a1 20%, black 70%);
   border: none;
   color: #feffff;
@@ -71,7 +75,7 @@
   margin-top: 0px;
 }
 
-.save-button {
+.pfedit-save-button {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -85,35 +89,45 @@
   margin-top: 10px;
 }
 
-.save-message {
+.pfedit-save-message {
   color: #2e7d32;
   font-size: 0.9em;
   margin-top: 8px;
 }
 
+/* Make all labels white */
+.pfedit-profile-form label {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+
+
 @media (max-width: 768px) {
-  .profile-panel {
+  .pfedit-profile-panel {
     width: 100%;
     max-width: 100%;
     padding: 16px;
   }
 
-  .profile-form form {
+  .pfedit-profile-form form {
     width: 100%;
   }
 
-  .profile-form input,
-  .profile-form textarea {
+  .pfedit-profile-form input,
+  .pfedit-profile-form textarea {
     width: 100%;
   }
 
-  .add-skill {
+  .pfedit-add-skill {
     flex-direction: column;
     width: 100%;
   }
 
-  .add-skill input,
-  .add-skill button {
+  .pfedit-add-skill input,
+  .pfedit-add-skill button {
     width: 100%;
   }
 }
