@@ -9,57 +9,92 @@ const InternshipApp = () => {
   const [groupedApplications, setGroupedApplications] = useState({});
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchApplications = async () => {
-      try {
-        const token = localStorage.getItem("token");
-        const response = await fetch(
-          "http://localhost:5000/api/applications/employee-applications",
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-
-        const data = await response.json();
-
-        if (!response.ok) {
-          alert("Error: " + (data.message || "Failed to fetch applications"));
-          return;
+  const fetchApplications = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const response = await fetch(
+        "http://localhost:5000/api/applications/employee-applications",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
         }
+      );
 
-        console.log("fetched applications:", data);
+      const data = await response.json();
 
-        // Group applications by job title
-        const grouped = {};
-        data.forEach((app) => {
-          const title = app.job?.title || "Other";
-          if (!grouped[title]) grouped[title] = [];
-          grouped[title].push({
-            name: app.student?.fullname || "N/A",
-            role: app.job?.title || "Unknown Role",
-            university: app.student?.universityName || "Unknown University",
-            email: app.student?.user?.email || "Unknown Email",
-            applied: new Date(app.appliedAt).toISOString().split("T")[0],
-          });
-        });
-
-        setApplications(data);
-        setGroupedApplications(grouped);
-      } catch (error) {
-        console.error("Failed to fetch applications:", error);
+      if (!response.ok) {
+        alert("Error: " + (data.message || "Failed to fetch applications"));
+        return;
       }
-    };
 
+      setApplications(data);
+
+      // Group applications by job title
+      const grouped = {};
+      data.forEach((app) => {
+        const title = app.job?.title || "Other";
+        if (!grouped[title]) grouped[title] = [];
+        grouped[title].push({
+          _id: app._id, // <-- include application id
+          name: app.student?.fullname || "N/A",
+          role: app.job?.title || "Unknown Role",
+          university: app.student?.universityName || "Unknown University",
+          email: app.student?.user?.email || "Unknown Email",
+          applied: new Date(app.appliedAt).toISOString().split("T")[0],
+        });
+      });
+
+      setGroupedApplications(grouped);
+    } catch (error) {
+      console.error("Failed to fetch applications:", error);
+    }
+  };
+
+  useEffect(() => {
     fetchApplications();
   }, []);
 
-  const handleViewProfile = (email) => {
-    navigate(`/student-profile/${encodeURIComponent(email)}`);
+  const handleShortList = (email) => {
+    // Add shortlist logic here later
+    console.log("Shortlisted:", email);
   };
+
+  const handleDelete = async (applicationId) => {
+  const confirmDelete = window.confirm("Are you sure you want to delete this application?");
+  if (!confirmDelete) return;
+
+  try {
+    const token = localStorage.getItem("token");
+    const response = await fetch(
+      `http://localhost:5000/api/applicationsdelete/${applicationId}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      alert("Error deleting application: " + (data.message || "Unknown error"));
+      return;
+    }
+
+    alert("Application deleted successfully");
+    await fetchApplications();
+  } catch (error) {
+    console.error("Delete error:", error);
+    alert("Failed to delete application");
+  }
+};
+
 
   return (
     <div className="internship-app">
@@ -72,15 +107,17 @@ const InternshipApp = () => {
           </div>
           <div className="profile-list">
             {groupedApplications[jobTitle].map((candidate, index) => (
-              <InternshipProfileCard
+             <InternshipProfileCard
                 key={index}
                 name={candidate.name}
                 role={candidate.role}
                 university={candidate.university}
                 email={candidate.email}
                 applied={candidate.applied}
-                onViewProfile={() => handleViewProfile(candidate.email)}
+                onShortList={() => handleShortList(candidate.email)}
+                onDelete={() => handleDelete(candidate._id)} 
               />
+
             ))}
           </div>
         </div>
