@@ -6,7 +6,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.15);   /* semi-transparent */
   border-radius: 16px;
-  padding: 20px;
+  padding: 30px;
   backdrop-filter: blur(10px);             /* the blur effect */
   -webkit-backdrop-filter: blur(10px); 
   max-width: 400px;
@@ -46,7 +46,7 @@
 
 .pfedit-add-skill button {
   padding: 8px 12px;
-  background: linear-gradient(to left, #0d47a1 20%, black 70%);
+  background-color: #0d47a1; 
   color: white;
   border: none;
   border-radius: 6px;
@@ -79,7 +79,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(to left, #0d47a1 20%, black 70%);
+  background-color: #0d47a1;
   color: white;
   padding: 10px 14px;
   font-size: 0.95em;

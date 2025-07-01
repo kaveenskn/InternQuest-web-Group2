@@ -78,9 +78,7 @@ const InternshipLandingPage = () => {
         </div>
       </section>
       <footer className="getstart-footer">
-<div className="feedback">
-    <TestimonialSection/>
-  </div>
+
 
 
 

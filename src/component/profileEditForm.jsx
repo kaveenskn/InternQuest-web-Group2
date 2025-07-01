@@ -32,7 +32,7 @@ const ProfileEditForm = ({
 
   return (
     <div className="pfedit-profile-panel pfedit-profile-form">
-      <h3>Edit Profile</h3>
+      <h3 style={{'fontSize':"30px","color":"#ffffff"}}>Edit Profile</h3>
       <form>
         <label>Full Name</label>
         <input
