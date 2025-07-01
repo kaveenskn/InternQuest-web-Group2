@@ -131,3 +131,12 @@
     width: 100%;
   }
 }
+
+
+
+/* Scoped version (if you want to apply it only inside .right-panel form) */
+.right-panel input::placeholder,
+.right-panel textarea::placeholder {
+  color: black;
+  opacity: 1;
+}

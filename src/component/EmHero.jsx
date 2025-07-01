@@ -7,7 +7,7 @@ const EmHero = () => {
     <div className="hero">
       <div className="hero-content">
         <div className="hero-text">
-          <h2 className="topic-text">Explore Our Services</h2>
+          <h2 className="topic-text">Explore Our Services </h2>
           <p className="hero-description">
             Discover our innovative services designed to support your goals with
             expert guidance, smart solutions and personalized customer care.
