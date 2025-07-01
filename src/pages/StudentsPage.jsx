@@ -5,6 +5,7 @@ import CardsSection from '../component/Cardsectionstd';
 import ProfilePage from './profilePage';
 import InternshipFinderPage from '../component/internshipFinderPage';
 import "../pagestyles/studentpage.css";
+import ReviewPage from '../component/Review';
 
 const StdLinks = [
   { key: "dashboard", label: "Dashboard" },
@@ -23,6 +24,7 @@ const StudentsPage = () => {
           <div className="std-dashboard">
             <HeroSection onGetStarted={() => setActivePage("find-jobs")} />
             <CardsSection />
+            <ReviewPage/>
           </div>
         );
       case 'profile':
