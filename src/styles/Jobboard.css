@@ -1,9 +1,17 @@
 .about-bg {
   min-height: 100vh;
-  background: linear-gradient(to top, white 30%, #0d47a1 50%, black 90%);
+  background: 
+  linear-gradient(to right, rgba(0, 0, 0, 0.91) 20%, rgba(0, 0, 0, 0.411) 100%),  /* lighter left fade */
+  linear-gradient(to top left, rgba(0, 0, 0, 0.552) 20%, rgba(255, 255, 255, 0) 80%), 
+  url("https://i.pinimg.com/736x/a6/e9/ed/a6e9edb268d90f5cf13e9955811051f2.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-bottom: 60px;
+  padding:60px 0px 90px;
   width: 102%;
+  margin-top: -100px;
   margin-left: -10px;
 }
 
@@ -257,5 +265,107 @@
   .about-job-card {
     padding: 14px 8px 12px 8px;
     min-height: 220px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .about-bg {
+    padding-bottom: 24px;
+    width: 104%;
+    margin-left: -5px;
+  }
+
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    white-space: normal; /* Allow wrapping on small screens */
+    padding: 0 12px;
+  }
+
+  .about-stats-row {
+    gap: 16px;
+    font-size: 0.95rem;
+    flex-direction: column;
+  }
+
+  .about-job-container {
+    padding: 16px 8px;
+    border-radius: 16px;
+  }
+
+  .about-job-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+  }
+
+  .about-job-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    padding: 0 10px;
+  }
+
+  .about-job-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .about-job-card {
+    padding: 12px;
+    margin-left: 10%;
+    min-height: 180px;
+    max-width: 80%;
+  }
+
+  .about-job-card h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .about-company-link {
+    font-size: 0.9rem;
+  }
+
+  .about-job-location {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+
+  .about-job-desc {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    max-height: 60px;
+  }
+
+  .read-more-toggle {
+    font-size: 0.88rem;
+    margin-top: 2px;
+  }
+
+  .about-job-tags {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .about-job-type,
+  .about-salary-type {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+  }
+
+  .about-job-meta {
+    font-size: 0.83rem;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .about-job-salary {
+    font-size: 0.95rem;
   }
 }

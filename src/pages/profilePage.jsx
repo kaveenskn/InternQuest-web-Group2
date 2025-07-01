@@ -127,7 +127,8 @@ const ProfilePage = () => {
           handleSaveProfile={handleSaveProfile}
           message={message}
         />
-      </div>
+        
+       </div>
     </div>
   );
 };

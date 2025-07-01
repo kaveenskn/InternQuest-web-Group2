@@ -2,7 +2,11 @@ import React from "react";
 import "../pagestyles/InternshipLanding.css"
 import { FaSearch, FaUserCheck, FaBullhorn, FaFilter, FaUserCircle, FaRegCalendarAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import TestimonialSection from "./TestimonialSection";
+=======
+import TestimonialSection from "../component/TestimonialSection";
+>>>>>>> Development-kaveen
 
 
 const InternshipLandingPage = () => {
@@ -78,6 +82,10 @@ const InternshipLandingPage = () => {
         </div>
       </section>
       <footer className="getstart-footer">
+
+
+
+
   <div className="getstart-footer-container">
     <div className="getstart-footer-left">
       <h3>InternQuest</h3>
@@ -93,9 +101,13 @@ const InternshipLandingPage = () => {
   <div className="getstart-footer-bottom">
     <p>© 2025 InternQuest. All rights reserved.</p>
   </div>
+<<<<<<< HEAD
   <div className="feedbacks">
 
   </div>
+=======
+  
+>>>>>>> Development-kaveen
 </footer>
 
     </div>

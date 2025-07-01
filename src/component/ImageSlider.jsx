@@ -37,7 +37,7 @@ export default function ImageSlider() {
       </SwiperSlide>
       <SwiperSlide>
         <img
-          src="https://portalpune.com/storage/16683/How-to-Find-a-Job-in-a-Competitive-Market.jpg"
+          src="https://i.pinimg.com/736x/54/92/93/549293c9cb0b3bcd5874ad38d2a5fac2.jpg"
           alt=""
         />
       </SwiperSlide>

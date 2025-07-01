@@ -1,0 +1,111 @@
+.review-page {
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+.review-testimonial {
+    background: 
+  linear-gradient(to right, rgba(0, 0, 0, 0.95) 25%, rgba(0, 0, 0, 0) 100%),  /* dark left fade */
+  linear-gradient(to top left, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 80%), 
+    url("https://i.pinimg.com/736x/53/3a/25/533a25d0fd940cc5fc8b5fdaf457b14a.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment:fixed;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.review-subtitle {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.review-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.review-client-name {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.review-stars {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+.review-help-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #057cdd;
+}
+
+.review-help-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.review-help-text {
+  flex: 1;
+  padding: 60px 40px;
+  color: white;
+}
+
+.review-help-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.review-help-text p {
+  margin-bottom: 20px;
+}
+
+.review-help-text button {
+  padding: 10px 20px;
+  background: white;
+  color: #d71920;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.review-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #000;
+  padding: 40px 20px;
+}
+
+.review-contact, .review-subscribe {
+  color: white;
+  max-width: 300px;
+}
+
+.review-subscribe input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.review-subscribe button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #057cdd;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.review-social-icons a {
+  margin-right: 10px;
+  color: white;
+  font-size: 1.2rem;
+}
