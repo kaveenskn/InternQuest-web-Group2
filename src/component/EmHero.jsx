@@ -1,5 +1,5 @@
 import React from "react";
-import arrow from "../assets/arrow.png";
+import employee from "../assets/employee123.png";
 import "../styles/emDashboard.css";
 
 const EmHero = () => {
@@ -26,6 +26,9 @@ const EmHero = () => {
           <div className="hero-explore2">
             <p>Learn More</p>
           </div>
+        </div>
+        <div className="hero-image">
+          <img alt="hero-Img" src={employee} />{" "}
         </div>
       </div>
     </div>
