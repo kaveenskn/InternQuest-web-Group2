@@ -1,21 +1,17 @@
-
 .glass-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-
-  background: rgba(0, 0, 0, 0.4);  /* semi-transparent black */
-  backdrop-filter: blur(10px);     /* glassmorphism */
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   z-index: 999;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', sans-serif;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Brand icon and name alignment */
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -23,6 +19,7 @@
   font-weight: bold;
   color: white;
   gap: 8px;
+  flex: none; /* Prevent brand/logo from shifting */
 }
 
 .icon {
@@ -43,7 +40,6 @@
   border: none;
 }
 
-/* Reset list and button styling */
 .navbar-links {
   all: unset;
   display: flex;
@@ -51,6 +47,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative; /* Help isolate hover effects */
 }
 
 .navbar-links li {
@@ -66,27 +63,46 @@
   padding: 8px;
   cursor: pointer;
   position: relative;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  will-change: transform;
+  display: inline-block;
 }
 
-.nav-link::after {
+.nav-link.active::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 0;
   height: 2px;
   background-color: cyan;
-  transition: all 0.3s ease;
   transform: translateX(-50%);
+  animation: underlineExpand 0.4s ease forwards;
 }
 
-.nav-link.active::after {
-  width: 100%;
+@keyframes underlineExpand {
+  0% {
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.nav-link:hover {
+  color: white;
+  background: none;
+}
+
+/* Hover effect for all following links */
+.navbar-links:has(li:hover) li:hover ~ li .nav-link {
+  transform: translateX(10px);
 }
 
 .logout {
-  background-color: #ff4d4d;
   border: none;
   padding: 8px 16px;
   color: white;
@@ -100,7 +116,6 @@
   background-color: #e60000;
 }
 
-/* Mobile responsive styles */
 @media screen and (max-width: 768px) {
   .mobile-menu-icon {
     display: block;
@@ -129,10 +144,9 @@
   }
 
   .nav-link::after {
-    display: none; /* Disable underline animation on mobile */
+    display: none;
   }
 }
-
 
 button:focus,
 button:focus-visible,

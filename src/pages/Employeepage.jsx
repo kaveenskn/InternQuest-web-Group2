@@ -38,7 +38,7 @@ const EmployeePage = () => {
         );
       case "applications":
         return (
-          <>
+          <div className="employee-applications">
             <Navbar
               links={EmpLinks}
               onLinkClick={(key) => setActivePage(key)}
@@ -48,8 +48,11 @@ const EmployeePage = () => {
             <div className="applications-page" >
               <InternshipApp />
             </div>
-          </>
+         </div>
+         
         );
+       
+        
       case "post-job":
         return (
           <div className="employee-postjob">
@@ -65,7 +68,7 @@ const EmployeePage = () => {
             </div>
           </div>
         );
-      case "my-cv":
+      case "about":
         return (
           <>
             <Navbar

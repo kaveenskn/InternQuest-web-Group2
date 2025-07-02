@@ -40,6 +40,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+ 
 }
 
 .login-right-panel h1 {
@@ -61,8 +62,8 @@
   margin-bottom: 20px;
   border: none;
   border-radius: 8px;
-  background-color: #eef2ff;
   font-size: 1rem;
+  color: #000;
 }
 
 .login-right-panel form button {
@@ -85,7 +86,7 @@
   margin-top: 20px;
   font-size: 0.95rem;
   text-align: center;
-  color: #444;
+ 
 }
 
 .login-register-redirect a {

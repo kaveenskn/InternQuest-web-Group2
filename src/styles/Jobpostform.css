@@ -1,13 +1,13 @@
 
 .job-post-container {
   min-height: 90vh;
-  width:102%;
+  width:100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
 
-  margin-left: -10px;
+ 
 }
 
 /* Form card styling */
