@@ -75,7 +75,7 @@ const InternshipFinderPage = () => {
         </div>
 
         {/* Filters */}
-        <div className="intern-search-card">
+        <div className="intern-search-card"> 
           <div className="filter-row">
             <div className="filter-col">
               <label className="filter-label">

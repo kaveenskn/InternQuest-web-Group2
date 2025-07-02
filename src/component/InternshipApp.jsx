@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import InternshipHeader from "./InternshipHeader";
 import InternshipProfileCard from "./InternshipProfileCard";
 import "../styles/InternshipApp.css";
@@ -6,26 +7,31 @@ import "../styles/InternshipApp.css";
 const InternshipApp = () => {
   const [applications, setApplications] = useState([]);
   const [groupedApplications, setGroupedApplications] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchApplications = async () => {
       try {
-        const token = localStorage.getItem('token');
-          const response = await fetch("http://localhost:5000/api/applications/employee-applications", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${token}`,   // <-- Add token here
-    },
-  });
+        const token = localStorage.getItem("token");
+        const response = await fetch(
+          "http://localhost:5000/api/applications/employee-applications",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         const data = await response.json();
 
         if (!response.ok) {
-  alert("Error: " + (data.message || "Failed to fetch applications"));
-  return;
-}             
-         console.log("fetched applications:",data)
+          alert("Error: " + (data.message || "Failed to fetch applications"));
+          return;
+        }
+
+        console.log("fetched applications:", data);
 
         // Group applications by job title
         const grouped = {};
@@ -51,6 +57,10 @@ const InternshipApp = () => {
     fetchApplications();
   }, []);
 
+  const handleViewProfile = (email) => {
+    navigate(`/student-profile/${encodeURIComponent(email)}`);
+  };
+
   return (
     <div className="internship-app">
       <InternshipHeader />
@@ -69,6 +79,7 @@ const InternshipApp = () => {
                 university={candidate.university}
                 email={candidate.email}
                 applied={candidate.applied}
+                onViewProfile={() => handleViewProfile(candidate.email)}
               />
             ))}
           </div>

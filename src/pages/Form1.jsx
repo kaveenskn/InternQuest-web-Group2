@@ -64,117 +64,124 @@ const Form1 = () => {
       </div>
       <div className="right-panel">
         <h1>Signup With InternQuest</h1>
-        <form >
-          <label htmlFor="fullname">Full Name</label>
-          <input
-            type="text"
-            placeholder="Enter your full name"
-            name="fullname"
-            value={value.fullname}
-            onChange={handleChange}
-            required
-          />
+        <form>
+  <label htmlFor="fullname">Full Name</label>
+  <input
+    className="input-field"
+    type="text"
+    placeholder="Enter your full name"
+    name="fullname"
+    value={value.fullname}
+    onChange={handleChange}
+    required
+  />
 
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            name="email"
-            value={value.email}
-            onChange={handleChange}
-            required
-          />
+  <label htmlFor="email">Email</label>
+  <input
+    className="input-field"
+    type="email"
+    placeholder="Enter your email"
+    name="email"
+    value={value.email}
+    onChange={handleChange}
+    required
+  />
 
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            placeholder="Enter your password"
-            name="password"
-            value={value.password}
-            onChange={handleChange}
-            required
-          />
+  <label htmlFor="password">Password</label>
+  <input
+    className="input-field"
+    type="password"
+    placeholder="Enter your password"
+    name="password"
+    value={value.password}
+    onChange={handleChange}
+    required
+  />
 
-          <label htmlFor="role">Select Your Role</label>
-          <div className="radio-group">
-            <div>
-              <input
-                type="radio"
-                id="student"
-                name="role"
-                value="student"
-                checked={value.role === "student"}
-                onChange={handleChange}
-              />
-              <label htmlFor="student">Student</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                id="employee"
-                name="role"
-                value="employee"
-                checked={value.role === "employee"}
-                onChange={handleChange}
-              />
-              <label htmlFor="employee">Employee</label>
-            </div>
-          </div>
+  <label htmlFor="role">Select Your Role</label>
+  <div className="radio-group">
+    <div>
+      <input
+        className="radio-button"
+        type="radio"
+        id="student"
+        name="role"
+        value="student"
+        onChange={handleChange}
+      />
+      <label htmlFor="student">Student</label>
+    </div>
+    <div>
+      <input
+        className="radio-button"
+        type="radio"
+        id="employee"
+        name="role"
+        value="employee"
+        onChange={handleChange}
+      />
+      <label htmlFor="employee">Employee</label>
+    </div>
+  </div>
 
-          {value.role === "student" && (
-            <>
-              <label htmlFor="universityName">University Name</label>
-              <input
-                type="text"
-                placeholder="Enter your university name"
-                name="universityName"
-                value={value.universityName}
-                onChange={handleChange}
-                required
-              />
+  {value.role === "student" && (
+    <>
+      <label htmlFor="universityName">University Name</label>
+      <input
+        className="input-field"
+        type="text"
+        placeholder="Enter your university name"
+        name="universityName"
+        value={value.universityName}
+        onChange={handleChange}
+        required
+      />
 
-              <label htmlFor="universityLocation">University Location</label>
-              <input
-                type="text"
-                placeholder="Enter your university location"
-                name="universityLocation"
-                value={value.universityLocation}
-                onChange={handleChange}
-                required
-              />
-            </>
-          )}
+      <label htmlFor="universityLocation">University Location</label>
+      <input
+        className="input-field"
+        type="text"
+        placeholder="Enter your university location"
+        name="universityLocation"
+        value={value.universityLocation}
+        onChange={handleChange}
+        required
+      />
+    </>
+  )}
 
-          {value.role === "employee" && (
-            <>
-              <label htmlFor="companyName">Company Name</label>
-              <input
-                type="text"
-                placeholder="Enter your company name"
-                name="companyName"
-                value={value.companyName}
-                onChange={handleChange}
-                required
-              />
+  {value.role === "employee" && (
+    <>
+      <label htmlFor="companyName">Company Name</label>
+      <input
+        className="input-field"
+        type="text"
+        placeholder="Enter your company name"
+        name="companyName"
+        value={value.companyName}
+        onChange={handleChange}
+        required
+      />
 
-              <label htmlFor="companyLocation">Company Location</label>
-              <input
-                type="text"
-                placeholder="Enter your company location"
-                name="companyLocation"
-                value={value.companyLocation}
-                onChange={handleChange}
-                required
-              />
-            </>
-          )}
+      <label htmlFor="companyLocation">Company Location</label>
+      <input
+        className="input-field"
+        type="text"
+        placeholder="Enter your company location"
+        name="companyLocation"
+        value={value.companyLocation}
+        onChange={handleChange}
+        required
+      />
+    </>
+  )}
 
-          <button type="submit" onClick={handleSubmit}>Submit</button>
-          <div className="register-login-redirect">
-            Already have an account? <a href="/login">Sign in</a>
-          </div>
+  <button type="submit" onClick={handleSubmit}>Submit</button>
+  <div className="register-login-redirect">
+    Already have an account? <a href="/login">Sign in</a>
+  </div>
+</form>
 
-        </form>
       </div>
     </div>
      </div>

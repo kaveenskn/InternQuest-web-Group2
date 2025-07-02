@@ -14,7 +14,13 @@ import InternshipFinderPage from "./component/internshipFinderPage";
 import Jobboard from "./component/Jobboard";
 import InternshipApp from "./component/InternshipApp";
 import InternshipProfileCard from "./component/InternshipProfileCard";
+import StudentProfilePage from "./pages/StudentsProfile";
 
+
+
+
+
+import ReviewPage from "./component/Review";
 
 
 const App = () => {
@@ -26,11 +32,10 @@ const App = () => {
         <Route path="/" element={<InternshipLandingPage />} />
         <Route path="/signup" element={<Form1 />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/student-profile/:email" element={<StudentProfilePage/>}/>
 
       {/*students page */}
         <Route path="/students" element={<StudentsPage/>} />
-        
-        
         
           
 
@@ -43,6 +48,9 @@ const App = () => {
                  <Route path="/board" element={<Jobboard/>} />
                  <Route path="/application" element={<InternshipApp/>} />
                  
+
+                 <Route path="/rew" element={<ReviewPage />} />
+                 <Route path="/proof" element={<InternshipProfileCard />} />
       
       </Routes>
     </Router>
