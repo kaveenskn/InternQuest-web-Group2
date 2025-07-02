@@ -16,8 +16,9 @@ import InternshipApp from "./component/InternshipApp";
 import InternshipProfileCard from "./component/InternshipProfileCard";
 import StudentProfilePage from "./pages/StudentsProfile";
 
+import RecentApplications from "./component/ShortlistedApplications";
 
-
+import WhyInternQuest from "./component/WhyIntern";
 
 
 import ReviewPage from "./component/Review";
@@ -51,6 +52,10 @@ const App = () => {
 
                  <Route path="/rew" element={<ReviewPage />} />
                  <Route path="/proof" element={<InternshipProfileCard />} />
+
+                    <Route path="/recent" element={<RecentApplications />} />
+
+                      <Route path="/why" element={<WhyInternQuest />} />
       
       </Routes>
     </Router>

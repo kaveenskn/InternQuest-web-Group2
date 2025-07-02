@@ -24,6 +24,7 @@ const InternshipProfileCard = ({
           Short List
         </button>
         <button className="view-button" onClick={onDelete}>
+          
           Delete
         </button>
       </div>

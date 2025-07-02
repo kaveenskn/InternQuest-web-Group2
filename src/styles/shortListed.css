@@ -1,0 +1,66 @@
+.container {
+  max-width: 600px;
+  margin-top: 200px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cardWrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.applicationCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  background: linear-gradient(90deg, #dbe9ff, #f0f7ff);
+}
+
+.name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.details {
+  font-size: 14px;
+  color: #555;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+}
+
+.viewButton {
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.contactButton {
+  background-color: #10b981;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.viewButton:hover {
+  background-color: #2563eb; /* Slightly darker blue */
+}
+
+.contactButton:hover {
+  background-color: #059669; /* Slightly darker green */
+}

@@ -38,7 +38,9 @@ const InternshipApp = () => {
         const title = app.job?.title || "Other";
         if (!grouped[title]) grouped[title] = [];
         grouped[title].push({
-          _id: app._id, // <-- include application id
+          _id: app._id, // application id
+          studentId: app.student?._id,
+          jobId: app.job?._id,
           name: app.student?.fullname || "N/A",
           role: app.job?.title || "Unknown Role",
           university: app.student?.universityName || "Unknown University",
@@ -57,10 +59,40 @@ const InternshipApp = () => {
     fetchApplications();
   }, []);
 
-  const handleShortList = (email) => {
-    // Add shortlist logic here later
-    console.log("Shortlisted:", email);
-  };
+
+  
+ const handleShortList = async (candidate) => {
+  try {
+    const token = localStorage.getItem("token");
+    const response = await fetch("http://localhost:5000/api/card/shortlist", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        studentId: candidate.studentId,  // use student ObjectId
+        jobId: candidate.jobId,          // use job ObjectId
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      alert("Error shortlisting: " + (data.message || "Unknown error"));
+      return;
+    }
+
+    alert("Shortlisted successfully");
+  } catch (err) {
+    console.error(err);
+    alert("Shortlisting failed");
+  }
+};
+
+
+
+
 
   const handleDelete = async (applicationId) => {
   const confirmDelete = window.confirm("Are you sure you want to delete this application?");
@@ -108,15 +140,16 @@ const InternshipApp = () => {
           <div className="profile-list">
             {groupedApplications[jobTitle].map((candidate, index) => (
              <InternshipProfileCard
-                key={index}
-                name={candidate.name}
-                role={candidate.role}
-                university={candidate.university}
-                email={candidate.email}
-                applied={candidate.applied}
-                onShortList={() => handleShortList(candidate.email)}
-                onDelete={() => handleDelete(candidate._id)} 
+                    key={index}
+                    name={candidate.name}
+                    role={candidate.role}
+                    university={candidate.university}
+                    email={candidate.email}
+                    applied={candidate.applied}
+                    onShortList={() => handleShortList(candidate)}
+                    onDelete={() => handleDelete(candidate._id)}
               />
+
 
             ))}
           </div>
