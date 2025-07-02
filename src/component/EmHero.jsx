@@ -28,9 +28,6 @@ const EmHero = () => {
           <p>Learn More</p>
         </div>
       </div>
-      <div className="hero-image">
-        <img alt="hero-Img" src={employee} />{" "}
-      </div>
     </div>
   );
 };

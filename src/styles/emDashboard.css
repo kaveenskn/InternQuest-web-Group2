@@ -119,20 +119,7 @@
   border-radius: 10px;
 }
 
-.hero-image {
-  position: absolute;
-  top: 200px;
-  right: 80px;
-  z-index: 1;
-}
 
-.hero-image img {
-  max-width: 420px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  display: block;
-}
 
 @media (max-width: 768px) {
   .hero {
