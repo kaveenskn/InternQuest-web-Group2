@@ -35,9 +35,6 @@ const NewImgSlider = () => {
             key={index}
             style={{ backgroundImage: `url(${item.url})` }}
           >
-            <div className="icon-container">
-              <img src={item.icon} alt="icon" className="icon" />
-            </div>
           </div>
         ))}
       </div>

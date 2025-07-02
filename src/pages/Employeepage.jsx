@@ -8,11 +8,12 @@ import "../pagestyles/employee.css";
 import InternshipApp from "../component/InternshipApp";
 import RecentApplications from "../component/ShortlistedApplications";
 
+
 const EmpLinks = [
   { key: "home", label: "Home" },
   { key: "post-job", label: "Post-Job" },
   { key: "applications", label: "Applications" },
-  { key: "about", label: "About us" },
+  { key: "shortlist", label: "Short Listed" },
 ];
 
 const EmployeePage = () => {
@@ -69,7 +70,7 @@ const EmployeePage = () => {
             </div>
           </div>
         );
-      case "about":
+      case "shortlist":
         return (
           <>
             <Navbar

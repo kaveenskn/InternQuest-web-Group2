@@ -23,8 +23,8 @@ import WhyInternQuest from "./component/WhyIntern";
 
 import ReviewPage from "./component/Review";
 
-
 import NewImgSlider from "./component/NewSlider";
+
 
 const App = () => {
 
@@ -59,7 +59,7 @@ const App = () => {
 
                       <Route path="/why" element={<WhyInternQuest />} />
 
-                       <Route path="/img" element={<NewImgSlider />} />
+                       
       
       </Routes>
     </Router>
