@@ -19,6 +19,28 @@ background-attachment: fixed;
 
 }
 
+.employee-postjob{
+    background: 
+  linear-gradient(to right, rgba(0, 0, 0, 0.91) 20%, rgba(0, 0, 0, 0.411) 100%),  /* lighter left fade */
+  linear-gradient(to top left, rgba(0, 0, 0, 0.552) 20%, rgba(255, 255, 255, 0) 80%), 
+  url("https://i.pinimg.com/736x/a6/e9/ed/a6e9edb268d90f5cf13e9955811051f2.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+.employee-shortlist{
+  min-height: 100vh;
+     background: 
+  linear-gradient(to right, rgba(0, 0, 0, 0.91) 20%, rgba(0, 0, 0, 0.411) 100%),  /* lighter left fade */
+  linear-gradient(to top left, rgba(0, 0, 0, 0.552) 20%, rgba(255, 255, 255, 0) 80%), 
+  url("https://i.pinimg.com/736x/a6/e9/ed/a6e9edb268d90f5cf13e9955811051f2.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
 
 
 .employee-applications{

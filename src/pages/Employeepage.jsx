@@ -72,7 +72,7 @@ const EmployeePage = () => {
         );
       case "shortlist":
         return (
-          <>
+          <div className="employee-shortlist">
             <Navbar
               links={EmpLinks}
               onLinkClick={(key) => setActivePage(key)}
@@ -82,7 +82,7 @@ const EmployeePage = () => {
             <div >
               <RecentApplications/>
             </div>
-          </>
+          </div>
 
         );
     }
