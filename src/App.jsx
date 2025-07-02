@@ -24,6 +24,8 @@ import WhyInternQuest from "./component/WhyIntern";
 import ReviewPage from "./component/Review";
 
 
+import NewImgSlider from "./component/NewSlider";
+
 const App = () => {
 
   return (
@@ -56,6 +58,8 @@ const App = () => {
                     <Route path="/recent" element={<RecentApplications />} />
 
                       <Route path="/why" element={<WhyInternQuest />} />
+
+                       <Route path="/img" element={<NewImgSlider />} />
       
       </Routes>
     </Router>

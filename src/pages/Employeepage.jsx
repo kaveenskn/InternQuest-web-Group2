@@ -6,6 +6,7 @@ import EmployeePageCards from "../component/Cardsectionemp";
 import Jobboard from "../component/Jobboard";
 import "../pagestyles/employee.css";
 import InternshipApp from "../component/InternshipApp";
+import RecentApplications from "../component/ShortlistedApplications";
 
 const EmpLinks = [
   { key: "home", label: "Home" },
@@ -78,7 +79,7 @@ const EmployeePage = () => {
               transparent={false}
             />
             <div >
-              <h2>My CV Page</h2>
+              <RecentApplications/>
             </div>
           </>
 

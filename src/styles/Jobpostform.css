@@ -6,13 +6,13 @@
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
-
+  background:url("https://i.pinimg.com/736x/f8/02/e9/f802e95c6d9bad1e00497d5e7e11c494.jpg");
  
 }
 
 /* Form card styling */
 .job-post-form {
-    background: linear-gradient(to top, white 30%, #0d47a1 50%, black 90%);
+    background:url("https://i.pinimg.com/736x/c6/74/d1/c674d152bebe42ad1c74a311a3f87fbb.jpg");
   border-radius: 18px;
   padding: 32px 36px;
   max-width: 520px;
