@@ -53,19 +53,15 @@ const LoginForm = () => {
   return (
     <div className="login-container">
       <div className="login-wrapper">
-        <div className="login-left-panel">
-          <div className="login-panel-content">
-            <h2 className="login-welcome-title">Welcome Back!</h2>
-            <p className="login-welcome-subtitle">
-              Sign in to your InternQuest account and continue your journey
-            </p>
-          </div>
-        </div>
+        
         
         <div className="login-right-panel">
           <div className="login-form-container">
-            <h1 className="login-form-title">Sign In</h1>
-            <p className="login-form-subtitle">Enter your credentials to access your account</p>
+           <h1 className="login-form-heading">
+                  Sign In with InternQuest
+                </h1>
+
+            
             
             <form className="login-form" onSubmit={handleSubmit}>
               <div className="login-input-group">

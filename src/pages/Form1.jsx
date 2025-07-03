@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../pagestyles/form1.css";
 
-const Form1 = () => {
+const SignupForm = () => {
   const [value, setValue] = useState({
     fullname: "",
     email: "",
@@ -21,7 +22,7 @@ const Form1 = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/auth/signup", { 
+      const response = await fetch("http://localhost:5000/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,137 +56,154 @@ const Form1 = () => {
   };
 
   return (
-  
- <div className="signup-page">
-    <div className="form-wrapper">
-    
-      <div className="left-panel">
-        <h2>Welcome to InternQuest</h2>
+    <div className="signup-container">
+      <div className="signup-wrapper">
+        <div className="signup-right-panel-only">
+          <div className="signup-form-container">
+            <h1 className="signup-form-heading">Sign Up with InternQuest</h1>
+          
+
+            <form className="signup-form" onSubmit={handleSubmit}>
+              <div className="signup-input-group">
+                <label htmlFor="fullname" className="signup-label">Full Name</label>
+                <input
+                  className="signup-input"
+                  type="text"
+                  placeholder="Enter your full name"
+                  name="fullname"
+                  value={value.fullname}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="signup-input-group">
+                <label htmlFor="email" className="signup-label">Email</label>
+                <input
+                  className="signup-input"
+                  type="email"
+                  placeholder="Enter your email"
+                  name="email"
+                  value={value.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="signup-input-group">
+                <label htmlFor="password" className="signup-label">Password</label>
+                <input
+                  className="signup-input"
+                  type="password"
+                  placeholder="Enter your password"
+                  name="password"
+                  value={value.password}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="signup-input-group">
+                <label className="signup-label">Select Your Role</label>
+                <div className="signup-radio-group">
+                  <div className="signup-radio-item">
+                    <input
+                      className="signup-radio"
+                      type="radio"
+                      id="student"
+                      name="role"
+                      value="student"
+                      onChange={handleChange}
+                    />
+                    <label htmlFor="student" className="signup-radio-label">Student</label>
+                  </div>
+                  <div className="signup-radio-item">
+                    <input
+                      className="signup-radio"
+                      type="radio"
+                      id="employee"
+                      name="role"
+                      value="employee"
+                      onChange={handleChange}
+                    />
+                    <label htmlFor="employee" className="signup-radio-label">Employee</label>
+                  </div>
+                </div>
+              </div>
+
+              {value.role === "student" && (
+                <>
+                  <div className="signup-input-group">
+                    <label htmlFor="universityName" className="signup-label">University Name</label>
+                    <input
+                      className="signup-input"
+                      type="text"
+                      placeholder="Enter your university name"
+                      name="universityName"
+                      value={value.universityName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+
+                  <div className="signup-input-group">
+                    <label htmlFor="universityLocation" className="signup-label">University Location</label>
+                    <input
+                      className="signup-input"
+                      type="text"
+                      placeholder="Enter your university location"
+                      name="universityLocation"
+                      value={value.universityLocation}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </>
+              )}
+
+              {value.role === "employee" && (
+                <>
+                  <div className="signup-input-group">
+                    <label htmlFor="companyName" className="signup-label">Company Name</label>
+                    <input
+                      className="signup-input"
+                      type="text"
+                      placeholder="Enter your company name"
+                      name="companyName"
+                      value={value.companyName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+
+                  <div className="signup-input-group">
+                    <label htmlFor="companyLocation" className="signup-label">Company Location</label>
+                    <input
+                      className="signup-input"
+                      type="text"
+                      placeholder="Enter your company location"
+                      name="companyLocation"
+                      value={value.companyLocation}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </>
+              )}
+
+              <button type="submit" className="signup-submit-btn">
+                Create Account
+              </button>
+
+              <div className="signup-redirect">
+                Already have an account? <Link to="/login" className="signup-redirect-link">Sign in</Link>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div className="right-panel">
-        <h1>Signup With InternQuest</h1>
-        <form>
-  <label htmlFor="fullname">Full Name</label>
-  <input
-    className="input-field"
-    type="text"
-    placeholder="Enter your full name"
-    name="fullname"
-    value={value.fullname}
-    onChange={handleChange}
-    required
-  />
-
-  <label htmlFor="email">Email</label>
-  <input
-    className="input-field"
-    type="email"
-    placeholder="Enter your email"
-    name="email"
-    value={value.email}
-    onChange={handleChange}
-    required
-  />
-
-  <label htmlFor="password">Password</label>
-  <input
-    className="input-field"
-    type="password"
-    placeholder="Enter your password"
-    name="password"
-    value={value.password}
-    onChange={handleChange}
-    required
-  />
-
-  <label htmlFor="role">Select Your Role</label>
-  <div className="radio-group">
-    <div>
-      <input
-        className="radio-button"
-        type="radio"
-        id="student"
-        name="role"
-        value="student"
-        onChange={handleChange}
-      />
-      <label htmlFor="student">Student</label>
     </div>
-    <div>
-      <input
-        className="radio-button"
-        type="radio"
-        id="employee"
-        name="role"
-        value="employee"
-        onChange={handleChange}
-      />
-      <label htmlFor="employee">Employee</label>
-    </div>
-  </div>
-
-  {value.role === "student" && (
-    <>
-      <label htmlFor="universityName">University Name</label>
-      <input
-        className="input-field"
-        type="text"
-        placeholder="Enter your university name"
-        name="universityName"
-        value={value.universityName}
-        onChange={handleChange}
-        required
-      />
-
-      <label htmlFor="universityLocation">University Location</label>
-      <input
-        className="input-field"
-        type="text"
-        placeholder="Enter your university location"
-        name="universityLocation"
-        value={value.universityLocation}
-        onChange={handleChange}
-        required
-      />
-    </>
-  )}
-
-  {value.role === "employee" && (
-    <>
-      <label htmlFor="companyName">Company Name</label>
-      <input
-        className="input-field"
-        type="text"
-        placeholder="Enter your company name"
-        name="companyName"
-        value={value.companyName}
-        onChange={handleChange}
-        required
-      />
-
-      <label htmlFor="companyLocation">Company Location</label>
-      <input
-        className="input-field"
-        type="text"
-        placeholder="Enter your company location"
-        name="companyLocation"
-        value={value.companyLocation}
-        onChange={handleChange}
-        required
-      />
-    </>
-  )}
-
-  <button type="submit" onClick={handleSubmit}>Submit</button>
-  <div className="register-login-redirect">
-    Already have an account? <a href="/login">Sign in</a>
-  </div>
-</form>
-
-      </div>
-    </div>
-     </div>
   );
 };
 
-export default Form1;
+export default SignupForm;
