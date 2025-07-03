@@ -1,187 +1,188 @@
-
+/* Job Post Form Styles - Blue Theme */
 .job-post-container {
-  min-height: 90vh;
-  width:100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  padding: 2rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 50px 20px;
- 
+  justify-content: center;
 }
 
-/* Form card styling */
 .job-post-form {
-    background:url("https://i.pinimg.com/736x/c6/74/d1/c674d152bebe42ad1c74a311a3f87fbb.jpg");
-  border-radius: 18px;
-  padding: 32px 36px;
-  max-width: 520px;
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(14, 165, 233, 0.1);
+  border: 1px solid #e0f2fe;
   width: 100%;
-  box-shadow: 0 8px 32px rgba(39, 116, 174, 0.18);
-  color: #12396e;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+/* Form Header */
 .form-title {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0e172a;
   text-align: center;
-  margin-bottom: 8px;
-  color: #ffffff;
-  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
 .form-subtitle {
   text-align: center;
-  font-size: 15px;
-  margin-bottom: 22px;
-  opacity: 0.85;
-  color: #ffffff;
+  color: #64748b;
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
 }
 
+/* Form Elements */
 .input-label {
   display: block;
-  font-size: 15px;
-  margin-bottom: 16px;
-  color: #0095ff;
-  font-weight: 500;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  font-size: 0.95rem;
 }
 
 .input-field,
 .textarea-field {
-  display: block;
   width: 100%;
-  margin-top: 2px;
-  padding: 10px 14px;
-  border: 1.5px solid #b4c5e4;
-  background: #f7fbff;
-  color: #12396e;
-  font-size: 15px;
-  outline: none;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e5e7eb;
   border-radius: 8px;
-  transition: border 0.2s;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  background: #f8fafc;
 }
 
 .input-field:focus,
 .textarea-field:focus {
-  border: 1.5px solid #2774ae;
-  background: #eaf4fb;
-}
-
-.input-field::placeholder,
-.textarea-field::placeholder {
-  color: #b4c5e4;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(0.7);
-}
-
-select option {
-  background-color: #12396e;
-  color: #fff;
+  outline: none;
+  border-color: #0ea5e9;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
 }
 
 .textarea-field {
-  resize: none;
-  padding: 12px 14px;
-  text-align: left;
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
 }
 
+/* Row Layout */
 .row {
   display: flex;
-  justify-content: space-between;
-  gap: 1px;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.row .input-field{
-  width: 230px;
+.half-width {
+  flex: 1;
+  margin-bottom: 0;
 }
 
+/* Select Styling */
+select.input-field {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%230ea5e9' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  appearance: none;
+}
+
+/* Button Styles */
 .button-row {
   display: flex;
-  justify-content: space-between;
-  margin-top: 24px;
-  gap: 12px;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2.5rem;
   flex-wrap: wrap;
 }
 
-/* Modern Blue Gradient Buttons */
 .clear-btn,
 .post-btn {
-  padding: 12px 0;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
   min-width: 140px;
-  box-shadow: 0 2px 8px rgba(39, 116, 174, 0.08);
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
-/* Clear Button: outlined blue gradient */
 .clear-btn {
   background: transparent;
-  color: #2774ae;
-  border: 2px solid #2774ae;
+  color: #64748b;
+  border-color: #cbd5e1;
 }
 
 .clear-btn:hover {
-  background: linear-gradient(90deg, #2774ae 0%, #12396e 100%);
-  color: #fff;
-  border: 2px solid #12396e;
+  background: #f1f5f9;
+  color: #1e293b;
+  border-color: #94a3b8;
 }
 
-/* Post Button: filled blue gradient */
 .post-btn {
-  background: linear-gradient(90deg, #2774ae 0%, #12396e 100%);
-  color: #fff;
-  border: 2px solid #2774ae;
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.25);
 }
 
 .post-btn:hover {
-  background: #12396e;
-  color: #fff;
-  border: 2px solid #12396e;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.35);
 }
 
+.post-btn:active {
+  transform: translateY(0);
+}
+
+/* Focus States */
+.clear-btn:focus,
+.post-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.3);
+}
+
+/* Required Field Indicator */
+.input-label:has(+ .input-field[required])::after,
+.input-label:has(+ .textarea-field[required])::after {
+  content: " *";
+  color: #ef4444;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-.job-post-container {
-width: 105%;
-margin-left:-10px ;
+  .job-post-container {
+    padding: 1rem;
+  }
 
-}
   .job-post-form {
-    padding: 18px;
-    width: 102%;
-    margin-left: 10px;
-
+    padding: 2rem;
   }
 
   .form-title {
-    font-size: 22px;
+    font-size: 2rem;
   }
 
   .form-subtitle {
-    font-size: 13px;
+    font-size: 1rem;
   }
 
   .row {
     flex-direction: column;
-    gap: 10px;
-  }
-  .row .input-field{
-    width: 100%;
-  }
-
-  .textarea-field{
-    width: 95%;
+    gap: 0;
   }
 
   .half-width {
-    min-width: 100%;
+    margin-bottom: 1.5rem;
   }
 
   .button-row {
@@ -193,4 +194,33 @@ margin-left:-10px ;
   .post-btn {
     width: 100%;
   }
+}
+
+@media (max-width: 480px) {
+  .job-post-form {
+    padding: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.75rem;
+  }
+
+  .input-field,
+  .textarea-field {
+    padding: 0.75rem;
+  }
+}
+
+/* Ensure selected option text is black */
+
+/* But make the default placeholder option look gray */
+.input-field option:disabled {
+  color: #94a3b8; /* muted slate gray */
+}
+
+.input-field,
+.textarea-field {
+  color: #0f172a; /* dark navy for typed text */
+  background: #f8fafc;
+  /* other existing styles... */
 }
