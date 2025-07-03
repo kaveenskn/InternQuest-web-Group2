@@ -73,18 +73,19 @@
   border-radius: 10px;
   outline: none;
   transition: border-color 0.3s ease;
-  background-color: #dce0f5;
-  
+  background-color: #dce0f5; /* soft light blue background */
+  color: #000000; /* black text while typing */
 }
 
 .login-input::placeholder {
-  color: #000000; /* lighter grey to match signup style */
+  color: #000000; /* black placeholder text */
   font-size: 14px;
 }
 
 .login-input:focus {
   border-color: #2f3ab2;
   box-shadow: 0 0 8px rgba(47, 58, 178, 0.2);
+  /* keep background same on focus */
 }
 
 /* Forgot password link */
@@ -188,6 +189,7 @@
   position: relative;
   outline: none;
   transition: border-color 0.3s ease;
+  background-color: white;
 }
 
 .login-input-group.radio-group input[type="radio"]:checked {
@@ -204,4 +206,47 @@
   height: 8px;
   background: white;
   border-radius: 50%;
+}
+
+
+/* Floating dots background animation */
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><circle cx="100" cy="100" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="300" cy="300" r="3" fill="rgba(255,255,255,0.05)"/><circle cx="200" cy="50" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="50" cy="350" r="2" fill="rgba(255,255,255,0.06)"/><circle cx="350" cy="150" r="1" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+  background-size: 400px 400px;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 20s ease-in-out infinite;
+}
+
+/* Make sure container is positioned relative for absolute pseudo */
+.login-container {
+  position: relative;
+  z-index: 1; /* make content above the ::before */
+}
+
+/* Floating animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Slide in form container */
+.login-wrapper {
+  animation: slideInUp 0.8s ease forwards;
+  position: relative; /* keep stacking context */
+  z-index: 1;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
