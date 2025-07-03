@@ -1,82 +1,82 @@
 
-/* InternshipApp Styles with #2128BD Theme */
+/* InternshipApp.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .internship-app {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
-  padding: 2rem;
-  position: relative;
-  overflow-x: hidden;
+  background: linear-gradient(135deg, #f8faff 0%, #e8f0ff 50%, #dde7ff 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 2rem 1rem;
+  align-items: center;
+ display: flex;
+ flex-direction: column;
 }
 
-.internship-app::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="50" cy="50" r="1" fill="rgba(33,40,189,0.05)"/><circle cx="150" cy="150" r="1.5" fill="rgba(33,40,189,0.03)"/><circle cx="100" cy="30" r="1" fill="rgba(33,40,189,0.04)"/><circle cx="30" cy="170" r="1" fill="rgba(33,40,189,0.06)"/></svg>') repeat;
-  background-size: 200px 200px;
-  pointer-events: none;
-}
-
-/* Job Title Section Styling */
+/* Text Card Styling */
 .text-card {
-  background: linear-gradient(135deg, #2128BD 0%, #1e23a5 100%);
-  color: white;
-  padding: 2rem 2.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 2px solid #2128BD;
   border-radius: 20px;
-  margin: 2rem 0 1.5rem 0;
-  box-shadow: 0 10px 40px rgba(33, 40, 189, 0.3);
+  padding: 1.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(33, 40, 189, 0.15);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .text-card::before {
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
-  border-radius: 50%;
-  transform: translate(40px, -40px);
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(33, 40, 189, 0.05), transparent);
+  transition: left 0.5s ease;
+}
+
+.text-card:hover::before {
+  left: 100%;
 }
 
 .text-card h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 2rem;
+  color: #2128BD;
+  font-weight: 700;
   margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(33, 40, 189, 0.1);
 }
 
-/* Profile Cards Container */
+/* Profile List Container */
 .profile-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-  position: relative;
-  z-index: 1;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
 }
 
-/* Individual Profile Card Styling */
+/* Profile Card Styling */
 .profile-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+  border: 2px solid #2128BD;
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 10px 40px rgba(33, 40, 189, 0.1);
-  border: 1px solid rgba(33, 40, 189, 0.08);
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 32px rgba(33, 40, 189, 0.1);
 }
 
 .profile-card::before {
@@ -85,150 +85,225 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #2128BD, #4c6ef5, #7c3aed);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-}
-
-.profile-card:hover::before {
-  transform: scaleX(1);
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(33, 40, 189, 0.02) 0%, rgba(103, 126, 234, 0.02) 100%);
+  pointer-events: none;
 }
 
 .profile-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(33, 40, 189, 0.15);
-  border-color: rgba(33, 40, 189, 0.2);
+  box-shadow: 0 20px 40px rgba(33, 40, 189, 0.2);
+  border-color: #667eea;
 }
 
-/* Profile Card Content */
+.profile-card:hover::before {
+  background: linear-gradient(135deg, rgba(33, 40, 189, 0.05) 0%, rgba(103, 126, 234, 0.05) 100%);
+}
+
+/* Profile Header */
 .profile-header {
-  margin-bottom: 1.5rem;
-}
-
-.profile-name {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #2128BD;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
-}
-
-.profile-role {
-  color: #64748b;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
-}
-
-.profile-university {
-  color: #8b949e;
-  font-size: 0.9rem;
-  margin-bottom: 0.3rem;
-}
-
-.profile-email {
-  color: #2128BD;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
-}
-
-.profile-applied {
-  color: #8b949e;
-  font-size: 0.85rem;
-}
-
-/* Button Group Styling */
-.profile-actions {
   display: flex;
+  align-items: center;
   gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.btn-shortlist, .btn-delete {
-  flex: 1;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
   position: relative;
-  overflow: hidden;
+  z-index: 2;
 }
 
-.btn-shortlist {
-  background: linear-gradient(135deg, #2128BD 0%, #1e23a5 100%);
-  color: white;
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #2128BD, #667eea);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 3px solid rgba(33, 40, 189, 0.2);
   box-shadow: 0 4px 15px rgba(33, 40, 189, 0.3);
 }
 
-.btn-shortlist::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-  transition: left 0.5s ease;
+.profile-info h3 {
+  font-size: 1.3rem;
+  color: #2128BD;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
 }
 
-.btn-shortlist:hover::before {
-  left: 100%;
+.profile-info .role {
+  color: #667eea;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Profile Details */
+.profile-details {
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-details p {
+  margin-bottom: 0.8rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-details p strong {
+  color: #2128BD;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+/* Profile Actions */
+.profile-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  min-width: 120px;
+}
+
+.btn-shortlist {
+  background: linear-gradient(135deg, #2128BD, #667eea);
+  color: #ffffff;
+  border: 2px solid transparent;
 }
 
 .btn-shortlist:hover {
+  background: linear-gradient(135deg, #1a1f9a, #5a6fd8);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(33, 40, 189, 0.4);
 }
 
 .btn-delete {
-  background: white;
-  color: #dc2626;
-  border: 2px solid #dc2626;
-  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.1);
+  background: transparent;
+  color: #e53e3e;
+  border: 2px solid #e53e3e;
 }
 
 .btn-delete:hover {
-  background: #dc2626;
-  color: white;
+  background: #e53e3e;
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 8px 25px rgba(229, 62, 62, 0.3);
 }
 
-/* Loading Animation */
-@keyframes shimmer {
-  0% {
-    background-position: -200px 0;
-  }
-  100% {
-    background-position: calc(200px + 100%) 0;
-  }
+/* Loading and Empty States */
+.loading-state, .empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #4a5568;
+  font-size: 1.1rem;
 }
 
-.profile-card.loading {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-/* Empty State */
-.internship-app:empty::after {
-  content: 'No applications found';
+.loading-state {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
-  color: #64748b;
-  font-size: 1.2rem;
-  font-style: italic;
+  min-height: 200px;
 }
 
-/* Scroll Animation */
+.empty-state {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 2px dashed #2128BD;
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .internship-app {
+    padding: 1rem 0.5rem;
+  }
+  
+  .text-card {
+    margin: 1.5rem auto;
+    padding: 1rem 1.5rem;
+  }
+  
+  .text-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .profile-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .profile-card {
+    padding: 1.5rem;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .profile-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 1rem;
+  }
+  
+  .profile-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .profile-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .profile-details p {
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  
+  .btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Animation for smooth entry */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -251,99 +326,7 @@
 .profile-card:nth-child(5) { animation-delay: 0.5s; }
 .profile-card:nth-child(6) { animation-delay: 0.6s; }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .internship-app {
-    padding: 1.5rem;
-  }
-  
-  .profile-list {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .text-card {
-    padding: 1.5rem 2rem;
-    margin: 1.5rem 0 1rem 0;
-    border-radius: 16px;
-  }
-  
-  .text-card h2 {
-    font-size: 1.4rem;
-  }
-  
-  .profile-card {
-    padding: 1.5rem;
-    border-radius: 16px;
-  }
-  
-  .profile-actions {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .internship-app {
-    padding: 1rem;
-  }
-  
-  .text-card {
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-  }
-  
-  .text-card h2 {
-    font-size: 1.2rem;
-  }
-  
-  .profile-card {
-    padding: 1.2rem;
-    border-radius: 12px;
-  }
-  
-  .profile-name {
-    font-size: 1.2rem;
-  }
-  
-  .btn-shortlist, .btn-delete {
-    padding: 1rem;
-  }
-}
-
-/* Focus States for Accessibility */
-.btn-shortlist:focus, .btn-delete:focus {
-  outline: 3px solid rgba(33, 40, 189, 0.3);
-  outline-offset: 2px;
-}
-
-/* High Contrast Mode Support */
-@media (prefers-contrast: high) {
-  .profile-card {
-    border: 2px solid #2128BD;
-  }
-  
-  .profile-name {
-    color: #000;
-  }
-  
-  .profile-role, .profile-university, .profile-applied {
-    color: #333;
-  }
-}
-
-/* Reduced Motion Support */
-@media (prefers-reduced-motion: reduce) {
-  .profile-card {
-    animation: none;
-    transition: none;
-  }
-  
-  .profile-card:hover {
-    transform: none;
-  }
-  
-  .btn-shortlist, .btn-delete {
-    transition: none;
-  }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }

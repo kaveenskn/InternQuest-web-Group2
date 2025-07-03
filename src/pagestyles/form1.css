@@ -1,7 +1,8 @@
 /* Container and wrapper */
 .signup-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #2f3ab2, #5b5edc);
+     background: radial-gradient(circle at 30% 50%, rgba(33, 41, 189, 0.258) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(103, 127, 234, 0.278) 0%, transparent 50%);
   display: flex;
   align-items: center;
   justify-content: center;

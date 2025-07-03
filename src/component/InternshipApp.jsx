@@ -130,7 +130,10 @@ const InternshipApp = () => {
 
   return (
     <div className="internship-app">
-      <InternshipHeader />
+      <div className="int-head">
+             <InternshipHeader />
+      </div>
+      
 
       {Object.keys(groupedApplications).map((jobTitle) => (
         <div key={jobTitle}>
