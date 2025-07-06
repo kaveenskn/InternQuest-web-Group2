@@ -81,29 +81,7 @@ const InternshipLandingPage = () => {
 
 
       <footer className="getstart-footer">
-<<<<<<< HEAD
 
-
-
-
-  <div className="getstart-footer-container">
-    <div className="getstart-footer-left">
-      <h3>InternQuest</h3>
-      <p>Your gateway to career-building internships. Empowering students and companies.</p>
-    </div>
-    <div className="getstart-footer-right">
-      <h4>Contact Us</h4>
-      <p><a href="mailto:someone@example.com" style={{color:"white",textDecoration:"none"}}>Email: support@internquest.com</a></p>
-      <p>Phone: +1 (555) 123-4567</p>
-      <p>Address: 123 Career Ave, Silicon Valley, CA</p>
-    </div>
-  </div>
-  <div className="getstart-footer-bottom">
-    <p>© 2025 InternQuest. All rights reserved.</p>
-  </div>
-
-  
-=======
           <div className="getstart-footer-container">
             <div className="getstart-footer-left">
               <h3>InternQuest</h3>
@@ -120,7 +98,7 @@ const InternshipLandingPage = () => {
             <p>© 2025 InternQuest. All rights reserved.</p>
           </div>
           
->>>>>>> Development-kaveen
+
 </footer>
 
     </div>
