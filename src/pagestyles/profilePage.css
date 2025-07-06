@@ -1,37 +1,61 @@
 
 .profile-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
   padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeInUp 0.8s ease-out 0.2s both; 
+  position: relative;
+  z-index: 1;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 .profile-page h1 {
   text-align: center;
-  color: white;
+  color: #1e40af;
   font-size: 2.5rem;
   font-weight: 700;
+   margin-top: 30px;
   margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .profile-container {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 20px auto;
+   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
+  
 }
 
 @media (max-width: 768px) {
   .profile-container {
+    margin-top: 60px;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 5.0rem;
+    padding: 10px;
+    
   }
   
   .profile-page {
-    padding: 1rem;
+    padding: 10px;
+     position: relative;
+  z-index: 1;
   }
   
   .profile-page h1 {

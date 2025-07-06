@@ -10,6 +10,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   min-height: 70px;
+  z-index: 1000;
 }
 
 .navbar-solid {
@@ -41,7 +42,7 @@
 
 .icon {
   font-size: 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #2128BD 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -49,7 +50,7 @@
 }
 
 .brand-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #2128BD 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -118,12 +119,12 @@
 
 .nav-link.active::before {
   width: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4a67e7 0%, #2128BD 100%);
 }
 
 /* Logout Button - Right */
 .logout {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #2128BD 100%);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -176,9 +177,10 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .glass-navbar {
     padding: 1rem 1.5rem;
+    z-index: 1100;
   }
 
   .mobile-menu-icon {
@@ -202,6 +204,7 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border-top: 1px solid rgba(102, 126, 234, 0.1);
     padding: 1rem 0;
+    z-index: 1100;
   }
 
   .navbar-links.show {
@@ -260,7 +263,7 @@
 }
 
 /* Animation for page load */
-@keyframes slideDown {
+/* @keyframes slideDown {
   from {
     transform: translateY(-100%);
     opacity: 0;
@@ -273,7 +276,7 @@
 
 .glass-navbar {
   animation: slideDown 0.5s ease-out;
-}
+} */
 
 /* Smooth scrolling offset for fixed navbar */
 html {

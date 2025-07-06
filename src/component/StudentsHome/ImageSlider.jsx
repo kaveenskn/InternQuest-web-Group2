@@ -4,7 +4,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import "../styles/ImageSlider.css";
+import "../../styles/ImageSlider.css";
 
 export default function ImageSlider() {
   const pagination = {

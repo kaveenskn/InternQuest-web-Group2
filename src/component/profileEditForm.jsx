@@ -122,7 +122,7 @@ const ProfileEditForm = ({
         {message && <p className="pfedit-save-message">{message}</p>}
       </form>
 
-      <h3>Add Project</h3>
+      <h3 style={{'fontSize':"30px","color":"#ffffff","marginTop":"20px"}}>Add Project</h3>
       <form className="pfedit-project-form">
         <label>Title</label>
         <input

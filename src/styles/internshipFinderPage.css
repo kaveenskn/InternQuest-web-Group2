@@ -3,7 +3,7 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
   padding: 2rem 0;
-  margin-top: 5rem; /* Prevents overlap with fixed navbar */
+   /* Prevents overlap with fixed navbar */
 }
 
 .intern-main {

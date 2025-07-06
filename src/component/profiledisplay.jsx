@@ -13,7 +13,8 @@ const ProfileDisplay = ({ profile, projects }) => {
           fontSize: "25px",
           wordBreak: "break-word",
           textAlign: "center",
-          whiteSpace: "normal"
+          whiteSpace: "normal",
+          fontWeight:500
         }}>
           {profile.course_of_study}
         </p>

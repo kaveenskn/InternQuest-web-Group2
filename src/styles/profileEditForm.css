@@ -8,10 +8,14 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   max-height: calc(100vh - 4rem);
   overflow-y: auto;
+  max-width: 400px;
+   margin-left: auto; /* Pushes to the right side */
+  margin-right: auto; 
+  
 }
 
 .pfedit-profile-form h3 {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #1e40af);
   margin: -2rem -2rem 2rem -2rem;
   padding: 1.5rem 2rem;
   border-radius: 20px 20px 0 0;
@@ -96,7 +100,7 @@
 }
 
 .pfedit-skill-tag {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #667eea, #1e40af);
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 15px;
@@ -166,7 +170,7 @@
 }
 
 .pfedit-save-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #1e40af 100%);
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -209,4 +213,36 @@
 .pfedit-profile-panel::-webkit-scrollbar-thumb:hover,
 .prdis-preview::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
+}
+
+
+@media (max-width: 768px) {
+  .pfedit-profile-panel {
+    position: static; /* Removes sticky or fixed effect if present */
+    max-height: none;
+    overflow: visible;
+    margin: 0 auto; /* Centered horizontally */
+    width: 100%;
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .pfedit-project-form {
+    padding: 1rem;
+  }
+
+  .pfedit-save-button {
+    width: 100%;
+  }
+
+  .pfedit-profile-form h3 {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .pfedit-profile-form input,
+  .pfedit-profile-form textarea {
+    font-size: 1rem;
+  }
 }

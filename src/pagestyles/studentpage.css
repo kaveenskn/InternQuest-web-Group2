@@ -20,15 +20,11 @@ margin-top: 0px;
 }
 
 .std-findjobs{
-  margin-top: -100px;
-  background: 
-  linear-gradient(to right, rgba(0, 0, 0, 0.54) 25%, rgba(39, 39, 39, 0) 100%),  /* dark left fade */
-  linear-gradient(to top left, rgba(0, 0, 0, 0.61) 20%, rgba(0, 0, 0, 0) 80%), 
-    url("https://i.pinimg.com/736x/1d/e9/59/1de959957c92232225b4438afece0349.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment:fixed; 
+  margin-top: 0;
+  z-index: -1;
+}
 
-
+.std-profile{
+  margin-top: 0;
+  z-index: -1;
 }

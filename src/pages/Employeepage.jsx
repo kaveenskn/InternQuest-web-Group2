@@ -5,8 +5,7 @@ import Jobpostform from "../component/Jobpostform";
 import EmployeePageCards from "../component/Cardsectionemp";
 import Jobboard from "../component/Jobboard";
 import "../pagestyles/employee.css";
-import InternshipApp from "../component/InternshipApp";
-import RecentApplications from "../component/ShortlistedApplications";
+
 import ApplicationPage from "../component/CompanyApplication/Applicationpage";
 
 
@@ -81,7 +80,7 @@ const EmployeePage = () => {
               transparent={false}
             />
             <div >
-              <RecentApplications/>
+             
             </div>
           </div>
 
