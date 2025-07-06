@@ -10,6 +10,7 @@ const StudentProfilePage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem('token');

@@ -4,10 +4,10 @@ import "../styles/navbar.css";
 
 const Navbar = ({
   brand = "InternQuest",
-  icon = "👤",
+  icon = "❖𝓠 ",
   links = [],
   activeKey = "",
-  onLinkClick = () => {},
+  onLinkClick = (key) => {},
   transparent = false, // 👈 New prop
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

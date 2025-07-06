@@ -1,14 +1,14 @@
 import React from "react";
-import "../styles/InternshipApp.css";
+import "../styles/Shortedlistedprofilecard.css"; // Reuses same styles for consistency
 
-const InternshipProfileCard = ({
+const ShortlistedProfileCard = ({
   name,
   role,
   university,
   email,
   applied,
-  onShortList = () => {},
-  onDelete = () => {},
+  onViewProfile = () => {},
+  onContact = () => {},
 }) => {
   return (
     <div className="application-card">
@@ -22,7 +22,7 @@ const InternshipProfileCard = ({
             <p className="email">{email}</p>
           </div>
         </div>
-        <div className="status-badge status-all">New</div>
+        <div className="status-badge status-shortlisted">Shortlisted</div>
       </div>
 
       {/* Card Body */}
@@ -39,15 +39,15 @@ const InternshipProfileCard = ({
 
       {/* Card Actions */}
       <div className="card-actions">
-        <button className="view-profile-button" onClick={onShortList}>
-          Short List
+        <button className="view-profile-button" onClick={onViewProfile}>
+          View Profile
         </button>
-        <button className="view-profile-button" onClick={onDelete}>
-          Delete
+        <button className="view-profile-button" onClick={onContact}>
+          Contact
         </button>
       </div>
     </div>
   );
 };
 
-export default InternshipProfileCard;
+export default ShortlistedProfileCard;

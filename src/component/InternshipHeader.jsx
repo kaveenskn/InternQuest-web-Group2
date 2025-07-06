@@ -5,7 +5,7 @@ const InternshipHeader = () => {
   return (
     <div className="header">
       <div className="header-text">
-        <h1> 👤 Internship Applications</h1>
+        <h1 style={{"color":"black"}}> 👤 Internship Applications</h1>
         <p>Review and manage candidate applications by job position</p>
       </div>
       <div className="status-bar">

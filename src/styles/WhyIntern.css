@@ -1,0 +1,74 @@
+.why-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 4rem 8%;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.why-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.tag {
+  background-color: transparent;
+  border: 1px solid #00f5c6;
+  color: #00f5c6;
+  border-radius: 20px;
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  cursor: default;
+}
+
+.why-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.why-feature {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.8rem;
+}
+
+.why-feature .icon {
+  color: #00f5c6;
+  font-size: 2rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.why-feature h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.why-feature p {
+  color: #cfd1d3;
+  font-size: 0.95rem;
+  max-width: 400px;
+}
+
+.why-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-right img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 245, 198, 0.3);
+}
