@@ -2,6 +2,7 @@ import React from "react";
 import arrow from "../assets/arrow.png";
 import "../styles/emDashboard.css";
  import Empslider from "./EmpSlider";
+ import EmpImage from "../assets/Empheropic.jpg";
 
 const EmHero = () => {
   return (
@@ -24,7 +25,7 @@ const EmHero = () => {
         </div>
 
         <div className="em-hero-slider">
-           <Empslider /> 
+           <img src={EmpImage} alt="image" /> 
           <div className="em-slider-placeholder">Slider Content</div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import Jobboard from "../component/Jobboard";
 import "../pagestyles/employee.css";
 import InternshipApp from "../component/InternshipApp";
 import RecentApplications from "../component/ShortlistedApplications";
+import ApplicationPage from "../component/CompanyApplication/Applicationpage";
 
 
 const EmpLinks = [
@@ -48,7 +49,7 @@ const EmployeePage = () => {
               transparent={false}
             />
             <div className="applications-page" >
-              <InternshipApp />
+              <ApplicationPage />
             </div>
          </div>
          

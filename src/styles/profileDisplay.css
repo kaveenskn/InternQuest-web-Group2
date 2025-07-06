@@ -13,6 +13,7 @@
   top: 2rem;
   max-height: calc(100vh - 4rem);
   overflow-y: auto;
+  z-index: 9;
 }
 
 .prdis-head {

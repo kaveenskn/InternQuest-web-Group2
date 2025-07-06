@@ -118,8 +118,8 @@
   box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
 }
 
-/* Results Section */
-.results-count {
+/* RESULTS SECTION — RENAMED WITH `find-` PREFIX */
+.find-results-count {
   font-size: 1.125rem;
   color: #1e40af;
   font-weight: 600;
@@ -127,15 +127,14 @@
   padding-left: 0.5rem;
 }
 
-.results-grid {
+.find-results-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
-/* Internship Cards */
-.intern-card {
+.find-intern-card {
   background: white;
   border-radius: 12px;
   padding: 1.5rem;
@@ -147,13 +146,13 @@
   animation: fadeInUp 0.6s ease-out 0.2s both;
 }
 
-.intern-card:hover {
+.find-intern-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
   border-color: #3b82f6;
 }
 
-.intern-card::before {
+.find-intern-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -163,12 +162,12 @@
   background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%);
 }
 
-.card-content {
+.find-card-content {
   position: relative;
   z-index: 1;
 }
 
-.card-title-row {
+.find-card-title-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -176,7 +175,7 @@
   gap: 1rem;
 }
 
-.int-card-title {
+.find-card-title {
   font-size: 1.25rem;
   font-weight: 700;
   color: #1e40af;
@@ -184,7 +183,7 @@
   flex: 1;
 }
 
-.int-card-type {
+.find-card-type {
   background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
   color: white;
   padding: 0.25rem 0.75rem;
@@ -196,17 +195,17 @@
   white-space: nowrap;
 }
 
-.card-company {
+.find-card-company {
   color: #374151;
   margin-bottom: 0.75rem;
   font-size: 0.95rem;
 }
 
-.card-company strong {
+.find-card-company strong {
   color: #1e40af;
 }
 
-.card-meta {
+.find-card-meta {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -215,22 +214,22 @@
   font-size: 0.9rem;
 }
 
-.card-meta-icon {
+.find-card-meta-icon {
   color: #3b82f6;
   font-size: 0.875rem;
 }
 
-.card-deadline {
+.find-card-deadline {
   color: #374151;
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }
 
-.card-deadline strong {
+.find-card-deadline strong {
   color: #1e40af;
 }
 
-.card-desc {
+.find-card-desc {
   color: #64748b;
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -238,11 +237,11 @@
   transition: all 0.3s ease;
 }
 
-.card-desc.expanded {
+.find-card-desc.expanded {
   max-height: none;
 }
 
-.read-more-toggle {
+.find-read-more-toggle {
   color: #3b82f6;
   font-size: 0.875rem;
   font-weight: 600;
@@ -253,11 +252,11 @@
   transition: color 0.3s ease;
 }
 
-.read-more-toggle:hover {
+.find-read-more-toggle:hover {
   color: #1e40af;
 }
 
-.view-profile-btn {
+.find-apply-btn {
   width: 100%;
   padding: 0.75rem 1.5rem;
   background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
@@ -272,10 +271,30 @@
   letter-spacing: 0.05em;
 }
 
-.view-profile-btn:hover {
+.find-apply-btn:hover {
   background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
   transform: translateY(-1px);
   box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+}
+
+.find-view-more-btn {
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.find-view-more-btn:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
 }
 
 /* Responsive Design */
@@ -301,22 +320,22 @@
     gap: 1rem;
   }
 
-  .results-grid {
+  .find-results-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .intern-card {
+  .find-intern-card {
     padding: 1.25rem;
   }
 
-  .card-title-row {
+  .find-card-title-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
 
-  .int-card-title {
+  .find-card-title {
     font-size: 1.125rem;
   }
 }
@@ -354,12 +373,13 @@
 
 /* Focus states for accessibility */
 .search-btn:focus,
-.view-profile-btn:focus {
+.find-apply-btn:focus,
+.find-view-more-btn:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
 }
 
-.read-more-toggle:focus {
+.find-read-more-toggle:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }

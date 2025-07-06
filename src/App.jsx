@@ -26,6 +26,9 @@ import ReviewPage from "./component/Review";
 import NewImgSlider from "./component/NewSlider";
 
 
+import ApplicationPage from "./component/CompanyApplication/Applicationpage";
+
+
 const App = () => {
 
   return (
@@ -58,7 +61,7 @@ const App = () => {
                     <Route path="/recent" element={<RecentApplications />} />
 
                       <Route path="/why" element={<WhyInternQuest />} />
-
+<Route path="/app" element={<ApplicationPage />} />
                        
       
       </Routes>
