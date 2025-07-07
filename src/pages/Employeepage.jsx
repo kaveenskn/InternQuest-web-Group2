@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import EmHero from "../component/EmHero";
+import EmHero from "../component/CompanyHome/EmHero";
 import Navbar from "../component/navbar";
 import Jobpostform from "../component/Jobpostform";
 import EmployeePageCards from "../component/Cardsectionemp";
@@ -30,7 +30,7 @@ const EmployeePage = () => {
               links={EmpLinks}
               onLinkClick={(key) => setActivePage(key)}
               activeKey={activePage}
-              transparent={true} // transparent true here because background is on wrapper
+              transparent={true} 
             />
             <EmHero />
                </div>

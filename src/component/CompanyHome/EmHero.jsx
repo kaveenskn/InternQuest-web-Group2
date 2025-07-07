@@ -1,19 +1,17 @@
 import React from "react";
-import arrow from "../assets/arrow.png";
-import "../styles/emDashboard.css";
- import Empslider from "./EmpSlider";
- import EmpImage from "../assets/Empheropic.jpg";
+import "../../styles/emDashboard.css";
+ import EmpImage from "../../assets/Empheropic.jpg";
 
 const EmHero = () => {
   return (
     <div className="em-hero">
       <div className="em-hero-content">
         <div className="em-hero-text">
-          <h2 className="em-topic-text">Explore Our Services</h2>
-          <p className="em-hero-description">
-            Discover our innovative services designed to support your goals with
-            expert guidance, smart solutions and personalized customer care.
-          </p>
+         <h2 className="em-topic-text">Empowering Your Career Journey</h2>
+<p className="em-hero-description">
+  At InternQuest, we connect ambitious students with meaningful internship opportunities, offering tailored career guidance, skill-building resources, and expert mentorship to help you thrive in the professional world.
+</p>
+
           <div className="em-button-group">
             <div className="em-hero-explore1">
               <p>Get Started</p>
@@ -26,7 +24,7 @@ const EmHero = () => {
 
         <div className="em-hero-slider">
            <img src={EmpImage} alt="image" /> 
-          <div className="em-slider-placeholder">Slider Content</div>
+          <div className="em-slider-placeholder"></div>
         </div>
       </div>
     </div>

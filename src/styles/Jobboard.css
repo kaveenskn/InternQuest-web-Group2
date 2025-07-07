@@ -8,10 +8,23 @@
 .about-hero {
   text-align: center;
   padding: 4rem 2rem 3rem;
-  background: linear-gradient(135deg, #2128BD 0%, #2128BD);
+  background: linear-gradient(135deg, #5e65f6 0%, #2128BD);
   color: white;
   margin-bottom: 3rem;
+   animation: fadeInUp 0.8s ease-out 0.2s both; 
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .about-hero h1 {
   font-size: 3rem;

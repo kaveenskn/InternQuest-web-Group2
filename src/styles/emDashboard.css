@@ -3,20 +3,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 95vh;
   width: 100%;
   padding: 0 5%;
   box-sizing: border-box;
+  
 }
 
 .em-hero-content {
   display: flex;
+  padding: 0;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: 1400px;
   gap: 4rem;
-  flex-wrap: wrap; /* enable wrapping for small screens */
+  flex-wrap: wrap; 
 }
 
 .em-hero-text {
@@ -29,6 +31,7 @@
   justify-content: center;
   align-items: flex-start;
   text-align: left;
+  margin-top: -100px;
 }
 
 .em-topic-text {
@@ -36,7 +39,7 @@
   font-weight: 900;
   line-height: 1.2;
   color: #1e40af;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.9rem;
   letter-spacing: -0.02em;
   width: 100%;
 }
@@ -125,6 +128,7 @@
     text-align: center;
     align-items: center;
     padding-right: 0;
+    margin-top: 0;
   }
 
   .em-topic-text,
@@ -144,6 +148,7 @@
 @media (max-width: 768px) {
   .em-topic-text {
     font-size: 2.5rem;
+    margin-top: 0;
   }
 
   .em-hero-description {
@@ -164,6 +169,10 @@
 @media (max-width: 480px) {
   .em-topic-text {
     font-size: 2rem;
+  }
+  .em-topic-text {
+    font-size: 2.0rem;
+    margin-top: 0;
   }
 
   .em-button-group {

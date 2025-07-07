@@ -31,8 +31,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(33, 41, 189, 0.258) 0%, transparent 50%),
-              radial-gradient(circle at 70% 80%, rgba(103, 127, 234, 0.278) 0%, transparent 50%);
+  background-color: white;
   pointer-events: none;
 }
 
@@ -118,7 +117,7 @@
 /* Features Section */
 .features-section {
   padding: 5rem 2rem;
-  background: rgba(255, 255, 255, 0.95);
+   background: linear-gradient(to bottom,  #0f16a2 0%,  #0f16a2 100%);
   backdrop-filter: blur(10px);
   position: relative;
 }
@@ -126,7 +125,7 @@
 .features-section h2 {
   text-align: center;
   font-size: 3rem;
-  color: #2128BD;
+  color: #ffffff;
   margin-bottom: 3rem;
   font-weight: 700;
   position: relative;
@@ -140,7 +139,7 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(135deg, #2128BD, #667eea);
+  background: linear-gradient(135deg, #b3b5e2, #667eea);
   border-radius: 2px;
 }
 

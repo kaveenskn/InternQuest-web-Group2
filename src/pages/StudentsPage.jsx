@@ -8,10 +8,11 @@ import "../pagestyles/studentpage.css";
 
 
 const StdLinks = [
-  { key: "dashboard", label: "Dashboard" },
+  { key: "home", label: "Home" },
   { key: "profile", label: "Profile" },
   { key: "find-jobs", label: "Find Jobs" },
-  { key: "my-cv", label: "My CV" },
+  { key: "mentor", label: "Mentorship" },
+  { key: "calender", label: "Calendar" }
 ];
 
 const StudentsPage = () => {
@@ -19,7 +20,7 @@ const StudentsPage = () => {
 
   const renderPageContent = () => {
     switch (activePage) {
-      case 'dashboard':
+      case 'home':
         return (
           <div className="std-dashboard">
             <HeroSection onGetStarted={() => setActivePage("find-jobs")} />
@@ -39,7 +40,7 @@ const StudentsPage = () => {
             <InternshipFinderPage />
           </div>
         );
-      case 'my-cv':
+      case 'mentor':
         return (
           <div className="std-cv">
             <h2>My CV Page</h2>
