@@ -5,6 +5,8 @@ import CardsSection from '../component/Cardsectionstd';
 import ProfilePage from './profilePage';
 import InternshipFinderPage from '../component/internshipFinderPage';
 import "../pagestyles/studentpage.css";
+import StudentsReviews from '../component/StudentsHome/Std-reviews';
+
 
 
 const StdLinks = [
@@ -24,7 +26,7 @@ const StudentsPage = () => {
         return (
           <div className="std-dashboard">
             <HeroSection onGetStarted={() => setActivePage("find-jobs")} />
-            <CardsSection />
+            <StudentsReviews/>
           
           </div>
         );
@@ -49,8 +51,10 @@ const StudentsPage = () => {
         );
       default:
         return (
-          <div className="std-default">
-            <h2>Page Not Found</h2>
+           <div className="std-dashboard">
+            <HeroSection onGetStarted={() => setActivePage("find-jobs")} />
+            <StudentsReviews/>
+          
           </div>
         );
     }

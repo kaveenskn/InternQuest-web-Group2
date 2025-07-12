@@ -7,6 +7,7 @@
   width: 100%;
   padding: 0 5%;
   box-sizing: border-box;
+  position: relative;
   
 }
 
@@ -105,7 +106,7 @@
   flex: 1;
   max-width: 600px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -114,7 +115,14 @@
   max-width: 500px;
   height: auto;
   object-fit: contain;
+  animation: floatCard 3s ease-in-out infinite;
 }
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -219,3 +227,5 @@
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
+
+

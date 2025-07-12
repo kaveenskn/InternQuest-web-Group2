@@ -5,6 +5,7 @@ import Jobpostform from "../component/Jobpostform";
 import EmployeePageCards from "../component/Cardsectionemp";
 import Jobboard from "../component/Jobboard";
 import "../pagestyles/employee.css";
+import EmpFeatures from '../component/CompanyHome/EmpFeatures';
 
 import ApplicationPage from "../component/CompanyApplication/Applicationpage";
 
@@ -35,7 +36,7 @@ const EmployeePage = () => {
             <EmHero />
                </div>
             
-            <EmployeePageCards />
+            <EmpFeatures/>
           </div>
         );
       case "applications":

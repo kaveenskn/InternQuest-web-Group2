@@ -29,7 +29,6 @@ const getJobsByLoggedInEmployee = async (req, res) => {
       companyName: job.employee?.companyName || "Unknown Company",
     }));
 
-    console.log("Fetched jobs:", formattedJobs); // ✅ Check if this logs expected jobs
     res.json(formattedJobs);
   } catch (err) {
     console.error("Error in fetching job board:", err);
