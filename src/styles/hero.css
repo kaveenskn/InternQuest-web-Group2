@@ -21,6 +21,7 @@
   background-repeat: no-repeat;
   animation: fadeInUp 0.8s ease-out;
   min-height: auto;
+  margin-top: 30px;
 }
 
 .hero-text h1 {

@@ -95,17 +95,61 @@ const ProfilePage = () => {
       {!showProfile ? (
         <>
           {/* Hero Section */}
-          <section className="profilehome-hero">
-            <p className="profilehome-badge"> Welcome to Intern Quest</p>
-            <h1 className="profilehome-title">Build Your Future</h1>
-            <p className="profilehome-subtitle">
-              Create and showcase your professional profile, track your internship journey, and
-              connect with opportunities that shape your career path.
-            </p>
-            <button className="profilehome-button" onClick={() => setShowProfile(true)}>
-              View My Profile →
-            </button>
-          </section>
+          <div class="stdprofile-hero-alt">
+  
+  <div class="stdprofile-bg-decoration">
+    <div class="stdprofile-circle stdprofile-top-right"></div>
+    <div class="stdprofile-circle stdprofile-bottom-left"></div>
+  </div>
+
+  <div class="stdprofile-container">
+    <div class="stdprofile-content">
+    
+      <h1 class="stdprofile-heading">
+       <div style={{"fontWeight":500}}>Build</div>Your Future
+      </h1>
+
+     
+      <p class="stdprofile-description">
+        Create and showcase your professional profile, track your internship journey,
+        and connect with opportunities that shape your career path.
+      </p>
+
+      
+      <div class="stdprofile-buttons">
+        <button class="stdprofile-btn-orange">
+          View My Profile
+          <svg class="stdprofile-icon-arrow"></svg>
+        </button>
+        <button class="stdprofile-btn-outline-blue">
+          <svg class="stdprofile-icon-users"></svg>
+          Explore Community
+        </button>
+      </div>
+
+  
+      <div class="stdprofile-trust-grid">
+        <div class="stdprofile-trust-item">
+          <div class="stdprofile-trust-number">50K+</div>
+          <div class="stdprofile-trust-label">Active Users</div>
+        </div>
+        <div class="stdprofile-trust-item">
+          <div class="stdprofile-trust-number">10K+</div>
+          <div class="stdprofile-trust-label">Internships</div>
+        </div>
+        <div class="stdprofile-trust-item">
+          <div class="stdprofile-trust-number">500+</div>
+          <div class="stdprofile-trust-label">Companies</div>
+        </div>
+        <div class="stdprofile-trust-item">
+          <div class="stdprofile-trust-number">95%</div>
+          <div class="stdprofile-trust-label">Success Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
           {/* Feature Section */}
           <section className="profilehome-features">
@@ -113,23 +157,23 @@ const ProfilePage = () => {
             <p className="profilehome-subheading">
               Discover the powerful features that help you showcase your potential and advance your career
             </p>
-            <div className="profilehome-feature-grid">
-              <div className="profilehome-feature-card">
-                <FaUserCircle size={30} color="#8b5cf6" />
-                <h3>Professional Profile</h3>
-                <p>Create a comprehensive profile that highlights your skills, experiences, and achievements to potential employers.</p>
-              </div>
-              <div className="profilehome-feature-card">
-                <FaTrophy size={30} color="#10b981" />
-                <h3>Track Achievements</h3>
-                <p>Document your projects, certifications, and milestones as you progress through your internship journey.</p>
-              </div>
-              <div className="profilehome-feature-card">
-                <FaStar size={30} color="#ef4444" />
-                <h3>Showcase Skills</h3>
-                <p>Display your technical and soft skills in an organized, visually appealing format that stands out.</p>
-              </div>
+          <div className="profilehome-feature-grid">
+            <div className="profilehome-feature-card">
+              <img src="https://i.pinimg.com/736x/22/5f/4c/225f4c968155fcd81cc89182f673583b.jpg" alt="Profile Icon" className="feature-image" />
+              <h3>Professional Profile</h3>
+              <p>Create a comprehensive profile that highlights your skills, experiences, and achievements to potential employers.</p>
             </div>
+            <div className="profilehome-feature-card">
+              <img src="https://i.pinimg.com/736x/5c/76/a6/5c76a6f15ff214c617ebd5186963a3af.jpg" alt="Achievements Icon" className="feature-image" />
+              <h3>Track Achievements</h3>
+              <p>Document your projects, certifications, and milestones as you progress through your internship journey.</p>
+            </div>
+            <div className="profilehome-feature-card">
+              <img src="https://i.pinimg.com/736x/8b/ba/83/8bba83d794f0162a64b31dbddc41d89e.jpg" alt="Skills Icon" className="feature-image" />
+              <h3>Showcase Skills</h3>
+              <p>Display your technical and soft skills in an organized, visually appealing format that stands out.</p>
+            </div>
+          </div>
             <button className="profilehome-cta" onClick={() => setShowProfile(true)}>
               Get Started Now →
             </button>
