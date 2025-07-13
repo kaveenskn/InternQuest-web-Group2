@@ -39,7 +39,10 @@
   font-size: 3.5rem;
   font-weight: 900;
   line-height: 1.2;
-  color: #1e40af;
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #f97316 20%, #1e3a8a 50%);
   margin-bottom: 1.9rem;
   letter-spacing: -0.02em;
   width: 100%;
@@ -78,7 +81,8 @@
 }
 
 .em-hero-explore1 {
-  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
+  border: 1px solid black;
   color: white;
   border: none;
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
@@ -103,6 +107,7 @@
 }
 
 .em-hero-slider {
+  margin-top: 30px;
   flex: 1;
   max-width: 600px;
   display: flex;

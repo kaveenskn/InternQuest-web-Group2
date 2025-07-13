@@ -53,7 +53,7 @@ const ProfilePage = () => {
         }
       } catch (error) {
         console.error('Error fetching profile:', error);
-        alert("Cannot connect: " + error.message);
+        
         setProfile(emptyProfile);
         setProjects([]);
       }
