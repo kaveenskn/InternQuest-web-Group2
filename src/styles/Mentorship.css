@@ -1,0 +1,237 @@
+.mentorship-page {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #c471f5, #fa71cd);
+  padding: 2rem;
+  color: #1e1e1e;
+}
+
+/* Hero Section */
+.mentorship-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9ff;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.mentorship-hero-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.mentorship-badge {
+  background-color: #edf2ff;
+  color: #5c6ac4;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.mentorship-highlight {
+  color: #ff4f8b;
+}
+
+.mentorship-search {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.mentorship-input {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #ccc;
+}
+
+.mentorship-launch-btn {
+  background: #5c6ac4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+.mentorship-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9ff;
+  border-radius: 20px;
+  padding: 3rem 2rem; /* increased vertical padding */
+  min-height: 480px;   /* ensures enough height even with little content */
+  margin-bottom: 3rem;
+}
+
+.mentorship-hero-left h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.mentorship-hero-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.mentorship-search {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 500px;
+}
+
+.mentorship-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+}
+
+.mentorship-launch-btn {
+  font-size: 1rem;
+}
+
+
+.mentorship-hero-right {
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+}
+
+.mentorship-card-preview {
+  background: white;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.mentorship-preview-photo {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.mentorship-stat {
+  background: white;
+  padding: 0.8rem 1.2rem;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Mentors Section */
+.mentorship-mentors {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.mentorship-subtitle {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.mentorship-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.mentorship-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.mentorship-avatar,
+.mentorship-avatar-img img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.mentorship-status {
+  color: green;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.mentorship-position {
+  color: #555;
+  margin: 0.3rem 0;
+}
+
+.mentorship-company {
+  color: #6b5bff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.mentorship-rating {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.mentorship-skills span {
+  background: #e0dcff;
+  color: #4b3fbb;
+  margin: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.mentorship-location {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.mentorship-card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.mentorship-price {
+  font-weight: bold;
+  color: #333;
+}
+
+.mentorship-connect-btn {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}

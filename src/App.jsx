@@ -8,7 +8,7 @@ import ProfilePage from "./pages/profilePage";
 import StudentsPage from "./pages/StudentsPage";
 import EmployeePage from "./pages/Employeepage";
 
-
+import MentorshipFinder from "./component/Studentmentorship/Mentorship";
 
 import StudentProfilePage from "./pages/StudentsProfile";
 
@@ -34,7 +34,7 @@ const App = () => {
         {/* employee page */}
         <Route path="/employers" element={<EmployeePage />} />
                
-      
+      <Route path="/find" element={<MentorshipFinder />} />
       </Routes>
     </Router>
   );
