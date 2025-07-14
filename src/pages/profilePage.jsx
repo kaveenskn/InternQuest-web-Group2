@@ -159,18 +159,18 @@ const ProfilePage = () => {
             </p>
           <div className="profilehome-feature-grid">
             <div className="profilehome-feature-card">
-              <img src="https://i.pinimg.com/736x/22/5f/4c/225f4c968155fcd81cc89182f673583b.jpg" alt="Profile Icon" className="feature-image" />
-              <h3>Professional Profile</h3>
+              <img src="https://images.nightcafe.studio/jobs/bDNLKyDBEhfJ62U07MH9/bDNLKyDBEhfJ62U07MH9--0--kostn.jpg?tr=w-1600,c-at_max" alt="Profile Icon" className="feature-image" />
+             <hr style={{ border: 'none', height: '2px', backgroundColor: ' rgba(251, 132, 14, 1)' }} /> <h3>Professional Profile</h3>
               <p>Create a comprehensive profile that highlights your skills, experiences, and achievements to potential employers.</p>
             </div>
             <div className="profilehome-feature-card">
-              <img src="https://i.pinimg.com/736x/5c/76/a6/5c76a6f15ff214c617ebd5186963a3af.jpg" alt="Achievements Icon" className="feature-image" />
-              <h3>Track Achievements</h3>
+              <img src="https://images.nightcafe.studio/jobs/kHjTHlAusucnPBwNATJA/kHjTHlAusucnPBwNATJA--0--ibavs.jpg?tr=w-1600,c-at_max" alt="Achievements Icon" className="feature-image" />
+             <hr style={{ border: 'none', height: '2px', backgroundColor: 'rgba(0, 10, 87, 0.95)' }} /> <h3>Track Achievements</h3>
               <p>Document your projects, certifications, and milestones as you progress through your internship journey.</p>
             </div>
             <div className="profilehome-feature-card">
-              <img src="https://i.pinimg.com/736x/8b/ba/83/8bba83d794f0162a64b31dbddc41d89e.jpg" alt="Skills Icon" className="feature-image" />
-              <h3>Showcase Skills</h3>
+              <img src="https://images.nightcafe.studio/jobs/CUW100i3oMmUf3Uc9ta3/CUW100i3oMmUf3Uc9ta3--0--slbk0.jpg?tr=w-1600,c-at_max" alt="Skills Icon" className="feature-image" />
+              <hr style={{ border: 'none', height: '2px', backgroundColor: 'rgba(252, 137, 22, 1)' }} /><h3>Showcase Skills</h3>
               <p>Display your technical and soft skills in an organized, visually appealing format that stands out.</p>
             </div>
           </div>

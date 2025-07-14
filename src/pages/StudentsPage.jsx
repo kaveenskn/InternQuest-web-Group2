@@ -3,7 +3,7 @@ import HeroSection from '../component/StudentsHome/hero';
 import Navbar from '../component/navbar';
 import CardsSection from '../component/Cardsectionstd';
 import ProfilePage from './profilePage';
-import InternshipFinderPage from '../component/internshipFinderPage';
+import InternshipFinderPage from '../component/Studentjobfinder/internshipFinderPage';
 import "../pagestyles/studentpage.css";
 import StudentsReviews from '../component/StudentsHome/Std-reviews';
 

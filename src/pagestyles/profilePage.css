@@ -206,9 +206,9 @@
 
 /* Features Section */
 .profilehome-features {
-  padding: 60px 20px 100px;
+  padding: 90px 20px 100px;
   text-align: center;
-  background: #f9fafb;
+  background: #ffffff;
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
@@ -229,23 +229,24 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  padding: 20px 0;
+  gap: 70px;
   margin-bottom: 40px;
 }
 
 .profilehome-feature-card {
-  background: rgb(255, 255, 255);
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
   width: 300px;
   min-height: 300px;
-  padding: 10px;
+  padding: 0px;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.53);
   text-align: center;
   padding-bottom: 20px;
 }
 
 .profilehome-feature-card h3 {
-  margin: 10px 0;
+  margin: 5px 0;
   font-size: 20px;
   font-weight: 600;
   color: #111827;
@@ -259,11 +260,11 @@
 .feature-image {
   width: 100%;
   max-width: 260px; /* Limit max width to avoid touching card edges */
-  height: 400px;
+  height: 300px;
   object-fit: contain;
   display: block;
   margin: 0 auto 20px; /* Center image + bottom spacing */
-  padding: 10px;
+  padding: 0px;
   border-radius: 40px;
 }
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { HiOutlineBriefcase } from "react-icons/hi";
 import axios from "axios";
-import "../styles/internshipFinderPage.css";
+import "../../styles/internshipFinderPage.css";
 
 const InternshipFinderPage = () => {
   const [internships, setInternships] = useState([]);

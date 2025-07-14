@@ -1,6 +1,6 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay,EffectCoverflow, } from 'swiper/modules';
+import { Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
 import React, { useRef, useState } from 'react';
 
 import 'swiper/css';
@@ -12,23 +12,27 @@ export default function ImageSlider() {
 
   return (
     <div className="slider-wrapper">
-    <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-         initialSlide={2} 
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
+      <Swiper
+      effect={'coverflow'}
+      grabCursor={true}
+      centeredSlides={true}
+      initialSlide={2}
+      slidesPerView={'auto'}
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      }}
+      pagination={true}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+      }}
+      modules={[EffectCoverflow, Pagination, Autoplay]}  // Added Autoplay here
+      className="mySwiper"
+    >
         <SwiperSlide>
           <img src="https://cdn.leonardo.ai/users/bc687ae9-58de-4c67-ac57-345cde20882f/generations/897e8edd-718b-442e-b5fd-1e74c178c657/Leonardo_Phoenix_09_Create_an_image_for_InternQuest_to_showcas_2.jpg" />
         </SwiperSlide>
