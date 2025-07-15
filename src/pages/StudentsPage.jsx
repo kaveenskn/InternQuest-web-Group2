@@ -6,7 +6,7 @@ import ProfilePage from './profilePage';
 import InternshipFinderPage from '../component/Studentjobfinder/internshipFinderPage';
 import "../pagestyles/studentpage.css";
 import StudentsReviews from '../component/StudentsHome/Std-reviews';
-
+import MentorshipFinder from '../component/Studentmentorship/Mentorship';
 
 
 const StdLinks = [
@@ -45,8 +45,7 @@ const StudentsPage = () => {
       case 'mentor':
         return (
           <div className="std-cv">
-            <h2>My CV Page</h2>
-            <p>Upload, edit or generate your CV here with InternQuest.</p>
+              <MentorshipFinder/>
           </div>
         );
       default:

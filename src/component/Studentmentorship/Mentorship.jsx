@@ -4,7 +4,7 @@ import "../../styles/Mentorship.css";
 const MentorshipFinder = () => {
   return (
     <div className="mentorship-page">
-      {/* Top Hero Section */}
+      {/* Hero Section */}
       <section className="mentorship-hero">
         <div className="mentorship-hero-left">
           <button className="mentorship-badge">🚀 Where careers begin</button>
@@ -23,13 +23,13 @@ const MentorshipFinder = () => {
               placeholder="Find your perfect mentor..."
               className="mentorship-input"
             />
-            <button className="mentorship-launch-btn">🚀 Launch Journey</button>
+            <button className="mentorship-launch-btn">🚀 Search Mentor</button>
           </div>
         </div>
         <div className="mentorship-hero-right">
           <div className="mentorship-card-preview">
             <img
-              src="https://images.unsplash.com/photo-1603415526960-f7e0328f1f4c"
+              src="https://i.pinimg.com/736x/5f/cb/0a/5fcb0a5578d81bba2917013c511cc247.jpg"
               alt="Sarah Johnson"
               className="mentorship-preview-photo"
             />
@@ -39,24 +39,18 @@ const MentorshipFinder = () => {
               <div className="mentorship-rating">⭐ 4.9</div>
             </div>
           </div>
-          <div className="mentorship-stat">
-            <p>
-              <strong>127%</strong>
-              <br />
-              Salary Increase
-            </p>
-          </div>
+          
         </div>
       </section>
 
-      {/* Mentor Cards Section */}
+      {/* Mentors List */}
       <section className="mentorship-mentors">
         <h2>Meet Your Mentors</h2>
         <p className="mentorship-subtitle">
           Industry leaders ready to guide your journey
         </p>
         <div className="mentorship-card-container">
-          {/* Mentor Card 1 */}
+          {/* Mentor 1 */}
           <div className="mentorship-card">
             <div className="mentorship-avatar">SJ</div>
             <div className="mentorship-status">● Available</div>
@@ -78,7 +72,7 @@ const MentorshipFinder = () => {
             </div>
           </div>
 
-          {/* Mentor Card 2 */}
+          {/* Mentor 2 */}
           <div className="mentorship-card">
             <div className="mentorship-avatar-img">
               <img

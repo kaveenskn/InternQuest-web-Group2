@@ -1,6 +1,5 @@
 .mentorship-page {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #c471f5, #fa71cd);
   padding: 2rem;
   color: #1e1e1e;
 }
@@ -12,28 +11,32 @@
   gap: 2rem;
   justify-content: space-between;
   align-items: center;
-  background: #f8f9ff;
+ background-color: white;
   border-radius: 20px;
   padding: 2rem;
+
+  line-height: 20px;
 }
 
 .mentorship-hero-left {
-  flex: 1;
+  flex: 2;
   min-width: 280px;
+  
 }
 
 .mentorship-badge {
-  background-color: #edf2ff;
+  background-color: #ffffff;
   color: #5c6ac4;
   border: none;
   padding: 6px 12px;
   font-size: 0.85rem;
   border-radius: 999px;
   margin-bottom: 1rem;
+  
 }
 
 .mentorship-highlight {
-  color: #ff4f8b;
+  color:#f97316;
 }
 
 .mentorship-search {
@@ -49,7 +52,7 @@
 }
 
 .mentorship-launch-btn {
-  background: #5c6ac4;
+  background-image: linear-gradient(to right, #fe9041 20%, #f97316 50%);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -59,7 +62,7 @@
 .mentorship-hero {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 200px;
   justify-content: space-between;
   align-items: center;
   background: #f8f9ff;
@@ -111,10 +114,14 @@
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
+  width: 100%;
+  align-items: right;
 }
 
 .mentorship-preview-photo {
-  width: 100%;
+  width: 80%;
+  height: 300px;            /* Set a fixed height */
+  object-fit: cover;        /* Ensures image is cropped proportionally */
   border-radius: 15px;
   margin-bottom: 1rem;
 }

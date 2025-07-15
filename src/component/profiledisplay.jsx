@@ -10,6 +10,8 @@ const ProfileDisplay = ({ profile, projects }) => {
         <p className="profile-tag">Intern Quest Profile</p>
         <h1>Shape Your Future</h1>
         <p className="subtext">Showcase your journey, skills, and achievements in your personalized intern profile</p>
+        <br />
+        <button> Edit profile</button>
       </div>
 
       {/* Top Profile Card */}
