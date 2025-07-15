@@ -39,12 +39,4 @@ The platform is built with **React + Vite** for speed and great user experience.
 - **Version Control:** GitHub
 - **Hosting:** Google Cloud / AWS
 
----
 
-## Home Page
-
-The image below showcases the clean and intuitive InternQuest landing page:
-
-![Home Page Preview](Home.png)
-
----
