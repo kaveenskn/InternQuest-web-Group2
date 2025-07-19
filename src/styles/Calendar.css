@@ -56,6 +56,7 @@ html {
     font-size: clamp(4rem, 3.8cqi, 7rem);
     color: #fff;
     letter-spacing: 0.3rem;
+    padding-left: 1.3rem;
 }
 
 .navigate-date {
@@ -87,4 +88,38 @@ html {
     font-size: 2rem;
     color: #c97cfa;
     cursor: pointer;
+}
+
+.weekdays {
+    width: 100%;
+    display: flex;
+    margin: 3rem 0;
+}
+
+.weekdays span {
+    width: calc(100% / 7);
+    font-size: clamp(1rem, 0.8cqi, 1.3rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #78879e;
+    letter-spacing: 0.1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.days span {
+    font-size: clamp(1.2rem, 1cqi, 1.6rem);
+    width: calc(100% / 7);
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+    cursor: pointer;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
