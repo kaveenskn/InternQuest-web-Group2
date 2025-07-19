@@ -67,9 +67,22 @@ const nextMonth = () => {
     ))}
     
     {/* Days of the current month */}
-    {[...Array(daysInMonth).keys()].map((day) => (
-        <span key={`day-${day + 1}`}>{day + 1}</span>
-    ))}
+    {[...Array(daysInMonth).keys()].map((day) => {
+        const date = day + 1;
+        const isCurrentDay = 
+            date === currentDate.getDate() && 
+            currentMonth === currentDate.getMonth() && 
+            currentYear === currentDate.getFullYear();
+            
+        return (
+            <span 
+                key={`day-${date}`} 
+                className={isCurrentDay ? 'current-day' : ''}
+            >
+                {date}
+            </span>
+        );
+    })}
 </div>
             </div>
             
