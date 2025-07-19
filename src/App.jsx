@@ -16,6 +16,8 @@ import InternshipApp from "./component/InternshipApp";
 import InternshipProfileCard from "./component/InternshipProfileCard";
 import StudentProfilePage from "./pages/StudentsProfile";
 
+import Calendar from "./pages/Calendar";
+
 
 
 
@@ -51,7 +53,10 @@ const App = () => {
 
                  <Route path="/rew" element={<ReviewPage />} />
                  <Route path="/proof" element={<InternshipProfileCard />} />
-      
+
+          {/* Calendar */}
+        <Route path="/Calendar" element={<Calendar/>} />
+
       </Routes>
     </Router>
   );
