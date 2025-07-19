@@ -2,6 +2,21 @@ import React from 'react'
 import "../styles/Calendar.css";
 
 const Calendar = () => {
+    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const monthsOfYear = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+];
   return (
       <div className="calendar-app">
             <div className="calendar">
