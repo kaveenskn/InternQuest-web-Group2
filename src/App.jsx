@@ -11,6 +11,7 @@ import EmployeePage from "./pages/Employeepage";
 import MentorshipFinder from "./component/Studentmentorship/Mentorship";
 
 import StudentProfilePage from "./pages/StudentsProfile";
+import CalendarPage from "./Calenderpage/Calendar";
 
 
 
@@ -35,6 +36,8 @@ const App = () => {
         <Route path="/employers" element={<EmployeePage />} />
                
       <Route path="/find" element={<MentorshipFinder />} />
+
+       <Route path="/Calendar" element={<CalendarPage />} />
       </Routes>
     </Router>
   );
