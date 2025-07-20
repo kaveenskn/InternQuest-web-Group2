@@ -36,11 +36,12 @@ const ProfilePage = () => {
         });
 
         const data = res.data;
+        
         if (data) {
           const formattedProfile = {
             fullname: data.fullname || '',
             email: data.user?.email || data.email || '',
-            universityName: data.user?.universityName || data.universityName || '',
+            universityName: data.universityName || '',
             universityLocation: data.universityLocation || '',
             course_of_study: data.course_of_study || '',
             phone: data.phone || '',
@@ -119,10 +120,9 @@ const ProfilePage = () => {
       <div class="stdprofile-buttons">
         <button class="stdprofile-btn-orange">
           View My Profile
-          <svg class="stdprofile-icon-arrow"></svg>
+          
         </button>
         <button class="stdprofile-btn-outline-blue">
-          <svg class="stdprofile-icon-users"></svg>
           Explore Community
         </button>
       </div>
@@ -175,7 +175,7 @@ const ProfilePage = () => {
             </div>
           </div>
             <button className="profilehome-cta" onClick={() => setShowProfile(true)}>
-              Get Started Now →
+              Get Started Now 
             </button>
           </section>
         </>

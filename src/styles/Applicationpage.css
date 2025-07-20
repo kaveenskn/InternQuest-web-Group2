@@ -1,16 +1,17 @@
 /* Top Banner */
 .application-container{
   overflow: hidden;
+  margin-top: 20px;
 }
 
 
 
 .application-top-banner {
-   background: linear-gradient(135deg, #4867f4 0%, #2a33d7 100%);
-  color: white;
+   
+  color: rgb(8, 0, 0);
   text-align: center;
   padding: 60px 20px 40px;
-  border-bottom: 4px solid #2563eb;
+  border-bottom: 4px solid #f97316;
   animation: fadeInUp 0.8s ease-out 0.2s both; 
 }
 
@@ -31,6 +32,10 @@
   font-size: 36px;
   margin-bottom: 10px;
   font-weight: 700;
+   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #f97316 20%, #070147 50%);
 }
 
 .application-top-banner p {
@@ -57,7 +62,7 @@
   max-height: 230px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  color: white;
+  color: rgb(7, 1, 74);
   text-align: center;
 }
 
@@ -68,14 +73,14 @@
 .application-icon {
   font-size: 36px;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #f97316;
 }
 
 /* Main Layout */
 .application-page {
   display: flex;
   height: 100vh;
-  background-color: #f8fafc;
+  background-color: #ffffff;
    animation: fadeInUp 0.8s ease-out 0.2s both; 
 }
 
@@ -201,6 +206,12 @@
   font-weight: 600;
   color: #1e293b;
 }
+.application-detail-section h4{
+  color: #001b72;
+}
+
+
+
 
 .application-profile-position {
   color: #2563eb;

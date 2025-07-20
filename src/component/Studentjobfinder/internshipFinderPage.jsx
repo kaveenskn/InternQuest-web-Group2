@@ -12,6 +12,7 @@ const InternshipFinderPage = () => {
   const [jobTitle, setJobTitle] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [expandedCard, setExpandedCard] = useState(null);
+const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -74,45 +75,50 @@ const InternshipFinderPage = () => {
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="intern-search-card"> 
-          <div className="filter-row">
-            <div className="filter-col">
-              <label className="filter-label">
-                <FaMapMarkerAlt className="filter-icon" /> Location
-              </label>
-              <select className="filter-select" value={location} onChange={(e) => setLocation(e.target.value)}>
-                <option value="">Select location</option>
-                {locations.map((loc) => (
-                  <option key={loc} value={loc}>{loc}</option>
-                ))}
-              </select>
-            </div>
-            <div className="filter-col">
-              <label className="filter-label">
-                <HiOutlineBriefcase className="filter-icon" /> Job Type
-              </label>
-              <select className="filter-select" value={jobType} onChange={(e) => setJobType(e.target.value)}>
-                <option value="">Select job type</option>
-                {jobTypes.map((type) => (
-                  <option key={type} value={type}>{type}</option>
-                ))}
-              </select>
-            </div>
-            <div className="filter-col">
-              <label className="filter-label">Job Title</label>
-              <select className="filter-select" value={jobTitle} onChange={(e) => setJobTitle(e.target.value)}>
-                <option value="">Select job title</option>
-                {jobTitles.map((title) => (
-                  <option key={title} value={title}>{title}</option>
-                ))}
-              </select>
-            </div>
-            <button className="search-btn" onClick={handleSearch}>
-              Search Internships
-            </button>
-          </div>
-        </div>
+       {/* Top Filter Section */}
+<section className="top-filter-bar">
+  
+  <div className="filter-bar">
+    <input
+      type="text"
+      className="search-input"
+      placeholder="Search internships, companies, or skills..."
+    />
+    
+    <button className="toggle-filters-btn" onClick={() => setShowFilters((prev) => !prev)}>
+      {showFilters ? "Hide Filters" : "Filters"}
+    </button>
+  </div>
+
+  <div className={`dropdown-container ${showFilters ? "show" : "hide"}`}>
+  <div className="dropdown-group">
+    <select className="dropdown" value={location} onChange={(e) => setLocation(e.target.value)}>
+      <option value="">Select location</option>
+      {locations.map((loc) => (
+        <option key={loc} value={loc}>{loc}</option>
+      ))}
+    </select>
+
+    <select className="dropdown" value={jobType} onChange={(e) => setJobType(e.target.value)}>
+      <option value="">Select job type</option>
+      {jobTypes.map((type) => (
+        <option key={type} value={type}>{type}</option>
+      ))}
+    </select>
+
+    <select className="dropdown" value={jobTitle} onChange={(e) => setJobTitle(e.target.value)}>
+      <option value="">Select job title</option>
+      {jobTitles.map((title) => (
+        <option key={title} value={title}>{title}</option>
+      ))}
+    </select>
+
+    <button className="apply-filters-btn" onClick={handleSearch}>Apply Filters</button>
+  </div>
+</div>
+
+</section>
+
 
         
         {/* Results */}

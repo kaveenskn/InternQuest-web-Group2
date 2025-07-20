@@ -128,9 +128,9 @@
 .stdprofile-btn-orange {
   background: linear-gradient(to right, #f97316, #ea580c);
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.9rem 1.8rem;
   border-radius: 9999px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -149,9 +149,9 @@
   border: 2px solid #2563eb;
   color: #2563eb;
   background-color: transparent;
-  padding: 1rem 2rem;
+  padding: 0.9rem 1.8rem;
   border-radius: 9999px;
-  font-size: 1.125rem;
+   font-size: 1rem;
   font-weight: 500;
   display: inline-flex;
   align-items: center;

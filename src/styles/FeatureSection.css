@@ -41,11 +41,12 @@
 .Home-feature-card {
   padding: 40px;
   border-radius: 20px;
-  background: white;
+  background: rgb(235, 237, 246);
   box-shadow: 2px 2px 2px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  color: #020764;
 }
 
 .Home-feature-card::before {
