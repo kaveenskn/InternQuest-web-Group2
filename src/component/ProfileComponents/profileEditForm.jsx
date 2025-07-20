@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaSave } from 'react-icons/fa';
-import "../styles/ProfileEditForm.css";
+import "../../styles/ProfileEditForm.css";
 
 const ProfileEditForm = ({
   profile, setProfile,

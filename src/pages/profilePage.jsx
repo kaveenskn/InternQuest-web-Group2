@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaUserCircle, FaTrophy, FaStar } from 'react-icons/fa';
 import axios from 'axios';
-import ProfileDisplay from '../component/profiledisplay';
-import ProfileEditForm from '../component/profileEditForm';
+import ProfileDisplay from '../component/ProfileComponents/profiledisplay';
+import ProfileEditForm from '../component/ProfileComponents/profileEditForm';
 import '../pagestyles/ProfilePage.css';
 
 const emptyProfile = {

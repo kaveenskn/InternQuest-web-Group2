@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGraduationCap, FaUser, FaCode, FaGithub } from 'react-icons/fa';
-import '../styles/ProfileDisplay.css';
+import '../../styles/ProfileDisplay.css';
 
 const ProfileDisplay = ({ profile, projects }) => {
   return (
