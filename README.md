@@ -1,12 +1,42 @@
-# React + Vite
+# InternQuest – Internship & Job Matcher System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **InternQuest**, a web-based platform aimed at helping university students find internships and job opportunities. Employers can connect with talented candidates efficiently, making the hiring process smoother and more effective.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## Expanding the ESLint configuration
+**InternQuest** streamlines internship and job searches by providing:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Personalized recommendations based on users’ skills and backgrounds
+- Resume building and skill assessment utilities
+- Tools for application tracking and bookmarking opportunities
+- Secure, role-based access for different user types
+- Direct messaging and insight features for employers and job seekers
+
+The platform is built with **React + Vite** for speed and great user experience.
+
+---
+
+## Key Features
+
+- **Resume Builder:** Quickly create professional resumes.
+- **Personalized Listings:** Get recommendations tailored to skills and interests.
+- **Filters & Searches:** Easily find, filter, and bookmark job and internship opportunities.
+- **Skill Assessment:** Take quizzes to measure and improve competencies.
+- **Company Insights:** Learn about potential employers with ranking and feedback.
+- **Application Tracking:** Stay organized with deadlines and statuses.
+- **Employer Portal:** Post opportunities, evaluate candidates, manage shortlists.
+- **Secure Access:** Role-based controls and data privacy compliance.
+
+---
+
+## Tech Stack
+
+- **Frontend:** React.js, Vite, JavaScript, HTML5, CSS3
+- **Backend:** Node.js, Express.js
+- **Database:** Firebase, SQL
+- **Version Control:** GitHub
+- **Hosting:** Google Cloud / AWS
+
+

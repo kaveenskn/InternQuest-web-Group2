@@ -81,6 +81,7 @@ const InternshipLandingPage = () => {
 
 
       <footer className="getstart-footer">
+
           <div className="getstart-footer-container">
             <div className="getstart-footer-left">
               <h3>InternQuest</h3>
@@ -97,6 +98,7 @@ const InternshipLandingPage = () => {
             <p>© 2025 InternQuest. All rights reserved.</p>
           </div>
           
+
 </footer>
 
     </div>
