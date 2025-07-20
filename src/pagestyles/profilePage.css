@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 40px; /* Added to lift content */
+  padding-top: 10px; /* Added to lift content */
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
@@ -284,4 +284,48 @@
 
 .profilehome-cta:hover {
   opacity: 0.9;
+}
+/* Marquee Trust Grid */
+.stdprofile-trust-scroll-container {
+  width: 80%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: 0rem auto 2rem;
+  position: relative;
+}
+
+.stdprofile-trust-marquee {
+  display: flex;
+  gap: 3rem;
+  animation: marquee-scroll 18s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.stdprofile-trust-item {
+  min-width: 200px;
+  background: #f9fafb;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.stdprofile-trust-number {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+.stdprofile-trust-label {
+  font-size: 0.9rem;
+  color: #374151;
 }

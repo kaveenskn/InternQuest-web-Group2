@@ -128,24 +128,29 @@ const ProfilePage = () => {
       </div>
 
   
-      <div class="stdprofile-trust-grid">
-        <div class="stdprofile-trust-item">
-          <div class="stdprofile-trust-number">50K+</div>
-          <div class="stdprofile-trust-label">Active Users</div>
-        </div>
-        <div class="stdprofile-trust-item">
-          <div class="stdprofile-trust-number">10K+</div>
-          <div class="stdprofile-trust-label">Internships</div>
-        </div>
-        <div class="stdprofile-trust-item">
-          <div class="stdprofile-trust-number">500+</div>
-          <div class="stdprofile-trust-label">Companies</div>
-        </div>
-        <div class="stdprofile-trust-item">
-          <div class="stdprofile-trust-number">95%</div>
-          <div class="stdprofile-trust-label">Success Rate</div>
-        </div>
+      <div className="stdprofile-trust-scroll-container">
+  <div className="stdprofile-trust-marquee">
+    <div className="stdprofile-trust-grid">
+      <div className="stdprofile-trust-item">
+        <div className="stdprofile-trust-number">50K+</div>
+        <div className="stdprofile-trust-label">Active Users</div>
       </div>
+      <div className="stdprofile-trust-item">
+        <div className="stdprofile-trust-number">10K+</div>
+        <div className="stdprofile-trust-label">Internships</div>
+      </div>
+      <div className="stdprofile-trust-item">
+        <div className="stdprofile-trust-number">500+</div>
+        <div className="stdprofile-trust-label">Companies</div>
+      </div>
+      <div className="stdprofile-trust-item">
+        <div className="stdprofile-trust-number">95%</div>
+        <div className="stdprofile-trust-label">Success Rate</div>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
   </div>
 </div>

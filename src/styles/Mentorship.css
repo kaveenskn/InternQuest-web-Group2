@@ -89,6 +89,10 @@
   font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 1rem;
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #f97316 30%, #011a5f 50%);
 }
 
 .mentorship-hero-left p {
