@@ -2,7 +2,20 @@
   font-family: 'Segoe UI', sans-serif;
   padding: 2rem;
   color: #1e1e1e;
+   animation: emFadeInUp 0.8s ease-out;
 }
+
+@keyframes emFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* Hero Section */
 .mentorship-hero {
@@ -52,7 +65,7 @@
 }
 
 .mentorship-launch-btn {
-  background-image: linear-gradient(to right, #fe9041 20%, #f97316 50%);
+  background-image: linear-gradient(to right, #0303bd 20%, #0d0393 50%);
   color: white;
   border: none;
   padding: 10px 20px;

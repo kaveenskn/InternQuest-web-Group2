@@ -120,7 +120,7 @@
 /* Features Section */
 .features-section {
   padding: 5rem 2rem;
-   background-image: linear-gradient(to right, #05058f  20%, #070147 50%);
+   background-color:#e1e1e1;
   backdrop-filter: blur(10px);
   position: relative;
 }
@@ -128,7 +128,7 @@
 .features-section h2 {
   text-align: center;
   font-size: 3rem;
-  color: #ffffff;
+  color: #050069;
   margin-bottom: 3rem;
   font-weight: 700;
   position: relative;
@@ -155,16 +155,16 @@
 }
 
 .feature-card {
-    background: rgb(205, 227, 247); /* Semi-transparent */
+   background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
 
-  border: 2px solid #2128BD;
   border-radius: 20px;
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 10px 8px 32px rgba(33, 40, 189, 0.1);
+  box-shadow: 10px 8px 32px rgba(0, 0, 0, 0.47);
 }
 
 .feature-card::before {
@@ -198,8 +198,8 @@
 
 .icon {
   font-size: 2.5rem;
-  color: #2128BD;
-  background: linear-gradient(135deg, rgba(33, 40, 189, 0.1), rgba(103, 126, 234, 0.1));
+  color: #f48e45;
+  background: linear-gradient(135deg, #f97316 , #fc8d3e );
   padding: 1rem;
   border-radius: 50%;
   display: flex;
@@ -219,13 +219,16 @@
 
 .card-title h3 {
   font-size: 1.5rem;
-  color: #2128BD;
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #f97316 20%, #070147 50%);
   font-weight: 600;
   margin: 0;
 }
 
 .feature-card p {
-  color: #666;
+  color: #004196;
   line-height: 1.6;
   font-size: 1rem;
   position: relative;
@@ -234,11 +237,12 @@
 
 /* Footer */
 .getstart-footer {
-  background: linear-gradient(135deg, #1a1f9a, #2128BD);
+background: #e3e4e5;
   color: white;
   padding: 3rem 2rem 1rem;
   position: relative;
   overflow: hidden;
+  border-top: 2px solid rgb(1, 1, 91);
 }
 
 .getstart-footer::before {

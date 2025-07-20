@@ -7,6 +7,7 @@ import InternshipFinderPage from '../component/Studentjobfinder/internshipFinder
 import "../pagestyles/studentpage.css";
 import StudentsReviews from '../component/StudentsHome/Std-reviews';
 import MentorshipFinder from '../component/Studentmentorship/Mentorship';
+import CalendarPage from '../component/Calenderpage/Calendar';
 
 
 const StdLinks = [
@@ -14,7 +15,7 @@ const StdLinks = [
   { key: "profile", label: "Profile" },
   { key: "find-jobs", label: "Find Jobs" },
   { key: "mentor", label: "Mentorship" },
-  { key: "calender", label: "Calendar" }
+  { key: "calendar", label: "Calendar" }
 ];
 
 const StudentsPage = () => {
@@ -48,6 +49,14 @@ const StudentsPage = () => {
               <MentorshipFinder/>
           </div>
         );
+        case 'calendar':
+                return (
+        <div className="Calendarpage">
+              <CalendarPage/>
+        </div>
+
+                );
+
       default:
         return (
            <div className="std-dashboard">

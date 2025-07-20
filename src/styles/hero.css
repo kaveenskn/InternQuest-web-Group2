@@ -79,7 +79,7 @@
 }
 
 .cta-btn.primary {
-  background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
+    background-image: linear-gradient(to right, #0303bd 20%, #0d0393 50%);
   color: white;
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
   animation: pulse 2s infinite ease-in-out;
@@ -96,7 +96,7 @@
 }
 
 .cta-btn.primary:hover {
-  background: linear-gradient(135deg, #ee8031 0%, #ee6807 100%);
+    background-image: linear-gradient(to right, #2929db 20%, #1406e1 50%);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(30, 64, 175, 0.35);
 }

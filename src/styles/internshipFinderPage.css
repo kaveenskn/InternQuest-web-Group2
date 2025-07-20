@@ -27,7 +27,7 @@
    background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, #f97316 20%, #1e3a8a 50%);
+  background-image: linear-gradient(to right, #f97316 20%, #021e6b 50%);
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
@@ -136,7 +136,7 @@
 
 .toggle-filters-btn {
   padding: 0.9rem 1.5rem;
-  background-image: linear-gradient(to right, #fe9041 20%, #f97316 50%);
+    background-image: linear-gradient(to right, #0303bd 20%, #0d0393 50%);
   margin-bottom: 1rem;;
   color: #ffffff;
   font-weight: 600;

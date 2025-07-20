@@ -11,7 +11,7 @@ import EmployeePage from "./pages/Employeepage";
 import MentorshipFinder from "./component/Studentmentorship/Mentorship";
 
 import StudentProfilePage from "./pages/StudentsProfile";
-import CalendarPage from "./Calenderpage/Calendar";
+import CalendarPage from "./component/Calenderpage/Calendar";
 
 
 

@@ -90,7 +90,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, #f97316 30%, #1e3a8a 50%);
+  background-image: linear-gradient(to right, #f97316 30%, #011a5f 50%);
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
@@ -126,7 +126,7 @@
 }
 
 .stdprofile-btn-orange {
-  background: linear-gradient(to right, #f97316, #ea580c);
+  background-image: linear-gradient(to right, #0303bd 20%, #0d0393 50%);
   color: white;
   padding: 0.9rem 1.8rem;
   border-radius: 9999px;

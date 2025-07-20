@@ -1,40 +1,155 @@
-.calendar-container {
-  max-width: 1000px;
-  margin: auto;
+/* CalendarPage.css (Responsive and Enhanced) */
+
+.calendar-page {
   padding: 2rem;
-  font-family: sans-serif;
-  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+  box-sizing: border-box;
+  animation: emFadeInUp 0.8s ease-out;
+  margin-top: 20px;
 }
 
-.calendar-header {
+@keyframes emFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.header {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
-.add-btn {
-  background: linear-gradient(to right, #6366f1, #8b5cf6);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.header h1 {
+  font-size: 2.2rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
   font-size: 1rem;
-  margin-top: 10px;
+  color: #64748b;
 }
 
-.calendar-body {
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.top-bar input {
+  flex: 1 1 250px;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  max-width: 300px;
+}
+
+.add-event-btn {
+  background-image: linear-gradient(to right, #0303bd 20%, #0d0393 50%);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-event-btn:hover {
+  background-image: linear-gradient(to right, #1414ca 20%, #1005ac 50%);
+}
+
+.main-content {
   display: flex;
   gap: 2rem;
+  margin-top: 2rem;
   align-items: flex-start;
   flex-wrap: wrap;
+  padding: 0 1rem;
 }
 
-.events-list {
-  flex: 1;
-  min-width: 300px;
-  background-color: #f9f9f9;
-  padding: 1rem;
+.calendar-section {
+  flex: 2.5;
+  min-width: 350px;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.react-calendar {
+  width: 100% !important;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.react-calendar__tile {
+  padding: 1rem 0.5rem;
   border-radius: 8px;
+}
+
+.react-calendar__tile--active {
+  background: #6366f1;
+  color: white;
+}
+
+.sidebar {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.534);
+  min-width: 280px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.event-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #1e40af;
+  border-bottom: 1px solid #cbd5e1;
+  padding-bottom: 0.5rem;
+}
+
+.event-card {
+  background: #eef2ff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #f97316;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateX(4px);
+}
+
+.event-card h4 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+.event-card p {
+  margin: 0;
+  color: #324868;
+  font-size: 0.95rem;
 }
 
 .popup-form {
@@ -43,35 +158,49 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .popup-form form {
   background: white;
   padding: 2rem;
-  border-radius: 10px;
-  width: 300px;
+  border-radius: 12px;
+  width: 320px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.popup-form h2 {
+  margin-bottom: 1rem;
+  color: #1e40af;
+}
+
+.popup-form label {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
 }
 
 .popup-form input,
 .popup-form select {
   margin-bottom: 1rem;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
 }
 
 .popup-form button {
   padding: 0.6rem;
+  margin-top: 0.5rem;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
-  margin-top: 0.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 .popup-form button[type="submit"] {
@@ -80,5 +209,23 @@
 }
 
 .popup-form button[type="button"] {
-  background-color: #ddd;
+  background-color: #e2e8f0;
+  color: #1e293b;
+  margin-top: 0.3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .calendar-section, .sidebar {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
