@@ -23,13 +23,13 @@
 
 .profile-header h1 {
   font-size: 36px;
-  color: #1d1d1f;
+  color: #020256;
   margin: 8px 0;
 }
 
 .profile-header .subtext {
   font-size: 16px;
-  color: #555;
+  color: #3e3e3e;
 }
 
 /* Card */
@@ -38,7 +38,7 @@
   max-width: 850px;
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.084);
   padding: 30px;
 }
 
@@ -54,7 +54,7 @@
 .avatar-circle {
   width: 100px;
   height: 100px;
-  background-color: #ddd;
+  background-color: #85b1f7;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -69,7 +69,7 @@
 }
 
 .profile-info .role {
-  color: #666;
+  color: #515050;
   font-size: 15px;
   margin: 6px 0;
 }
@@ -78,7 +78,7 @@
   display: inline-block;
   margin-right: 12px;
   font-size: 14px;
-  color: #777;
+  color: #3f3f3f;
 }
 
 /* Sections */
@@ -88,7 +88,7 @@
 
 .section h3 {
   font-size: 18px;
-  color: #222;
+  color: #101010;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -105,7 +105,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #f1f1f1;
+  background-color: #7b7b7b;
   padding: 10px 14px;
   border-radius: 10px;
   font-size: 14px;
@@ -114,7 +114,7 @@
 .github-link {
   display: inline-block;
   margin-top: 8px;
-  color: #0056b3;
+  color: #014c9c;
   text-decoration: none;
 }
 

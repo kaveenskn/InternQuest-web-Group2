@@ -18,7 +18,7 @@ const ProfileDisplay = ({ profile, projects }) => {
       <div className="profile-content">
       <div className="profile-card">
         <div className="avatar-circle">
-          <FaUser size={50} color="#555" />
+          <FaUser size={50} color="black" />
         </div>
         <div className="profile-info">
           <h2>{profile.fullname}</h2>

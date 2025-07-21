@@ -26,6 +26,7 @@ const [showFilters, setShowFilters] = useState(false);
       }
     };
     fetchData();
+    
   }, []);
 
   const handleSearch = () => {
