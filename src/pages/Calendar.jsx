@@ -21,13 +21,14 @@ const monthsOfYear = [
 
  const currentDate = new Date();
     
-    const [currentMonth, setCurrentMonth] = useState(currentDate.getMonth());
+const [currentMonth, setCurrentMonth] = useState(currentDate.getMonth());
 const [currentYear, setCurrentYear] = useState(currentDate.getFullYear());
 const [selectedDate, setSelectedDate] = useState(currentDate);
 const [showEventPopup, setShowEventPopup] = useState(false);
 const [events, setEvents] = useState([]);
 const [eventTime, setEventTime] = useState({ hours: '00', minutes: '00' });
 const [eventText, setEventText] = useState('');
+const [editingEvent, setEditingEvent] = useState(null);
 
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
     const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
@@ -51,6 +52,7 @@ const handleDayClick = (day) => {
         setShowEventPopup(true);
         setEventTime({ hours: '00', minutes: '00' });
         setEventText('');
+        setEditingEvent(null);
     }
 };
 
@@ -64,15 +66,53 @@ const isSameDay = (date1, date2) => {
 
 const handleEventSubmit = () => {
     const newEvent = {
+        id: editingEvent ? editingEvent.id : Date.now(),
         date: selectedDate,
         time: `${eventTime.hours.padStart(2, '0')}:${eventTime.minutes.padStart(2, '0')}`,
         text: eventText,
     };
 
-    setEvents([...events, newEvent]);
+    let updatedEvents = [...events];
+
+if (editingEvent) {
+    updatedEvents = updatedEvents.map(event => 
+        event.id === editingEvent.id ? newEvent : event
+    );
+} else {
+    updatedEvents.push(newEvent);
+}
+
+updatedEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    setEvents(updatedEvents);
     setEventTime({ hours: '00', minutes: '00' });
     setEventText('');
     setShowEventPopup(false);
+    setEditingEvent(null);
+};
+
+const handleEditEvent = (event) => {
+    setSelectedDate(new Date(event.date));
+    setEventTime({
+        hours: event.time.split(':')[0],
+        minutes: event.time.split(':')[1],
+    });
+    setEventText(event.text);
+    setEditingEvent(event);
+    setShowEventPopup(true);
+};
+
+const handleDeleteEvent = (eventId) => {
+    const updatedEvents = events.filter((event) => event.id !== eventId);
+    setEvents(updatedEvents);
+};
+
+const handleTimeChange = (e) => {
+    const { name, value } = e.target;
+    setEventTime((prevTime) => ({
+        ...prevTime,
+        [name]: value.padStart(2, '0')
+    }));
 };
     
   return (
@@ -138,7 +178,7 @@ const handleEventSubmit = () => {
     max={23}
     className="hours"
     value={eventTime.hours}
-    onChange={(e) => setEventTime({ ...eventTime, hours: e.target.value })}
+    onChange={handleTimeChange}
 />
             <span>:</span>
             <input
@@ -148,7 +188,7 @@ const handleEventSubmit = () => {
     max={59}
     className="minutes"
     value={eventTime.minutes}
-    onChange={(e) => setEventTime({ ...eventTime, minutes: e.target.value })}
+    onChange={handleTimeChange}
 />
         </div>
        <textarea
@@ -162,7 +202,7 @@ const handleEventSubmit = () => {
 ></textarea>
         <div className="event-popup-buttons">
             <button className="event-popup-btn" onClick={handleEventSubmit}>
-    Add Event
+    {editingEvent ? 'Update Event' : 'Add Event'}
 </button>
             <button 
                 className="close-event-popup"
@@ -184,8 +224,14 @@ const handleEventSubmit = () => {
         </div>
         <div className="event-text">{event.text}</div>
         <div className="event-buttons">
-            <i className="bx bxs-edit-alt"></i>
-            <i className="bx bxs-trash-alt"></i>
+            <i 
+    className="bx bxs-edit-alt" 
+    onClick={() => handleEditEvent(event)}
+></i>
+            <i 
+    className="bx bxs-trash-alt" 
+    onClick={() => handleDeleteEvent(event.id)}
+></i>
         </div>
     </div>
 ))}
