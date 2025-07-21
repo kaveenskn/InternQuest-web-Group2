@@ -114,6 +114,12 @@ const handleTimeChange = (e) => {
         [name]: value.padStart(2, '0')
     }));
 };
+
+const hasEvent = (day) => {
+    return events.some(event => 
+        isSameDay(new Date(event.date), new Date(currentYear, currentMonth, day))
+    );
+};
     
   return (
       <div className="calendar-app">
@@ -151,11 +157,13 @@ const handleTimeChange = (e) => {
             date === currentDate.getDate() && 
             currentMonth === currentDate.getMonth() && 
             currentYear === currentDate.getFullYear();
-            
+        const dateHasEvent = hasEvent(date);
+        
         return (
             <span 
                 key={`day-${date}`} 
-                className={isCurrentDay ? 'current-day' : ''}
+                className={`${isCurrentDay ? 'current-day' : ''} 
+                           ${dateHasEvent ? 'has-event' : ''}`}
                 onClick={() => handleDayClick(day + 1)}
             >
                 {date}
@@ -240,4 +248,4 @@ const handleTimeChange = (e) => {
   )
 }
 
-export default Calendar
+export default Calendar;
