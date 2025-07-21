@@ -27,7 +27,9 @@ router.get("/profile", authenticate, async (req, res) => {
 
     const student = await Student.findOne({ user: user._id })
       .populate("user", "email")
-      .populate("projects");
+      .populate("projects")
+      .populate("skills")
+       .exec();
 
     if (!student) {
       return res.status(404).json({ message: "Student profile not found" });
@@ -55,7 +57,16 @@ router.put("/profile", authenticate, async (req, res) => {
       projects,
     } = req.body;
 
-    console.log("Received github_link:", github_link);
+    console.log("Received profile data from frontend:", {
+  fullname,
+  universityName,
+  universityLocation,
+  course_of_study,
+  phone,
+  github_link,
+  skills,
+  projects,
+});
 
     // Find the user
     const user = await User.findOne({ email });
@@ -130,7 +141,7 @@ router.put("/profile", authenticate, async (req, res) => {
 
       student.projects = savedProjectIds;
     }
-
+   await student.save();
     res.status(200).json({
       message: "Profile updated successfully",
       user: {

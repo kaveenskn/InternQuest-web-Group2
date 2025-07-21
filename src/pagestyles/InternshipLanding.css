@@ -7,7 +7,7 @@
 
 .landing-page {
   min-height: 100vh;
-  
+   
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -31,8 +31,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(33, 41, 189, 0.258) 0%, transparent 50%),
-              radial-gradient(circle at 70% 80%, rgba(103, 127, 234, 0.278) 0%, transparent 50%);
+  background-color: white;
   pointer-events: none;
 }
 
@@ -44,8 +43,11 @@
   position: relative;
    -webkit-box-reflect: below -25px linear-gradient(transparent, transparent 50%, rgba(0, 0, 0, 0.3));
   z-index: 2;
-  color: #0f16a2;
-  text-shadow: 0 0 30px rgba(20, 30, 210, 0.3);
+   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #071a58 20%, #080154 50%);
+  
 }
 
 
@@ -97,28 +99,28 @@
 }
 
 .sign-in:hover {
-  background: #2128BD;
+   background: linear-gradient(135deg, #1a1f9a, #5a6fd8);
   color: rgb(255, 255, 255);
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(33, 40, 189, 0.4);
 }
 
 .sign-up {
-  background: linear-gradient(135deg, #2128BD, #667eea);
+    background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
   color: white;
-  border: 2px solid transparent;
+  
 }
 
 .sign-up:hover {
-  background: linear-gradient(135deg, #1a1f9a, #5a6fd8);
+   background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(33, 40, 189, 0.4);
+  box-shadow: 2px 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* Features Section */
 .features-section {
   padding: 5rem 2rem;
-  background: rgba(255, 255, 255, 0.95);
+   background-color:#e1e1e1;
   backdrop-filter: blur(10px);
   position: relative;
 }
@@ -126,7 +128,7 @@
 .features-section h2 {
   text-align: center;
   font-size: 3rem;
-  color: #2128BD;
+  color: #050069;
   margin-bottom: 3rem;
   font-weight: 700;
   position: relative;
@@ -140,7 +142,7 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(135deg, #2128BD, #667eea);
+  background: linear-gradient(135deg, #b3b5e2, #667eea);
   border-radius: 2px;
 }
 
@@ -153,16 +155,16 @@
 }
 
 .feature-card {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  border: 2px solid #2128BD;
+   background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+
   border-radius: 20px;
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(33, 40, 189, 0.1);
+  box-shadow: 10px 8px 32px rgba(0, 0, 0, 0.47);
 }
 
 .feature-card::before {
@@ -196,8 +198,8 @@
 
 .icon {
   font-size: 2.5rem;
-  color: #2128BD;
-  background: linear-gradient(135deg, rgba(33, 40, 189, 0.1), rgba(103, 126, 234, 0.1));
+  color: #f48e45;
+  background: linear-gradient(135deg, #f97316 , #fc8d3e );
   padding: 1rem;
   border-radius: 50%;
   display: flex;
@@ -210,20 +212,23 @@
 }
 
 .feature-card:hover .icon {
-  background: linear-gradient(135deg, #2128BD, #667eea);
+  background: linear-gradient(135deg, #f5b384 0%, #f97316 100%);
   color: white;
   transform: scale(1.1);
 }
 
 .card-title h3 {
   font-size: 1.5rem;
-  color: #2128BD;
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #f97316 20%, #070147 50%);
   font-weight: 600;
   margin: 0;
 }
 
 .feature-card p {
-  color: #666;
+  color: #004196;
   line-height: 1.6;
   font-size: 1rem;
   position: relative;
@@ -232,11 +237,12 @@
 
 /* Footer */
 .getstart-footer {
-  background: linear-gradient(135deg, #1a1f9a, #2128BD);
+background: #e3e4e5;
   color: white;
   padding: 3rem 2rem 1rem;
   position: relative;
   overflow: hidden;
+  border-top: 2px solid rgb(1, 1, 91);
 }
 
 .getstart-footer::before {
@@ -278,7 +284,7 @@
 .getstart-footer-right h4 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #e0e7ff;
+  color: #011b70;
 }
 
 .getstart-footer-right p {
@@ -287,7 +293,7 @@
 }
 
 .getstart-footer-right a {
-  color: white;
+  color: rgb(5, 71, 136);
   text-decoration: none;
   transition: color 0.3s ease;
 }

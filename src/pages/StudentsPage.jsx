@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
-import HeroSection from '../component/hero';
+import HeroSection from '../component/StudentsHome/hero';
 import Navbar from '../component/navbar';
 import CardsSection from '../component/Cardsectionstd';
 import ProfilePage from './profilePage';
-import InternshipFinderPage from '../component/internshipFinderPage';
+import InternshipFinderPage from '../component/Studentjobfinder/internshipFinderPage';
 import "../pagestyles/studentpage.css";
-import ReviewPage from '../component/Review';
+import StudentsReviews from '../component/StudentsHome/Std-reviews';
+import MentorshipFinder from '../component/Studentmentorship/Mentorship';
+import CalendarPage from '../component/Calenderpage/Calendar';
+
 
 const StdLinks = [
-  { key: "dashboard", label: "Dashboard" },
+  { key: "home", label: "Home" },
   { key: "profile", label: "Profile" },
   { key: "find-jobs", label: "Find Jobs" },
-  { key: "my-cv", label: "My CV" },
+  { key: "mentor", label: "Mentorship" },
+  { key: "calendar", label: "Calendar" }
 ];
 
 const StudentsPage = () => {
@@ -19,12 +23,12 @@ const StudentsPage = () => {
 
   const renderPageContent = () => {
     switch (activePage) {
-      case 'dashboard':
+      case 'home':
         return (
           <div className="std-dashboard">
             <HeroSection onGetStarted={() => setActivePage("find-jobs")} />
-            <CardsSection />
-            <ReviewPage/>
+            <StudentsReviews/>
+          
           </div>
         );
       case 'profile':
@@ -39,17 +43,26 @@ const StudentsPage = () => {
             <InternshipFinderPage />
           </div>
         );
-      case 'my-cv':
+      case 'mentor':
         return (
           <div className="std-cv">
-            <h2>My CV Page</h2>
-            <p>Upload, edit or generate your CV here with InternQuest.</p>
+              <MentorshipFinder/>
           </div>
         );
+        case 'calendar':
+                return (
+        <div className="Calendarpage">
+              <CalendarPage/>
+        </div>
+
+                );
+
       default:
         return (
-          <div className="std-default">
-            <h2>Page Not Found</h2>
+           <div className="std-dashboard">
+            <HeroSection onGetStarted={() => setActivePage("find-jobs")} />
+            <StudentsReviews/>
+          
           </div>
         );
     }

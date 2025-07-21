@@ -1,46 +1,21 @@
-.post-job{
-    padding: 0;
-    width:101%;
-    margin-top: -10px;
-    margin-left: -10px;
-    
+
+/* .employee-postjob{
+   animation: fadeInUp 0.8s ease-out 0.2s both; 
 }
-
-
-
-.employee-postjob{
-    background: 
-  linear-gradient(to right, rgba(0, 0, 0, 0.91) 20%, rgba(0, 0, 0, 0.411) 100%),  /* lighter left fade */
-  linear-gradient(to top left, rgba(0, 0, 0, 0.552) 20%, rgba(255, 255, 255, 0) 80%), 
-  url("https://i.pinimg.com/736x/a6/e9/ed/a6e9edb268d90f5cf13e9955811051f2.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-}
-
-.employee-shortlist{
-  min-height: 100vh;
-     background: 
-  linear-gradient(to right, rgba(0, 0, 0, 0.91) 20%, rgba(0, 0, 0, 0.411) 100%),  /* lighter left fade */
-  linear-gradient(to top left, rgba(0, 0, 0, 0.552) 20%, rgba(255, 255, 255, 0) 80%), 
-  url("https://i.pinimg.com/736x/a6/e9/ed/a6e9edb268d90f5cf13e9955811051f2.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-}
-
 
 .employee-applications{
-  min-height: 100vh;
+  animation: fadeInUp 0.8s ease-out 0.2s both; 
+} */
 
-background: 
-  linear-gradient(to right, rgba(0, 0, 0, 0.91) 20%, rgba(0, 0, 0, 0.411) 100%),  /* lighter left fade */
-  linear-gradient(to top left, rgba(0, 0, 0, 0.552) 20%, rgba(255, 255, 255, 0) 80%), 
-  url("https://i.pinimg.com/736x/99/cc/71/99cc711ec42198ca4ff194cf68fcaf57.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

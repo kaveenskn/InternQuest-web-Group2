@@ -107,6 +107,10 @@ const Jobboard = () => {
                     {new Date(job.deadline).toLocaleDateString()}
                   </span>
                 </div>
+                <div className="job-card-actions">
+  <button className="job-action-btn update-btn">Update</button>
+  <button className="job-action-btn delete-btn">Delete</button>
+</div>
               </div>
             ))
           )}

@@ -339,7 +339,7 @@ const ApplicationPage = () => {
               </div>
             )}
             <div className="application-profile-actions">
-              <button className="application-action-button accept">Accept</button>
+              <button className="application-action-button accept" onClick={()=>{alert(" candidate selected")}}>Accept</button>
               <button className="application-action-button reject">Reject</button>
               <button className="application-action-button schedule">Schedule Interview</button>
             </div>

@@ -15,43 +15,52 @@ body {
   padding: 2rem 0;
 }
 
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #000;
+  font-family:
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
 .swiper {
-  width: 85%;
-  aspect-ratio: 16 / 9; /* Keeps the aspect ratio consistent */
-  border-radius: 2rem;
-  overflow: hidden;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fcf050;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-position: center;
+  background-size: cover;
+  width: 350px;
+  height: 350px;
 }
 
 .swiper-slide img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
-.swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: #000;
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
-}
 
-.swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff;
-}
+
+
+
+
+
 
 /* Responsive Fix */
 @media (max-width: 968px) {

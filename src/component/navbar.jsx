@@ -4,7 +4,7 @@ import "../styles/navbar.css";
 
 const Navbar = ({
   brand = "InternQuest",
-  icon = "❖𝓠 ",
+  icon = "𝓘𝓠 ",
   links = [],
   activeKey = "",
   onLinkClick = (key) => {},

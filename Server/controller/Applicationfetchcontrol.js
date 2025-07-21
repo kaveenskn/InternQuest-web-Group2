@@ -21,7 +21,7 @@ const getEmployeeApplications = async (req, res) => {
         path: "job",
         select: "title",
       });
-    console.log("fetched applications:", applications);
+
     res.status(200).json(applications);
   } catch (err) {
     console.error("Error fetching applications:", err);

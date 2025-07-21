@@ -1,47 +1,56 @@
 /* Hero Section Styles - Blue Theme */
 .hero-section {
   display: flex;
+  flex-direction: column; /* Stack vertically */
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   min-height: 100vh;
   width: 100%;
-  padding: 0 5%;
-  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-  gap: 4rem;
+  padding: 3rem 5%;
   box-sizing: border-box;
-  margin-top: 5rem; /* Adjust if using a fixed navbar */
+  text-align: center;
 }
 
 /* Hero Text Section */
 .hero-text {
-  flex: 1;
-  max-width: 600px;
-  padding-right: 2rem;
+  width: 100%;
+  margin-bottom: 3rem;
+  background-image:url("../assets/bgnew.png") ;
+  background-size: cover;
+ background-position: left;
+  background-repeat: no-repeat;
   animation: fadeInUp 0.8s ease-out;
+  min-height: auto;
+  margin-top: 30px;
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
-  font-weight: 300;
+  font-size: 4.5rem;
+  font-weight: 400;
   line-height: 1.2;
-  color: #1e3a8a;
+   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #f97316 30%, #1e3a8a 50%);
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
 }
 
 .hero-text h1 strong {
   font-weight: 700;
-  color: #3b82f6;
+  color: #2128BD;
   display: block;
   margin-top: 0.5rem;
 }
 
-.hero-descriptions{
+.hero-descriptions {
   font-size: 1.125rem;
   line-height: 1.7;
-color: rgb(3, 31, 158) !important; 
+  color: rgb(3, 31, 158) !important;
   margin-bottom: 3rem;
   max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Button Group */
@@ -49,6 +58,7 @@ color: rgb(3, 31, 158) !important;
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -69,13 +79,24 @@ color: rgb(3, 31, 158) !important;
 }
 
 .cta-btn.primary {
-  background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+     background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
   color: white;
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Animation Keyframes */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
 }
 
 .cta-btn.primary:hover {
-  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    background-image: linear-gradient(to right, #2929db 20%, #1406e1 50%);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(30, 64, 175, 0.35);
 }
@@ -94,8 +115,8 @@ color: rgb(3, 31, 158) !important;
 
 /* Hero Slider Section */
 .hero-slider {
-  flex: 1;
-  max-width: 600px;
+  width: 100%;
+  max-width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,36 +125,12 @@ color: rgb(3, 31, 158) !important;
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .hero-section {
-    gap: 3rem;
-    padding: 0 3%;
-  }
-
   .hero-text h1 {
     font-size: 3rem;
-  }
-
-  .hero-text {
-    padding-right: 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 5%;
-    gap: 3rem;
-    min-height: auto;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .hero-text {
-    padding-right: 0;
-    max-width: 100%;
-  }
-
   .hero-text h1 {
     font-size: 2.5rem;
   }
@@ -143,9 +140,9 @@ color: rgb(3, 31, 158) !important;
     margin-top: 0;
   }
 
-  .hero-description {
-    max-width: 100%;
+  .hero-descriptions {
     margin-bottom: 2rem;
+    max-width: 100%;
   }
 
   .button-group {
@@ -168,7 +165,7 @@ color: rgb(3, 31, 158) !important;
     font-size: 2rem;
   }
 
-  .hero-description {
+  .hero-descriptions {
     font-size: 1rem;
   }
 

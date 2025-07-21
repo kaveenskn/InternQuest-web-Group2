@@ -37,10 +37,17 @@
 }
 
 .card.highlighted {
-   background: linear-gradient(to left, #0d47a1 20%, black 70%);
+background-color: #2128BD;
   color: white;
   border-bottom: 4px solid #3e51e2;
 }
+
+.card.highlighted .icon{
+  color: #bfc3c7;
+  border:2px solid rgb(255, 255, 255);
+
+}
+
 
 .card .icon {
   margin-bottom: 15px;

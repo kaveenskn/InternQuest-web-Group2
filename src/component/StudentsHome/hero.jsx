@@ -1,18 +1,18 @@
 import React from "react";
-import "../styles/hero.css";
+import "../../styles/hero.css";
 import ImageSlider from "./ImageSlider";
 
 const HeroSection = ({ onGetStarted }) => {
   return (
     <section className="hero-section">
       <div className="hero-text">
-        <h1>
-          We Create <br /> <strong>Solutions for Your Business</strong>
+              <h1>
+          We Build <br /> <strong>Futures for Students</strong>
         </h1>
         <p className="hero-descriptions">
-          Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-          per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis.
+          At InternQuest, we help students find the right internships, build valuable skills, and move closer to their dream careers with the support they need.
         </p>
+
         <div className="button-group">
           <button className="cta-btn primary" onClick={onGetStarted}>
             Get Started

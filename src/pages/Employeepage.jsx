@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import EmHero from "../component/EmHero";
+import EmHero from "../component/CompanyHome/EmHero";
 import Navbar from "../component/navbar";
 import Jobpostform from "../component/Jobpostform";
 import EmployeePageCards from "../component/Cardsectionemp";
 import Jobboard from "../component/Jobboard";
 import "../pagestyles/employee.css";
-import InternshipApp from "../component/InternshipApp";
-import RecentApplications from "../component/ShortlistedApplications";
+import EmpFeatures from '../component/CompanyHome/EmpFeatures';
+
 import ApplicationPage from "../component/CompanyApplication/Applicationpage";
 
 
@@ -14,7 +14,7 @@ const EmpLinks = [
   { key: "home", label: "Home" },
   { key: "post-job", label: "Post-Job" },
   { key: "applications", label: "Applications" },
-  { key: "shortlist", label: "Short Listed" },
+  { key: "Company-Profile", label: "Company Profile" },
 ];
 
 const EmployeePage = () => {
@@ -31,12 +31,12 @@ const EmployeePage = () => {
               links={EmpLinks}
               onLinkClick={(key) => setActivePage(key)}
               activeKey={activePage}
-              transparent={true} // transparent true here because background is on wrapper
+              transparent={true} 
             />
-            <EmHero />
+            <EmHero onGetStarted={() => setActivePage("applications")} />
                </div>
             
-            <EmployeePageCards />
+            <EmpFeatures/>
           </div>
         );
       case "applications":
@@ -71,7 +71,7 @@ const EmployeePage = () => {
             </div>
           </div>
         );
-      case "shortlist":
+      case "Company-Profile":
         return (
           <div className="employee-shortlist">
             <Navbar
@@ -81,7 +81,7 @@ const EmployeePage = () => {
               transparent={false}
             />
             <div >
-              <RecentApplications/>
+             
             </div>
           </div>
 

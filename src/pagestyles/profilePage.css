@@ -1,40 +1,331 @@
-
-.profile-page {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 2rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.profilehome-container {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
 }
 
-.profile-page h1 {
-  text-align: center;
-  color: white;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+/* Hero Section */
+.stdprofile-hero-alt {
+  position: relative;
+  min-height: auto; /* Reduced from 100vh */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 10px; /* Added to lift content */
+  animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-.profile-container {
-  max-width: 1400px;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }}
+
+.stdprofile-bg-decoration {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.stdprofile-circle {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.stdprofile-top-right {
+  top: -10rem;
+  right: -10rem;
+  background-color: #0462dc;
+}
+
+.stdprofile-bottom-left {
+  bottom: -10rem;
+  left: -10rem;
+  background-color: #ffddd5;
+}
+
+.stdprofile-container {
+  max-width: 1280px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.stdprofile-content {
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.stdprofile-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.stdprofile-icon-trending {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.stdprofile-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #f97316 30%, #011a5f 50%);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
-  .profile-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .stdprofile-heading {
+    font-size: 30px;
   }
-  
-  .profile-page {
-    padding: 1rem;
+}
+
+.stdprofile-description {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.75;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stdprofile-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .stdprofile-buttons {
+    flex-direction: row;
+    justify-content: center;
   }
-  
-  .profile-page h1 {
-    font-size: 2rem;
+}
+
+.stdprofile-btn-orange {
+   background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
+  color: white;
+  padding: 0.9rem 1.8rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+}
+
+.stdprofile-btn-orange:hover {
+  background: linear-gradient(to right, #ea580c, #c2410c);
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.stdprofile-btn-outline-blue {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  background-color: transparent;
+  padding: 0.9rem 1.8rem;
+  border-radius: 9999px;
+   font-size: 1rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.stdprofile-btn-outline-blue:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.stdprofile-icon-arrow,
+.stdprofile-icon-users {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+.stdprofile-icon-users {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.stdprofile-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .stdprofile-trust-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.stdprofile-trust-item {
+  text-align: center;
+}
+
+.stdprofile-trust-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.stdprofile-trust-label {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+/* Features Section */
+.profilehome-features {
+  padding: 90px 20px 100px;
+  text-align: center;
+  background: #ffffff;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.profilehome-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.profilehome-subheading {
+  color: #6b7280;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.profilehome-feature-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  gap: 70px;
+  margin-bottom: 40px;
+}
+
+.profilehome-feature-card {
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  width: 300px;
+  min-height: 300px;
+  padding: 0px;
+  border-radius: 20px;
+  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.53);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.profilehome-feature-card h3 {
+  margin: 5px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.profilehome-feature-card p {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.feature-image {
+  width: 100%;
+  max-width: 260px; /* Limit max width to avoid touching card edges */
+  height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px; /* Center image + bottom spacing */
+  padding: 0px;
+  border-radius: 40px;
+}
+
+
+
+.profilehome-cta {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.profilehome-cta:hover {
+  opacity: 0.9;
+}
+/* Marquee Trust Grid */
+.stdprofile-trust-scroll-container {
+  width: 80%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: 0rem auto 2rem;
+  position: relative;
+}
+
+.stdprofile-trust-marquee {
+  display: flex;
+  gap: 3rem;
+  animation: marquee-scroll 18s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.stdprofile-trust-item {
+  min-width: 200px;
+  background: #f9fafb;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.stdprofile-trust-number {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+.stdprofile-trust-label {
+  font-size: 0.9rem;
+  color: #374151;
 }

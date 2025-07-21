@@ -1,23 +1,40 @@
 /* Job Board Styles */
 .about-bg {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  margin-top: 20px;
+  
 }
 
 /* Hero Section */
 .about-hero {
   text-align: center;
   padding: 4rem 2rem 3rem;
-  background: linear-gradient(135deg, #2128BD 0%, #2128BD);
   color: white;
   margin-bottom: 3rem;
+   animation: fadeInUp 0.8s ease-out 0.2s both; 
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .about-hero h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
+     background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #f97316 20%, #070147 50%);
 }
 
 .about-hero-subtitle {
@@ -27,6 +44,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  color: #070147;
 }
 
 /* Stats Row */
@@ -48,6 +66,8 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   min-width: 150px;
+  color: #070147;
+  box-shadow: 3px 3px 8px black;
 }
 
 .about-stat i {
@@ -90,6 +110,42 @@
   margin-right: auto;
 }
 
+.job-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.job-action-btn {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.update-btn {
+  background-color: #2563eb; /* Blue */
+  color: white;
+}
+
+.update-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.delete-btn {
+  background-color: #f97316 ; /* Red */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #cf5803 ;
+}
+
+
 /* Job Grid */
 .about-job-grid {
   display: grid;
@@ -113,13 +169,13 @@
 .about-job-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(14, 165, 233, 0.15);
-  border-color: #0ea5e9;
+  border-color: #fa8a2f;
 }
 
 .about-job-card h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #0f172a;
+  color: #011b58;
   margin-bottom: 0.5rem;
   line-height: 1.3;
 }
