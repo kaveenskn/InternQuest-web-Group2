@@ -17,6 +17,7 @@ html {
     background-color: #2c35d2;
     display: grid;
     place-items: center;
+    overflow: hidden;
     perspective: 100rem;
 }
 
@@ -134,6 +135,11 @@ html {
     width: 60%;
     height: 100%;
     padding: 3rem 0;
+    overflow-y: auto;
+}
+
+.events::-webkit-scrollbar {
+    display: none;
 }
 
 .event-popup {
@@ -283,4 +289,77 @@ html {
     width: 75%;
     padding: 0 3rem 0 1rem;
     overflow-wrap: break-word;
+}
+
+
+@media (max-width: 850px) {
+    .calendar-app {
+        flex-direction: column;
+        row-gap: 2rem;
+        aspect-ratio: 3 / 2;
+    }
+
+    .calendar {
+        width: 70%;
+        margin: auto;
+    }
+
+    .navigate-date {
+        margin: 1rem 0;
+    }
+
+    .weekdays {
+        margin: 1rem 0;
+    }
+
+    .events {
+    width: 80%;
+    margin: auto;
+}
+
+.event-popup {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    aspect-ratio: 4 / 3;
+    row-gap: 1rem;
+}
+
+.event-popup-time {
+    width: clamp(5rem, 10cqi, 8rem);
+    font-size: clamp(1.5rem, 3cqi, 2.2rem);
+}
+
+.time-input input {
+    width: clamp(5rem, 10cqi, 8rem);
+    font-size: clamp(1.2rem, 2cqi, 1.6rem);
+}
+
+.event-popup textarea {
+    width: clamp(18rem, 35cqi, 28rem);
+}
+
+.event-popup textarea::placeholder {
+    font-size: clamp(1rem, 1.5cqi, 1.2rem);
+}
+
+.event-popup-btn {
+    width: clamp(18rem, 35cqi, 28rem);
+    font-size: clamp(1.5rem, 3cqi, 2.2rem);
+}
+
+.event-date {
+    font-size: clamp(1rem, 1.4cqi, 1.2rem);
+}
+
+.event-time {
+    font-size: clamp(1rem, 2cqi, 1.6rem);
+}
+
+.event-text {
+    font-size: clamp(1rem, 2.5cqi, 1.4rem);
+}
+
 }
