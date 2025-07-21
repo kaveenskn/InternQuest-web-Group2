@@ -114,59 +114,67 @@ const InternshipFinderPage = () => {
           </div>
         </div>
 
+        
         {/* Results */}
-        <div className="results-count">{filtered.length} results found</div>
-        <div className="results-grid">
-          {displayedInternships.map((i) => (
-            <div key={i._id} className="intern-card">
-              <div className="card-content">
-                <div className="card-title-row">
-                  <span className="int-card-title" title={i.title}>{i.title}</span>
-                  <span className="int-card-type">{i.jobType}</span>
-                </div>
-
-                {i.employee?.companyName && (
-                  <div className="card-company">
-                    <strong>Company:</strong> {i.employee.companyName}
-                  </div>
-                )}
-
-                <div className="card-meta">
-                  <FaMapMarkerAlt className="card-meta-icon" /> {i.location}
-                </div>
-
-                <div className="card-deadline">
-                  <strong>Deadline:</strong> {new Date(i.deadline).toLocaleDateString()}
-                </div>
-
-                <div className={`card-desc ${expandedCard === i._id ? "expanded" : ""}`}>
-                  {expandedCard === i._id ? i.description : i.description.slice(0, 120) + (i.description.length > 120 ? "..." : "")}
-                </div>
-
-                {i.description.length > 120 && (
-                  <span className="read-more-toggle" onClick={() =>
-                    setExpandedCard((prev) => (prev === i._id ? null : i._id))
-                  }>
-                    {expandedCard === i._id ? "Read less" : "Read more"}
-                  </span>
-                )}
-
-                <button className="view-profile-btn" onClick={() => handleApply(i._id, i.employee?._id)}>
-                  Apply
-                </button>
-              </div>
-            </div>
-          ))}
+<div className="find-results-count">{filtered.length} results found</div>
+<div className="find-results-grid">
+  {displayedInternships.map((i) => (
+    <div key={i._id} className="find-intern-card">
+      <div className="find-card-content">
+        <div className="find-card-title-row">
+          <span className="find-card-title" title={i.title}>{i.title}</span>
+          <span className="find-card-type">{i.jobType}</span>
         </div>
 
-        {/* View More / Less */}
-        {filtered.length > 6 && (
-          <div style={{ textAlign: "center", marginTop: "20px" }}>
-            <button className="search-btn" onClick={() => setShowAll(!showAll)}>
-              {showAll ? "View Less" : "View More"}
-            </button>
+        {i.employee?.companyName && (
+          <div className="find-card-company">
+            <strong>Company:</strong> {i.employee.companyName}
           </div>
         )}
+
+        <div className="find-card-meta">
+          <FaMapMarkerAlt className="find-card-meta-icon" /> {i.location}
+        </div>
+
+        <div className="find-card-deadline">
+          <strong>Deadline:</strong> {new Date(i.deadline).toLocaleDateString()}
+        </div>
+
+        <div className={`find-card-desc ${expandedCard === i._id ? "expanded" : ""}`}>
+          {expandedCard === i._id
+            ? i.description
+            : i.description.slice(0, 120) + (i.description.length > 120 ? "..." : "")}
+        </div>
+
+        {i.description.length > 120 && (
+          <span
+            className="find-read-more-toggle"
+            onClick={() => setExpandedCard((prev) => (prev === i._id ? null : i._id))}
+          >
+            {expandedCard === i._id ? "Read less" : "Read more"}
+          </span>
+        )}
+
+        <button
+          className="find-apply-btn"
+          onClick={() => handleApply(i._id, i.employee?._id)}
+        >
+          Apply
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
+
+{/* View More / Less */}
+{filtered.length > 6 && (
+  <div style={{ textAlign: "center", marginTop: "20px" }}>
+    <button className="find-view-more-btn" onClick={() => setShowAll(!showAll)}>
+      {showAll ? "View Less" : "View More"}
+    </button>
+  </div>
+)}
+
       </main>
     </div>
   );

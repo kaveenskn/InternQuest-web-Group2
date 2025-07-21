@@ -6,12 +6,15 @@ import EmployeePageCards from "../component/Cardsectionemp";
 import Jobboard from "../component/Jobboard";
 import "../pagestyles/employee.css";
 import InternshipApp from "../component/InternshipApp";
+import RecentApplications from "../component/ShortlistedApplications";
+import ApplicationPage from "../component/CompanyApplication/Applicationpage";
+
 
 const EmpLinks = [
   { key: "home", label: "Home" },
   { key: "post-job", label: "Post-Job" },
   { key: "applications", label: "Applications" },
-  { key: "about", label: "About us" },
+  { key: "shortlist", label: "Short Listed" },
 ];
 
 const EmployeePage = () => {
@@ -38,7 +41,7 @@ const EmployeePage = () => {
         );
       case "applications":
         return (
-          <>
+          <div className="employee-applications">
             <Navbar
               links={EmpLinks}
               onLinkClick={(key) => setActivePage(key)}
@@ -46,10 +49,13 @@ const EmployeePage = () => {
               transparent={false}
             />
             <div className="applications-page" >
-              <InternshipApp />
+              <ApplicationPage />
             </div>
-          </>
+         </div>
+         
         );
+       
+        
       case "post-job":
         return (
           <div className="employee-postjob">
@@ -65,9 +71,9 @@ const EmployeePage = () => {
             </div>
           </div>
         );
-      case "my-cv":
+      case "shortlist":
         return (
-          <>
+          <div className="employee-shortlist">
             <Navbar
               links={EmpLinks}
               onLinkClick={(key) => setActivePage(key)}
@@ -75,9 +81,9 @@ const EmployeePage = () => {
               transparent={false}
             />
             <div >
-              <h2>My CV Page</h2>
+              <RecentApplications/>
             </div>
-          </>
+          </div>
 
         );
     }

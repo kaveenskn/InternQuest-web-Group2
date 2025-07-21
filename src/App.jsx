@@ -16,13 +16,17 @@ import InternshipApp from "./component/InternshipApp";
 import InternshipProfileCard from "./component/InternshipProfileCard";
 import StudentProfilePage from "./pages/StudentsProfile";
 
-import Calendar from "./pages/Calendar";
+import RecentApplications from "./component/ShortlistedApplications";
 
-
-
+import WhyInternQuest from "./component/WhyIntern";
 
 
 import ReviewPage from "./component/Review";
+
+import NewImgSlider from "./component/NewSlider";
+
+
+import ApplicationPage from "./component/CompanyApplication/Applicationpage";
 
 
 const App = () => {
@@ -54,9 +58,12 @@ const App = () => {
                  <Route path="/rew" element={<ReviewPage />} />
                  <Route path="/proof" element={<InternshipProfileCard />} />
 
-          {/* Calendar */}
-        <Route path="/Calendar" element={<Calendar/>} />
+                    <Route path="/recent" element={<RecentApplications />} />
 
+                      <Route path="/why" element={<WhyInternQuest />} />
+<Route path="/app" element={<ApplicationPage />} />
+                       
+      
       </Routes>
     </Router>
   );

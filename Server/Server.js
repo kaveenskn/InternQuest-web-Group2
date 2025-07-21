@@ -9,7 +9,6 @@ connectDB();
 app.use(express.json());
 
 const Regroute = require("./routes/Registration.js");
-
 app.use("/auth", Regroute);
 
 const logroutes = require("./routes/Login.js");
@@ -35,6 +34,15 @@ app.use("/api/applications", Applicationfetchcontrol);
 
 const Studentsview = require("./routes/StudentView.js");
 app.use("/api/students", Studentsview);
+
+const ApplicationDeleteroutes = require("./routes/ApplicationDeleteroute.js");
+app.use("/api/applicationsdelete", ApplicationDeleteroutes);
+
+const ApplicatiShortlist = require("./routes/Shortlistroute.js");
+app.use("/api/card", ApplicatiShortlist);
+
+const Shortlistfetch = require("./routes/Shortlistfetchroute.js");
+app.use("/api/shortlist", Shortlistfetch);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

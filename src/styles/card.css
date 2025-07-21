@@ -28,6 +28,7 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-bottom: 4px solid #bfc3c7;
+  color: black;
 }
 
 .card:hover {

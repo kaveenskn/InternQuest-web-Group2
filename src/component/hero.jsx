@@ -9,7 +9,7 @@ const HeroSection = ({ onGetStarted }) => {
         <h1>
           We Create <br /> <strong>Solutions for Your Business</strong>
         </h1>
-        <p className="hero-description">
+        <p className="hero-descriptions">
           Class aptent taciti sociosqu ad litora torquent per conubia nostra,
           per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis.
         </p>

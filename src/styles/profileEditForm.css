@@ -1,142 +1,212 @@
-/* ProfileEditForm.css */
+
 .pfedit-profile-panel {
-  border-radius: 12px;
-  padding: 60px;
-  flex: 1 1 350px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.15);   /* semi-transparent */
-  border-radius: 16px;
-  padding: 30px;
-  backdrop-filter: blur(10px);             /* the blur effect */
-  -webkit-backdrop-filter: blur(10px); 
-  max-width: 400px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+.pfedit-profile-form h3 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: -2rem -2rem 2rem -2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .pfedit-profile-form form {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+}
+
+.pfedit-profile-form label {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
 }
 
 .pfedit-profile-form input,
 .pfedit-profile-form textarea {
-  padding: 8px;
-  margin-bottom: 12px;
-  border: 1px solid #90caf9;
-  border-radius: 6px;
-  font-size: 0.95em;
-  background: #e3f2fd;
-  color: #0d47a1;
+  padding: 0.8rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+}
+
+.pfedit-profile-form input:focus,
+.pfedit-profile-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.pfedit-profile-form input[readonly] {
+  background: #f8f9fa;
+  color: #666;
+  cursor: not-allowed;
 }
 
 .pfedit-profile-form textarea {
+  min-height: 100px;
   resize: vertical;
-  min-height: 60px;
+  font-family: inherit;
 }
 
 .pfedit-add-skill {
   display: flex;
-  gap: 8px;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: stretch;
 }
 
 .pfedit-add-skill input {
   flex: 1;
+  margin: 0;
 }
 
 .pfedit-add-skill button {
-  padding: 8px 12px;
-  background-color: #0d47a1; 
+  background: #667eea;
   color: white;
   border: none;
-  border-radius: 6px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
   cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.pfedit-add-skill button:hover {
+  background: #764ba2;
+}
+
+.pfedit-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 .pfedit-skill-tag {
-  display: inline-flex;
-  align-items: center;
-  background: #e1f5fe;
-  color: #0277bd;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.95em;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .pfedit-skill-tag button {
-  background: linear-gradient(to left, #0d47a1 20%, black 70%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
   border: none;
-  color: #feffff;
-  font-size: 2em;
-  margin-left: 6px;
-  padding: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   cursor: pointer;
-  margin-top: 0px;
-}
-
-.pfedit-save-button {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background-color: #0d47a1;
-  color: white;
-  padding: 10px 14px;
-  font-size: 0.95em;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.pfedit-skill-tag button:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .pfedit-save-message {
-  color: #2e7d32;
-  font-size: 0.9em;
-  margin-top: 8px;
-}
-
-/* Make all labels white */
-.pfedit-profile-form label {
-  color: white;
+  background: #d4edda;
+  color: #155724;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #c3e6cb;
+  margin: 1rem 0;
   font-weight: 500;
-  margin-bottom: 6px;
-  display: inline-block;
 }
 
-
-
-@media (max-width: 768px) {
-  .pfedit-profile-panel {
-    width: 100%;
-    max-width: 100%;
-    padding: 16px;
-  }
-
-  .pfedit-profile-form form {
-    width: 100%;
-  }
-
-  .pfedit-profile-form input,
-  .pfedit-profile-form textarea {
-    width: 100%;
-  }
-
-  .pfedit-add-skill {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .pfedit-add-skill input,
-  .pfedit-add-skill button {
-    width: 100%;
-  }
+.pfedit-project-form {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 1.5rem 0;
+  border: 1px solid #e9ecef;
 }
 
+.pfedit-project-form label {
+  color: #495057;
+}
 
+.pfedit-project-form button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
 
-/* Scoped version (if you want to apply it only inside .right-panel form) */
-.right-panel input::placeholder,
-.right-panel textarea::placeholder {
-  color: black;
-  opacity: 1;
+.pfedit-project-form button:hover {
+  background: #218838;
+}
+
+.pfedit-save-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pfedit-save-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar Styling */
+.pfedit-profile-panel::-webkit-scrollbar,
+.prdis-preview::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pfedit-profile-panel::-webkit-scrollbar-track,
+.prdis-preview::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.pfedit-profile-panel::-webkit-scrollbar-thumb,
+.prdis-preview::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.pfedit-profile-panel::-webkit-scrollbar-thumb:hover,
+.prdis-preview::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
