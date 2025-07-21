@@ -14,7 +14,7 @@ const EmpLinks = [
   { key: "home", label: "Home" },
   { key: "post-job", label: "Post-Job" },
   { key: "applications", label: "Applications" },
-  { key: "shortlist", label: "Short Listed" },
+  { key: "Company-Profile", label: "Company Profile" },
 ];
 
 const EmployeePage = () => {
@@ -33,7 +33,7 @@ const EmployeePage = () => {
               activeKey={activePage}
               transparent={true} 
             />
-            <EmHero />
+            <EmHero onGetStarted={() => setActivePage("applications")} />
                </div>
             
             <EmpFeatures/>
@@ -71,7 +71,7 @@ const EmployeePage = () => {
             </div>
           </div>
         );
-      case "shortlist":
+      case "Company-Profile":
         return (
           <div className="employee-shortlist">
             <Navbar

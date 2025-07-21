@@ -118,7 +118,7 @@ const ProfilePage = () => {
 
       
       <div class="stdprofile-buttons">
-        <button class="stdprofile-btn-orange">
+        <button onClick={() => setShowProfile(true)} class="stdprofile-btn-orange">
           View My Profile
           
         </button>

@@ -23,7 +23,6 @@ const [showFilters, setShowFilters] = useState(false);
         setFiltered(sorted);
       } catch (err) {
         console.error("Failed to fetch internships", err);
-        alert("Error fetching internships.");
       }
     };
     fetchData();

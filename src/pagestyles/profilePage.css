@@ -126,7 +126,7 @@
 }
 
 .stdprofile-btn-orange {
-  background-image: linear-gradient(to right, #0303bd 20%, #0d0393 50%);
+   background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
   color: white;
   padding: 0.9rem 1.8rem;
   border-radius: 9999px;

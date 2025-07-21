@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/emDashboard.css";
  import EmpImage from "../../assets/Empheropic.jpg";
 
-const EmHero = () => {
+const EmHero = ({ onGetStarted }) => {
   return (
     <div className="em-hero">
       <div className="em-hero-content">
@@ -22,7 +22,7 @@ const EmHero = () => {
 
           <div className="em-button-group">
             <div className="em-hero-explore1">
-              <p>Get Started</p>
+              <p onClick={onGetStarted}>Get Started</p>
             </div>
             <div className="em-hero-explore2">
               <p>Learn More</p>

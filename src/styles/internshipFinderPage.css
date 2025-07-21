@@ -64,7 +64,7 @@
  padding-bottom: 5rem;
   text-align: center;
   border-radius: 0 0 1rem 1rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.144);
 }
 
 .top-heading {
@@ -136,7 +136,7 @@
 
 .toggle-filters-btn {
   padding: 0.9rem 1.5rem;
-    background-image: linear-gradient(to right, #0303bd 20%, #0d0393 50%);
+  background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
   margin-bottom: 1rem;;
   color: #ffffff;
   font-weight: 600;

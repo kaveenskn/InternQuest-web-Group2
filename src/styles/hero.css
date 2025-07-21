@@ -79,7 +79,7 @@
 }
 
 .cta-btn.primary {
-    background-image: linear-gradient(to right, #0303bd 20%, #0d0393 50%);
+     background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
   color: white;
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
   animation: pulse 2s infinite ease-in-out;
