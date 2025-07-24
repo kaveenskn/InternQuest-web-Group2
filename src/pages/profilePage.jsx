@@ -107,6 +107,7 @@ const ProfilePage = () => {
 
             <div className="stdprofile-container">
               <div className="stdprofile-content">
+                <div className="stdprofile-background">
                 <h1 className="stdprofile-heading">
                   <div style={{ fontWeight: 500 }}>Build</div>Your Future
                 </h1>
@@ -115,14 +116,14 @@ const ProfilePage = () => {
                   Create and showcase your professional profile, track your internship journey,
                   and connect with opportunities that shape your career path.
                 </p>
-
+                 
                 <div className="stdprofile-buttons">
                   <button onClick={() => setShowProfile(true)} className="stdprofile-btn-orange">
                     View My Profile
                   </button>
                   <button className="stdprofile-btn-outline-blue">Explore Community</button>
                 </div>
-
+               </div><br /><br />
                 <div className="stdprofile-trust-scroll-container">
                   <div className="stdprofile-trust-marquee">
                     <div className="stdprofile-trust-grid">

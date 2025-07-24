@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import EmHero from "../component/CompanyHome/EmHero";
 import Navbar from "../component/navbar";
-import Jobpostform from "../component/Jobpostform";
+import Jobboard from "../component/CompanyJob-post/Jobboard";
 import EmployeePageCards from "../component/Cardsectionemp";
-import Jobboard from "../component/Jobboard";
+import Jobpostform from "../component/CompanyJob-post/Jobpostform";
 import "../pagestyles/employee.css";
 import EmpFeatures from '../component/CompanyHome/EmpFeatures';
 

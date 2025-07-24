@@ -1,13 +1,13 @@
 /* Top Banner */
 .application-container{
   overflow: hidden;
-  margin-top: 20px;
+  
 }
 
 
 
 .application-top-banner {
-   
+   margin-top: 100px;
   color: rgb(8, 0, 0);
   text-align: center;
   padding: 60px 20px 40px;
@@ -29,7 +29,7 @@
 
 
 .application-top-banner h1 {
-  font-size: 36px;
+  font-size: 2.9rem;
   margin-bottom: 10px;
   font-weight: 700;
    background-clip: text;

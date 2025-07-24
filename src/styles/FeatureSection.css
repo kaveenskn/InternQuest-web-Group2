@@ -12,6 +12,7 @@
 .Home-section-header {
   text-align: center;
   margin-bottom: 80px;
+  
 }
 
 .Home-section-header h2 {
@@ -30,6 +31,7 @@
   color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
+  color: #020764;
 }
 
 .Home-features-grid {

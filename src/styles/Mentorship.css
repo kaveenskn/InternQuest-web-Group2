@@ -3,6 +3,7 @@
   padding: 2rem;
   color: #1e1e1e;
    animation: emFadeInUp 0.8s ease-out;
+   padding-top:100px ;
 }
 
 @keyframes emFadeInUp {
@@ -65,7 +66,7 @@
 }
 
 .mentorship-launch-btn {
-  background-image: linear-gradient(to right, #0303bd 20%, #0d0393 50%);
+  background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -86,13 +87,14 @@
 }
 
 .mentorship-hero-left h1 {
-  font-size: 2.5rem;
+  font-size: 2.9rem;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
     background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, #f97316 30%, #011a5f 50%);
+  background-image: linear-gradient(to right, #030d8f 30%, #012179 50%);
 }
 
 .mentorship-hero-left p {

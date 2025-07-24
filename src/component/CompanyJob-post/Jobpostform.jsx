@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../styles/Jobpostform.css";
+import "../../styles/Jobpostform.css";
 
 const jobTypes = [
   'Onsite',

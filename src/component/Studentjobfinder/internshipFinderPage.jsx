@@ -73,7 +73,7 @@ const [showFilters, setShowFilters] = useState(false);
           <p className="intern-subtitle">
             Browse through our curated list of internship opportunities
           </p>
-        </div>
+        
 
        {/* Top Filter Section */}
 <section className="top-filter-bar">
@@ -118,7 +118,7 @@ const [showFilters, setShowFilters] = useState(false);
 </div>
 
 </section>
-
+</div>
 
         
      <br />   {/* Results */}
@@ -180,6 +180,11 @@ const [showFilters, setShowFilters] = useState(false);
     </button>
   </div>
 )}
+<div className="bubble-container">
+  <div className="bubble bubble1"></div>
+  <div className="bubble bubble2"></div>
+  <div className="bubble bubble3"></div>
+</div>
 
       </main>
     </div>

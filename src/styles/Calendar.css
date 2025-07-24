@@ -7,7 +7,7 @@
   min-height: 100vh;
   box-sizing: border-box;
   animation: emFadeInUp 0.8s ease-out;
-  margin-top: 20px;
+ 
 }
 
 @keyframes emFadeInUp {
@@ -23,13 +23,15 @@
 
 
 .header {
+   margin-top: 120px;
   text-align: center;
   margin-bottom: 2rem;
   padding: 0 1rem;
 }
 
 .header h1 {
-  font-size: 2.2rem;
+   font-size: 2.9rem;
+  font-weight: 700;
   color: #1e3a8a;
   margin-bottom: 0.9rem;
 }

@@ -1,21 +1,28 @@
 /* ProfileEditForm.css */
 
 .pfedit-profile-form {
-  background-color: #f3f3f3; /* light neutral bg, not white */
+/* light neutral bg, not white */
   border-radius: 16px;
   padding: 2rem 3rem;
-  max-width: 700px;
-  margin: 2rem auto;
+ 
+  margin: 0 auto;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   color: #1e293b; /* dark slate blue, good readability */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.pfedit-background-form{
+  margin-top: 100px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .pfedit-profile-form h3 {
+  margin-top: 100px;
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 30px;
-  color: #ea580c; /* bright orange */
+  color: #ea580c; 
   font-weight: 700;
 }
 

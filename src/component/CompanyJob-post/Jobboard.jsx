@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/Jobboard.css";
+import "../../styles/Jobboard.css";
 
 const Jobboard = () => {
   const [jobs, setJobs] = useState([]);

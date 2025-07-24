@@ -1,7 +1,7 @@
 /* Job Board Styles */
 .about-bg {
   min-height: 100vh;
-  margin-top: 20px;
+  
   
 }
 
@@ -12,6 +12,7 @@
   color: white;
   margin-bottom: 3rem;
    animation: fadeInUp 0.8s ease-out 0.2s both; 
+
 }
 
 @keyframes fadeInUp {
@@ -30,6 +31,7 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
+   margin-top: 100px;
   letter-spacing: -0.02em;
      background-clip: text;
   -webkit-background-clip: text;

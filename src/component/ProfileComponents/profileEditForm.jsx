@@ -33,6 +33,7 @@ const ProfileEditForm = ({
 
   return (
     <div className="pfedit-profile-panel pfedit-profile-form">
+      <div className="pfedit-background-form">
       <h3 style={{ fontSize: "30px", color: "#02167aff" }}>Edit Profile</h3>
       <form>
         <label>Full Name</label>
@@ -180,6 +181,7 @@ const ProfileEditForm = ({
         >
           Cancel
         </button>
+      </div>
       </div>
     </div>
   );

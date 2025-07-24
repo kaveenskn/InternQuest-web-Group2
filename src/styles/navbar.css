@@ -1,6 +1,5 @@
 /* Modern Navbar Styles */
 .glass-navbar {
-  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,6 +10,8 @@
   border-radius: 20px;
   transition: all 0.3s ease;
   min-height: 70px;
+  position: absolute;
+  left: 10%;
   z-index: 1000;
   background-color: rgba(6, 23, 155, 0.95);
   width: 80%;
