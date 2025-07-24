@@ -44,6 +44,11 @@ app.use("/api/card", ApplicatiShortlist);
 const Shortlistfetch = require("./routes/Shortlistfetchroute.js");
 app.use("/api/shortlist", Shortlistfetch);
 
+
+const mentorRoutes = require("./routes/Mentorroute.js");
+app.use("/api/mentor", mentorRoutes);
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port  ${PORT}`);

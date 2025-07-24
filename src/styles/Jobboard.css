@@ -162,8 +162,10 @@
   border: 1px solid #e2e8f0;
   transition: all 0.3s ease;
   position: relative;
-  max-height: 280px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .about-job-card:hover {

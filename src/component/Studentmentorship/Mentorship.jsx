@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/Mentorship.css";
+import axios from "axios";
+
 
 const MentorshipFinder = () => {
+  const [searchEmail, setSearchEmail] = useState("");
+  const [mentor, setMentor] = useState(null);
+  const [error, setError] = useState("");
+
+  const handleSearch = async () => {
+  try {
+    alert("try block");
+
+    const res = await axios.get(`http://localhost:5000/api/mentor/mentor?email=${searchEmail}`);
+
+    alert(JSON.stringify(res.data)); // Only runs if request succeeds
+    setMentor(res.data);
+    setError("");
+  } catch (err) {
+    console.error("Fetch error:", err);
+    alert("Error: " + (err.response?.data?.message || err.message)); // Debug message
+    setMentor(null);
+    setError("Mentor not found or server error.");
+  }
+};
+
+
   return (
     <div className="mentorship-page">
       {/* Hero Section */}
@@ -18,13 +42,18 @@ const MentorshipFinder = () => {
             world's top professionals.
           </p>
           <div className="mentorship-search">
-            <input
-              type="text"
-              placeholder="Find your perfect mentor..."
-              className="mentorship-input"
-            />
-            <button className="mentorship-launch-btn">🚀 Search Mentor</button>
-          </div>
+  <input
+    type="email"
+    placeholder="Enter mentor email..."
+    className="mentorship-input"
+    value={searchEmail}
+    onChange={(e) => setSearchEmail(e.target.value)}
+  />
+  <button className="mentorship-launch-btn" onClick={handleSearch}>
+     Search Mentor
+  </button>
+</div>
+
         </div>
         <div className="mentorship-hero-right">
           <div className="mentorship-card-preview">
@@ -49,56 +78,39 @@ const MentorshipFinder = () => {
         <p className="mentorship-subtitle">
           Industry leaders ready to guide your journey
         </p>
-        <div className="mentorship-card-container">
-          {/* Mentor 1 */}
-          <div className="mentorship-card">
-            <div className="mentorship-avatar">SJ</div>
-            <div className="mentorship-status">● Available</div>
-            <h3>Sarah Johnson</h3>
-            <p className="mentorship-position">Senior Software Engineer</p>
-            <a href="#" className="mentorship-company">Google</a>
-            <div className="mentorship-rating">
-              ⭐ 4.9 <span>(127 reviews)</span>
+      <div className="mentorship-card-container">
+          {mentor && Array.isArray(mentor.skills) ? (
+            <div className="mentorship-card">
+              <div className="mentorship-avatar-img">
+                <img src={mentor.imageUrl} alt={mentor.name} />
+              </div>
+              <div className="mentorship-status">
+                {mentor.available ? "● Available" : "● Unavailable"}
+              </div>
+              <h3>{mentor.name}</h3>
+              <p className="mentorship-position">{mentor.position}</p>
+              <a href="#" className="mentorship-company">{mentor.company}</a>
+              <div className="mentorship-rating">
+                ⭐ {mentor.rating} <span>({mentor.reviews} reviews)</span>
+              </div>
+              <div className="mentorship-skills">
+                {mentor.skills.map((skill, index) => (
+                  <span key={index}>{skill}</span>
+                ))}
+              </div>
+              <p className="mentorship-location">📍 {mentor.location}</p>
+              <div className="mentorship-card-footer">
+                <p className="mentorship-price">${mentor.pricePerHour}/hour</p>
+                <button className="mentorship-connect-btn">💬 Connect Now</button>
+              </div>
             </div>
-            <div className="mentorship-skills">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>System Design</span>
-            </div>
-            <p className="mentorship-location">📍 San Francisco, CA</p>
-            <div className="mentorship-card-footer">
-              <p className="mentorship-price">$80/hour</p>
-              <button className="mentorship-connect-btn">💬 Connect Now</button>
-            </div>
-          </div>
+          ) : error ? (
+            <p style={{ color: "red", fontWeight: "bold" }}>{error}</p>
+          ) : (
+            <p style={{ marginTop: "20px" }}>Search for a mentor above to display here.</p>
+          )}
+</div>
 
-          {/* Mentor 2 */}
-          <div className="mentorship-card">
-            <div className="mentorship-avatar-img">
-              <img
-                src="https://randomuser.me/api/portraits/men/32.jpg"
-                alt="Michael Chen"
-              />
-            </div>
-            <div className="mentorship-status">● Available</div>
-            <h3>Michael Chen</h3>
-            <p className="mentorship-position">Product Manager</p>
-            <a href="#" className="mentorship-company">Microsoft</a>
-            <div className="mentorship-rating">
-              ⭐ 4.8 <span>(89 reviews)</span>
-            </div>
-            <div className="mentorship-skills">
-              <span>Product Strategy</span>
-              <span>User Research</span>
-              <span>Agile</span>
-            </div>
-            <p className="mentorship-location">📍 Seattle, WA</p>
-            <div className="mentorship-card-footer">
-              <p className="mentorship-price">$95/hour</p>
-              <button className="mentorship-connect-btn">💬 Connect Now</button>
-            </div>
-          </div>
-        </div>
       </section>
     </div>
   );
