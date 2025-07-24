@@ -38,14 +38,14 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
+
       <div className="dashboard-header">
         <div className="logo-section">
           <div className="logo-icon">🏢</div>
           <div>
             <h1>TechCorp Analytics</h1>
             <p>Performance Dashboard</p>
-          </div>
-        </div>
+          </div><br />
         <div className="stats-grid">
           <div className="stat-card">
             <p>Overall Score</p>
@@ -64,6 +64,7 @@ const Dashboard = () => {
             <h2>4.6</h2>
           </div>
         </div>
+      </div>
       </div>
 
       <div className="dashboard-section">

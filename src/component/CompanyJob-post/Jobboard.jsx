@@ -45,8 +45,8 @@ const Jobboard = () => {
         <p className="about-hero-subtitle">
           Discover amazing career opportunities and find your next dream job
         </p>
-        <div className="about-stats-row">
-          <div className="about-stat">
+        <div className="about-stats-row ">
+          <div className="about-stat first-card">
             <i className="fi fi-rr-users"></i>
             <span className="about-stat-main">{jobs.length}</span>
             <span>Active Positions</span>

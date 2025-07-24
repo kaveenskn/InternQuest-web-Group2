@@ -21,6 +21,14 @@ const HeroSection = ({ onGetStarted }) => {
           
         </div>
       </div>
+     <div className="stdhome-banner">
+      <h2 className="stdhome-banner-title">
+        Empowering Futures with Exceptional <br />
+        Internship Opportunities...
+      </h2>
+      <p className="stdhome-banner-subtitle">Start your journey with us today</p>
+    </div>
+
       <div className="hero-slider">
         <ImageSlider />
       </div>

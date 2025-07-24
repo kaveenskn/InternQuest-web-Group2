@@ -114,10 +114,39 @@
   transform: translateY(-1px);
 }
 
+.stdhome-banner {
+  background: linear-gradient(90deg, #0d1a6d, #173f91);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 250px;
+  margin-top: 50px;
+}
+
+.stdhome-banner-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.stdhome-banner-subtitle {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+
+
 /* Hero Slider Section */
 .hero-slider {
   width: 100%;
-  max-width: 900px;
+  max-width: 1050px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -7,7 +7,7 @@
 }
 
 .dashboard-header {
-  background: #0b1444;
+ 
   color: #ffffff;
   padding: 2rem;
   border-bottom: 1px solid #e2e8f0;
@@ -16,7 +16,11 @@
 .logo-section {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  background: #0b1444;
+  margin-top: 100px;
+ padding: 15px 20px;
+ border-radius: 30px;
 }
 
 .logo-icon {

@@ -201,7 +201,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, orange  0%, orange 100%);
+  background: linear-gradient(90deg, rgb(66, 69, 245)  0%, rgb(238, 227, 206) 100%);
 }
 
 

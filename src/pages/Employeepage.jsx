@@ -6,7 +6,7 @@ import EmployeePageCards from "../component/Cardsectionemp";
 import Jobpostform from "../component/CompanyJob-post/Jobpostform";
 import "../pagestyles/employee.css";
 import EmpFeatures from '../component/CompanyHome/EmpFeatures';
-
+import Dashboard from "../component/CompanyDashboard/Dashboard";
 import ApplicationPage from "../component/CompanyApplication/Applicationpage";
 
 
@@ -14,7 +14,7 @@ const EmpLinks = [
   { key: "home", label: "Home" },
   { key: "post-job", label: "Post-Job" },
   { key: "applications", label: "Applications" },
-  { key: "Company-Profile", label: "Company Profile" },
+  { key: "Company-Dashboard", label: " Dashboard" },
 ];
 
 const EmployeePage = () => {
@@ -71,7 +71,7 @@ const EmployeePage = () => {
             </div>
           </div>
         );
-      case "Company-Profile":
+      case "Company-Dashboard":
         return (
           <div className="employee-shortlist">
             <Navbar
@@ -81,7 +81,7 @@ const EmployeePage = () => {
               transparent={false}
             />
             <div >
-             
+              <Dashboard/>
             </div>
           </div>
 
