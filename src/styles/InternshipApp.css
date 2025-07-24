@@ -118,7 +118,7 @@
 }
 
 .view-profile-button {
-  background-color: #3b82f6;
+  background-color: #01245c;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -130,7 +130,7 @@
 }
 
 .view-profile-button:hover {
-  background-color: #2563eb;
+  background-color: #02124d;
 }
 
 .filter-bar {

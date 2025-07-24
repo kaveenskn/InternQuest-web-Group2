@@ -1,7 +1,7 @@
 .application-card {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.374);
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
   display: flex;
@@ -90,7 +90,7 @@
 }
 
 .view-profile-button {
-  background-color: #4A90E2;
+  background-color: #022954;
   border: none;
   border-radius: 6px;
   color: white;
@@ -101,5 +101,5 @@
 }
 
 .view-profile-button:hover {
-  background-color: #357ABD;
+  background-color: #010b53;
 }

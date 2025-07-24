@@ -170,6 +170,38 @@ const ApplicationPage = () => {
     }
   };
 
+
+const handleShortlistDelete = async (shortlistId) => {
+  const confirmDelete = window.confirm("Are you sure you want to remove this candidate from the shortlist?");
+  if (!confirmDelete) return;
+ 
+  try {
+    const token = localStorage.getItem("token");
+    alert(" called Shortlisted candidate removed");
+    const response = await fetch(`http://localhost:5000/api/shortlist/${shortlistId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    const data = await response.json();
+    if (!response.ok) {
+      alert("Error deleting shortlist: " + (data.message || "Unknown error"));
+      return;
+    }
+
+    alert("Shortlisted candidate removed");
+    fetchShortlistedApplications(); // Refresh
+  } catch (error) {
+    console.error("Delete error:", error);
+    alert("Failed to delete shortlisted candidate");
+  }
+};
+
+
+
+
   return (
     <div className="application-container">
       <div className="application-top-banner">
@@ -250,18 +282,20 @@ const ApplicationPage = () => {
                   <p>No shortlisted candidates found.</p>
                 ) : (
                   <div className="application-profile-list">
-                    {shortlistedApplications.map((app, idx) => (
-                      <ShortlistedProfileCard
-                        key={idx}
-                        name={app.fullname}
-                        role={app.title}
-                        university={app.universityName}
-                        email={app.email}
-                        applied={new Date(app.shortlistedAt).toISOString().split("T")[0]}
-                        onViewProfile={() => handleViewProfile(app.email)}
-                        onContact={() => alert(`Contact: ${app.email}`)}
-                      />
-                    ))}
+                                      {shortlistedApplications.map((app, idx) => (
+                    <ShortlistedProfileCard
+                      key={idx}
+                      id={app._id} // <-- ADD THIS LINE
+                      name={app.fullname}
+                      role={app.title}
+                      university={app.universityName}
+                      email={app.email}
+                      applied={new Date(app.shortlistedAt).toISOString().split("T")[0]}
+                      onViewProfile={() => handleViewProfile(app.email)}
+                      onContact={() => alert(`Contact: ${app.email}`)}
+                      onDelete={handleShortlistDelete}
+                    />
+                  ))}
                   </div>
                 )
               ) : (

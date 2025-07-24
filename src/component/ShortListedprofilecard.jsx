@@ -2,12 +2,14 @@ import React from "react";
 import "../styles/Shortedlistedprofilecard.css"; // Reuses same styles for consistency
 
 const ShortlistedProfileCard = ({
+  id, 
   name,
   role,
   university,
   email,
   applied,
   onViewProfile = () => {},
+  onDelete = () => {},
   onContact = () => {},
 }) => {
   return (
@@ -45,6 +47,9 @@ const ShortlistedProfileCard = ({
         <button className="view-profile-button" onClick={onContact}>
           Contact
         </button>
+        <button className="view-profile-button" onClick={() => onDelete(id)}>
+          Delete
+          </button>
       </div>
     </div>
   );

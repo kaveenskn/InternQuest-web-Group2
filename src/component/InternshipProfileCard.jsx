@@ -8,6 +8,7 @@ const InternshipProfileCard = ({
   email,
   applied,
   onShortList = () => {},
+  onViewProfile = () => {},
   onDelete = () => {},
 }) => {
   return (
@@ -39,6 +40,9 @@ const InternshipProfileCard = ({
 
       {/* Card Actions */}
       <div className="card-actions">
+         <button className="view-profile-button" onClick={onViewProfile}>
+          View Profile
+        </button>
         <button className="view-profile-button" onClick={onShortList}>
           Short List
         </button>
