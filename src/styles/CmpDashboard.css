@@ -1,0 +1,143 @@
+.dashboard-container {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fafb;
+  color: #0f172a;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-header {
+  background: #0b1444;
+  color: #ffffff;
+  padding: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+  background: white;
+  color: #0b1444;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.stats-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: #1e293b;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  flex: 1;
+  min-width: 150px;
+}
+
+.stat-card p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.stat-card h2 {
+  font-size: 1.8rem;
+  margin: 0.3rem 0 0;
+}
+
+.dashboard-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.chart-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.chart-card h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+}
+
+.skill-list {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skill-list li {
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.testimonial-section {
+  background: #fff;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.testimonial-section h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.4rem;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: #fefefe;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.2rem;
+  max-width: 300px;
+  flex: 1;
+}
+
+.avatar {
+  background: #f97316;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card .role {
+  color: #475569;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card blockquote {
+  font-style: italic;
+  color: #1e293b;
+  margin: 0.5rem 0;
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 1rem;
+}

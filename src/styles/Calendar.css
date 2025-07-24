@@ -31,7 +31,7 @@
 .header h1 {
   font-size: 2.2rem;
   color: #1e3a8a;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
 }
 
 .header p {
@@ -44,7 +44,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 0 1rem;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .add-event-btn {
-  background-image: linear-gradient(to right, #0303bd 20%, #0d0393 50%);
+  background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
   color: white;
   border: none;
   padding: 0.6rem 1.4rem;
@@ -104,7 +104,7 @@
 }
 
 .react-calendar__tile--active {
-  background: #6366f1;
+  background: #000388;
   color: white;
 }
 

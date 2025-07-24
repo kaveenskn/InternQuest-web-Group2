@@ -1,7 +1,7 @@
 /* Container Setup */
 .profile-container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fc;
+  background-color: #ffffff; /* Light background */
   padding: 40px 20px;
   min-height: 100vh;
   display: flex;
@@ -16,29 +16,46 @@
 
 .profile-header .profile-tag {
   font-size: 14px;
-  color: #777;
+  color: #ff8c00; /* Orange */
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .profile-header h1 {
   font-size: 36px;
-  color: #020256;
+  color: #012a4a; /* Dark Blue */
   margin: 8px 0;
 }
 
 .profile-header .subtext {
   font-size: 16px;
-  color: #3e3e3e;
+  color: #333;
+}
+
+/* Edit Button */
+.profile-header button {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.profile-header button:hover {
+  background-color: #e37700;
 }
 
 /* Card */
 .profile-content {
   width: 100%;
   max-width: 850px;
-  background: #ffffff;
+   background-color: #f1f4ff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.084);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.324);
   padding: 30px;
 }
 
@@ -54,22 +71,27 @@
 .avatar-circle {
   width: 100px;
   height: 100px;
-  background-color: #85b1f7;
+  background-color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.904);
+}
+
+.avatar-circle svg {
+  color: white;
 }
 
 .profile-info h2 {
   margin: 0;
   font-size: 24px;
-  color: #111;
+  color: #012a4a;
 }
 
 .profile-info .role {
-  color: #515050;
+  color: #444;
   font-size: 15px;
   margin: 6px 0;
 }
@@ -78,7 +100,7 @@
   display: inline-block;
   margin-right: 12px;
   font-size: 14px;
-  color: #3f3f3f;
+  color: #777;
 }
 
 /* Sections */
@@ -88,13 +110,14 @@
 
 .section h3 {
   font-size: 18px;
-  color: #101010;
+  color: #012a4a;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* Contact Info */
 .contact-boxes {
   display: flex;
   flex-wrap: wrap;
@@ -105,17 +128,21 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #7b7b7b;
+  background-color: #f0f0f0;
+  color: #012a4a;
   padding: 10px 14px;
   border-radius: 10px;
   font-size: 14px;
+  font-weight: 500;
 }
 
+/* GitHub */
 .github-link {
   display: inline-block;
   margin-top: 8px;
-  color: #014c9c;
+  color: #ff8c00;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .github-link:hover {
@@ -130,8 +157,8 @@
 }
 
 .skill-tags .tag {
-  background-color: #ffe8cc;
-  color: #a14c00;
+  background-color: #ffe3c2;
+  color: #ff8c00;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 13px;
@@ -148,15 +175,19 @@
 .project-card {
   display: flex;
   gap: 15px;
-  background-color: #f9fafb;
+  background-color: #fdfdfd;
   border-radius: 12px;
   padding: 18px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.project-card svg {
+  color: #ff8c00;
 }
 
 .project-details h4 {
   margin: 0;
-  color: #222;
+  color: #012a4a;
 }
 
 .project-details .tech {
@@ -175,12 +206,20 @@
   display: inline-block;
   margin-top: 4px;
   font-size: 13px;
-  color: #0077cc;
+  color: #ff8c00;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .live-link:hover {
   text-decoration: underline;
+}
+
+/* No Data Fallback */
+.faded-text {
+  color: #999;
+  font-style: italic;
+  font-size: 14px;
 }
 
 /* Responsive */

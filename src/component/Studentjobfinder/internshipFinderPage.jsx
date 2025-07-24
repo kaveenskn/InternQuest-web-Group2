@@ -121,7 +121,7 @@ const [showFilters, setShowFilters] = useState(false);
 
 
         
-        {/* Results */}
+     <br />   {/* Results */}
 <div className="find-results-count">{filtered.length} results found</div>
 <div className="find-results-grid">
   {displayedInternships.map((i) => (

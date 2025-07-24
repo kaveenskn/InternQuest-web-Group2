@@ -10,11 +10,8 @@ const MentorshipFinder = () => {
 
   const handleSearch = async () => {
   try {
-    alert("try block");
 
     const res = await axios.get(`http://localhost:5000/api/mentor/mentor?email=${searchEmail}`);
-
-    alert(JSON.stringify(res.data)); // Only runs if request succeeds
     setMentor(res.data);
     setError("");
   } catch (err) {

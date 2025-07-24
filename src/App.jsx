@@ -12,7 +12,7 @@ import MentorshipFinder from "./component/Studentmentorship/Mentorship";
 
 import StudentProfilePage from "./pages/StudentsProfile";
 import CalendarPage from "./component/Calenderpage/Calendar";
-
+import Dashboard from "./component/CompanyDashboard/Dashboard";
 
 
 
@@ -37,7 +37,7 @@ const App = () => {
                
       <Route path="/find" element={<MentorshipFinder />} />
 
-       <Route path="/Calendar" element={<CalendarPage />} />
+       <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   );

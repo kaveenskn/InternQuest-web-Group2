@@ -7,7 +7,8 @@ const ProfileEditForm = ({
   newSkill, setNewSkill,
   newProject, setNewProject,
   projects, setProjects,
-  handleSaveProfile, message
+  handleSaveProfile, message,
+  onCancel  // new prop
 }) => {
   const handleChange = (e) => {
     setProfile({ ...profile, [e.target.name]: e.target.value });
@@ -32,7 +33,7 @@ const ProfileEditForm = ({
 
   return (
     <div className="pfedit-profile-panel pfedit-profile-form">
-      <h3 style={{'fontSize':"30px","color":"#ffffff"}}>Edit Profile</h3>
+      <h3 style={{ fontSize: "30px", color: "#02167aff" }}>Edit Profile</h3>
       <form>
         <label>Full Name</label>
         <input
@@ -122,7 +123,7 @@ const ProfileEditForm = ({
         {message && <p className="pfedit-save-message">{message}</p>}
       </form>
 
-      <h3 style={{'fontSize':"30px","color":"#ffffff","marginTop":"20px"}}>Add Project</h3>
+      <h3 style={{ fontSize: "30px", color: "#06007dff", marginTop: "20px" }}>Add Project</h3>
       <form className="pfedit-project-form">
         <label>Title</label>
         <input
@@ -158,9 +159,28 @@ const ProfileEditForm = ({
         <button type="button" onClick={handleAddProject}>Add Project</button>
       </form>
 
-      <button type="button" className="pfedit-save-button" onClick={handleSaveProfile}>
-        <FaSave /> Save
-      </button>
+      <div style={{ marginTop: "20px", display: "flex", gap: "10px" }}>
+        <button type="button" className="pfedit-save-button" onClick={handleSaveProfile}>
+          <FaSave /> Save
+        </button>
+        <button
+          type="button"
+          className="pfedit-cancel-button"
+          onClick={onCancel}
+          style={{
+            backgroundColor: '#888',
+            color: '#fff',
+            border: 'none',
+            padding: '5px 15px',
+            cursor: 'pointer',
+            borderRadius: '4px',
+            height:"30px",
+            marginTop:"45px"
+          }}
+        >
+          Cancel
+        </button>
+      </div>
     </div>
   );
 };
