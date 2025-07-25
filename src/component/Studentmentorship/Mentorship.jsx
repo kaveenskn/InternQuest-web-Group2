@@ -98,7 +98,10 @@ const MentorshipFinder = () => {
               <p className="mentorship-location">📍 {mentor.location}</p>
               <div className="mentorship-card-footer">
                 <p className="mentorship-price">${mentor.pricePerHour}/hour</p>
-                <button className="mentorship-connect-btn">💬 Connect Now</button>
+                <button
+                  className="mentorship-connect-btn"
+                  onClick={() => alert("Mentor connection request sent successfully!")}
+                >💬 Connect Now</button>
               </div>
             </div>
           ) : error ? (

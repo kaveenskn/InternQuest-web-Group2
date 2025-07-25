@@ -61,7 +61,7 @@
 }
 
 .status-shortlisted {
-  background-color: #28a745; /* green */
+  background-color: #f49923; /* green */
 }
 
 .card-content {
@@ -90,7 +90,7 @@
 }
 
 .view-profile-button {
-  background-color: #022954;
+  background-color: #023a93;
   border: none;
   border-radius: 6px;
   color: white;

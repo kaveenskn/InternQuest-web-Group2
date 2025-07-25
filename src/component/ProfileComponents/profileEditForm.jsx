@@ -157,7 +157,7 @@ const ProfileEditForm = ({
           placeholder="Paste your project or GitHub link"
         />
 
-        <button type="button" onClick={handleAddProject}>Add Project</button>
+        <button type="button" onClick={handleAddProject} className='add-project-button'>Add Project</button>
       </form>
 
       <div style={{ marginTop: "20px", display: "flex", gap: "10px" }}>

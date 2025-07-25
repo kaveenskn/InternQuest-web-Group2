@@ -6,7 +6,7 @@
   padding: 2rem 3rem;
  
   margin: 0 auto;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
   color: #1e293b; /* dark slate blue, good readability */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -15,6 +15,8 @@
   margin-top: 100px;
   max-width: 700px;
   margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    padding: 20px;
 }
 
 .pfedit-profile-form h3 {
@@ -156,6 +158,11 @@
   margin-top: 0.5rem;
   font-weight: 700;
   text-align: center;
+}
+
+
+.add-project-button{
+  background-color: rgb(231, 117, 4);
 }
 
 /* Responsive Design */

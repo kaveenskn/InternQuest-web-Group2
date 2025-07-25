@@ -83,11 +83,12 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+   background-color: #f49923;
 }
 
 .status-all {
-  background-color: #e5e7eb;
-  color: #374151;
+  background-color: #f49923;
+  color: #000000;
 }
 
 .card-content {
@@ -118,7 +119,7 @@
 }
 
 .view-profile-button {
-  background-color: #01245c;
+  background-color: #0a3985;
   color: white;
   border: none;
   padding: 8px 16px;

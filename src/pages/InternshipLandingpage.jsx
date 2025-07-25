@@ -88,14 +88,14 @@ const InternshipLandingPage = () => {
               <p>Your gateway to career-building internships. Empowering students and companies.</p>
             </div>
             <div className="getstart-footer-right">
-              <h4>Contact Us</h4>
-              <p><a href="mailto:someone@example.com" style={{color:"white",textDecoration:"none"}}>Email: support@internquest.com</a></p>
+              <h4 >Contact Us</h4>
+              <p><a href="mailto:someone@example.com" style={{color:"Blue",textDecoration:"none"}}>Email: support@internquest.com</a></p>
               <p>Phone: +1 (555) 123-4567</p>
               <p>Address: 123 Career Ave, Silicon Valley, CA</p>
             </div>
           </div>
           <div className="getstart-footer-bottom">
-            <p>© 2025 InternQuest. All rights reserved.</p>
+            <marquee behavior="scroll" direction="left"><p>© 2025 InternQuest. All rights reserved.</p></marquee>
           </div>
           
 

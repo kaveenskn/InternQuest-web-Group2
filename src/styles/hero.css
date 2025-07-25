@@ -22,7 +22,7 @@
   background-repeat: no-repeat;
   animation: fadeInUp 0.8s ease-out;
   min-height: auto;
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 .hero-text h1 {
@@ -125,7 +125,7 @@
   width: 100%;
   margin: 0 auto;
   min-height: 250px;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .stdhome-banner-title {

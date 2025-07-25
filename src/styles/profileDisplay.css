@@ -143,7 +143,7 @@
 .github-link {
   display: inline-block;
   margin-top: 8px;
-  color: #ff8c00;
+  color: #703f03 !important;
   text-decoration: none;
   font-weight: bold;
 }
@@ -181,28 +181,28 @@
   background-color: #fdfdfd;
   border-radius: 12px;
   padding: 18px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.279);
 }
 
 .project-card svg {
-  color: #ff8c00;
+  color: #925203;
 }
 
 .project-details h4 {
   margin: 0;
-  color: #012a4a;
+  color: #001525;
 }
 
 .project-details .tech {
   font-size: 13px;
-  color: #555;
+  color: #000000;
   margin: 4px 0;
 }
 
 .project-details p {
   margin: 4px 0;
   font-size: 14px;
-  color: #333;
+  color: #000000 !important;
 }
 
 .live-link {
@@ -220,7 +220,7 @@
 
 /* No Data Fallback */
 .faded-text {
-  color: #999;
+  color: #383737;
   font-style: italic;
   font-size: 14px;
 }

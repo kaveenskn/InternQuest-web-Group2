@@ -57,16 +57,6 @@ router.put("/profile", authenticate, async (req, res) => {
       projects,
     } = req.body;
 
-    console.log("Received profile data from frontend:", {
-  fullname,
-  universityName,
-  universityLocation,
-  course_of_study,
-  phone,
-  github_link,
-  skills,
-  projects,
-});
 
     // Find the user
     const user = await User.findOne({ email });

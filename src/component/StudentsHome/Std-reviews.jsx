@@ -16,51 +16,51 @@ const testimonials = [
 
 const StudentsReviews = () => {
   return (
-    <section className="testimonial-section">
-      <div className="testimonial-container">
-        <div className="testimonial-grid">
+    <section className="std-testimonial-section">
+      <div className="std-testimonial-container">
+        <div className="std-testimonial-grid">
           {/* Image Side */}
-          <div className="testimonial-image-block">
+          <div className="std-testimonial-image-block">
             <img
               src={Graduates} // Update this path to your image
               alt="Graduating students"
-              className="testimonial-image"
+              className="std-testimonial-image"
             />
-            <div className="testimonial-stat-card">
-              <div className="stat-percentage">98%</div>
-              <div className="stat-text">Student Satisfaction</div>
+            <div className="std-testimonial-stat-card">
+              <div className="std-stat-percentage">98%</div>
+              <div className="std-stat-text">Student Satisfaction</div>
             </div>
           </div>
 
           {/* Content Side */}
-          <div className="testimonial-content-block">
-            <h2 className="testimonial-heading">What Students Say</h2>
-            <p className="testimonial-subheading">
+          <div className="std-testimonial-content-block">
+            <h2 className="std-testimonial-heading">What Students Say</h2>
+            <p className="std-testimonial-subheading">
               Hear from thousands of students who have successfully launched their careers through InternQuest.
             </p>
 
             {/* Testimonials */}
             {testimonials.map((t, i) => (
-              <div key={i} className="testimonial-card">
-                <FaQuoteLeft className="quote-icon" />
-                <div className="star-rating">
+              <div key={i} className="std-testimonial-card">
+                <FaQuoteLeft className="std-quote-icon" />
+                <div className="std-star-rating">
                   {[...Array(t.rating)].map((_, i) => (
                     <FaStar key={i} className="star-icon" />
                   ))}
                 </div>
-                <p className="testimonial-comment">
+                <p className="std-testimonial-comment">
                   <em>"{t.comment}"</em>
                 </p>
-                <div className="testimonial-author">
-                  <div className="author-avatar">
+                <div className="std-testimonial-author">
+                  <div className="std-author-avatar">
                     {t.name
                       .split(" ")
                       .map((n) => n[0])
                       .join("")}
                   </div>
                   <div>
-                    <div className="author-name">{t.name}</div>
-                    <div className="author-details">{t.role} • {t.university}</div>
+                    <div className="std-author-name">{t.name}</div>
+                    <div className="std-author-details">{t.role} • {t.university}</div>
                   </div>
                 </div>
               </div>
