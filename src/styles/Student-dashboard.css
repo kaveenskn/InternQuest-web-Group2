@@ -1,0 +1,200 @@
+.std-dashboard-container {
+  font-family: 'Segoe UI', sans-serif;
+ padding: 20px;
+  background: #f9fbfd;
+  color: #1a1a1a;
+}
+
+.std-dashboard-topbanner{
+    background-color: rgb(1, 1, 72);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.std-dashboard-welcome {
+  font-size: 24px;
+  color: white;
+}
+
+.std-dashboard-welcome span {
+  color: #ffffff;
+ 
+}
+
+.std-dashboard-subtitle {
+  margin-bottom: 20px;
+  color: #ffffff;
+   font-size: 18px;
+}
+
+.std-dashboard-topcards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.std-dashboard-card {
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.std-dashboard-card h3 {
+  margin: 6px 0;
+}
+
+.std-dashboard-green {
+  color: #28a745;
+}
+
+.std-dashboard-purple {
+  color: #a855f7;
+}
+
+.std-dashboard-orange {
+  color: #f97316;
+}
+
+.std-dashboard-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.std-dashboard-skill-assessment, .std-dashboard-gpa {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 320px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.26);
+}
+
+.std-dashboard-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.std-dashboard-button {
+  border: 1px solid #1e40af;
+  background: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.std-dashboard-skill-bar {
+  margin-top: 12px;
+}
+
+.std-dashboard-skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.std-dashboard-bar-bg {
+  background: linear-gradient(to right, #f7a307, #f4b339);
+  height: 10px;
+  border-radius: 5px;
+}
+
+.std-dashboard-bar-fill {
+  background: linear-gradient(to right, #0b0497, #01034d);
+  height: 10px;
+  border-radius: 5px;
+}
+
+.std-dashboard-gpa h2 {
+  font-size: 32px;
+  margin: 0;
+   
+}
+
+.std-dashboard-graph {
+  margin-top: 20px;
+  height: 100px;
+  background: #f0f2f5;
+  border-radius: 8px;
+  position: relative;
+}
+
+.std-dashboard-dot-line {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  height: 100%;
+  padding: 10px;
+}
+
+.std-dashboard-dot .dot {
+  width: 8px;
+  height: 8px;
+  background: #2563eb;
+  border-radius: 50%;
+  margin-bottom: 6px;
+}
+
+.std-dashboard-milestone {
+  margin-top: 12px;
+  background: #e5f4ff;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.std-dashboard-activities {
+  margin-top: 24px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.267);
+}
+
+.std-dashboard-activities ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.std-dashboard-activities li {
+  margin-bottom: 10px;
+}
+
+.std-dashboard-tag {
+  background: #1e40af;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.std-dashboard-tag.orange {
+  background: #f97316;
+}
+
+.std-dashboard-time {
+  color: #6b7280;
+  font-size: 12px;
+  margin-left: 12px;
+}
+.std-dashboard-chart {
+  margin-top: 20px;
+  height: 200px;
+}
+
+.std-dashboard-gpa {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 320px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}

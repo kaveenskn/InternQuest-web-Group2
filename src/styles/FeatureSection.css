@@ -1,6 +1,6 @@
 .Home-features-section {
   padding: 100px 0;
-  background: white;
+  background:  #ffffff;
 }
 
 .Home-features-container {
@@ -20,7 +20,7 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
-  background-color: blue;
+  background-color: rgb(2, 2, 95);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

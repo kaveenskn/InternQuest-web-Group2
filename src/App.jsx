@@ -14,7 +14,7 @@ import StudentProfilePage from "./pages/StudentsProfile";
 import CalendarPage from "./component/Calenderpage/Calendar";
 import Dashboard from "./component/CompanyDashboard/Dashboard";
 
-
+import StudentDashboard from "./component/student-Dashboard/StudentDashboard";
 
 const App = () => {
 
@@ -37,7 +37,7 @@ const App = () => {
                
       <Route path="/find" element={<MentorshipFinder />} />
 
-       <Route path="/dashboard" element={<Dashboard />} />
+       <Route path="/dashboard" element={<StudentDashboard />} />
       </Routes>
     </Router>
   );

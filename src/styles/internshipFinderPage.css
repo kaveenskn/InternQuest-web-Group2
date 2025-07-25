@@ -153,7 +153,7 @@
 
 .toggle-filters-btn {
   padding: 0.9rem 1.5rem;
-  background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
+  background: linear-gradient(135deg, #f8a469 0%, #f97316 100%);
   margin-bottom: 1rem;;
   color: #ffffff;
   font-weight: 600;
@@ -333,7 +333,7 @@
 
 /* Apply Button */
 .find-apply-btn {
-  background-color: #f97316;
+  background-color: #f5812f;
   color: white;
   padding: 0.6rem 1.2rem;
   font-size: 0.875rem;
@@ -349,7 +349,7 @@
 }
 
 .find-apply-btn:hover {
-  background-color: #ea580c;
+  background-color: #f07736;
   box-shadow: 0 4px 15px rgba(30, 64, 175, 0.2);
 }
 

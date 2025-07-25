@@ -23,7 +23,7 @@
 
 
 .header {
-   margin-top: 120px;
+   margin-top: 30px;
   text-align: center;
   margin-bottom: 2rem;
   padding: 0 1rem;
@@ -32,7 +32,7 @@
 .header h1 {
    font-size: 2.9rem;
   font-weight: 700;
-  color: #1e3a8a;
+  color: #001a62;
   margin-bottom: 0.9rem;
 }
 
@@ -230,4 +230,40 @@
     flex-direction: column;
     align-items: stretch;
   }
+}
+.cal-summary-mainbox{
+  margin-top: 100px;
+}
+.cal-summary-box {
+  background-color: #000d4f;
+  border: 1px solid #d0d7e5;
+  border-radius: 8px;
+  padding: 16px 20px;
+  max-width: 800px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.628);
+margin: 0 auto;
+}
+
+
+.cal-summary-title {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #f98c38;
+}
+
+.cal-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.cal-label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.cal-value {
+  font-weight: 500;
+  color: #d5e2ff;
 }

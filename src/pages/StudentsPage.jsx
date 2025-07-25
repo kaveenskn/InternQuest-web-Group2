@@ -41,13 +41,13 @@ const StudentsPage = () => {
         return (
           <div className="std-findjobs">
             <InternshipFinderPage />
-            <MentorshipFinder/>
+             <MentorshipFinder/>
           </div>
         );
       case 'mentor':
         return (
           <div className="std-cv">
-              
+             
           </div>
         );
         case 'calendar':

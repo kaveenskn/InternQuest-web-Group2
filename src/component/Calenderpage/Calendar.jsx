@@ -103,6 +103,29 @@ const CalendarPage = () => {
           </form>
         </div>
       )}
+
+      <section className="cal-summary-mainbox">
+        <div className="cal-summary-box">
+      <h3 className="cal-summary-title">📈 Monthly Overview Summary</h3>
+      <div className="cal-summary-item">
+        <span className="cal-label">Total events:</span>
+        <span className="cal-value">10</span>
+      </div>
+      <div className="cal-summary-item">
+        <span className="cal-label">Events attended vs. missed:</span>
+        <span className="cal-value">
+          20 attended / 2 missed
+        </span>
+      </div>
+      <div className="cal-summary-item">
+        <span className="cal-label">Most frequent category:</span>
+        <span className="cal-value">cal</span>
+      </div>
+      </div>
+    </section>
+
+
+
     </div>
   );
 };
