@@ -5,7 +5,7 @@ import Graduates from "../../assets/graduation.jpg";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Saman pieris",
     role: "Software Engineering Student",
     university: "Stanford University",
     rating: 5,

@@ -1,38 +1,44 @@
 /* Hero Section Styles - Blue Theme */
 .hero-section {
   display: flex;
-  flex-direction: column; /* Stack vertically */
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   width: 100%;
   padding: 3rem 5%;
   box-sizing: border-box;
-  
-  text-align: center;
+  text-align: left;
+}
+
+/* Top section: Text + Image side-by-side */
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  gap: 4rem;
 }
 
 /* Hero Text Section */
 .hero-text {
-  width: 100%;
-  margin-bottom: 3rem;
-  background-image:url("../assets/bgnew.png") ;
-  background-size: cover;
- background-position: left;
-  background-repeat: no-repeat;
+  flex: 1;
   animation: fadeInUp 0.8s ease-out;
   min-height: auto;
-  margin-top: 130px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .hero-text h1 {
   font-size: 4.5rem;
   font-weight: 400;
   line-height: 1.2;
-   background-clip: text;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, #f97316 30%, #1e3a8a 50%);
+  background-image: linear-gradient(to right, #0e005e 10%, #001b65 30%);
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
 }
@@ -50,8 +56,6 @@
   color: rgb(3, 31, 158) !important;
   margin-bottom: 3rem;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Button Group */
@@ -59,7 +63,7 @@
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -80,24 +84,14 @@
 }
 
 .cta-btn.primary {
-     background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
+  background: linear-gradient(135deg, #f6924a 0%, #f97316 100%);
   color: white;
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
   animation: pulse 2s infinite ease-in-out;
 }
 
-/* Animation Keyframes */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.15);
-  }
-}
-
 .cta-btn.primary:hover {
-    background-image: linear-gradient(to right, #2929db 20%, #1406e1 50%);
+  background-image: linear-gradient(to right, #2929db 20%, #1406e1 50%);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(30, 64, 175, 0.35);
 }
@@ -114,6 +108,7 @@
   transform: translateY(-1px);
 }
 
+/* Banner under text */
 .stdhome-banner {
   background: linear-gradient(90deg, #0d1a6d, #173f91);
   color: white;
@@ -121,10 +116,8 @@
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
+  max-width: 700px;
   width: 100%;
-  margin: 0 auto;
-  min-height: 250px;
   margin-top: 80px;
 }
 
@@ -141,16 +134,59 @@
   margin-top: 10px;
 }
 
+/* Right Image Styling */
+.hero-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+ animation: fadeInUp 0.8s ease-out, floatCard 3s ease-in-out infinite;
+}
+
+ @keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
 
 
-/* Hero Slider Section */
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  
+}
+
+/* Slider Section */
 .hero-slider {
   width: 100%;
   max-width: 1050px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0rem;
   animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Animation Keyframes */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
@@ -161,6 +197,12 @@
 }
 
 @media (max-width: 768px) {
+  .hero-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .hero-text h1 {
     font-size: 2.5rem;
   }
@@ -179,6 +221,8 @@
     justify-content: center;
     gap: 1rem;
   }
+
+  
 
   .hero-slider {
     max-width: 100%;
@@ -208,18 +252,6 @@
     width: 100%;
     max-width: 280px;
     margin: 0 auto;
-  }
-}
-
-/* Animation for smooth entrance */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 

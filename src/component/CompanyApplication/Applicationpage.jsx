@@ -92,6 +92,7 @@ const ApplicationPage = () => {
         return;
       }
       setSelectedProfile(data);
+  
     } catch (error) {
       console.error("Error fetching student profile:", error);
     }
@@ -331,7 +332,7 @@ const handleShortlistDelete = async (shortlistId) => {
                   <div className="application-detail-section">
                     <h4>Contact</h4>
                     <div className="application-detail-item">
-                      <span className="application-detail-label">Email:</span> {selectedProfile.email}
+                      <span className="application-detail-label" color="black">Email:</span> {selectedProfile.email}
                     </div>
                     <div className="application-detail-item">
                       <span className="application-detail-label">Phone:</span> {selectedProfile.phone}
@@ -355,9 +356,9 @@ const handleShortlistDelete = async (shortlistId) => {
                     <h4>Projects</h4>
                     {selectedProfile.projects?.map((project, index) => (
                       <div key={index} className="application-project-card">
-                        <h5>{project.title}</h5>
+                        <h5 style={{color:"orange"}}>{project.title}</h5>
                         <p className="application-tech">{project.tech_stack}</p>
-                        <p>{project.description}</p>
+                        <p style={{color:"black"}}>{project.description}</p>
                         {project.link && <a href={project.link} target="_blank" rel="noreferrer">Live</a>}
                       </div>
                     ))}

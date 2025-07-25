@@ -69,6 +69,7 @@ const [showFilters, setShowFilters] = useState(false);
     <div className="intern-page">
       <main className="intern-main">
         <div className="intern-header">
+          
           <h1>Find Your Perfect Internship</h1>
           <p className="intern-subtitle">
             Browse through our curated list of internship opportunities
@@ -77,7 +78,6 @@ const [showFilters, setShowFilters] = useState(false);
 
        {/* Top Filter Section */}
 <section className="top-filter-bar">
-  
   <div className="filter-bar">
     <input
       type="text"

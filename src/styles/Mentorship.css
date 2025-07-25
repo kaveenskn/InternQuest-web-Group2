@@ -3,7 +3,7 @@
   padding: 2rem;
   color: #1e1e1e;
    animation: emFadeInUp 0.8s ease-out;
-   padding-top:100px ;
+   padding-top:0px ;
 }
 
 @keyframes emFadeInUp {

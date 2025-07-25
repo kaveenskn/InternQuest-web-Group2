@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 10px; /* Added to lift content */
+  padding-top: 0px; /* Added to lift content */
   animation: fadeInUp 0.8s ease-out 0.2s both;
   
 }
@@ -66,7 +66,7 @@
   max-width: 64rem;
   margin: 0 auto;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 40px;
   
 }
 

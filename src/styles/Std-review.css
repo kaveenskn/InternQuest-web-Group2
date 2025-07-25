@@ -6,6 +6,7 @@
 .std-testimonial-container {
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 .std-testimonial-grid {
@@ -35,6 +36,7 @@
 }
 
 .std-testimonial-stat-card {
+  
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -58,6 +60,7 @@
 
 /* Content Side */
 .std-testimonial-content-block {
+  
   flex: 1;
 }
 

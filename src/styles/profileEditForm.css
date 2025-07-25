@@ -6,13 +6,13 @@
   padding: 2rem 3rem;
  
   margin: 0 auto;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  
   color: #1e293b; /* dark slate blue, good readability */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .pfedit-background-form{
-  margin-top: 100px;
+  margin-top: 30px;
   max-width: 700px;
   margin: 0 auto;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);

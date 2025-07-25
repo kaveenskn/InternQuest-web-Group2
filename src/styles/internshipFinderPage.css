@@ -1,9 +1,7 @@
 /* Internship Finder Page - Blue Professional Theme */
 .intern-page {
   min-height: 100vh;
- 
-  padding: 2rem 0;
-   /* Prevents overlap with fixed navbar */
+  padding: 2rem 0;  
 }
 
 .intern-main {
@@ -11,12 +9,30 @@
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+.stdprofile-circle {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.stdprofile-top-right {
+  top: -10rem;
+  right: -10rem;
+  background-color: #0462dc;
+}
+
+.stdprofile-bottom-left {
+  bottom: -10rem;
+  left: -10rem;
+  background-color: #0e34f6;
+}
 
 /* Header Section */
 .intern-header {
   text-align: center;
-  
-  margin-top: 120px;
+  margin-top: 30px;
   padding: 2rem 0;
   animation: fadeInUp 0.6s ease-out;
  border-radius: 40px;
@@ -173,7 +189,7 @@
 .find-results-grid {
   
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -190,6 +206,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 300px;
+  max-width: 400px;
   position: relative;
   animation: fadeInUp 0.6s ease-out;
 }
@@ -327,6 +344,8 @@
   transition: background-color 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+   margin-top: auto; /* Pushes button to the bottom */
+  margin-bottom: 10px;
 }
 
 .find-apply-btn:hover {
