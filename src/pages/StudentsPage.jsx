@@ -8,13 +8,13 @@ import "../pagestyles/studentpage.css";
 import StudentsReviews from '../component/StudentsHome/Std-reviews';
 import MentorshipFinder from '../component/Studentmentorship/Mentorship';
 import CalendarPage from '../component/Calenderpage/Calendar';
-
+import StudentDashboard from '../component/student-Dashboard/StudentDashboard';
 
 const StdLinks = [
   { key: "home", label: "Home" },
+  { key: "Student-dashboard", label: "Dashboard" },
   { key: "profile", label: "Profile" },
   { key: "find-jobs", label: "Find Jobs" },
-  { key: "mentor", label: "Mentorship" },
   { key: "calendar", label: "Calendar" }
 ];
 
@@ -44,10 +44,10 @@ const StudentsPage = () => {
              <MentorshipFinder/>
           </div>
         );
-      case 'mentor':
+      case 'Student-dashboard':
         return (
-          <div className="std-cv">
-             
+          <div className="std-dashboard">
+             <StudentDashboard/>
           </div>
         );
         case 'calendar':
@@ -60,7 +60,7 @@ const StudentsPage = () => {
 
       default:
         return (
-           <div className="std-dashboard">
+           <div className="std">
             <HeroSection onGetStarted={() => setActivePage("find-jobs")} />
             <StudentsReviews/>
           

@@ -1,6 +1,6 @@
 .std-dashboard-container {
   font-family: 'Segoe UI', sans-serif;
- padding: 20px;
+ padding: 40px;
   background: #f9fbfd;
   color: #1a1a1a;
 }
@@ -9,6 +9,8 @@
     background-color: rgb(1, 1, 72);
     padding: 20px;
     border-radius: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .std-dashboard-welcome {
@@ -40,7 +42,7 @@
   border-radius: 10px;
   flex: 1;
   min-width: 200px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.06);
 }
 
 .std-dashboard-card h3 {
@@ -72,7 +74,7 @@
   border-radius: 12px;
   flex: 1;
   min-width: 320px;
-  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.26);
 }
 
 .std-dashboard-title-row {
@@ -155,7 +157,7 @@
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.267);
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.06);
 }
 
 .std-dashboard-activities ul {
