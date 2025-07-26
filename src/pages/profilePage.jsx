@@ -94,7 +94,7 @@ const ProfilePage = () => {
 
       setIsEditing(false); // exit edit mode after save
     } catch (err) {
-      alert('Error saving profile: ' + err.message);
+      toast.error("Error in saving profile!");
     }
   };
 

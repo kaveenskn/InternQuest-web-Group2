@@ -190,7 +190,7 @@ const [showFilters, setShowFilters] = useState(false);
 </div>
 
       </main>
-      <ToastContainer />
+      <ToastContainer position="top-center"  />
     </div>
   );
 };
