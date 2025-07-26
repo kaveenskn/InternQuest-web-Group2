@@ -23,6 +23,9 @@ app.use("/api/employers", jobpostroutes);
 const jobboardroutes = require("./routes/jobboardroute.js");
 app.use("/api/employee", jobboardroutes);
 
+const jobdeleteroutes = require("./routes/JobDeleteroutes.js");
+app.use("/api/employedelete", jobdeleteroutes);
+
 const jobfindroutes = require("./routes/jobFinderroute.js");
 app.use("/api/jobs", jobfindroutes);
 

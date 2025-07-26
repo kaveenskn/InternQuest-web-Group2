@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../../styles/Jobboard.css";
 
 const Jobboard = () => {
   const [jobs, setJobs] = useState([]);
-  const [expandedCard, setExpandedCard] = useState(null); // to track expanded job
+  const [expandedCard, setExpandedCard] = useState(null);
 
+  // Fetch jobs when component mounts
   useEffect(() => {
     const fetchJobs = async () => {
       try {
@@ -33,9 +36,43 @@ const Jobboard = () => {
     fetchJobs();
   }, []);
 
+  // Handle read more toggle
   const toggleReadMore = (index) => {
     setExpandedCard((prev) => (prev === index ? null : index));
   };
+
+  // Handle delete job
+const handleDelete = async (jobId) => {
+  
+
+  try {
+    const token = localStorage.getItem("token");
+    console.log("Using token:", token);
+
+    const response = await fetch(`http://localhost:5000/api/employedelete/jobs/${jobId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    
+
+    const data = await response.json();
+    
+
+    if (response.ok) {
+      toast.success("Job deleted successfully!");
+      setJobs((prevJobs) => prevJobs.filter((job) => job._id !== jobId));
+    } else {
+      toast.error(data.message || "Failed to delete job.");
+    }
+  } catch (error) {
+    toast.error("Server error while deleting job.");
+  }
+};
+
 
   return (
     <div className="about-bg">
@@ -45,7 +82,7 @@ const Jobboard = () => {
         <p className="about-hero-subtitle">
           Discover amazing career opportunities and find your next dream job
         </p>
-        <div className="about-stats-row ">
+        <div className="about-stats-row">
           <div className="about-stat first-card">
             <i className="fi fi-rr-users"></i>
             <span className="about-stat-main">{jobs.length}</span>
@@ -76,7 +113,7 @@ const Jobboard = () => {
             <p>No job postings found.</p>
           ) : (
             jobs.map((job, idx) => (
-              <div key={idx} className="about-job-card">
+              <div key={job._id} className="about-job-card">
                 <h3>{job.title}</h3>
                 <a href="#" className="about-company-link">
                   {job.companyName}
@@ -88,8 +125,8 @@ const Jobboard = () => {
                 <p className={`about-job-desc ${expandedCard === idx ? "expanded" : ""}`}>
                   {expandedCard === idx
                     ? job.description
-                    : job.description.slice(0, 100) + (job.description.length > 100 ? "..." : "")
-                  }
+                    : job.description.slice(0, 100) +
+                      (job.description.length > 100 ? "..." : "")}
                 </p>
 
                 {job.description.length > 100 && (
@@ -108,14 +145,23 @@ const Jobboard = () => {
                   </span>
                 </div>
                 <div className="job-card-actions">
-  <button className="job-action-btn update-btn">Update</button>
-  <button className="job-action-btn delete-btn">Delete</button>
-</div>
+                  <button
+                    className="job-action-btn update-btn"
+                    onClick={() => toast.success("Update successful!")}
+                  >
+                    Update
+                  </button>
+                    <button onClick={() => handleDelete(job.id)}   className="job-action-btn delete-btn">
+                      Delete</button>
+                    
+                  
+                </div>
               </div>
             ))
           )}
         </div>
       </section>
+      <ToastContainer position="top-center" />
     </div>
   );
 };
