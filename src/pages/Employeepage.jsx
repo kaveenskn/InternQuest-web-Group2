@@ -12,9 +12,10 @@ import ApplicationPage from "../component/CompanyApplication/Applicationpage";
 
 const EmpLinks = [
   { key: "home", label: "Home" },
+  { key: "Company-Dashboard", label: " Dashboard" },
   { key: "post-job", label: "Post-Job" },
   { key: "applications", label: "Applications" },
-  { key: "Company-Dashboard", label: " Dashboard" },
+  
 ];
 
 const EmployeePage = () => {

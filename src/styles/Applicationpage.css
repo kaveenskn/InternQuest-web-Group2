@@ -10,8 +10,8 @@
    margin-top: 100px;
   color: rgb(8, 0, 0);
   text-align: center;
-  padding: 60px 20px 40px;
-  border-bottom: 4px solid #f97316;
+  padding: 0px 20px 40px;
+  border-bottom: 4px solid #030093;
   animation: fadeInUp 0.8s ease-out 0.2s both; 
 }
 
@@ -68,6 +68,10 @@
 
 .application-feature-card:hover {
   transform: translateY(-6px);
+}
+.application-feature-card:nth-child(2){
+  background-color: #001b72;
+  color: white;
 }
 
 .application-icon {
@@ -316,12 +320,12 @@
 }
 
 .application-action-button.schedule {
-  background-color: #f59e0b;
+  background-color: #07d7f7;
   color: white;
 }
 
 .application-action-button.schedule:hover {
-  background-color: #d97706;
+  background-color:  #038ea4;
 }
 
 /* Placeholder */

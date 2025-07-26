@@ -4,28 +4,28 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Form1 from "./pages/Form1";
 import Login from "./pages/Login";
 import InternshipLandingPage from "./pages/InternshipLandingpage";
-import ProfilePage from "./pages/profilePage";
+
 import StudentsPage from "./pages/StudentsPage";
 import EmployeePage from "./pages/Employeepage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-import MentorshipFinder from "./component/Studentmentorship/Mentorship";
 
-import StudentProfilePage from "./pages/StudentsProfile";
-import CalendarPage from "./component/Calenderpage/Calendar";
-import Dashboard from "./component/CompanyDashboard/Dashboard";
 
-import StudentDashboard from "./component/student-Dashboard/StudentDashboard";
+
+
 
 const App = () => {
 
   return (
+    <>
     <Router>
       <Routes>
      {/* Interface and login, Register */}
         <Route path="/" element={<InternshipLandingPage />} />
         <Route path="/signup" element={<Form1 />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/student-profile/:email" element={<StudentProfilePage/>}/>
+        
 
       {/*students page */}
         <Route path="/students" element={<StudentsPage/>} />
@@ -35,11 +35,17 @@ const App = () => {
         {/* employee page */}
         <Route path="/employers" element={<EmployeePage />} />
                
-      <Route path="/find" element={<MentorshipFinder />} />
-
-       <Route path="/dashboard" element={<StudentDashboard />} />
+      
       </Routes>
     </Router>
+      <ToastContainer 
+        position="top-center" 
+        autoClose={2000} 
+        limit={3}
+        newestOnTop
+        theme="colored"
+      />
+    </>
   );
 };
 

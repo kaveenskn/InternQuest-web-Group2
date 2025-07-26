@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ProfileDisplay from '../component/ProfileComponents/profiledisplay';
 import ProfileEditForm from '../component/ProfileComponents/profileEditForm';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import '../pagestyles/ProfilePage.css';
 
 const emptyProfile = {
@@ -80,6 +82,7 @@ const ProfilePage = () => {
       );
 
       const updated = res.data;
+
       setProfile(prev => ({
         ...prev,
         ...updated,
@@ -87,7 +90,8 @@ const ProfilePage = () => {
         projects: updated.projects || prev.projects,
       }));
       setProjects(updated.projects || []);
-      alert('Profile saved successfully!');
+      toast.success("Profile saved successful!");
+
       setIsEditing(false); // exit edit mode after save
     } catch (err) {
       alert('Error saving profile: ' + err.message);
@@ -222,6 +226,8 @@ const ProfilePage = () => {
           )}
         </>
       )}
+      <ToastContainer position="top-center" autoClose={2000} />
+
     </div>
   );
 };

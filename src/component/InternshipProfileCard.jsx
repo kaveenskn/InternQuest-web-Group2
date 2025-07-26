@@ -40,13 +40,13 @@ const InternshipProfileCard = ({
 
       {/* Card Actions */}
       <div className="card-actions">
-         <button className="view-profile-button" onClick={onViewProfile}>
+         <button className="view-profile-button view-profile" onClick={onViewProfile}>
           View Profile
         </button>
-        <button className="view-profile-button" onClick={onShortList}>
+        <button className="view-profile-button shortlist" onClick={onShortList}>
           Short List
         </button>
-        <button className="view-profile-button" onClick={onDelete}>
+        <button className="view-profile-button delete" onClick={onDelete}>
           Delete
         </button>
       </div>

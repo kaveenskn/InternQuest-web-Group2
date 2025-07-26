@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGraduationCap, FaUser, FaCode, FaGithub } from 'react-icons/fa';
 import '../../styles/ProfileDisplay.css';
 
+
 const ProfileDisplay = ({ profile, projects, onEdit }) => {
+ const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
+  };
+
+  const handleAnalyze = () => {
+    if (selectedFile) {
+      alert(`Analyzing: ${selectedFile.name}`);
+      // You can add your analysis logic here
+    } else {
+      alert('Please upload a CV first.');
+    }
+  };
+
+
+
   return (
     <div className="profile-container">
       {/* Header */}
@@ -87,6 +105,34 @@ const ProfileDisplay = ({ profile, projects, onEdit }) => {
     </div>
   </div>
 </div>
+<section className="cv-section">
+      <h2 className="cv-title">Upload and Analyze Your CV</h2>
+      
+      <input
+        type="file"
+        accept=".pdf,.doc,.docx"
+        id="cv-upload"
+        onChange={handleFileChange}
+        className="cv-input"
+      />
+
+      <div className="cv-buttons">
+        <label htmlFor="cv-upload" className="cv-btn upload-btn">
+          Upload CV
+        </label>
+        <button onClick={handleAnalyze} className="cv-btn analyze-btn">
+          Analyze CV
+        </button>
+      </div>
+
+      {selectedFile && (
+        <p className="cv-filename">Selected File: {selectedFile.name}</p>
+      )}
+    </section>
+
+
+
+
 
     </div>
   );

@@ -134,6 +134,16 @@
   background-color: #02124d;
 }
 
+.view-profile-button:nth-child(2){
+  background-color: #01bbff;
+}
+
+.view-profile-button:nth-child(3){
+  background-color: #fa4b00;
+  color: #ffffff;
+}
+
+
 .filter-bar {
   display: flex;
   gap: 16px;

@@ -237,8 +237,8 @@
 
 /* Footer */
 .getstart-footer {
-background: #e3e4e5;
-  color: rgb(12, 1, 79);
+background: #080035;
+  color: rgb(255, 255, 255);
   padding: 3rem 2rem 1rem;
   position: relative;
   overflow: hidden;
@@ -284,16 +284,17 @@ background: #e3e4e5;
 .getstart-footer-right h4 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #011b70;
+  color: #dfe3f3;
 }
 
 .getstart-footer-right p {
   margin-bottom: 0.5rem;
   opacity: 0.9;
+  color: white;
 }
 
 .getstart-footer-right a {
-  color: rgb(5, 71, 136);
+  color: rgb(182, 201, 220);
   text-decoration: none;
   transition: color 0.3s ease;
 }

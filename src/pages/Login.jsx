@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../pagestyles/Login.css";
 
 const LoginForm = () => {
@@ -34,13 +36,16 @@ const LoginForm = () => {
         localStorage.setItem('token', token);
         localStorage.setItem('email', userEmail);
 
-        if (data.user.role === "student") {
-          navigate("/students");
-        } else if (data.user.role === "employee") {
-          navigate("/employers");
-        } else {
-          alert("Unknown user role");
-        }
+                toast.success("Login successful!");
+           setTimeout(() => {
+          if (data.user.role === "student") {
+            navigate("/students");
+          } else if (data.user.role === "employee") {
+            navigate("/employers");
+          } else {
+            alert("Unknown user role");
+          }
+        }, 1500);
       } else {
         alert(`Error: ${data.message}`);
       }
@@ -105,6 +110,7 @@ const LoginForm = () => {
           </div>
         </div>
       </div>
+      <ToastContainer position="top-center" autoClose={2000} />
     </div>
   );
 };

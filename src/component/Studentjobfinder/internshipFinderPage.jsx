@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { HiOutlineBriefcase } from "react-icons/hi";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../../styles/internshipFinderPage.css";
 
 const InternshipFinderPage = () => {
@@ -52,10 +54,11 @@ const [showFilters, setShowFilters] = useState(false);
           },
         }
       );
-      alert(res.data.message || "Application submitted!");
+      toast.success("Applied successfully!");
+
     } catch (error) {
       console.error("Apply error:", error);
-      alert(error.res?.data?.message || "Application failed. Try again.");
+      toast.error("Application failed. Try again!");
     }
   };
 
@@ -187,6 +190,7 @@ const [showFilters, setShowFilters] = useState(false);
 </div>
 
       </main>
+      <ToastContainer />
     </div>
   );
 };

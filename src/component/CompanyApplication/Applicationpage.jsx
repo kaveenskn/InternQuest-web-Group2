@@ -376,7 +376,7 @@ const handleShortlistDelete = async (shortlistId) => {
             <div className="application-profile-actions">
               <button className="application-action-button accept" onClick={()=>{alert(" candidate selected")}}>Accept</button>
               <button className="application-action-button reject">Reject</button>
-              <button className="application-action-button schedule">Schedule Interview</button>
+              <button className="application-action-button schedule">Download Cv</button>
             </div>
           </div>
         </div>

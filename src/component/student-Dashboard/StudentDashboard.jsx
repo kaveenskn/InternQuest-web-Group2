@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   LineChart,
   Line,
@@ -18,6 +18,14 @@ const StudentDashboard= () => {
     { semester: "Spring 2024", gpa: 3.75 },
     { semester: "Fall 2024", gpa: 3.8 },
   ];
+
+
+
+   const [certificate, setCertificate] = useState(null);
+
+  const handleFileChange = (e) => {
+    setCertificate(e.target.files[0]);
+  };
 
   return (
     <div className="std-dashboard-container">
@@ -57,7 +65,24 @@ const StudentDashboard= () => {
         <div className="std-dashboard-skill-assessment">
           <div className="std-dashboard-title-row">
             <h4>Skill Assessment</h4>
-            <button className="std-dashboard-button">Take Test</button>
+            <div>
+      <input
+        type="file"
+        id="certificate-upload"
+        accept=".pdf, .jpg, .jpeg, .png"
+        onChange={handleFileChange}
+        style={{ display: 'none' }}
+      />
+
+      <label htmlFor="certificate-upload" className="std-dashboard-button">
+        Upload Certification
+      </label>
+
+      {certificate && (
+        <p className="cert-file-name">Uploaded: {certificate.name}</p>
+      )}
+    </div>
+    <br /><br />
           </div>
           {[
             { label: "JavaScript", value: 85 },

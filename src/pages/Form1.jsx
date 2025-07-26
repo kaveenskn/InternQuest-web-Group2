@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import "../pagestyles/form1.css";
 
 const SignupForm = () => {
@@ -34,6 +34,7 @@ const SignupForm = () => {
 
       if (response.ok) {
         alert("User registered successfully!");
+        navigate("/login");
         console.log(data);
         setValue({
           fullname: "",
@@ -54,6 +55,7 @@ const SignupForm = () => {
       alert("Something went wrong while registering the user.");
     }
   };
+   const navigate = useNavigate();
 
   return (
     <div className="signup-container">

@@ -89,7 +89,7 @@ const InternshipLandingPage = () => {
             </div>
             <div className="getstart-footer-right">
               <h4 >Contact Us</h4>
-              <p><a href="mailto:someone@example.com" style={{color:"Blue",textDecoration:"none"}}>Email: support@internquest.com</a></p>
+              <p><a href="mailto:someone@example.com" style={{color:"#f7a048ff",textDecoration:"none"}}>Email: support@internquest.com</a></p>
               <p>Phone: +1 (555) 123-4567</p>
               <p>Address: 123 Career Ave, Silicon Valley, CA</p>
             </div>

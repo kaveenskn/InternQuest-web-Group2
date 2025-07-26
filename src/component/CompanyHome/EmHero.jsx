@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/emDashboard.css";
- import EmpImage from "../../assets/Empheropic.jpg";
+ import EmpImage from "../../assets/cmpimage.png";
 
 const EmHero = ({ onGetStarted }) => {
   return (
