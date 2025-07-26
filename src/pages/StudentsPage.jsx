@@ -9,6 +9,7 @@ import StudentsReviews from '../component/StudentsHome/Std-reviews';
 import MentorshipFinder from '../component/Studentmentorship/Mentorship';
 import CalendarPage from '../component/Calenderpage/Calendar';
 import StudentDashboard from '../component/student-Dashboard/StudentDashboard';
+import FooterPage from './Footer';
 
 const StdLinks = [
   { key: "home", label: "Home" },
@@ -27,8 +28,8 @@ const StudentsPage = () => {
         return (
           <div className="std-dashboard">
             <HeroSection onGetStarted={() => setActivePage("find-jobs")} />
-            <StudentsReviews/>
           
+          <FooterPage/>
           </div>
         );
       case 'profile':

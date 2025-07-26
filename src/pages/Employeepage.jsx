@@ -8,7 +8,7 @@ import "../pagestyles/employee.css";
 import EmpFeatures from '../component/CompanyHome/EmpFeatures';
 import Dashboard from "../component/CompanyDashboard/Dashboard";
 import ApplicationPage from "../component/CompanyApplication/Applicationpage";
-
+import FooterPage from "./Footer";
 
 const EmpLinks = [
   { key: "home", label: "Home" },
@@ -38,6 +38,7 @@ const EmployeePage = () => {
                </div>
             
             <EmpFeatures/>
+            <FooterPage/>
           </div>
         );
       case "applications":

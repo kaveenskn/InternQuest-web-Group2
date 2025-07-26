@@ -1,0 +1,76 @@
+.getstart-footer {
+background: #0b0145;
+  color: rgb(255, 255, 255);
+  padding: 3rem 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+  border-top: 2px solid rgb(1, 1, 91);
+}
+
+.getstart-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.getstart-footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.getstart-footer-left h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg,  #f88513, #f88513);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.getstart-footer-left p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.getstart-footer-right h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #dfe3f3;
+}
+
+.getstart-footer-right p {
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  color: white;
+}
+
+.getstart-footer-right a {
+  color: rgb(182, 201, 220);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.getstart-footer-right a:hover {
+  color: #e0e7ff;
+}
+
+.getstart-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  opacity: 0.8;
+  position: relative;
+  z-index: 2;
+}

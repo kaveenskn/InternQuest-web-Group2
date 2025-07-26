@@ -2,7 +2,7 @@ import React from "react";
 import "../pagestyles/InternshipLanding.css"
 import { FaSearch, FaUserCheck, FaBullhorn, FaFilter, FaUserCircle, FaRegCalendarAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
+import FooterPage from "./Footer";
 
 
 const InternshipLandingPage = () => {
@@ -77,29 +77,7 @@ const InternshipLandingPage = () => {
 
                 </div>
       </section>
-
-
-
-      <footer className="getstart-footer">
-
-          <div className="getstart-footer-container">
-            <div className="getstart-footer-left">
-              <h3>InternQuest</h3>
-              <p>Your gateway to career-building internships. Empowering students and companies.</p>
-            </div>
-            <div className="getstart-footer-right">
-              <h4 >Contact Us</h4>
-              <p><a href="mailto:someone@example.com" style={{color:"#f7a048ff",textDecoration:"none"}}>Email: support@internquest.com</a></p>
-              <p>Phone: +1 (555) 123-4567</p>
-              <p>Address: 123 Career Ave, Silicon Valley, CA</p>
-            </div>
-          </div>
-          <div className="getstart-footer-bottom">
-            <marquee behavior="scroll" direction="left"><p>© 2025 InternQuest. All rights reserved.</p></marquee>
-          </div>
-          
-
-</footer>
+<FooterPage/>
 
     </div>
   );
