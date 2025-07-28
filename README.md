@@ -37,6 +37,6 @@ The platform is built with **React + Vite** for speed and great user experience.
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 - **Version Control:** GitHub
-- **Hosting:** Google Cloud / AWS
+- **Other Tools:** VS Code, Postman, Canva ,Figma
 
 
