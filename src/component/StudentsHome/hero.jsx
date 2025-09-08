@@ -18,7 +18,6 @@ const HeroSection = ({ onGetStarted }) => {
             Get Started
           </button>
           <button className="cta-btn secondary">Learn More</button>
-          
         </div>
       </div>
       <div className="hero-slider">

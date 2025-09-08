@@ -7,19 +7,16 @@
   width: 100%;
   padding: 0 5%;
   box-sizing: border-box;
-  position: relative;
-  
 }
 
 .em-hero-content {
   display: flex;
-  padding: 0;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: 1400px;
   gap: 4rem;
-  flex-wrap: wrap; 
+  flex-wrap: wrap; /* enable wrapping for small screens */
 }
 
 .em-hero-text {
@@ -28,22 +25,19 @@
   max-width: 800px;
   padding-right: 2rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-  margin-top: -100px;
 }
 
 .em-topic-text {
   font-size: 3.5rem;
   font-weight: 900;
   line-height: 1.2;
-    background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, #f97316 20%, #1e3a8a 50%);
-  margin-bottom: 1.9rem;
+  color: #1e40af;
+  margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
   width: 100%;
 }
@@ -65,19 +59,48 @@
   justify-content: flex-start;
 }
 
-.em-hero-explore1,
-.em-hero-explore2 {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
+.hero-text p {
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: rgb(226, 226, 226);
+}
+
+.hero-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.5;
+  max-width: 100%;
+ 
+}
+
+.button-group {
+ padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
   transition: all 0.3s ease;
-  display: inline-flex;
+}
+
+.hero-explore1,
+.hero-explore2 {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 140px;
-  letter-spacing: 0.025em;
+  gap: 8px;
+  width: 180px;
+  height: 50px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #4a60ff;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .em-hero-explore1 {
@@ -88,30 +111,31 @@
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
 }
 
-.em-hero-explore1:hover {
-  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 64, 175, 0.35);
+.hero-explore2:hover {
+ background-color: #4a60ff;
+  color: white;
 }
 
-.em-hero-explore2 {
-  background-color: transparent;
-  color: #1e40af;
-  border: 2px solid #3b82f6;
+.hero-explore1 p,
+.hero-explore2 p {
+  font-size: 16px;
+  margin: 0;
+    font-weight: 500;
 }
 
-.em-hero-explore2:hover {
-  background-color: #eff6ff;
-  border-color: #1e40af;
-  transform: translateY(-1px);
+
+
+.style-arrow {
+  width: 20%;
+  background-size: cover;
+  border-radius: 10px;
 }
 
 .em-hero-slider {
-  margin-top: 30px;
   flex: 1;
   max-width: 600px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -120,14 +144,7 @@
   max-width: 500px;
   height: auto;
   object-fit: contain;
-  animation: floatCard 3s ease-in-out infinite;
 }
-
-@keyframes floatCard {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-}
-
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -174,7 +191,8 @@
     gap: 1rem;
   }
 
-  .em-hero-slider img {
+  .hero-description {
+    font-size: 14px;
     max-width: 100%;
   }
 }
@@ -206,31 +224,18 @@
     opacity: 0;
     transform: translateY(30px);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .hero-explore1 p,
+  .hero-explore2 p {
+    font-size: 14px;
   }
-}
 
-.em-hero-text {
-  animation: emFadeInUp 0.8s ease-out;
-}
+  .style-arrow {
+    width: 20px;
+    height: 20px;
+  }
 
-.em-hero-slider {
-  animation: emFadeInUp 0.8s ease-out 0.2s both;
-}
 
-/* Focus styles */
-.em-hero-explore1:focus,
-.em-hero-explore2:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
-}
-
-.em-hero-explore1:focus-visible,
-.em-hero-explore2:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
 }
 
 
