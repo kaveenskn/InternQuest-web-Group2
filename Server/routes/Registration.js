@@ -19,7 +19,7 @@ router.post("/signup", async (req, res) => {
   } = req.body;
 
   email = email.toLowerCase();
-  companyLocation = companyLocation.toLowerCase();
+  if (companyLocation) companyLocation = companyLocation.toLowerCase();
 
   try {
     const existingUser = await User.findOne({ email });

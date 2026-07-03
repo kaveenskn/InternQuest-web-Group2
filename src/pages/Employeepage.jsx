@@ -8,6 +8,7 @@ import "../pagestyles/employee.css";
 import EmpFeatures from '../component/CompanyHome/EmpFeatures';
 
 import ApplicationPage from "../component/CompanyApplication/Applicationpage";
+import CompanyProfile from "../component/CompanyHome/CompanyProfile";
 
 
 const EmpLinks = [
@@ -80,11 +81,10 @@ const EmployeePage = () => {
               activeKey={activePage}
               transparent={false}
             />
-            <div >
-             
+            <div>
+              <CompanyProfile />
             </div>
           </div>
-
         );
     }
   };

@@ -26,11 +26,19 @@ const CalendarPage = () => {
     handleCloseForm();
   };
 
-  const filteredEvents = events.filter(
-    (e) =>
-      new Date(e.date).toDateString() === selectedDate.toDateString() &&
-      e.title.toLowerCase().includes(search.toLowerCase())
-  );
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const upcomingEvents = events
+    .filter((e) => {
+      const eventDate = new Date(e.date);
+      eventDate.setHours(0, 0, 0, 0);
+      return (
+        eventDate >= today &&
+        e.title.toLowerCase().includes(search.toLowerCase())
+      );
+    })
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
 
   return (
     <div className="calendar-page">
@@ -58,11 +66,18 @@ const CalendarPage = () => {
         <div className="sidebar">
           <div className="event-section">
             <h3>Upcoming Events</h3>
-            {filteredEvents.length === 0 ? (
-              <p>No events on this day.</p>
+            {upcomingEvents.length === 0 ? (
+              <p className="no-events-msg">No upcoming events. Click <strong>+ Add Event</strong> to get started!</p>
             ) : (
-              filteredEvents.map((e, i) => (
+              upcomingEvents.map((e, i) => (
                 <div className="event-card" key={i}>
+                  <p className="event-date-label">
+                    {new Date(e.date).toLocaleDateString("en-US", {
+                      weekday: "short",
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </p>
                   <h4>{e.title}</h4>
                   <p>{e.type}</p>
                 </div>

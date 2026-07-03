@@ -1,0 +1,284 @@
+/* CompanyProfile.css */
+
+.company-profile-wrapper {
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: cpFadeInUp 0.6s ease-out;
+}
+
+@keyframes cpFadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero header banner */
+.cp-header {
+  background: linear-gradient(135deg, #0f2d7b 0%, #1a3fa0 60%, #f97316 100%);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(15, 45, 123, 0.25);
+}
+
+.cp-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+  backdrop-filter: blur(4px);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cp-header-info h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.4rem 0;
+}
+
+.cp-role-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.25rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* Cards grid */
+.cp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.cp-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  border: 1px solid #e0e7ff;
+  box-shadow: 0 4px 18px rgba(59, 130, 246, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cp-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.14);
+}
+
+.cp-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+}
+
+.cp-card-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+}
+
+.cp-card-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Edit button */
+.cp-edit-btn {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.75rem 2.5rem;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.cp-edit-btn:hover {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30, 64, 175, 0.3);
+}
+
+/* Modal overlay */
+.cp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: cpFadeIn 0.2s ease;
+}
+
+@keyframes cpFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cp-modal {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: cpSlideUp 0.3s ease;
+}
+
+@keyframes cpSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cp-modal-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0 0 1.5rem 0;
+}
+
+.cp-form-group {
+  margin-bottom: 1.2rem;
+}
+
+.cp-form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 0.4rem;
+}
+
+.cp-form-input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1e293b;
+  background: #f8fafc;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.cp-form-input:focus {
+  border-color: #3b82f6;
+  background: #fff;
+}
+
+.cp-save-msg {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.cp-save-msg.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.cp-save-msg.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.cp-modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.cp-save-btn {
+  flex: 1;
+  padding: 0.7rem;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cp-save-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+}
+
+.cp-save-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.cp-cancel-btn {
+  flex: 1;
+  padding: 0.7rem;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cp-cancel-btn:hover {
+  background: #e2e8f0;
+}
+
+/* Loading / Error states */
+.cp-loading,
+.cp-error {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.cp-error { color: #ef4444; }
+
+@media (max-width: 600px) {
+  .cp-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cp-modal {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}

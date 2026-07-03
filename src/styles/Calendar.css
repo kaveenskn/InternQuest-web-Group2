@@ -96,16 +96,91 @@
   width: 100% !important;
   font-size: 1.2rem;
   border: none;
+  color: #333;
+}
+
+.react-calendar__navigation {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  border-radius: 12px;
+  padding: 0.5rem 0.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.react-calendar__navigation button {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.react-calendar__navigation button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.react-calendar__navigation button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* Month + Year label button */
+.react-calendar__navigation__label {
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em;
+  flex: 1;
+}
+
+.react-calendar__month-view__weekdays {
+  background: #f0f4ff;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
 }
 
 .react-calendar__tile {
   padding: 1rem 0.5rem;
   border-radius: 8px;
+  color: #333;
 }
 
 .react-calendar__tile--active {
   background: #6366f1;
   color: white;
+}
+
+/* Saturday & Sunday — red */
+.react-calendar__month-view__weekdays__weekday--weekend abbr {
+  color: #e53e3e;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #e53e3e !important;
+}
+
+/* Keep active (selected) weekend tiles white text */
+.react-calendar__tile--active.react-calendar__month-view__days__day--weekend {
+  color: white !important;
 }
 
 .sidebar {
@@ -134,6 +209,21 @@
   border-left: 4px solid #f97316;
   border-radius: 8px;
   transition: transform 0.2s ease;
+}
+
+.event-date-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #f97316;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 0.25rem 0;
+}
+
+.no-events-msg {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .event-card:hover {
